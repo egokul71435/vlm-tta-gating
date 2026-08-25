@@ -9,7 +9,7 @@ random_seed = 42  # already baked into manifest's shuffle order
 INPUT_MANIFEST = Path("data/manifests/base_images.json")
 OUTPUT_DIR = Path("data/corrupted")
 OUTPUT_MANIFEST = Path("data/manifests/corrupted_manifest.json")
-SEVERITY = 3
+SEVERITY = 4
 
 # sigma values per severity level, matching ImageNet-C's gaussian_blur convention
 BLUR_SIGMAS = {1: 0.5, 2: 0.75, 3: 1.0, 4: 1.25, 5: 1.5}

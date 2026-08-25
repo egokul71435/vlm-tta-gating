@@ -5,23 +5,22 @@ from pathlib import Path
 
 random.seed(42)
 
-IMAGENETTE_VAL_DIR = Path("data/raw/imagenette2-160/val")
+IMAGENETTE_VAL_DIR = Path("data/raw/imagewoof2-160/val")
 NUM_IMAGES = 150
 OUTPUT_MANIFEST = Path("data/manifests/base_images.json")
 
-# Imagenette class folder names map to WordNet IDs, not human labels
-# below mapping is Imagenette's official label set
+# mapping
 CLASS_NAMES = {
-    "n01440764": "tench",
-    "n02102040": "English springer",
-    "n02979186": "cassette player",
-    "n03000684": "chain saw",
-    "n03028079": "church",
-    "n03394916": "French horn",
-    "n03417042": "garbage truck",
-    "n03425413": "gas pump",
-    "n03445777": "golf ball",
-    "n03888257": "parachute",
+    "n02086240": "Shih-Tzu",
+    "n02087394": "Rhodesian ridgeback",
+    "n02088364": "beagle",
+    "n02089973": "English foxhound",
+    "n02093754": "Australian terrier",
+    "n02096294": "border terrier",
+    "n02099601": "golden retriever",
+    "n02105641": "Old English sheepdog",
+    "n02111889": "Samoyed",
+    "n02115641": "dingo",
 }
 
 def collect_images():

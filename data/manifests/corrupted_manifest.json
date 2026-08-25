@@ -1,1202 +1,1202 @@
 [
   {
-    "original_path": "data/raw/imagenette2-160/val/n03445777/n03445777_7670.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_n03445777_7670.jpg",
-    "class_id": "n03445777",
-    "label": "golf ball",
+    "original_path": "data/raw/imagewoof2-160/val/n02115641/n02115641_22250.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02115641_22250.jpg",
+    "class_id": "n02115641",
+    "label": "dingo",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03000684/n03000684_17431.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_n03000684_17431.jpg",
-    "class_id": "n03000684",
-    "label": "chain saw",
+    "original_path": "data/raw/imagewoof2-160/val/n02087394/n02087394_631.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02087394_631.jpg",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03028079/n03028079_26571.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_n03028079_26571.jpg",
-    "class_id": "n03028079",
-    "label": "church",
+    "original_path": "data/raw/imagewoof2-160/val/n02093754/n02093754_4081.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02093754_4081.jpg",
+    "class_id": "n02093754",
+    "label": "Australian terrier",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03445777/n03445777_9292.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_n03445777_9292.jpg",
-    "class_id": "n03445777",
-    "label": "golf ball",
+    "original_path": "data/raw/imagewoof2-160/val/n02087394/n02087394_9352.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02087394_9352.jpg",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03394916/n03394916_38360.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_n03394916_38360.jpg",
-    "class_id": "n03394916",
-    "label": "French horn",
+    "original_path": "data/raw/imagewoof2-160/val/n02089973/ILSVRC2012_val_00011342.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_ILSVRC2012_val_00011342.jpg",
+    "class_id": "n02089973",
+    "label": "English foxhound",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03394916/n03394916_68551.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_n03394916_68551.jpg",
-    "class_id": "n03394916",
-    "label": "French horn",
+    "original_path": "data/raw/imagewoof2-160/val/n02089973/n02089973_2931.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02089973_2931.jpg",
+    "class_id": "n02089973",
+    "label": "English foxhound",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03888257/n03888257_29191.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_n03888257_29191.jpg",
-    "class_id": "n03888257",
-    "label": "parachute",
+    "original_path": "data/raw/imagewoof2-160/val/n02087394/n02087394_5761.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02087394_5761.jpg",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03445777/n03445777_4211.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_n03445777_4211.jpg",
-    "class_id": "n03445777",
-    "label": "golf ball",
+    "original_path": "data/raw/imagewoof2-160/val/n02088364/n02088364_8060.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02088364_8060.jpg",
+    "class_id": "n02088364",
+    "label": "beagle",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03417042/n03417042_5631.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_n03417042_5631.jpg",
-    "class_id": "n03417042",
-    "label": "garbage truck",
+    "original_path": "data/raw/imagewoof2-160/val/n02105641/n02105641_12001.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02105641_12001.jpg",
+    "class_id": "n02105641",
+    "label": "Old English sheepdog",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03445777/n03445777_16192.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_n03445777_16192.jpg",
-    "class_id": "n03445777",
-    "label": "golf ball",
+    "original_path": "data/raw/imagewoof2-160/val/n02087394/n02087394_601.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02087394_601.jpg",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n02979186/n02979186_12962.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_n02979186_12962.jpg",
-    "class_id": "n02979186",
-    "label": "cassette player",
+    "original_path": "data/raw/imagewoof2-160/val/n02099601/n02099601_3062.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02099601_3062.jpg",
+    "class_id": "n02099601",
+    "label": "golden retriever",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03888257/n03888257_7921.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_n03888257_7921.jpg",
-    "class_id": "n03888257",
-    "label": "parachute",
+    "original_path": "data/raw/imagewoof2-160/val/n02087394/n02087394_4032.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02087394_4032.jpg",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03028079/n03028079_17831.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_n03028079_17831.jpg",
-    "class_id": "n03028079",
-    "label": "church",
+    "original_path": "data/raw/imagewoof2-160/val/n02093754/n02093754_2841.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02093754_2841.jpg",
+    "class_id": "n02093754",
+    "label": "Australian terrier",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03417042/n03417042_3280.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_n03417042_3280.jpg",
-    "class_id": "n03417042",
-    "label": "garbage truck",
+    "original_path": "data/raw/imagewoof2-160/val/n02096294/n02096294_10711.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02096294_10711.jpg",
+    "class_id": "n02096294",
+    "label": "border terrier",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n02102040/n02102040_620.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_n02102040_620.jpg",
-    "class_id": "n02102040",
-    "label": "English springer",
+    "original_path": "data/raw/imagewoof2-160/val/n02087394/n02087394_10880.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02087394_10880.jpg",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03028079/n03028079_3600.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_n03028079_3600.jpg",
-    "class_id": "n03028079",
-    "label": "church",
+    "original_path": "data/raw/imagewoof2-160/val/n02087394/n02087394_760.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02087394_760.jpg",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03417042/n03417042_4752.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_n03417042_4752.jpg",
-    "class_id": "n03417042",
-    "label": "garbage truck",
+    "original_path": "data/raw/imagewoof2-160/val/n02096294/n02096294_3552.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02096294_3552.jpg",
+    "class_id": "n02096294",
+    "label": "border terrier",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03028079/n03028079_15081.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_n03028079_15081.jpg",
-    "class_id": "n03028079",
-    "label": "church",
+    "original_path": "data/raw/imagewoof2-160/val/n02096294/n02096294_5561.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02096294_5561.jpg",
+    "class_id": "n02096294",
+    "label": "border terrier",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03394916/n03394916_23071.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_n03394916_23071.jpg",
-    "class_id": "n03394916",
-    "label": "French horn",
+    "original_path": "data/raw/imagewoof2-160/val/n02086240/n02086240_7110.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02086240_7110.jpg",
+    "class_id": "n02086240",
+    "label": "Shih-Tzu",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n02102040/n02102040_6400.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_n02102040_6400.jpg",
-    "class_id": "n02102040",
-    "label": "English springer",
+    "original_path": "data/raw/imagewoof2-160/val/n02087394/n02087394_8202.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02087394_8202.jpg",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n02102040/n02102040_1022.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_n02102040_1022.jpg",
-    "class_id": "n02102040",
-    "label": "English springer",
+    "original_path": "data/raw/imagewoof2-160/val/n02093754/n02093754_6250.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02093754_6250.jpg",
+    "class_id": "n02093754",
+    "label": "Australian terrier",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n02102040/n02102040_8150.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_n02102040_8150.jpg",
-    "class_id": "n02102040",
-    "label": "English springer",
+    "original_path": "data/raw/imagewoof2-160/val/n02087394/n02087394_10411.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02087394_10411.jpg",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03445777/n03445777_7011.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_n03445777_7011.jpg",
-    "class_id": "n03445777",
-    "label": "golf ball",
+    "original_path": "data/raw/imagewoof2-160/val/n02111889/n02111889_12661.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02111889_12661.jpg",
+    "class_id": "n02111889",
+    "label": "Samoyed",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n02102040/n02102040_4742.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_n02102040_4742.jpg",
-    "class_id": "n02102040",
-    "label": "English springer",
+    "original_path": "data/raw/imagewoof2-160/val/n02086240/n02086240_4451.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02086240_4451.jpg",
+    "class_id": "n02086240",
+    "label": "Shih-Tzu",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n01440764/n01440764_8992.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_n01440764_8992.jpg",
-    "class_id": "n01440764",
-    "label": "tench",
+    "original_path": "data/raw/imagewoof2-160/val/n02096294/n02096294_2142.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02096294_2142.jpg",
+    "class_id": "n02096294",
+    "label": "border terrier",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03888257/n03888257_22972.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_n03888257_22972.jpg",
-    "class_id": "n03888257",
-    "label": "parachute",
+    "original_path": "data/raw/imagewoof2-160/val/n02096294/n02096294_7620.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02096294_7620.jpg",
+    "class_id": "n02096294",
+    "label": "border terrier",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03417042/n03417042_14861.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_n03417042_14861.jpg",
-    "class_id": "n03417042",
-    "label": "garbage truck",
+    "original_path": "data/raw/imagewoof2-160/val/n02099601/n02099601_2441.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02099601_2441.jpg",
+    "class_id": "n02099601",
+    "label": "golden retriever",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03445777/n03445777_551.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_n03445777_551.jpg",
-    "class_id": "n03445777",
-    "label": "golf ball",
+    "original_path": "data/raw/imagewoof2-160/val/n02105641/ILSVRC2012_val_00004361.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_ILSVRC2012_val_00004361.jpg",
+    "class_id": "n02105641",
+    "label": "Old English sheepdog",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03888257/n03888257_30712.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_n03888257_30712.jpg",
-    "class_id": "n03888257",
-    "label": "parachute",
+    "original_path": "data/raw/imagewoof2-160/val/n02088364/n02088364_2430.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02088364_2430.jpg",
+    "class_id": "n02088364",
+    "label": "beagle",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03394916/n03394916_47110.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_n03394916_47110.jpg",
-    "class_id": "n03394916",
-    "label": "French horn",
+    "original_path": "data/raw/imagewoof2-160/val/n02086240/n02086240_12760.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02086240_12760.jpg",
+    "class_id": "n02086240",
+    "label": "Shih-Tzu",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n01440764/n01440764_10320.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_n01440764_10320.jpg",
-    "class_id": "n01440764",
-    "label": "tench",
+    "original_path": "data/raw/imagewoof2-160/val/n02105641/n02105641_6182.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02105641_6182.jpg",
+    "class_id": "n02105641",
+    "label": "Old English sheepdog",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03888257/n03888257_32350.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_n03888257_32350.jpg",
-    "class_id": "n03888257",
-    "label": "parachute",
+    "original_path": "data/raw/imagewoof2-160/val/n02115641/n02115641_8092.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02115641_8092.jpg",
+    "class_id": "n02115641",
+    "label": "dingo",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03000684/n03000684_26901.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_n03000684_26901.jpg",
-    "class_id": "n03000684",
-    "label": "chain saw",
+    "original_path": "data/raw/imagewoof2-160/val/n02115641/n02115641_52552.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02115641_52552.jpg",
+    "class_id": "n02115641",
+    "label": "dingo",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03445777/ILSVRC2012_val_00042350.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_ILSVRC2012_val_00042350.jpg",
-    "class_id": "n03445777",
-    "label": "golf ball",
+    "original_path": "data/raw/imagewoof2-160/val/n02093754/n02093754_90.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02093754_90.jpg",
+    "class_id": "n02093754",
+    "label": "Australian terrier",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n01440764/n01440764_13860.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_n01440764_13860.jpg",
-    "class_id": "n01440764",
-    "label": "tench",
+    "original_path": "data/raw/imagewoof2-160/val/n02096294/n02096294_5781.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02096294_5781.jpg",
+    "class_id": "n02096294",
+    "label": "border terrier",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03425413/n03425413_21350.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_n03425413_21350.jpg",
-    "class_id": "n03425413",
-    "label": "gas pump",
+    "original_path": "data/raw/imagewoof2-160/val/n02093754/n02093754_210.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02093754_210.jpg",
+    "class_id": "n02093754",
+    "label": "Australian terrier",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03425413/ILSVRC2012_val_00009821.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_ILSVRC2012_val_00009821.jpg",
-    "class_id": "n03425413",
-    "label": "gas pump",
+    "original_path": "data/raw/imagewoof2-160/val/n02093754/n02093754_2281.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02093754_2281.jpg",
+    "class_id": "n02093754",
+    "label": "Australian terrier",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03000684/n03000684_5692.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_n03000684_5692.jpg",
-    "class_id": "n03000684",
-    "label": "chain saw",
+    "original_path": "data/raw/imagewoof2-160/val/n02096294/n02096294_3041.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02096294_3041.jpg",
+    "class_id": "n02096294",
+    "label": "border terrier",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n02979186/n02979186_13841.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_n02979186_13841.jpg",
-    "class_id": "n02979186",
-    "label": "cassette player",
+    "original_path": "data/raw/imagewoof2-160/val/n02099601/n02099601_2521.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02099601_2521.jpg",
+    "class_id": "n02099601",
+    "label": "golden retriever",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03417042/ILSVRC2012_val_00028190.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_ILSVRC2012_val_00028190.jpg",
-    "class_id": "n03417042",
-    "label": "garbage truck",
+    "original_path": "data/raw/imagewoof2-160/val/n02105641/n02105641_4631.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02105641_4631.jpg",
+    "class_id": "n02105641",
+    "label": "Old English sheepdog",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03000684/n03000684_19591.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_n03000684_19591.jpg",
-    "class_id": "n03000684",
-    "label": "chain saw",
+    "original_path": "data/raw/imagewoof2-160/val/n02096294/n02096294_5051.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02096294_5051.jpg",
+    "class_id": "n02096294",
+    "label": "border terrier",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03888257/n03888257_19702.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_n03888257_19702.jpg",
-    "class_id": "n03888257",
-    "label": "parachute",
+    "original_path": "data/raw/imagewoof2-160/val/n02087394/n02087394_7962.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02087394_7962.jpg",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03394916/n03394916_51752.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_n03394916_51752.jpg",
-    "class_id": "n03394916",
-    "label": "French horn",
+    "original_path": "data/raw/imagewoof2-160/val/n02086240/n02086240_6032.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02086240_6032.jpg",
+    "class_id": "n02086240",
+    "label": "Shih-Tzu",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03000684/n03000684_8890.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_n03000684_8890.jpg",
-    "class_id": "n03000684",
-    "label": "chain saw",
+    "original_path": "data/raw/imagewoof2-160/val/n02111889/n02111889_6671.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02111889_6671.jpg",
+    "class_id": "n02111889",
+    "label": "Samoyed",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03000684/n03000684_10992.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_n03000684_10992.jpg",
-    "class_id": "n03000684",
-    "label": "chain saw",
+    "original_path": "data/raw/imagewoof2-160/val/n02093754/n02093754_4120.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02093754_4120.jpg",
+    "class_id": "n02093754",
+    "label": "Australian terrier",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n01440764/n01440764_2221.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_n01440764_2221.jpg",
-    "class_id": "n01440764",
-    "label": "tench",
+    "original_path": "data/raw/imagewoof2-160/val/n02087394/n02087394_5890.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02087394_5890.jpg",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03445777/n03445777_13161.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_n03445777_13161.jpg",
-    "class_id": "n03445777",
-    "label": "golf ball",
+    "original_path": "data/raw/imagewoof2-160/val/n02087394/n02087394_7612.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02087394_7612.jpg",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03417042/n03417042_19862.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_n03417042_19862.jpg",
-    "class_id": "n03417042",
-    "label": "garbage truck",
+    "original_path": "data/raw/imagewoof2-160/val/n02111889/n02111889_3760.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02111889_3760.jpg",
+    "class_id": "n02111889",
+    "label": "Samoyed",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03394916/n03394916_35542.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_n03394916_35542.jpg",
-    "class_id": "n03394916",
-    "label": "French horn",
+    "original_path": "data/raw/imagewoof2-160/val/n02089973/n02089973_362.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02089973_362.jpg",
+    "class_id": "n02089973",
+    "label": "English foxhound",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03888257/n03888257_1251.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_n03888257_1251.jpg",
-    "class_id": "n03888257",
-    "label": "parachute",
+    "original_path": "data/raw/imagewoof2-160/val/n02105641/n02105641_8890.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02105641_8890.jpg",
+    "class_id": "n02105641",
+    "label": "Old English sheepdog",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03445777/n03445777_9442.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_n03445777_9442.jpg",
-    "class_id": "n03445777",
-    "label": "golf ball",
+    "original_path": "data/raw/imagewoof2-160/val/n02087394/n02087394_2341.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02087394_2341.jpg",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n02979186/n02979186_10341.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_n02979186_10341.jpg",
-    "class_id": "n02979186",
-    "label": "cassette player",
+    "original_path": "data/raw/imagewoof2-160/val/n02093754/n02093754_5061.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02093754_5061.jpg",
+    "class_id": "n02093754",
+    "label": "Australian terrier",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n02979186/n02979186_1810.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_n02979186_1810.jpg",
-    "class_id": "n02979186",
-    "label": "cassette player",
+    "original_path": "data/raw/imagewoof2-160/val/n02111889/n02111889_16541.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02111889_16541.jpg",
+    "class_id": "n02111889",
+    "label": "Samoyed",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n02102040/n02102040_7460.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_n02102040_7460.jpg",
-    "class_id": "n02102040",
-    "label": "English springer",
+    "original_path": "data/raw/imagewoof2-160/val/n02088364/n02088364_2502.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02088364_2502.jpg",
+    "class_id": "n02088364",
+    "label": "beagle",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03394916/n03394916_35801.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_n03394916_35801.jpg",
-    "class_id": "n03394916",
-    "label": "French horn",
+    "original_path": "data/raw/imagewoof2-160/val/n02089973/n02089973_1351.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02089973_1351.jpg",
+    "class_id": "n02089973",
+    "label": "English foxhound",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n02102040/n02102040_7931.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_n02102040_7931.jpg",
-    "class_id": "n02102040",
-    "label": "English springer",
+    "original_path": "data/raw/imagewoof2-160/val/n02115641/n02115641_38781.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02115641_38781.jpg",
+    "class_id": "n02115641",
+    "label": "dingo",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03888257/n03888257_32391.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_n03888257_32391.jpg",
-    "class_id": "n03888257",
-    "label": "parachute",
+    "original_path": "data/raw/imagewoof2-160/val/n02111889/n02111889_3961.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02111889_3961.jpg",
+    "class_id": "n02111889",
+    "label": "Samoyed",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03028079/n03028079_25612.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_n03028079_25612.jpg",
-    "class_id": "n03028079",
-    "label": "church",
+    "original_path": "data/raw/imagewoof2-160/val/n02087394/n02087394_12002.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02087394_12002.jpg",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03000684/n03000684_34171.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_n03000684_34171.jpg",
-    "class_id": "n03000684",
-    "label": "chain saw",
+    "original_path": "data/raw/imagewoof2-160/val/n02099601/n02099601_7101.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02099601_7101.jpg",
+    "class_id": "n02099601",
+    "label": "golden retriever",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n02979186/n02979186_4852.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_n02979186_4852.jpg",
-    "class_id": "n02979186",
-    "label": "cassette player",
+    "original_path": "data/raw/imagewoof2-160/val/n02088364/n02088364_522.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02088364_522.jpg",
+    "class_id": "n02088364",
+    "label": "beagle",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03394916/n03394916_14002.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_n03394916_14002.jpg",
-    "class_id": "n03394916",
-    "label": "French horn",
+    "original_path": "data/raw/imagewoof2-160/val/n02089973/n02089973_9560.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02089973_9560.jpg",
+    "class_id": "n02089973",
+    "label": "English foxhound",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03417042/n03417042_11511.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_n03417042_11511.jpg",
-    "class_id": "n03417042",
-    "label": "garbage truck",
+    "original_path": "data/raw/imagewoof2-160/val/n02111889/n02111889_3792.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02111889_3792.jpg",
+    "class_id": "n02111889",
+    "label": "Samoyed",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03028079/n03028079_13251.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_n03028079_13251.jpg",
-    "class_id": "n03028079",
-    "label": "church",
+    "original_path": "data/raw/imagewoof2-160/val/n02111889/n02111889_13580.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02111889_13580.jpg",
+    "class_id": "n02111889",
+    "label": "Samoyed",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03888257/n03888257_22330.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_n03888257_22330.jpg",
-    "class_id": "n03888257",
-    "label": "parachute",
+    "original_path": "data/raw/imagewoof2-160/val/n02088364/n02088364_871.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02088364_871.jpg",
+    "class_id": "n02088364",
+    "label": "beagle",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03000684/n03000684_32301.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_n03000684_32301.jpg",
-    "class_id": "n03000684",
-    "label": "chain saw",
+    "original_path": "data/raw/imagewoof2-160/val/n02111889/n02111889_15060.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02111889_15060.jpg",
+    "class_id": "n02111889",
+    "label": "Samoyed",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n02979186/n02979186_9811.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_n02979186_9811.jpg",
-    "class_id": "n02979186",
-    "label": "cassette player",
+    "original_path": "data/raw/imagewoof2-160/val/n02086240/n02086240_10272.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02086240_10272.jpg",
+    "class_id": "n02086240",
+    "label": "Shih-Tzu",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n02979186/n02979186_24140.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_n02979186_24140.jpg",
-    "class_id": "n02979186",
-    "label": "cassette player",
+    "original_path": "data/raw/imagewoof2-160/val/n02086240/n02086240_8141.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02086240_8141.jpg",
+    "class_id": "n02086240",
+    "label": "Shih-Tzu",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n02979186/n02979186_11372.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_n02979186_11372.jpg",
-    "class_id": "n02979186",
-    "label": "cassette player",
+    "original_path": "data/raw/imagewoof2-160/val/n02105641/n02105641_2822.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02105641_2822.jpg",
+    "class_id": "n02105641",
+    "label": "Old English sheepdog",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03888257/n03888257_25460.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_n03888257_25460.jpg",
-    "class_id": "n03888257",
-    "label": "parachute",
+    "original_path": "data/raw/imagewoof2-160/val/n02093754/n02093754_6630.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02093754_6630.jpg",
+    "class_id": "n02093754",
+    "label": "Australian terrier",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03394916/n03394916_30460.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_n03394916_30460.jpg",
-    "class_id": "n03394916",
-    "label": "French horn",
+    "original_path": "data/raw/imagewoof2-160/val/n02086240/n02086240_751.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02086240_751.jpg",
+    "class_id": "n02086240",
+    "label": "Shih-Tzu",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03000684/n03000684_14740.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_n03000684_14740.jpg",
-    "class_id": "n03000684",
-    "label": "chain saw",
+    "original_path": "data/raw/imagewoof2-160/val/n02086240/n02086240_7442.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02086240_7442.jpg",
+    "class_id": "n02086240",
+    "label": "Shih-Tzu",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n01440764/n01440764_6760.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_n01440764_6760.jpg",
-    "class_id": "n01440764",
-    "label": "tench",
+    "original_path": "data/raw/imagewoof2-160/val/n02096294/n02096294_1880.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02096294_1880.jpg",
+    "class_id": "n02096294",
+    "label": "border terrier",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03888257/n03888257_80.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_n03888257_80.jpg",
-    "class_id": "n03888257",
-    "label": "parachute",
+    "original_path": "data/raw/imagewoof2-160/val/n02086240/n02086240_5362.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02086240_5362.jpg",
+    "class_id": "n02086240",
+    "label": "Shih-Tzu",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n02102040/n02102040_1222.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_n02102040_1222.jpg",
-    "class_id": "n02102040",
-    "label": "English springer",
+    "original_path": "data/raw/imagewoof2-160/val/n02096294/n02096294_7641.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02096294_7641.jpg",
+    "class_id": "n02096294",
+    "label": "border terrier",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03888257/n03888257_33931.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_blur_n03888257_33931.jpg",
-    "class_id": "n03888257",
-    "label": "parachute",
+    "original_path": "data/raw/imagewoof2-160/val/n02096294/n02096294_11902.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02096294_11902.jpg",
+    "class_id": "n02096294",
+    "label": "border terrier",
     "corruption_type": "gaussian_blur",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03394916/n03394916_42690.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n03394916_42690.jpg",
-    "class_id": "n03394916",
-    "label": "French horn",
+    "original_path": "data/raw/imagewoof2-160/val/n02089973/n02089973_1352.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02089973_1352.jpg",
+    "class_id": "n02089973",
+    "label": "English foxhound",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03394916/n03394916_55411.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n03394916_55411.jpg",
-    "class_id": "n03394916",
-    "label": "French horn",
+    "original_path": "data/raw/imagewoof2-160/val/n02089973/n02089973_780.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02089973_780.jpg",
+    "class_id": "n02089973",
+    "label": "English foxhound",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n02102040/n02102040_6880.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02102040_6880.jpg",
-    "class_id": "n02102040",
-    "label": "English springer",
+    "original_path": "data/raw/imagewoof2-160/val/n02105641/n02105641_15011.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02105641_15011.jpg",
+    "class_id": "n02105641",
+    "label": "Old English sheepdog",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n01440764/n01440764_9212.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n01440764_9212.jpg",
-    "class_id": "n01440764",
-    "label": "tench",
+    "original_path": "data/raw/imagewoof2-160/val/n02096294/n02096294_2472.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02096294_2472.jpg",
+    "class_id": "n02096294",
+    "label": "border terrier",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n02979186/n02979186_13950.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02979186_13950.jpg",
-    "class_id": "n02979186",
-    "label": "cassette player",
+    "original_path": "data/raw/imagewoof2-160/val/n02093754/n02093754_7931.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02093754_7931.jpg",
+    "class_id": "n02093754",
+    "label": "Australian terrier",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03425413/n03425413_21301.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n03425413_21301.jpg",
-    "class_id": "n03425413",
-    "label": "gas pump",
+    "original_path": "data/raw/imagewoof2-160/val/n02115641/n02115641_7082.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02115641_7082.jpg",
+    "class_id": "n02115641",
+    "label": "dingo",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n01440764/n01440764_9931.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n01440764_9931.jpg",
-    "class_id": "n01440764",
-    "label": "tench",
+    "original_path": "data/raw/imagewoof2-160/val/n02087394/n02087394_9061.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02087394_9061.jpg",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n01440764/n01440764_190.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n01440764_190.jpg",
-    "class_id": "n01440764",
-    "label": "tench",
+    "original_path": "data/raw/imagewoof2-160/val/n02087394/n02087394_12.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02087394_12.jpg",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03417042/n03417042_6662.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n03417042_6662.jpg",
-    "class_id": "n03417042",
-    "label": "garbage truck",
+    "original_path": "data/raw/imagewoof2-160/val/n02115641/n02115641_12541.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02115641_12541.jpg",
+    "class_id": "n02115641",
+    "label": "dingo",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03394916/n03394916_36772.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n03394916_36772.jpg",
-    "class_id": "n03394916",
-    "label": "French horn",
+    "original_path": "data/raw/imagewoof2-160/val/n02089973/n02089973_2302.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02089973_2302.jpg",
+    "class_id": "n02089973",
+    "label": "English foxhound",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03028079/n03028079_37021.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n03028079_37021.jpg",
-    "class_id": "n03028079",
-    "label": "church",
+    "original_path": "data/raw/imagewoof2-160/val/n02111889/n02111889_16732.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02111889_16732.jpg",
+    "class_id": "n02111889",
+    "label": "Samoyed",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n02979186/n02979186_10870.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02979186_10870.jpg",
-    "class_id": "n02979186",
-    "label": "cassette player",
+    "original_path": "data/raw/imagewoof2-160/val/n02096294/n02096294_2232.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02096294_2232.jpg",
+    "class_id": "n02096294",
+    "label": "border terrier",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03445777/n03445777_7902.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n03445777_7902.jpg",
-    "class_id": "n03445777",
-    "label": "golf ball",
+    "original_path": "data/raw/imagewoof2-160/val/n02115641/n02115641_12171.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02115641_12171.jpg",
+    "class_id": "n02115641",
+    "label": "dingo",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03445777/n03445777_13911.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n03445777_13911.jpg",
-    "class_id": "n03445777",
-    "label": "golf ball",
+    "original_path": "data/raw/imagewoof2-160/val/n02093754/n02093754_3120.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02093754_3120.jpg",
+    "class_id": "n02093754",
+    "label": "Australian terrier",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03394916/n03394916_33181.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n03394916_33181.jpg",
-    "class_id": "n03394916",
-    "label": "French horn",
+    "original_path": "data/raw/imagewoof2-160/val/n02086240/n02086240_4920.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02086240_4920.jpg",
+    "class_id": "n02086240",
+    "label": "Shih-Tzu",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n02979186/n02979186_19412.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02979186_19412.jpg",
-    "class_id": "n02979186",
-    "label": "cassette player",
+    "original_path": "data/raw/imagewoof2-160/val/n02088364/n02088364_1022.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02088364_1022.jpg",
+    "class_id": "n02088364",
+    "label": "beagle",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03000684/n03000684_7671.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n03000684_7671.jpg",
-    "class_id": "n03000684",
-    "label": "chain saw",
+    "original_path": "data/raw/imagewoof2-160/val/n02088364/n02088364_14702.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02088364_14702.jpg",
+    "class_id": "n02088364",
+    "label": "beagle",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03417042/n03417042_21102.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n03417042_21102.jpg",
-    "class_id": "n03417042",
-    "label": "garbage truck",
+    "original_path": "data/raw/imagewoof2-160/val/n02111889/n02111889_4202.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02111889_4202.jpg",
+    "class_id": "n02111889",
+    "label": "Samoyed",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03000684/n03000684_31112.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n03000684_31112.jpg",
-    "class_id": "n03000684",
-    "label": "chain saw",
+    "original_path": "data/raw/imagewoof2-160/val/n02111889/n02111889_13491.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02111889_13491.jpg",
+    "class_id": "n02111889",
+    "label": "Samoyed",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03394916/n03394916_34332.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n03394916_34332.jpg",
-    "class_id": "n03394916",
-    "label": "French horn",
+    "original_path": "data/raw/imagewoof2-160/val/n02089973/n02089973_4121.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02089973_4121.jpg",
+    "class_id": "n02089973",
+    "label": "English foxhound",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03394916/n03394916_48491.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n03394916_48491.jpg",
-    "class_id": "n03394916",
-    "label": "French horn",
+    "original_path": "data/raw/imagewoof2-160/val/n02089973/n02089973_2131.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02089973_2131.jpg",
+    "class_id": "n02089973",
+    "label": "English foxhound",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03000684/n03000684_35991.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n03000684_35991.jpg",
-    "class_id": "n03000684",
-    "label": "chain saw",
+    "original_path": "data/raw/imagewoof2-160/val/n02105641/n02105641_5572.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02105641_5572.jpg",
+    "class_id": "n02105641",
+    "label": "Old English sheepdog",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03028079/n03028079_901.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n03028079_901.jpg",
-    "class_id": "n03028079",
-    "label": "church",
+    "original_path": "data/raw/imagewoof2-160/val/n02087394/n02087394_26422.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02087394_26422.jpg",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03425413/n03425413_15131.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n03425413_15131.jpg",
-    "class_id": "n03425413",
-    "label": "gas pump",
+    "original_path": "data/raw/imagewoof2-160/val/n02099601/n02099601_28691.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02099601_28691.jpg",
+    "class_id": "n02099601",
+    "label": "golden retriever",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n01440764/n01440764_5680.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n01440764_5680.jpg",
-    "class_id": "n01440764",
-    "label": "tench",
+    "original_path": "data/raw/imagewoof2-160/val/n02096294/n02096294_9982.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02096294_9982.jpg",
+    "class_id": "n02096294",
+    "label": "border terrier",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03000684/n03000684_19771.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n03000684_19771.jpg",
-    "class_id": "n03000684",
-    "label": "chain saw",
+    "original_path": "data/raw/imagewoof2-160/val/n02111889/n02111889_14572.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02111889_14572.jpg",
+    "class_id": "n02111889",
+    "label": "Samoyed",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03028079/n03028079_4612.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n03028079_4612.jpg",
-    "class_id": "n03028079",
-    "label": "church",
+    "original_path": "data/raw/imagewoof2-160/val/n02115641/n02115641_37280.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02115641_37280.jpg",
+    "class_id": "n02115641",
+    "label": "dingo",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03888257/n03888257_59442.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n03888257_59442.jpg",
-    "class_id": "n03888257",
-    "label": "parachute",
+    "original_path": "data/raw/imagewoof2-160/val/n02093754/n02093754_3770.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02093754_3770.jpg",
+    "class_id": "n02093754",
+    "label": "Australian terrier",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03000684/n03000684_14632.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n03000684_14632.jpg",
-    "class_id": "n03000684",
-    "label": "chain saw",
+    "original_path": "data/raw/imagewoof2-160/val/n02115641/n02115641_6760.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02115641_6760.jpg",
+    "class_id": "n02115641",
+    "label": "dingo",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n02102040/n02102040_6392.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02102040_6392.jpg",
-    "class_id": "n02102040",
-    "label": "English springer",
+    "original_path": "data/raw/imagewoof2-160/val/n02093754/n02093754_7241.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02093754_7241.jpg",
+    "class_id": "n02093754",
+    "label": "Australian terrier",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03028079/n03028079_6601.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n03028079_6601.jpg",
-    "class_id": "n03028079",
-    "label": "church",
+    "original_path": "data/raw/imagewoof2-160/val/n02096294/n02096294_5602.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02096294_5602.jpg",
+    "class_id": "n02096294",
+    "label": "border terrier",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03888257/n03888257_18560.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n03888257_18560.jpg",
-    "class_id": "n03888257",
-    "label": "parachute",
+    "original_path": "data/raw/imagewoof2-160/val/n02115641/n02115641_8532.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02115641_8532.jpg",
+    "class_id": "n02115641",
+    "label": "dingo",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03417042/n03417042_20892.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n03417042_20892.jpg",
-    "class_id": "n03417042",
-    "label": "garbage truck",
+    "original_path": "data/raw/imagewoof2-160/val/n02093754/n02093754_7950.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02093754_7950.jpg",
+    "class_id": "n02093754",
+    "label": "Australian terrier",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03000684/n03000684_11441.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n03000684_11441.jpg",
-    "class_id": "n03000684",
-    "label": "chain saw",
+    "original_path": "data/raw/imagewoof2-160/val/n02111889/n02111889_4460.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02111889_4460.jpg",
+    "class_id": "n02111889",
+    "label": "Samoyed",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n02102040/n02102040_8330.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02102040_8330.jpg",
-    "class_id": "n02102040",
-    "label": "English springer",
+    "original_path": "data/raw/imagewoof2-160/val/n02111889/n02111889_6111.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02111889_6111.jpg",
+    "class_id": "n02111889",
+    "label": "Samoyed",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03888257/n03888257_4842.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n03888257_4842.jpg",
-    "class_id": "n03888257",
-    "label": "parachute",
+    "original_path": "data/raw/imagewoof2-160/val/n02093754/n02093754_5360.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02093754_5360.jpg",
+    "class_id": "n02093754",
+    "label": "Australian terrier",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n02102040/n02102040_2842.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02102040_2842.jpg",
-    "class_id": "n02102040",
-    "label": "English springer",
+    "original_path": "data/raw/imagewoof2-160/val/n02099601/n02099601_1041.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02099601_1041.jpg",
+    "class_id": "n02099601",
+    "label": "golden retriever",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n02979186/n02979186_70.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02979186_70.jpg",
-    "class_id": "n02979186",
-    "label": "cassette player",
+    "original_path": "data/raw/imagewoof2-160/val/n02086240/n02086240_7261.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02086240_7261.jpg",
+    "class_id": "n02086240",
+    "label": "Shih-Tzu",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n02102040/n02102040_4582.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02102040_4582.jpg",
-    "class_id": "n02102040",
-    "label": "English springer",
+    "original_path": "data/raw/imagewoof2-160/val/n02105641/n02105641_10800.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02105641_10800.jpg",
+    "class_id": "n02105641",
+    "label": "Old English sheepdog",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03425413/n03425413_20562.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n03425413_20562.jpg",
-    "class_id": "n03425413",
-    "label": "gas pump",
+    "original_path": "data/raw/imagewoof2-160/val/n02099601/n02099601_3360.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02099601_3360.jpg",
+    "class_id": "n02099601",
+    "label": "golden retriever",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03425413/n03425413_13811.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n03425413_13811.jpg",
-    "class_id": "n03425413",
-    "label": "gas pump",
+    "original_path": "data/raw/imagewoof2-160/val/n02093754/n02093754_2150.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02093754_2150.jpg",
+    "class_id": "n02093754",
+    "label": "Australian terrier",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n02102040/n02102040_5900.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02102040_5900.jpg",
-    "class_id": "n02102040",
-    "label": "English springer",
+    "original_path": "data/raw/imagewoof2-160/val/n02093754/ILSVRC2012_val_00030770.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_ILSVRC2012_val_00030770.jpg",
+    "class_id": "n02093754",
+    "label": "Australian terrier",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03394916/n03394916_26391.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n03394916_26391.jpg",
-    "class_id": "n03394916",
-    "label": "French horn",
+    "original_path": "data/raw/imagewoof2-160/val/n02089973/n02089973_1890.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02089973_1890.jpg",
+    "class_id": "n02089973",
+    "label": "English foxhound",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n02979186/n02979186_23440.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02979186_23440.jpg",
-    "class_id": "n02979186",
-    "label": "cassette player",
+    "original_path": "data/raw/imagewoof2-160/val/n02115641/n02115641_3862.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02115641_3862.jpg",
+    "class_id": "n02115641",
+    "label": "dingo",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03000684/n03000684_17902.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n03000684_17902.jpg",
-    "class_id": "n03000684",
-    "label": "chain saw",
+    "original_path": "data/raw/imagewoof2-160/val/n02099601/n02099601_7780.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02099601_7780.jpg",
+    "class_id": "n02099601",
+    "label": "golden retriever",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03445777/n03445777_1311.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n03445777_1311.jpg",
-    "class_id": "n03445777",
-    "label": "golf ball",
+    "original_path": "data/raw/imagewoof2-160/val/n02105641/n02105641_1380.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02105641_1380.jpg",
+    "class_id": "n02105641",
+    "label": "Old English sheepdog",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03445777/n03445777_10862.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n03445777_10862.jpg",
-    "class_id": "n03445777",
-    "label": "golf ball",
+    "original_path": "data/raw/imagewoof2-160/val/n02115641/n02115641_421.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02115641_421.jpg",
+    "class_id": "n02115641",
+    "label": "dingo",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03028079/n03028079_15102.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n03028079_15102.jpg",
-    "class_id": "n03028079",
-    "label": "church",
+    "original_path": "data/raw/imagewoof2-160/val/n02099601/n02099601_5642.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02099601_5642.jpg",
+    "class_id": "n02099601",
+    "label": "golden retriever",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n02979186/n02979186_5392.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02979186_5392.jpg",
-    "class_id": "n02979186",
-    "label": "cassette player",
+    "original_path": "data/raw/imagewoof2-160/val/n02088364/n02088364_7731.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02088364_7731.jpg",
+    "class_id": "n02088364",
+    "label": "beagle",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03417042/n03417042_3422.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n03417042_3422.jpg",
-    "class_id": "n03417042",
-    "label": "garbage truck",
+    "original_path": "data/raw/imagewoof2-160/val/n02115641/n02115641_7321.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02115641_7321.jpg",
+    "class_id": "n02115641",
+    "label": "dingo",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n02979186/n02979186_6181.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02979186_6181.jpg",
-    "class_id": "n02979186",
-    "label": "cassette player",
+    "original_path": "data/raw/imagewoof2-160/val/n02099601/n02099601_3611.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02099601_3611.jpg",
+    "class_id": "n02099601",
+    "label": "golden retriever",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n02102040/n02102040_7222.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02102040_7222.jpg",
-    "class_id": "n02102040",
-    "label": "English springer",
+    "original_path": "data/raw/imagewoof2-160/val/n02096294/n02096294_5522.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02096294_5522.jpg",
+    "class_id": "n02096294",
+    "label": "border terrier",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n01440764/n01440764_8012.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n01440764_8012.jpg",
-    "class_id": "n01440764",
-    "label": "tench",
+    "original_path": "data/raw/imagewoof2-160/val/n02099601/n02099601_10841.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02099601_10841.jpg",
+    "class_id": "n02099601",
+    "label": "golden retriever",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03445777/n03445777_10581.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n03445777_10581.jpg",
-    "class_id": "n03445777",
-    "label": "golf ball",
+    "original_path": "data/raw/imagewoof2-160/val/n02111889/n02111889_3731.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02111889_3731.jpg",
+    "class_id": "n02111889",
+    "label": "Samoyed",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03417042/ILSVRC2012_val_00033842.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_ILSVRC2012_val_00033842.jpg",
-    "class_id": "n03417042",
-    "label": "garbage truck",
+    "original_path": "data/raw/imagewoof2-160/val/n02111889/n02111889_6811.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02111889_6811.jpg",
+    "class_id": "n02111889",
+    "label": "Samoyed",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03445777/n03445777_7090.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n03445777_7090.jpg",
-    "class_id": "n03445777",
-    "label": "golf ball",
+    "original_path": "data/raw/imagewoof2-160/val/n02087394/n02087394_7182.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02087394_7182.jpg",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03888257/n03888257_11210.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n03888257_11210.jpg",
-    "class_id": "n03888257",
-    "label": "parachute",
+    "original_path": "data/raw/imagewoof2-160/val/n02115641/n02115641_2370.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02115641_2370.jpg",
+    "class_id": "n02115641",
+    "label": "dingo",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03425413/n03425413_14650.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n03425413_14650.jpg",
-    "class_id": "n03425413",
-    "label": "gas pump",
+    "original_path": "data/raw/imagewoof2-160/val/n02088364/ILSVRC2012_val_00009542.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_ILSVRC2012_val_00009542.jpg",
+    "class_id": "n02088364",
+    "label": "beagle",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n02979186/n02979186_15901.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02979186_15901.jpg",
-    "class_id": "n02979186",
-    "label": "cassette player",
+    "original_path": "data/raw/imagewoof2-160/val/n02088364/n02088364_232.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02088364_232.jpg",
+    "class_id": "n02088364",
+    "label": "beagle",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n02979186/n02979186_22991.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02979186_22991.jpg",
-    "class_id": "n02979186",
-    "label": "cassette player",
+    "original_path": "data/raw/imagewoof2-160/val/n02111889/n02111889_16842.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02111889_16842.jpg",
+    "class_id": "n02111889",
+    "label": "Samoyed",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03417042/n03417042_28261.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n03417042_28261.jpg",
-    "class_id": "n03417042",
-    "label": "garbage truck",
+    "original_path": "data/raw/imagewoof2-160/val/n02115641/n02115641_60.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02115641_60.jpg",
+    "class_id": "n02115641",
+    "label": "dingo",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03445777/n03445777_71.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n03445777_71.jpg",
-    "class_id": "n03445777",
-    "label": "golf ball",
+    "original_path": "data/raw/imagewoof2-160/val/n02115641/n02115641_10511.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02115641_10511.jpg",
+    "class_id": "n02115641",
+    "label": "dingo",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n02979186/n02979186_10912.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02979186_10912.jpg",
-    "class_id": "n02979186",
-    "label": "cassette player",
+    "original_path": "data/raw/imagewoof2-160/val/n02115641/n02115641_13340.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02115641_13340.jpg",
+    "class_id": "n02115641",
+    "label": "dingo",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n02979186/n02979186_15931.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02979186_15931.jpg",
-    "class_id": "n02979186",
-    "label": "cassette player",
+    "original_path": "data/raw/imagewoof2-160/val/n02088364/n02088364_10642.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02088364_10642.jpg",
+    "class_id": "n02088364",
+    "label": "beagle",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03888257/n03888257_57010.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n03888257_57010.jpg",
-    "class_id": "n03888257",
-    "label": "parachute",
+    "original_path": "data/raw/imagewoof2-160/val/n02088364/n02088364_7110.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02088364_7110.jpg",
+    "class_id": "n02088364",
+    "label": "beagle",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03000684/n03000684_11122.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n03000684_11122.jpg",
-    "class_id": "n03000684",
-    "label": "chain saw",
+    "original_path": "data/raw/imagewoof2-160/val/n02096294/n02096294_6450.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02096294_6450.jpg",
+    "class_id": "n02096294",
+    "label": "border terrier",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n01440764/n01440764_7571.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n01440764_7571.jpg",
-    "class_id": "n01440764",
-    "label": "tench",
+    "original_path": "data/raw/imagewoof2-160/val/n02105641/n02105641_11611.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02105641_11611.jpg",
+    "class_id": "n02105641",
+    "label": "Old English sheepdog",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03028079/n03028079_29920.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n03028079_29920.jpg",
-    "class_id": "n03028079",
-    "label": "church",
+    "original_path": "data/raw/imagewoof2-160/val/n02086240/n02086240_11692.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02086240_11692.jpg",
+    "class_id": "n02086240",
+    "label": "Shih-Tzu",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03394916/n03394916_53581.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n03394916_53581.jpg",
-    "class_id": "n03394916",
-    "label": "French horn",
+    "original_path": "data/raw/imagewoof2-160/val/n02086240/n02086240_632.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02086240_632.jpg",
+    "class_id": "n02086240",
+    "label": "Shih-Tzu",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03888257/n03888257_38560.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n03888257_38560.jpg",
-    "class_id": "n03888257",
-    "label": "parachute",
+    "original_path": "data/raw/imagewoof2-160/val/n02099601/ILSVRC2012_val_00006981.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_ILSVRC2012_val_00006981.jpg",
+    "class_id": "n02099601",
+    "label": "golden retriever",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03888257/ILSVRC2012_val_00006561.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_ILSVRC2012_val_00006561.jpg",
-    "class_id": "n03888257",
-    "label": "parachute",
+    "original_path": "data/raw/imagewoof2-160/val/n02093754/n02093754_3571.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02093754_3571.jpg",
+    "class_id": "n02093754",
+    "label": "Australian terrier",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03888257/n03888257_61350.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n03888257_61350.jpg",
-    "class_id": "n03888257",
-    "label": "parachute",
+    "original_path": "data/raw/imagewoof2-160/val/n02096294/n02096294_2580.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02096294_2580.jpg",
+    "class_id": "n02096294",
+    "label": "border terrier",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n02102040/n02102040_4492.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02102040_4492.jpg",
-    "class_id": "n02102040",
-    "label": "English springer",
+    "original_path": "data/raw/imagewoof2-160/val/n02093754/n02093754_172.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02093754_172.jpg",
+    "class_id": "n02093754",
+    "label": "Australian terrier",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n01440764/n01440764_4962.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n01440764_4962.jpg",
-    "class_id": "n01440764",
-    "label": "tench",
+    "original_path": "data/raw/imagewoof2-160/val/n02096294/n02096294_7562.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02096294_7562.jpg",
+    "class_id": "n02096294",
+    "label": "border terrier",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   },
   {
-    "original_path": "data/raw/imagenette2-160/val/n03888257/n03888257_5501.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n03888257_5501.jpg",
-    "class_id": "n03888257",
-    "label": "parachute",
+    "original_path": "data/raw/imagewoof2-160/val/n02093754/n02093754_820.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02093754_820.jpg",
+    "class_id": "n02093754",
+    "label": "Australian terrier",
     "corruption_type": "gaussian_noise",
-    "severity": 3
+    "severity": 4
   }
 ]

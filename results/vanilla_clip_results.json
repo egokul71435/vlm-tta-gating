@@ -1,0 +1,1352 @@
+[
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_n02115641_22250.jpg",
+    "true_label": "dingo",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "dingo",
+    "correct": true,
+    "confidence": 0.9995859265327454,
+    "entropy": 0.004120641853660345
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_n02087394_631.jpg",
+    "true_label": "Rhodesian ridgeback",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "Rhodesian ridgeback",
+    "correct": true,
+    "confidence": 0.9539021849632263,
+    "entropy": 0.23405824601650238
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_n02093754_4081.jpg",
+    "true_label": "Australian terrier",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "border terrier",
+    "correct": false,
+    "confidence": 0.7071468830108643,
+    "entropy": 0.6295936703681946
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_n02087394_9352.jpg",
+    "true_label": "Rhodesian ridgeback",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "Rhodesian ridgeback",
+    "correct": true,
+    "confidence": 0.9809860587120056,
+    "entropy": 0.10978259146213531
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_ILSVRC2012_val_00011342.jpg",
+    "true_label": "English foxhound",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "English foxhound",
+    "correct": true,
+    "confidence": 0.9175726771354675,
+    "entropy": 0.36143434047698975
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_n02089973_2931.jpg",
+    "true_label": "English foxhound",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "English foxhound",
+    "correct": true,
+    "confidence": 0.44494327902793884,
+    "entropy": 1.534812569618225
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_n02087394_5761.jpg",
+    "true_label": "Rhodesian ridgeback",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "Rhodesian ridgeback",
+    "correct": true,
+    "confidence": 0.999313235282898,
+    "entropy": 0.006481858901679516
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_n02088364_8060.jpg",
+    "true_label": "beagle",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "Rhodesian ridgeback",
+    "correct": false,
+    "confidence": 0.909874677658081,
+    "entropy": 0.40435537695884705
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_n02105641_12001.jpg",
+    "true_label": "Old English sheepdog",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "Old English sheepdog",
+    "correct": true,
+    "confidence": 0.9965588450431824,
+    "entropy": 0.026585819199681282
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_n02087394_601.jpg",
+    "true_label": "Rhodesian ridgeback",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "Rhodesian ridgeback",
+    "correct": true,
+    "confidence": 0.9913398623466492,
+    "entropy": 0.057951200753450394
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_n02099601_3062.jpg",
+    "true_label": "golden retriever",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "beagle",
+    "correct": false,
+    "confidence": 0.4097816050052643,
+    "entropy": 1.699358582496643
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_n02087394_4032.jpg",
+    "true_label": "Rhodesian ridgeback",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "Rhodesian ridgeback",
+    "correct": true,
+    "confidence": 0.9951947331428528,
+    "entropy": 0.0361996665596962
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_n02093754_2841.jpg",
+    "true_label": "Australian terrier",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "border terrier",
+    "correct": false,
+    "confidence": 0.9857659339904785,
+    "entropy": 0.08065846562385559
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_n02096294_10711.jpg",
+    "true_label": "border terrier",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "Australian terrier",
+    "correct": false,
+    "confidence": 0.9889057874679565,
+    "entropy": 0.0656556636095047
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_n02087394_10880.jpg",
+    "true_label": "Rhodesian ridgeback",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "Rhodesian ridgeback",
+    "correct": true,
+    "confidence": 0.8155776262283325,
+    "entropy": 0.6654679775238037
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_n02087394_760.jpg",
+    "true_label": "Rhodesian ridgeback",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "Rhodesian ridgeback",
+    "correct": true,
+    "confidence": 0.9218971133232117,
+    "entropy": 0.29594600200653076
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_n02096294_3552.jpg",
+    "true_label": "border terrier",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "Australian terrier",
+    "correct": false,
+    "confidence": 0.47452300786972046,
+    "entropy": 1.1704401969909668
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_n02096294_5561.jpg",
+    "true_label": "border terrier",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "Australian terrier",
+    "correct": false,
+    "confidence": 0.999862790107727,
+    "entropy": 0.0015062055317685008
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_n02086240_7110.jpg",
+    "true_label": "Shih-Tzu",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "Shih-Tzu",
+    "correct": true,
+    "confidence": 0.995256245136261,
+    "entropy": 0.03745623305439949
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_n02087394_8202.jpg",
+    "true_label": "Rhodesian ridgeback",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "Rhodesian ridgeback",
+    "correct": true,
+    "confidence": 0.6626759767532349,
+    "entropy": 0.8120983839035034
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_n02093754_6250.jpg",
+    "true_label": "Australian terrier",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "golden retriever",
+    "correct": false,
+    "confidence": 0.35131651163101196,
+    "entropy": 1.5207582712173462
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_n02087394_10411.jpg",
+    "true_label": "Rhodesian ridgeback",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "Rhodesian ridgeback",
+    "correct": true,
+    "confidence": 0.9985431432723999,
+    "entropy": 0.012388736940920353
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_n02111889_12661.jpg",
+    "true_label": "Samoyed",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "Samoyed",
+    "correct": true,
+    "confidence": 0.8031743168830872,
+    "entropy": 0.5974642038345337
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_n02086240_4451.jpg",
+    "true_label": "Shih-Tzu",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "Shih-Tzu",
+    "correct": true,
+    "confidence": 0.9321374893188477,
+    "entropy": 0.3564470112323761
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_n02096294_2142.jpg",
+    "true_label": "border terrier",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "Australian terrier",
+    "correct": false,
+    "confidence": 0.997778594493866,
+    "entropy": 0.018006104975938797
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_n02096294_7620.jpg",
+    "true_label": "border terrier",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "Australian terrier",
+    "correct": false,
+    "confidence": 0.9689139723777771,
+    "entropy": 0.17492461204528809
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_n02099601_2441.jpg",
+    "true_label": "golden retriever",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "golden retriever",
+    "correct": true,
+    "confidence": 0.9263845682144165,
+    "entropy": 0.3735731542110443
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_ILSVRC2012_val_00004361.jpg",
+    "true_label": "Old English sheepdog",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "Old English sheepdog",
+    "correct": true,
+    "confidence": 0.9984702467918396,
+    "entropy": 0.012292751111090183
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_n02088364_2430.jpg",
+    "true_label": "beagle",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "border terrier",
+    "correct": false,
+    "confidence": 0.29353511333465576,
+    "entropy": 1.6667659282684326
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_n02086240_12760.jpg",
+    "true_label": "Shih-Tzu",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "Shih-Tzu",
+    "correct": true,
+    "confidence": 0.9969358444213867,
+    "entropy": 0.025365209206938744
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_n02105641_6182.jpg",
+    "true_label": "Old English sheepdog",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "Old English sheepdog",
+    "correct": true,
+    "confidence": 0.9494035840034485,
+    "entropy": 0.23373422026634216
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_n02115641_8092.jpg",
+    "true_label": "dingo",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "dingo",
+    "correct": true,
+    "confidence": 0.895893394947052,
+    "entropy": 0.43372589349746704
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_n02115641_52552.jpg",
+    "true_label": "dingo",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "dingo",
+    "correct": true,
+    "confidence": 0.9645367860794067,
+    "entropy": 0.18085117638111115
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_n02093754_90.jpg",
+    "true_label": "Australian terrier",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "border terrier",
+    "correct": false,
+    "confidence": 0.9145684838294983,
+    "entropy": 0.3579925000667572
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_n02096294_5781.jpg",
+    "true_label": "border terrier",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "Australian terrier",
+    "correct": false,
+    "confidence": 0.9997203946113586,
+    "entropy": 0.002604680135846138
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_n02093754_210.jpg",
+    "true_label": "Australian terrier",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "English foxhound",
+    "correct": false,
+    "confidence": 0.6700490713119507,
+    "entropy": 1.054100751876831
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_n02093754_2281.jpg",
+    "true_label": "Australian terrier",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "border terrier",
+    "correct": false,
+    "confidence": 0.9823287129402161,
+    "entropy": 0.10460410267114639
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_n02096294_3041.jpg",
+    "true_label": "border terrier",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "Australian terrier",
+    "correct": false,
+    "confidence": 0.9762552380561829,
+    "entropy": 0.13385723531246185
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_n02099601_2521.jpg",
+    "true_label": "golden retriever",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "golden retriever",
+    "correct": true,
+    "confidence": 0.9903435707092285,
+    "entropy": 0.0688842236995697
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_n02105641_4631.jpg",
+    "true_label": "Old English sheepdog",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "Old English sheepdog",
+    "correct": true,
+    "confidence": 0.997161865234375,
+    "entropy": 0.02125944383442402
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_n02096294_5051.jpg",
+    "true_label": "border terrier",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "Australian terrier",
+    "correct": false,
+    "confidence": 0.9987497329711914,
+    "entropy": 0.010181201621890068
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_n02087394_7962.jpg",
+    "true_label": "Rhodesian ridgeback",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "Rhodesian ridgeback",
+    "correct": true,
+    "confidence": 0.9946683049201965,
+    "entropy": 0.03862674534320831
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_n02086240_6032.jpg",
+    "true_label": "Shih-Tzu",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "Shih-Tzu",
+    "correct": true,
+    "confidence": 0.9760184288024902,
+    "entropy": 0.1250878870487213
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_n02111889_6671.jpg",
+    "true_label": "Samoyed",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "Samoyed",
+    "correct": true,
+    "confidence": 0.9972394704818726,
+    "entropy": 0.019717516377568245
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_n02093754_4120.jpg",
+    "true_label": "Australian terrier",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "border terrier",
+    "correct": false,
+    "confidence": 0.839997410774231,
+    "entropy": 0.4690532088279724
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_n02087394_5890.jpg",
+    "true_label": "Rhodesian ridgeback",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "Rhodesian ridgeback",
+    "correct": true,
+    "confidence": 0.8298758864402771,
+    "entropy": 0.5330798625946045
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_n02087394_7612.jpg",
+    "true_label": "Rhodesian ridgeback",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "Australian terrier",
+    "correct": false,
+    "confidence": 0.8361483216285706,
+    "entropy": 0.7041641473770142
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_n02111889_3760.jpg",
+    "true_label": "Samoyed",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "Samoyed",
+    "correct": true,
+    "confidence": 0.9912036657333374,
+    "entropy": 0.05900880694389343
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_n02089973_362.jpg",
+    "true_label": "English foxhound",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "English foxhound",
+    "correct": true,
+    "confidence": 0.9852792024612427,
+    "entropy": 0.07705407589673996
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_n02105641_8890.jpg",
+    "true_label": "Old English sheepdog",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "Old English sheepdog",
+    "correct": true,
+    "confidence": 0.9923561811447144,
+    "entropy": 0.0472879484295845
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_n02087394_2341.jpg",
+    "true_label": "Rhodesian ridgeback",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "Rhodesian ridgeback",
+    "correct": true,
+    "confidence": 0.8773109912872314,
+    "entropy": 0.5009222030639648
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_n02093754_5061.jpg",
+    "true_label": "Australian terrier",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "border terrier",
+    "correct": false,
+    "confidence": 0.9897375702857971,
+    "entropy": 0.0637873113155365
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_n02111889_16541.jpg",
+    "true_label": "Samoyed",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "Samoyed",
+    "correct": true,
+    "confidence": 0.9919300675392151,
+    "entropy": 0.05290747433900833
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_n02088364_2502.jpg",
+    "true_label": "beagle",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "English foxhound",
+    "correct": false,
+    "confidence": 0.8429155349731445,
+    "entropy": 0.5135424137115479
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_n02089973_1351.jpg",
+    "true_label": "English foxhound",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "English foxhound",
+    "correct": true,
+    "confidence": 0.9780887961387634,
+    "entropy": 0.13591104745864868
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_n02115641_38781.jpg",
+    "true_label": "dingo",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "dingo",
+    "correct": true,
+    "confidence": 0.8614186644554138,
+    "entropy": 0.5612618923187256
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_n02111889_3961.jpg",
+    "true_label": "Samoyed",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "Samoyed",
+    "correct": true,
+    "confidence": 0.7820250391960144,
+    "entropy": 0.6209115386009216
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_n02087394_12002.jpg",
+    "true_label": "Rhodesian ridgeback",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "Rhodesian ridgeback",
+    "correct": true,
+    "confidence": 0.9860995411872864,
+    "entropy": 0.07883350551128387
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_n02099601_7101.jpg",
+    "true_label": "golden retriever",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "golden retriever",
+    "correct": true,
+    "confidence": 0.9929448962211609,
+    "entropy": 0.055117323994636536
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_n02088364_522.jpg",
+    "true_label": "beagle",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "dingo",
+    "correct": false,
+    "confidence": 0.5248066186904907,
+    "entropy": 1.5208871364593506
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_n02089973_9560.jpg",
+    "true_label": "English foxhound",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "beagle",
+    "correct": false,
+    "confidence": 0.7369189262390137,
+    "entropy": 0.5880492925643921
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_n02111889_3792.jpg",
+    "true_label": "Samoyed",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "Samoyed",
+    "correct": true,
+    "confidence": 0.9551588296890259,
+    "entropy": 0.21587929129600525
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_n02111889_13580.jpg",
+    "true_label": "Samoyed",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "Samoyed",
+    "correct": true,
+    "confidence": 0.9860483407974243,
+    "entropy": 0.0888957604765892
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_n02088364_871.jpg",
+    "true_label": "beagle",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "English foxhound",
+    "correct": false,
+    "confidence": 0.5420909523963928,
+    "entropy": 0.6978230476379395
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_n02111889_15060.jpg",
+    "true_label": "Samoyed",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "Samoyed",
+    "correct": true,
+    "confidence": 0.8883811235427856,
+    "entropy": 0.49903759360313416
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_n02086240_10272.jpg",
+    "true_label": "Shih-Tzu",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "Shih-Tzu",
+    "correct": true,
+    "confidence": 0.9473437666893005,
+    "entropy": 0.23752330243587494
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_n02086240_8141.jpg",
+    "true_label": "Shih-Tzu",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "Shih-Tzu",
+    "correct": true,
+    "confidence": 0.8404240012168884,
+    "entropy": 0.5244347453117371
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_n02105641_2822.jpg",
+    "true_label": "Old English sheepdog",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "Old English sheepdog",
+    "correct": true,
+    "confidence": 0.9969577789306641,
+    "entropy": 0.02432280033826828
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_n02093754_6630.jpg",
+    "true_label": "Australian terrier",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "border terrier",
+    "correct": false,
+    "confidence": 0.9833758473396301,
+    "entropy": 0.10895408689975739
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_n02086240_751.jpg",
+    "true_label": "Shih-Tzu",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "Shih-Tzu",
+    "correct": true,
+    "confidence": 0.9713799357414246,
+    "entropy": 0.1679944097995758
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_n02086240_7442.jpg",
+    "true_label": "Shih-Tzu",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "Shih-Tzu",
+    "correct": true,
+    "confidence": 0.9977868795394897,
+    "entropy": 0.016810769215226173
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_n02096294_1880.jpg",
+    "true_label": "border terrier",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "Australian terrier",
+    "correct": false,
+    "confidence": 0.9625517725944519,
+    "entropy": 0.17204686999320984
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_n02086240_5362.jpg",
+    "true_label": "Shih-Tzu",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "Old English sheepdog",
+    "correct": false,
+    "confidence": 0.4802345335483551,
+    "entropy": 1.454238772392273
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_n02096294_7641.jpg",
+    "true_label": "border terrier",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "beagle",
+    "correct": false,
+    "confidence": 0.6857160925865173,
+    "entropy": 1.0275708436965942
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_blur_n02096294_11902.jpg",
+    "true_label": "border terrier",
+    "corruption_type": "gaussian_blur",
+    "predicted_label": "Shih-Tzu",
+    "correct": false,
+    "confidence": 0.901459813117981,
+    "entropy": 0.39336180686950684
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_n02089973_1352.jpg",
+    "true_label": "English foxhound",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "Rhodesian ridgeback",
+    "correct": false,
+    "confidence": 0.3325955867767334,
+    "entropy": 1.7495383024215698
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_n02089973_780.jpg",
+    "true_label": "English foxhound",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "English foxhound",
+    "correct": true,
+    "confidence": 0.9597835540771484,
+    "entropy": 0.19623765349388123
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_n02105641_15011.jpg",
+    "true_label": "Old English sheepdog",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "Samoyed",
+    "correct": false,
+    "confidence": 0.805592954158783,
+    "entropy": 0.8076620101928711
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_n02096294_2472.jpg",
+    "true_label": "border terrier",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "Australian terrier",
+    "correct": false,
+    "confidence": 0.512197732925415,
+    "entropy": 1.332086205482483
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_n02093754_7931.jpg",
+    "true_label": "Australian terrier",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "border terrier",
+    "correct": false,
+    "confidence": 0.9690642952919006,
+    "entropy": 0.16954876482486725
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_n02115641_7082.jpg",
+    "true_label": "dingo",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "dingo",
+    "correct": true,
+    "confidence": 0.3405166566371918,
+    "entropy": 1.9735090732574463
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_n02087394_9061.jpg",
+    "true_label": "Rhodesian ridgeback",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "Rhodesian ridgeback",
+    "correct": true,
+    "confidence": 0.44731006026268005,
+    "entropy": 1.486853837966919
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_n02087394_12.jpg",
+    "true_label": "Rhodesian ridgeback",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "Rhodesian ridgeback",
+    "correct": true,
+    "confidence": 0.9880843758583069,
+    "entropy": 0.08216285705566406
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_n02115641_12541.jpg",
+    "true_label": "dingo",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "dingo",
+    "correct": true,
+    "confidence": 0.2868472933769226,
+    "entropy": 1.6791858673095703
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_n02089973_2302.jpg",
+    "true_label": "English foxhound",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "English foxhound",
+    "correct": true,
+    "confidence": 0.8703173995018005,
+    "entropy": 0.5479256510734558
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_n02111889_16732.jpg",
+    "true_label": "Samoyed",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "dingo",
+    "correct": false,
+    "confidence": 0.2635328471660614,
+    "entropy": 1.992287278175354
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_n02096294_2232.jpg",
+    "true_label": "border terrier",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "Australian terrier",
+    "correct": false,
+    "confidence": 0.3932940363883972,
+    "entropy": 1.722879409790039
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_n02115641_12171.jpg",
+    "true_label": "dingo",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "dingo",
+    "correct": true,
+    "confidence": 0.9895589351654053,
+    "entropy": 0.07095470279455185
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_n02093754_3120.jpg",
+    "true_label": "Australian terrier",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "border terrier",
+    "correct": false,
+    "confidence": 0.8315384984016418,
+    "entropy": 0.696887195110321
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_n02086240_4920.jpg",
+    "true_label": "Shih-Tzu",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "Shih-Tzu",
+    "correct": true,
+    "confidence": 0.5708157420158386,
+    "entropy": 1.4340225458145142
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_n02088364_1022.jpg",
+    "true_label": "beagle",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "beagle",
+    "correct": true,
+    "confidence": 0.5471637845039368,
+    "entropy": 0.7138093113899231
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_n02088364_14702.jpg",
+    "true_label": "beagle",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "Australian terrier",
+    "correct": false,
+    "confidence": 0.4122099280357361,
+    "entropy": 1.33695650100708
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_n02111889_4202.jpg",
+    "true_label": "Samoyed",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "Samoyed",
+    "correct": true,
+    "confidence": 0.7520287036895752,
+    "entropy": 0.5712519288063049
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_n02111889_13491.jpg",
+    "true_label": "Samoyed",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "Samoyed",
+    "correct": true,
+    "confidence": 0.797807514667511,
+    "entropy": 0.8101868033409119
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_n02089973_4121.jpg",
+    "true_label": "English foxhound",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "English foxhound",
+    "correct": true,
+    "confidence": 0.8256332278251648,
+    "entropy": 0.6144859790802002
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_n02089973_2131.jpg",
+    "true_label": "English foxhound",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "Australian terrier",
+    "correct": false,
+    "confidence": 0.33877915143966675,
+    "entropy": 1.3422701358795166
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_n02105641_5572.jpg",
+    "true_label": "Old English sheepdog",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "Old English sheepdog",
+    "correct": true,
+    "confidence": 0.8070077300071716,
+    "entropy": 0.8182721138000488
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_n02087394_26422.jpg",
+    "true_label": "Rhodesian ridgeback",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "Rhodesian ridgeback",
+    "correct": true,
+    "confidence": 0.8630858659744263,
+    "entropy": 0.6066173911094666
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_n02099601_28691.jpg",
+    "true_label": "golden retriever",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "Rhodesian ridgeback",
+    "correct": false,
+    "confidence": 0.27959099411964417,
+    "entropy": 1.7670879364013672
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_n02096294_9982.jpg",
+    "true_label": "border terrier",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "Rhodesian ridgeback",
+    "correct": false,
+    "confidence": 0.3859945237636566,
+    "entropy": 1.8053686618804932
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_n02111889_14572.jpg",
+    "true_label": "Samoyed",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "Samoyed",
+    "correct": true,
+    "confidence": 0.969642698764801,
+    "entropy": 0.17632220685482025
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_n02115641_37280.jpg",
+    "true_label": "dingo",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "dingo",
+    "correct": true,
+    "confidence": 0.9446144700050354,
+    "entropy": 0.27120742201805115
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_n02093754_3770.jpg",
+    "true_label": "Australian terrier",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "border terrier",
+    "correct": false,
+    "confidence": 0.585379421710968,
+    "entropy": 0.9920870661735535
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_n02115641_6760.jpg",
+    "true_label": "dingo",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "dingo",
+    "correct": true,
+    "confidence": 0.7982898950576782,
+    "entropy": 0.8008924126625061
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_n02093754_7241.jpg",
+    "true_label": "Australian terrier",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "border terrier",
+    "correct": false,
+    "confidence": 0.9299606680870056,
+    "entropy": 0.33922091126441956
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_n02096294_5602.jpg",
+    "true_label": "border terrier",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "Australian terrier",
+    "correct": false,
+    "confidence": 0.753765344619751,
+    "entropy": 0.9889554381370544
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_n02115641_8532.jpg",
+    "true_label": "dingo",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "dingo",
+    "correct": true,
+    "confidence": 0.9933130145072937,
+    "entropy": 0.048035845160484314
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_n02093754_7950.jpg",
+    "true_label": "Australian terrier",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "Australian terrier",
+    "correct": true,
+    "confidence": 0.662520706653595,
+    "entropy": 1.1367520093917847
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_n02111889_4460.jpg",
+    "true_label": "Samoyed",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "Samoyed",
+    "correct": true,
+    "confidence": 0.5354464650154114,
+    "entropy": 1.383873701095581
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_n02111889_6111.jpg",
+    "true_label": "Samoyed",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "border terrier",
+    "correct": false,
+    "confidence": 0.19157148897647858,
+    "entropy": 2.1609318256378174
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_n02093754_5360.jpg",
+    "true_label": "Australian terrier",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "border terrier",
+    "correct": false,
+    "confidence": 0.6951332092285156,
+    "entropy": 0.8703349828720093
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_n02099601_1041.jpg",
+    "true_label": "golden retriever",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "Rhodesian ridgeback",
+    "correct": false,
+    "confidence": 0.45467931032180786,
+    "entropy": 1.4822043180465698
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_n02086240_7261.jpg",
+    "true_label": "Shih-Tzu",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "Shih-Tzu",
+    "correct": true,
+    "confidence": 0.5902284383773804,
+    "entropy": 1.3623709678649902
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_n02105641_10800.jpg",
+    "true_label": "Old English sheepdog",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "golden retriever",
+    "correct": false,
+    "confidence": 0.26633667945861816,
+    "entropy": 1.8255648612976074
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_n02099601_3360.jpg",
+    "true_label": "golden retriever",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "Samoyed",
+    "correct": false,
+    "confidence": 0.37652844190597534,
+    "entropy": 1.546420693397522
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_n02093754_2150.jpg",
+    "true_label": "Australian terrier",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "border terrier",
+    "correct": false,
+    "confidence": 0.4195300042629242,
+    "entropy": 1.1520395278930664
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_ILSVRC2012_val_00030770.jpg",
+    "true_label": "Australian terrier",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "border terrier",
+    "correct": false,
+    "confidence": 0.7495046257972717,
+    "entropy": 0.9977655410766602
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_n02089973_1890.jpg",
+    "true_label": "English foxhound",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "English foxhound",
+    "correct": true,
+    "confidence": 0.8979786038398743,
+    "entropy": 0.44134217500686646
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_n02115641_3862.jpg",
+    "true_label": "dingo",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "dingo",
+    "correct": true,
+    "confidence": 0.9873926043510437,
+    "entropy": 0.08656693249940872
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_n02099601_7780.jpg",
+    "true_label": "golden retriever",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "golden retriever",
+    "correct": true,
+    "confidence": 0.7092751860618591,
+    "entropy": 1.0469945669174194
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_n02105641_1380.jpg",
+    "true_label": "Old English sheepdog",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "Old English sheepdog",
+    "correct": true,
+    "confidence": 0.927888035774231,
+    "entropy": 0.3092663586139679
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_n02115641_421.jpg",
+    "true_label": "dingo",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "dingo",
+    "correct": true,
+    "confidence": 0.9730861783027649,
+    "entropy": 0.16648215055465698
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_n02099601_5642.jpg",
+    "true_label": "golden retriever",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "English foxhound",
+    "correct": false,
+    "confidence": 0.6779193878173828,
+    "entropy": 1.096091628074646
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_n02088364_7731.jpg",
+    "true_label": "beagle",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "English foxhound",
+    "correct": false,
+    "confidence": 0.9071089625358582,
+    "entropy": 0.33443206548690796
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_n02115641_7321.jpg",
+    "true_label": "dingo",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "dingo",
+    "correct": true,
+    "confidence": 0.9501791596412659,
+    "entropy": 0.24979063868522644
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_n02099601_3611.jpg",
+    "true_label": "golden retriever",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "Samoyed",
+    "correct": false,
+    "confidence": 0.1996399313211441,
+    "entropy": 2.1943368911743164
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_n02096294_5522.jpg",
+    "true_label": "border terrier",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "border terrier",
+    "correct": true,
+    "confidence": 0.6896573901176453,
+    "entropy": 0.8322163224220276
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_n02099601_10841.jpg",
+    "true_label": "golden retriever",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "golden retriever",
+    "correct": true,
+    "confidence": 0.6669021844863892,
+    "entropy": 1.305992841720581
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_n02111889_3731.jpg",
+    "true_label": "Samoyed",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "Samoyed",
+    "correct": true,
+    "confidence": 0.49591943621635437,
+    "entropy": 0.8862984776496887
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_n02111889_6811.jpg",
+    "true_label": "Samoyed",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "Samoyed",
+    "correct": true,
+    "confidence": 0.5979288220405579,
+    "entropy": 1.1560821533203125
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_n02087394_7182.jpg",
+    "true_label": "Rhodesian ridgeback",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "golden retriever",
+    "correct": false,
+    "confidence": 0.31211116909980774,
+    "entropy": 1.6773957014083862
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_n02115641_2370.jpg",
+    "true_label": "dingo",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "Australian terrier",
+    "correct": false,
+    "confidence": 0.5691555738449097,
+    "entropy": 1.0672036409378052
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_ILSVRC2012_val_00009542.jpg",
+    "true_label": "beagle",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "English foxhound",
+    "correct": false,
+    "confidence": 0.513939619064331,
+    "entropy": 0.8724372386932373
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_n02088364_232.jpg",
+    "true_label": "beagle",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "beagle",
+    "correct": true,
+    "confidence": 0.43835121393203735,
+    "entropy": 1.3834320306777954
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_n02111889_16842.jpg",
+    "true_label": "Samoyed",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "Samoyed",
+    "correct": true,
+    "confidence": 0.9659988284111023,
+    "entropy": 0.1851661503314972
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_n02115641_60.jpg",
+    "true_label": "dingo",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "dingo",
+    "correct": true,
+    "confidence": 0.8091189861297607,
+    "entropy": 0.771876335144043
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_n02115641_10511.jpg",
+    "true_label": "dingo",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "dingo",
+    "correct": true,
+    "confidence": 0.9502820372581482,
+    "entropy": 0.22043246030807495
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_n02115641_13340.jpg",
+    "true_label": "dingo",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "dingo",
+    "correct": true,
+    "confidence": 0.7506718039512634,
+    "entropy": 1.0299242734909058
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_n02088364_10642.jpg",
+    "true_label": "beagle",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "border terrier",
+    "correct": false,
+    "confidence": 0.1646622270345688,
+    "entropy": 2.170992612838745
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_n02088364_7110.jpg",
+    "true_label": "beagle",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "English foxhound",
+    "correct": false,
+    "confidence": 0.95240318775177,
+    "entropy": 0.2100888192653656
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_n02096294_6450.jpg",
+    "true_label": "border terrier",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "Australian terrier",
+    "correct": false,
+    "confidence": 0.9300989508628845,
+    "entropy": 0.30527451634407043
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_n02105641_11611.jpg",
+    "true_label": "Old English sheepdog",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "English foxhound",
+    "correct": false,
+    "confidence": 0.3320241868495941,
+    "entropy": 1.682930588722229
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_n02086240_11692.jpg",
+    "true_label": "Shih-Tzu",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "Shih-Tzu",
+    "correct": true,
+    "confidence": 0.9606394171714783,
+    "entropy": 0.2287495732307434
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_n02086240_632.jpg",
+    "true_label": "Shih-Tzu",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "Shih-Tzu",
+    "correct": true,
+    "confidence": 0.2929961383342743,
+    "entropy": 1.8262768983840942
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_ILSVRC2012_val_00006981.jpg",
+    "true_label": "golden retriever",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "golden retriever",
+    "correct": true,
+    "confidence": 0.9132619500160217,
+    "entropy": 0.42217591404914856
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_n02093754_3571.jpg",
+    "true_label": "Australian terrier",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "border terrier",
+    "correct": false,
+    "confidence": 0.9136680960655212,
+    "entropy": 0.3986649811267853
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_n02096294_2580.jpg",
+    "true_label": "border terrier",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "border terrier",
+    "correct": true,
+    "confidence": 0.6343271732330322,
+    "entropy": 1.049479603767395
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_n02093754_172.jpg",
+    "true_label": "Australian terrier",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "border terrier",
+    "correct": false,
+    "confidence": 0.8012703061103821,
+    "entropy": 0.728534996509552
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_n02096294_7562.jpg",
+    "true_label": "border terrier",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "Australian terrier",
+    "correct": false,
+    "confidence": 0.4037904739379883,
+    "entropy": 1.8179361820220947
+  },
+  {
+    "corrupted_path": "data/corrupted/gaussian_noise_n02093754_820.jpg",
+    "true_label": "Australian terrier",
+    "corruption_type": "gaussian_noise",
+    "predicted_label": "Shih-Tzu",
+    "correct": false,
+    "confidence": 0.24318301677703857,
+    "entropy": 2.0351617336273193
+  }
+]

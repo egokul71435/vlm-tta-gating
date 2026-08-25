@@ -1,752 +1,752 @@
 [
   {
-    "path": "data/raw/imagenette2-160/val/n03445777/n03445777_7670.JPEG",
-    "class_id": "n03445777",
-    "label": "golf ball"
+    "path": "data/raw/imagewoof2-160/val/n02115641/n02115641_22250.JPEG",
+    "class_id": "n02115641",
+    "label": "dingo"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03000684/n03000684_17431.JPEG",
-    "class_id": "n03000684",
-    "label": "chain saw"
+    "path": "data/raw/imagewoof2-160/val/n02087394/n02087394_631.JPEG",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03028079/n03028079_26571.JPEG",
-    "class_id": "n03028079",
-    "label": "church"
+    "path": "data/raw/imagewoof2-160/val/n02093754/n02093754_4081.JPEG",
+    "class_id": "n02093754",
+    "label": "Australian terrier"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03445777/n03445777_9292.JPEG",
-    "class_id": "n03445777",
-    "label": "golf ball"
+    "path": "data/raw/imagewoof2-160/val/n02087394/n02087394_9352.JPEG",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03394916/n03394916_38360.JPEG",
-    "class_id": "n03394916",
-    "label": "French horn"
+    "path": "data/raw/imagewoof2-160/val/n02089973/ILSVRC2012_val_00011342.JPEG",
+    "class_id": "n02089973",
+    "label": "English foxhound"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03394916/n03394916_68551.JPEG",
-    "class_id": "n03394916",
-    "label": "French horn"
+    "path": "data/raw/imagewoof2-160/val/n02089973/n02089973_2931.JPEG",
+    "class_id": "n02089973",
+    "label": "English foxhound"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03888257/n03888257_29191.JPEG",
-    "class_id": "n03888257",
-    "label": "parachute"
+    "path": "data/raw/imagewoof2-160/val/n02087394/n02087394_5761.JPEG",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03445777/n03445777_4211.JPEG",
-    "class_id": "n03445777",
-    "label": "golf ball"
+    "path": "data/raw/imagewoof2-160/val/n02088364/n02088364_8060.JPEG",
+    "class_id": "n02088364",
+    "label": "beagle"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03417042/n03417042_5631.JPEG",
-    "class_id": "n03417042",
-    "label": "garbage truck"
+    "path": "data/raw/imagewoof2-160/val/n02105641/n02105641_12001.JPEG",
+    "class_id": "n02105641",
+    "label": "Old English sheepdog"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03445777/n03445777_16192.JPEG",
-    "class_id": "n03445777",
-    "label": "golf ball"
+    "path": "data/raw/imagewoof2-160/val/n02087394/n02087394_601.JPEG",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n02979186/n02979186_12962.JPEG",
-    "class_id": "n02979186",
-    "label": "cassette player"
+    "path": "data/raw/imagewoof2-160/val/n02099601/n02099601_3062.JPEG",
+    "class_id": "n02099601",
+    "label": "golden retriever"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03888257/n03888257_7921.JPEG",
-    "class_id": "n03888257",
-    "label": "parachute"
+    "path": "data/raw/imagewoof2-160/val/n02087394/n02087394_4032.JPEG",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03028079/n03028079_17831.JPEG",
-    "class_id": "n03028079",
-    "label": "church"
+    "path": "data/raw/imagewoof2-160/val/n02093754/n02093754_2841.JPEG",
+    "class_id": "n02093754",
+    "label": "Australian terrier"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03417042/n03417042_3280.JPEG",
-    "class_id": "n03417042",
-    "label": "garbage truck"
+    "path": "data/raw/imagewoof2-160/val/n02096294/n02096294_10711.JPEG",
+    "class_id": "n02096294",
+    "label": "border terrier"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n02102040/n02102040_620.JPEG",
-    "class_id": "n02102040",
-    "label": "English springer"
+    "path": "data/raw/imagewoof2-160/val/n02087394/n02087394_10880.JPEG",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03028079/n03028079_3600.JPEG",
-    "class_id": "n03028079",
-    "label": "church"
+    "path": "data/raw/imagewoof2-160/val/n02087394/n02087394_760.JPEG",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03417042/n03417042_4752.JPEG",
-    "class_id": "n03417042",
-    "label": "garbage truck"
+    "path": "data/raw/imagewoof2-160/val/n02096294/n02096294_3552.JPEG",
+    "class_id": "n02096294",
+    "label": "border terrier"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03028079/n03028079_15081.JPEG",
-    "class_id": "n03028079",
-    "label": "church"
+    "path": "data/raw/imagewoof2-160/val/n02096294/n02096294_5561.JPEG",
+    "class_id": "n02096294",
+    "label": "border terrier"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03394916/n03394916_23071.JPEG",
-    "class_id": "n03394916",
-    "label": "French horn"
+    "path": "data/raw/imagewoof2-160/val/n02086240/n02086240_7110.JPEG",
+    "class_id": "n02086240",
+    "label": "Shih-Tzu"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n02102040/n02102040_6400.JPEG",
-    "class_id": "n02102040",
-    "label": "English springer"
+    "path": "data/raw/imagewoof2-160/val/n02087394/n02087394_8202.JPEG",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n02102040/n02102040_1022.JPEG",
-    "class_id": "n02102040",
-    "label": "English springer"
+    "path": "data/raw/imagewoof2-160/val/n02093754/n02093754_6250.JPEG",
+    "class_id": "n02093754",
+    "label": "Australian terrier"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n02102040/n02102040_8150.JPEG",
-    "class_id": "n02102040",
-    "label": "English springer"
+    "path": "data/raw/imagewoof2-160/val/n02087394/n02087394_10411.JPEG",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03445777/n03445777_7011.JPEG",
-    "class_id": "n03445777",
-    "label": "golf ball"
+    "path": "data/raw/imagewoof2-160/val/n02111889/n02111889_12661.JPEG",
+    "class_id": "n02111889",
+    "label": "Samoyed"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n02102040/n02102040_4742.JPEG",
-    "class_id": "n02102040",
-    "label": "English springer"
+    "path": "data/raw/imagewoof2-160/val/n02086240/n02086240_4451.JPEG",
+    "class_id": "n02086240",
+    "label": "Shih-Tzu"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n01440764/n01440764_8992.JPEG",
-    "class_id": "n01440764",
-    "label": "tench"
+    "path": "data/raw/imagewoof2-160/val/n02096294/n02096294_2142.JPEG",
+    "class_id": "n02096294",
+    "label": "border terrier"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03888257/n03888257_22972.JPEG",
-    "class_id": "n03888257",
-    "label": "parachute"
+    "path": "data/raw/imagewoof2-160/val/n02096294/n02096294_7620.JPEG",
+    "class_id": "n02096294",
+    "label": "border terrier"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03417042/n03417042_14861.JPEG",
-    "class_id": "n03417042",
-    "label": "garbage truck"
+    "path": "data/raw/imagewoof2-160/val/n02099601/n02099601_2441.JPEG",
+    "class_id": "n02099601",
+    "label": "golden retriever"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03445777/n03445777_551.JPEG",
-    "class_id": "n03445777",
-    "label": "golf ball"
+    "path": "data/raw/imagewoof2-160/val/n02105641/ILSVRC2012_val_00004361.JPEG",
+    "class_id": "n02105641",
+    "label": "Old English sheepdog"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03888257/n03888257_30712.JPEG",
-    "class_id": "n03888257",
-    "label": "parachute"
+    "path": "data/raw/imagewoof2-160/val/n02088364/n02088364_2430.JPEG",
+    "class_id": "n02088364",
+    "label": "beagle"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03394916/n03394916_47110.JPEG",
-    "class_id": "n03394916",
-    "label": "French horn"
+    "path": "data/raw/imagewoof2-160/val/n02086240/n02086240_12760.JPEG",
+    "class_id": "n02086240",
+    "label": "Shih-Tzu"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n01440764/n01440764_10320.JPEG",
-    "class_id": "n01440764",
-    "label": "tench"
+    "path": "data/raw/imagewoof2-160/val/n02105641/n02105641_6182.JPEG",
+    "class_id": "n02105641",
+    "label": "Old English sheepdog"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03888257/n03888257_32350.JPEG",
-    "class_id": "n03888257",
-    "label": "parachute"
+    "path": "data/raw/imagewoof2-160/val/n02115641/n02115641_8092.JPEG",
+    "class_id": "n02115641",
+    "label": "dingo"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03000684/n03000684_26901.JPEG",
-    "class_id": "n03000684",
-    "label": "chain saw"
+    "path": "data/raw/imagewoof2-160/val/n02115641/n02115641_52552.JPEG",
+    "class_id": "n02115641",
+    "label": "dingo"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03445777/ILSVRC2012_val_00042350.JPEG",
-    "class_id": "n03445777",
-    "label": "golf ball"
+    "path": "data/raw/imagewoof2-160/val/n02093754/n02093754_90.JPEG",
+    "class_id": "n02093754",
+    "label": "Australian terrier"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n01440764/n01440764_13860.JPEG",
-    "class_id": "n01440764",
-    "label": "tench"
+    "path": "data/raw/imagewoof2-160/val/n02096294/n02096294_5781.JPEG",
+    "class_id": "n02096294",
+    "label": "border terrier"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03425413/n03425413_21350.JPEG",
-    "class_id": "n03425413",
-    "label": "gas pump"
+    "path": "data/raw/imagewoof2-160/val/n02093754/n02093754_210.JPEG",
+    "class_id": "n02093754",
+    "label": "Australian terrier"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03425413/ILSVRC2012_val_00009821.JPEG",
-    "class_id": "n03425413",
-    "label": "gas pump"
+    "path": "data/raw/imagewoof2-160/val/n02093754/n02093754_2281.JPEG",
+    "class_id": "n02093754",
+    "label": "Australian terrier"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03000684/n03000684_5692.JPEG",
-    "class_id": "n03000684",
-    "label": "chain saw"
+    "path": "data/raw/imagewoof2-160/val/n02096294/n02096294_3041.JPEG",
+    "class_id": "n02096294",
+    "label": "border terrier"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n02979186/n02979186_13841.JPEG",
-    "class_id": "n02979186",
-    "label": "cassette player"
+    "path": "data/raw/imagewoof2-160/val/n02099601/n02099601_2521.JPEG",
+    "class_id": "n02099601",
+    "label": "golden retriever"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03417042/ILSVRC2012_val_00028190.JPEG",
-    "class_id": "n03417042",
-    "label": "garbage truck"
+    "path": "data/raw/imagewoof2-160/val/n02105641/n02105641_4631.JPEG",
+    "class_id": "n02105641",
+    "label": "Old English sheepdog"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03000684/n03000684_19591.JPEG",
-    "class_id": "n03000684",
-    "label": "chain saw"
+    "path": "data/raw/imagewoof2-160/val/n02096294/n02096294_5051.JPEG",
+    "class_id": "n02096294",
+    "label": "border terrier"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03888257/n03888257_19702.JPEG",
-    "class_id": "n03888257",
-    "label": "parachute"
+    "path": "data/raw/imagewoof2-160/val/n02087394/n02087394_7962.JPEG",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03394916/n03394916_51752.JPEG",
-    "class_id": "n03394916",
-    "label": "French horn"
+    "path": "data/raw/imagewoof2-160/val/n02086240/n02086240_6032.JPEG",
+    "class_id": "n02086240",
+    "label": "Shih-Tzu"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03000684/n03000684_8890.JPEG",
-    "class_id": "n03000684",
-    "label": "chain saw"
+    "path": "data/raw/imagewoof2-160/val/n02111889/n02111889_6671.JPEG",
+    "class_id": "n02111889",
+    "label": "Samoyed"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03000684/n03000684_10992.JPEG",
-    "class_id": "n03000684",
-    "label": "chain saw"
+    "path": "data/raw/imagewoof2-160/val/n02093754/n02093754_4120.JPEG",
+    "class_id": "n02093754",
+    "label": "Australian terrier"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n01440764/n01440764_2221.JPEG",
-    "class_id": "n01440764",
-    "label": "tench"
+    "path": "data/raw/imagewoof2-160/val/n02087394/n02087394_5890.JPEG",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03445777/n03445777_13161.JPEG",
-    "class_id": "n03445777",
-    "label": "golf ball"
+    "path": "data/raw/imagewoof2-160/val/n02087394/n02087394_7612.JPEG",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03417042/n03417042_19862.JPEG",
-    "class_id": "n03417042",
-    "label": "garbage truck"
+    "path": "data/raw/imagewoof2-160/val/n02111889/n02111889_3760.JPEG",
+    "class_id": "n02111889",
+    "label": "Samoyed"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03394916/n03394916_35542.JPEG",
-    "class_id": "n03394916",
-    "label": "French horn"
+    "path": "data/raw/imagewoof2-160/val/n02089973/n02089973_362.JPEG",
+    "class_id": "n02089973",
+    "label": "English foxhound"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03888257/n03888257_1251.JPEG",
-    "class_id": "n03888257",
-    "label": "parachute"
+    "path": "data/raw/imagewoof2-160/val/n02105641/n02105641_8890.JPEG",
+    "class_id": "n02105641",
+    "label": "Old English sheepdog"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03445777/n03445777_9442.JPEG",
-    "class_id": "n03445777",
-    "label": "golf ball"
+    "path": "data/raw/imagewoof2-160/val/n02087394/n02087394_2341.JPEG",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n02979186/n02979186_10341.JPEG",
-    "class_id": "n02979186",
-    "label": "cassette player"
+    "path": "data/raw/imagewoof2-160/val/n02093754/n02093754_5061.JPEG",
+    "class_id": "n02093754",
+    "label": "Australian terrier"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n02979186/n02979186_1810.JPEG",
-    "class_id": "n02979186",
-    "label": "cassette player"
+    "path": "data/raw/imagewoof2-160/val/n02111889/n02111889_16541.JPEG",
+    "class_id": "n02111889",
+    "label": "Samoyed"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n02102040/n02102040_7460.JPEG",
-    "class_id": "n02102040",
-    "label": "English springer"
+    "path": "data/raw/imagewoof2-160/val/n02088364/n02088364_2502.JPEG",
+    "class_id": "n02088364",
+    "label": "beagle"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03394916/n03394916_35801.JPEG",
-    "class_id": "n03394916",
-    "label": "French horn"
+    "path": "data/raw/imagewoof2-160/val/n02089973/n02089973_1351.JPEG",
+    "class_id": "n02089973",
+    "label": "English foxhound"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n02102040/n02102040_7931.JPEG",
-    "class_id": "n02102040",
-    "label": "English springer"
+    "path": "data/raw/imagewoof2-160/val/n02115641/n02115641_38781.JPEG",
+    "class_id": "n02115641",
+    "label": "dingo"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03888257/n03888257_32391.JPEG",
-    "class_id": "n03888257",
-    "label": "parachute"
+    "path": "data/raw/imagewoof2-160/val/n02111889/n02111889_3961.JPEG",
+    "class_id": "n02111889",
+    "label": "Samoyed"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03028079/n03028079_25612.JPEG",
-    "class_id": "n03028079",
-    "label": "church"
+    "path": "data/raw/imagewoof2-160/val/n02087394/n02087394_12002.JPEG",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03000684/n03000684_34171.JPEG",
-    "class_id": "n03000684",
-    "label": "chain saw"
+    "path": "data/raw/imagewoof2-160/val/n02099601/n02099601_7101.JPEG",
+    "class_id": "n02099601",
+    "label": "golden retriever"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n02979186/n02979186_4852.JPEG",
-    "class_id": "n02979186",
-    "label": "cassette player"
+    "path": "data/raw/imagewoof2-160/val/n02088364/n02088364_522.JPEG",
+    "class_id": "n02088364",
+    "label": "beagle"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03394916/n03394916_14002.JPEG",
-    "class_id": "n03394916",
-    "label": "French horn"
+    "path": "data/raw/imagewoof2-160/val/n02089973/n02089973_9560.JPEG",
+    "class_id": "n02089973",
+    "label": "English foxhound"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03417042/n03417042_11511.JPEG",
-    "class_id": "n03417042",
-    "label": "garbage truck"
+    "path": "data/raw/imagewoof2-160/val/n02111889/n02111889_3792.JPEG",
+    "class_id": "n02111889",
+    "label": "Samoyed"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03028079/n03028079_13251.JPEG",
-    "class_id": "n03028079",
-    "label": "church"
+    "path": "data/raw/imagewoof2-160/val/n02111889/n02111889_13580.JPEG",
+    "class_id": "n02111889",
+    "label": "Samoyed"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03888257/n03888257_22330.JPEG",
-    "class_id": "n03888257",
-    "label": "parachute"
+    "path": "data/raw/imagewoof2-160/val/n02088364/n02088364_871.JPEG",
+    "class_id": "n02088364",
+    "label": "beagle"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03000684/n03000684_32301.JPEG",
-    "class_id": "n03000684",
-    "label": "chain saw"
+    "path": "data/raw/imagewoof2-160/val/n02111889/n02111889_15060.JPEG",
+    "class_id": "n02111889",
+    "label": "Samoyed"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n02979186/n02979186_9811.JPEG",
-    "class_id": "n02979186",
-    "label": "cassette player"
+    "path": "data/raw/imagewoof2-160/val/n02086240/n02086240_10272.JPEG",
+    "class_id": "n02086240",
+    "label": "Shih-Tzu"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n02979186/n02979186_24140.JPEG",
-    "class_id": "n02979186",
-    "label": "cassette player"
+    "path": "data/raw/imagewoof2-160/val/n02086240/n02086240_8141.JPEG",
+    "class_id": "n02086240",
+    "label": "Shih-Tzu"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n02979186/n02979186_11372.JPEG",
-    "class_id": "n02979186",
-    "label": "cassette player"
+    "path": "data/raw/imagewoof2-160/val/n02105641/n02105641_2822.JPEG",
+    "class_id": "n02105641",
+    "label": "Old English sheepdog"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03888257/n03888257_25460.JPEG",
-    "class_id": "n03888257",
-    "label": "parachute"
+    "path": "data/raw/imagewoof2-160/val/n02093754/n02093754_6630.JPEG",
+    "class_id": "n02093754",
+    "label": "Australian terrier"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03394916/n03394916_30460.JPEG",
-    "class_id": "n03394916",
-    "label": "French horn"
+    "path": "data/raw/imagewoof2-160/val/n02086240/n02086240_751.JPEG",
+    "class_id": "n02086240",
+    "label": "Shih-Tzu"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03000684/n03000684_14740.JPEG",
-    "class_id": "n03000684",
-    "label": "chain saw"
+    "path": "data/raw/imagewoof2-160/val/n02086240/n02086240_7442.JPEG",
+    "class_id": "n02086240",
+    "label": "Shih-Tzu"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n01440764/n01440764_6760.JPEG",
-    "class_id": "n01440764",
-    "label": "tench"
+    "path": "data/raw/imagewoof2-160/val/n02096294/n02096294_1880.JPEG",
+    "class_id": "n02096294",
+    "label": "border terrier"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03888257/n03888257_80.JPEG",
-    "class_id": "n03888257",
-    "label": "parachute"
+    "path": "data/raw/imagewoof2-160/val/n02086240/n02086240_5362.JPEG",
+    "class_id": "n02086240",
+    "label": "Shih-Tzu"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n02102040/n02102040_1222.JPEG",
-    "class_id": "n02102040",
-    "label": "English springer"
+    "path": "data/raw/imagewoof2-160/val/n02096294/n02096294_7641.JPEG",
+    "class_id": "n02096294",
+    "label": "border terrier"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03888257/n03888257_33931.JPEG",
-    "class_id": "n03888257",
-    "label": "parachute"
+    "path": "data/raw/imagewoof2-160/val/n02096294/n02096294_11902.JPEG",
+    "class_id": "n02096294",
+    "label": "border terrier"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03394916/n03394916_42690.JPEG",
-    "class_id": "n03394916",
-    "label": "French horn"
+    "path": "data/raw/imagewoof2-160/val/n02089973/n02089973_1352.JPEG",
+    "class_id": "n02089973",
+    "label": "English foxhound"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03394916/n03394916_55411.JPEG",
-    "class_id": "n03394916",
-    "label": "French horn"
+    "path": "data/raw/imagewoof2-160/val/n02089973/n02089973_780.JPEG",
+    "class_id": "n02089973",
+    "label": "English foxhound"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n02102040/n02102040_6880.JPEG",
-    "class_id": "n02102040",
-    "label": "English springer"
+    "path": "data/raw/imagewoof2-160/val/n02105641/n02105641_15011.JPEG",
+    "class_id": "n02105641",
+    "label": "Old English sheepdog"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n01440764/n01440764_9212.JPEG",
-    "class_id": "n01440764",
-    "label": "tench"
+    "path": "data/raw/imagewoof2-160/val/n02096294/n02096294_2472.JPEG",
+    "class_id": "n02096294",
+    "label": "border terrier"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n02979186/n02979186_13950.JPEG",
-    "class_id": "n02979186",
-    "label": "cassette player"
+    "path": "data/raw/imagewoof2-160/val/n02093754/n02093754_7931.JPEG",
+    "class_id": "n02093754",
+    "label": "Australian terrier"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03425413/n03425413_21301.JPEG",
-    "class_id": "n03425413",
-    "label": "gas pump"
+    "path": "data/raw/imagewoof2-160/val/n02115641/n02115641_7082.JPEG",
+    "class_id": "n02115641",
+    "label": "dingo"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n01440764/n01440764_9931.JPEG",
-    "class_id": "n01440764",
-    "label": "tench"
+    "path": "data/raw/imagewoof2-160/val/n02087394/n02087394_9061.JPEG",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n01440764/n01440764_190.JPEG",
-    "class_id": "n01440764",
-    "label": "tench"
+    "path": "data/raw/imagewoof2-160/val/n02087394/n02087394_12.JPEG",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03417042/n03417042_6662.JPEG",
-    "class_id": "n03417042",
-    "label": "garbage truck"
+    "path": "data/raw/imagewoof2-160/val/n02115641/n02115641_12541.JPEG",
+    "class_id": "n02115641",
+    "label": "dingo"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03394916/n03394916_36772.JPEG",
-    "class_id": "n03394916",
-    "label": "French horn"
+    "path": "data/raw/imagewoof2-160/val/n02089973/n02089973_2302.JPEG",
+    "class_id": "n02089973",
+    "label": "English foxhound"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03028079/n03028079_37021.JPEG",
-    "class_id": "n03028079",
-    "label": "church"
+    "path": "data/raw/imagewoof2-160/val/n02111889/n02111889_16732.JPEG",
+    "class_id": "n02111889",
+    "label": "Samoyed"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n02979186/n02979186_10870.JPEG",
-    "class_id": "n02979186",
-    "label": "cassette player"
+    "path": "data/raw/imagewoof2-160/val/n02096294/n02096294_2232.JPEG",
+    "class_id": "n02096294",
+    "label": "border terrier"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03445777/n03445777_7902.JPEG",
-    "class_id": "n03445777",
-    "label": "golf ball"
+    "path": "data/raw/imagewoof2-160/val/n02115641/n02115641_12171.JPEG",
+    "class_id": "n02115641",
+    "label": "dingo"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03445777/n03445777_13911.JPEG",
-    "class_id": "n03445777",
-    "label": "golf ball"
+    "path": "data/raw/imagewoof2-160/val/n02093754/n02093754_3120.JPEG",
+    "class_id": "n02093754",
+    "label": "Australian terrier"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03394916/n03394916_33181.JPEG",
-    "class_id": "n03394916",
-    "label": "French horn"
+    "path": "data/raw/imagewoof2-160/val/n02086240/n02086240_4920.JPEG",
+    "class_id": "n02086240",
+    "label": "Shih-Tzu"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n02979186/n02979186_19412.JPEG",
-    "class_id": "n02979186",
-    "label": "cassette player"
+    "path": "data/raw/imagewoof2-160/val/n02088364/n02088364_1022.JPEG",
+    "class_id": "n02088364",
+    "label": "beagle"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03000684/n03000684_7671.JPEG",
-    "class_id": "n03000684",
-    "label": "chain saw"
+    "path": "data/raw/imagewoof2-160/val/n02088364/n02088364_14702.JPEG",
+    "class_id": "n02088364",
+    "label": "beagle"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03417042/n03417042_21102.JPEG",
-    "class_id": "n03417042",
-    "label": "garbage truck"
+    "path": "data/raw/imagewoof2-160/val/n02111889/n02111889_4202.JPEG",
+    "class_id": "n02111889",
+    "label": "Samoyed"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03000684/n03000684_31112.JPEG",
-    "class_id": "n03000684",
-    "label": "chain saw"
+    "path": "data/raw/imagewoof2-160/val/n02111889/n02111889_13491.JPEG",
+    "class_id": "n02111889",
+    "label": "Samoyed"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03394916/n03394916_34332.JPEG",
-    "class_id": "n03394916",
-    "label": "French horn"
+    "path": "data/raw/imagewoof2-160/val/n02089973/n02089973_4121.JPEG",
+    "class_id": "n02089973",
+    "label": "English foxhound"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03394916/n03394916_48491.JPEG",
-    "class_id": "n03394916",
-    "label": "French horn"
+    "path": "data/raw/imagewoof2-160/val/n02089973/n02089973_2131.JPEG",
+    "class_id": "n02089973",
+    "label": "English foxhound"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03000684/n03000684_35991.JPEG",
-    "class_id": "n03000684",
-    "label": "chain saw"
+    "path": "data/raw/imagewoof2-160/val/n02105641/n02105641_5572.JPEG",
+    "class_id": "n02105641",
+    "label": "Old English sheepdog"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03028079/n03028079_901.JPEG",
-    "class_id": "n03028079",
-    "label": "church"
+    "path": "data/raw/imagewoof2-160/val/n02087394/n02087394_26422.JPEG",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03425413/n03425413_15131.JPEG",
-    "class_id": "n03425413",
-    "label": "gas pump"
+    "path": "data/raw/imagewoof2-160/val/n02099601/n02099601_28691.JPEG",
+    "class_id": "n02099601",
+    "label": "golden retriever"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n01440764/n01440764_5680.JPEG",
-    "class_id": "n01440764",
-    "label": "tench"
+    "path": "data/raw/imagewoof2-160/val/n02096294/n02096294_9982.JPEG",
+    "class_id": "n02096294",
+    "label": "border terrier"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03000684/n03000684_19771.JPEG",
-    "class_id": "n03000684",
-    "label": "chain saw"
+    "path": "data/raw/imagewoof2-160/val/n02111889/n02111889_14572.JPEG",
+    "class_id": "n02111889",
+    "label": "Samoyed"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03028079/n03028079_4612.JPEG",
-    "class_id": "n03028079",
-    "label": "church"
+    "path": "data/raw/imagewoof2-160/val/n02115641/n02115641_37280.JPEG",
+    "class_id": "n02115641",
+    "label": "dingo"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03888257/n03888257_59442.JPEG",
-    "class_id": "n03888257",
-    "label": "parachute"
+    "path": "data/raw/imagewoof2-160/val/n02093754/n02093754_3770.JPEG",
+    "class_id": "n02093754",
+    "label": "Australian terrier"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03000684/n03000684_14632.JPEG",
-    "class_id": "n03000684",
-    "label": "chain saw"
+    "path": "data/raw/imagewoof2-160/val/n02115641/n02115641_6760.JPEG",
+    "class_id": "n02115641",
+    "label": "dingo"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n02102040/n02102040_6392.JPEG",
-    "class_id": "n02102040",
-    "label": "English springer"
+    "path": "data/raw/imagewoof2-160/val/n02093754/n02093754_7241.JPEG",
+    "class_id": "n02093754",
+    "label": "Australian terrier"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03028079/n03028079_6601.JPEG",
-    "class_id": "n03028079",
-    "label": "church"
+    "path": "data/raw/imagewoof2-160/val/n02096294/n02096294_5602.JPEG",
+    "class_id": "n02096294",
+    "label": "border terrier"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03888257/n03888257_18560.JPEG",
-    "class_id": "n03888257",
-    "label": "parachute"
+    "path": "data/raw/imagewoof2-160/val/n02115641/n02115641_8532.JPEG",
+    "class_id": "n02115641",
+    "label": "dingo"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03417042/n03417042_20892.JPEG",
-    "class_id": "n03417042",
-    "label": "garbage truck"
+    "path": "data/raw/imagewoof2-160/val/n02093754/n02093754_7950.JPEG",
+    "class_id": "n02093754",
+    "label": "Australian terrier"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03000684/n03000684_11441.JPEG",
-    "class_id": "n03000684",
-    "label": "chain saw"
+    "path": "data/raw/imagewoof2-160/val/n02111889/n02111889_4460.JPEG",
+    "class_id": "n02111889",
+    "label": "Samoyed"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n02102040/n02102040_8330.JPEG",
-    "class_id": "n02102040",
-    "label": "English springer"
+    "path": "data/raw/imagewoof2-160/val/n02111889/n02111889_6111.JPEG",
+    "class_id": "n02111889",
+    "label": "Samoyed"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03888257/n03888257_4842.JPEG",
-    "class_id": "n03888257",
-    "label": "parachute"
+    "path": "data/raw/imagewoof2-160/val/n02093754/n02093754_5360.JPEG",
+    "class_id": "n02093754",
+    "label": "Australian terrier"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n02102040/n02102040_2842.JPEG",
-    "class_id": "n02102040",
-    "label": "English springer"
+    "path": "data/raw/imagewoof2-160/val/n02099601/n02099601_1041.JPEG",
+    "class_id": "n02099601",
+    "label": "golden retriever"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n02979186/n02979186_70.JPEG",
-    "class_id": "n02979186",
-    "label": "cassette player"
+    "path": "data/raw/imagewoof2-160/val/n02086240/n02086240_7261.JPEG",
+    "class_id": "n02086240",
+    "label": "Shih-Tzu"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n02102040/n02102040_4582.JPEG",
-    "class_id": "n02102040",
-    "label": "English springer"
+    "path": "data/raw/imagewoof2-160/val/n02105641/n02105641_10800.JPEG",
+    "class_id": "n02105641",
+    "label": "Old English sheepdog"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03425413/n03425413_20562.JPEG",
-    "class_id": "n03425413",
-    "label": "gas pump"
+    "path": "data/raw/imagewoof2-160/val/n02099601/n02099601_3360.JPEG",
+    "class_id": "n02099601",
+    "label": "golden retriever"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03425413/n03425413_13811.JPEG",
-    "class_id": "n03425413",
-    "label": "gas pump"
+    "path": "data/raw/imagewoof2-160/val/n02093754/n02093754_2150.JPEG",
+    "class_id": "n02093754",
+    "label": "Australian terrier"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n02102040/n02102040_5900.JPEG",
-    "class_id": "n02102040",
-    "label": "English springer"
+    "path": "data/raw/imagewoof2-160/val/n02093754/ILSVRC2012_val_00030770.JPEG",
+    "class_id": "n02093754",
+    "label": "Australian terrier"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03394916/n03394916_26391.JPEG",
-    "class_id": "n03394916",
-    "label": "French horn"
+    "path": "data/raw/imagewoof2-160/val/n02089973/n02089973_1890.JPEG",
+    "class_id": "n02089973",
+    "label": "English foxhound"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n02979186/n02979186_23440.JPEG",
-    "class_id": "n02979186",
-    "label": "cassette player"
+    "path": "data/raw/imagewoof2-160/val/n02115641/n02115641_3862.JPEG",
+    "class_id": "n02115641",
+    "label": "dingo"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03000684/n03000684_17902.JPEG",
-    "class_id": "n03000684",
-    "label": "chain saw"
+    "path": "data/raw/imagewoof2-160/val/n02099601/n02099601_7780.JPEG",
+    "class_id": "n02099601",
+    "label": "golden retriever"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03445777/n03445777_1311.JPEG",
-    "class_id": "n03445777",
-    "label": "golf ball"
+    "path": "data/raw/imagewoof2-160/val/n02105641/n02105641_1380.JPEG",
+    "class_id": "n02105641",
+    "label": "Old English sheepdog"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03445777/n03445777_10862.JPEG",
-    "class_id": "n03445777",
-    "label": "golf ball"
+    "path": "data/raw/imagewoof2-160/val/n02115641/n02115641_421.JPEG",
+    "class_id": "n02115641",
+    "label": "dingo"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03028079/n03028079_15102.JPEG",
-    "class_id": "n03028079",
-    "label": "church"
+    "path": "data/raw/imagewoof2-160/val/n02099601/n02099601_5642.JPEG",
+    "class_id": "n02099601",
+    "label": "golden retriever"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n02979186/n02979186_5392.JPEG",
-    "class_id": "n02979186",
-    "label": "cassette player"
+    "path": "data/raw/imagewoof2-160/val/n02088364/n02088364_7731.JPEG",
+    "class_id": "n02088364",
+    "label": "beagle"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03417042/n03417042_3422.JPEG",
-    "class_id": "n03417042",
-    "label": "garbage truck"
+    "path": "data/raw/imagewoof2-160/val/n02115641/n02115641_7321.JPEG",
+    "class_id": "n02115641",
+    "label": "dingo"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n02979186/n02979186_6181.JPEG",
-    "class_id": "n02979186",
-    "label": "cassette player"
+    "path": "data/raw/imagewoof2-160/val/n02099601/n02099601_3611.JPEG",
+    "class_id": "n02099601",
+    "label": "golden retriever"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n02102040/n02102040_7222.JPEG",
-    "class_id": "n02102040",
-    "label": "English springer"
+    "path": "data/raw/imagewoof2-160/val/n02096294/n02096294_5522.JPEG",
+    "class_id": "n02096294",
+    "label": "border terrier"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n01440764/n01440764_8012.JPEG",
-    "class_id": "n01440764",
-    "label": "tench"
+    "path": "data/raw/imagewoof2-160/val/n02099601/n02099601_10841.JPEG",
+    "class_id": "n02099601",
+    "label": "golden retriever"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03445777/n03445777_10581.JPEG",
-    "class_id": "n03445777",
-    "label": "golf ball"
+    "path": "data/raw/imagewoof2-160/val/n02111889/n02111889_3731.JPEG",
+    "class_id": "n02111889",
+    "label": "Samoyed"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03417042/ILSVRC2012_val_00033842.JPEG",
-    "class_id": "n03417042",
-    "label": "garbage truck"
+    "path": "data/raw/imagewoof2-160/val/n02111889/n02111889_6811.JPEG",
+    "class_id": "n02111889",
+    "label": "Samoyed"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03445777/n03445777_7090.JPEG",
-    "class_id": "n03445777",
-    "label": "golf ball"
+    "path": "data/raw/imagewoof2-160/val/n02087394/n02087394_7182.JPEG",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03888257/n03888257_11210.JPEG",
-    "class_id": "n03888257",
-    "label": "parachute"
+    "path": "data/raw/imagewoof2-160/val/n02115641/n02115641_2370.JPEG",
+    "class_id": "n02115641",
+    "label": "dingo"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03425413/n03425413_14650.JPEG",
-    "class_id": "n03425413",
-    "label": "gas pump"
+    "path": "data/raw/imagewoof2-160/val/n02088364/ILSVRC2012_val_00009542.JPEG",
+    "class_id": "n02088364",
+    "label": "beagle"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n02979186/n02979186_15901.JPEG",
-    "class_id": "n02979186",
-    "label": "cassette player"
+    "path": "data/raw/imagewoof2-160/val/n02088364/n02088364_232.JPEG",
+    "class_id": "n02088364",
+    "label": "beagle"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n02979186/n02979186_22991.JPEG",
-    "class_id": "n02979186",
-    "label": "cassette player"
+    "path": "data/raw/imagewoof2-160/val/n02111889/n02111889_16842.JPEG",
+    "class_id": "n02111889",
+    "label": "Samoyed"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03417042/n03417042_28261.JPEG",
-    "class_id": "n03417042",
-    "label": "garbage truck"
+    "path": "data/raw/imagewoof2-160/val/n02115641/n02115641_60.JPEG",
+    "class_id": "n02115641",
+    "label": "dingo"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03445777/n03445777_71.JPEG",
-    "class_id": "n03445777",
-    "label": "golf ball"
+    "path": "data/raw/imagewoof2-160/val/n02115641/n02115641_10511.JPEG",
+    "class_id": "n02115641",
+    "label": "dingo"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n02979186/n02979186_10912.JPEG",
-    "class_id": "n02979186",
-    "label": "cassette player"
+    "path": "data/raw/imagewoof2-160/val/n02115641/n02115641_13340.JPEG",
+    "class_id": "n02115641",
+    "label": "dingo"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n02979186/n02979186_15931.JPEG",
-    "class_id": "n02979186",
-    "label": "cassette player"
+    "path": "data/raw/imagewoof2-160/val/n02088364/n02088364_10642.JPEG",
+    "class_id": "n02088364",
+    "label": "beagle"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03888257/n03888257_57010.JPEG",
-    "class_id": "n03888257",
-    "label": "parachute"
+    "path": "data/raw/imagewoof2-160/val/n02088364/n02088364_7110.JPEG",
+    "class_id": "n02088364",
+    "label": "beagle"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03000684/n03000684_11122.JPEG",
-    "class_id": "n03000684",
-    "label": "chain saw"
+    "path": "data/raw/imagewoof2-160/val/n02096294/n02096294_6450.JPEG",
+    "class_id": "n02096294",
+    "label": "border terrier"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n01440764/n01440764_7571.JPEG",
-    "class_id": "n01440764",
-    "label": "tench"
+    "path": "data/raw/imagewoof2-160/val/n02105641/n02105641_11611.JPEG",
+    "class_id": "n02105641",
+    "label": "Old English sheepdog"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03028079/n03028079_29920.JPEG",
-    "class_id": "n03028079",
-    "label": "church"
+    "path": "data/raw/imagewoof2-160/val/n02086240/n02086240_11692.JPEG",
+    "class_id": "n02086240",
+    "label": "Shih-Tzu"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03394916/n03394916_53581.JPEG",
-    "class_id": "n03394916",
-    "label": "French horn"
+    "path": "data/raw/imagewoof2-160/val/n02086240/n02086240_632.JPEG",
+    "class_id": "n02086240",
+    "label": "Shih-Tzu"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03888257/n03888257_38560.JPEG",
-    "class_id": "n03888257",
-    "label": "parachute"
+    "path": "data/raw/imagewoof2-160/val/n02099601/ILSVRC2012_val_00006981.JPEG",
+    "class_id": "n02099601",
+    "label": "golden retriever"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03888257/ILSVRC2012_val_00006561.JPEG",
-    "class_id": "n03888257",
-    "label": "parachute"
+    "path": "data/raw/imagewoof2-160/val/n02093754/n02093754_3571.JPEG",
+    "class_id": "n02093754",
+    "label": "Australian terrier"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03888257/n03888257_61350.JPEG",
-    "class_id": "n03888257",
-    "label": "parachute"
+    "path": "data/raw/imagewoof2-160/val/n02096294/n02096294_2580.JPEG",
+    "class_id": "n02096294",
+    "label": "border terrier"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n02102040/n02102040_4492.JPEG",
-    "class_id": "n02102040",
-    "label": "English springer"
+    "path": "data/raw/imagewoof2-160/val/n02093754/n02093754_172.JPEG",
+    "class_id": "n02093754",
+    "label": "Australian terrier"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n01440764/n01440764_4962.JPEG",
-    "class_id": "n01440764",
-    "label": "tench"
+    "path": "data/raw/imagewoof2-160/val/n02096294/n02096294_7562.JPEG",
+    "class_id": "n02096294",
+    "label": "border terrier"
   },
   {
-    "path": "data/raw/imagenette2-160/val/n03888257/n03888257_5501.JPEG",
-    "class_id": "n03888257",
-    "label": "parachute"
+    "path": "data/raw/imagewoof2-160/val/n02093754/n02093754_820.JPEG",
+    "class_id": "n02093754",
+    "label": "Australian terrier"
   }
 ]
