@@ -1,0 +1,1202 @@
+[
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03445777/n03445777_7670.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n03445777_7670.jpg",
+    "class_id": "n03445777",
+    "label": "golf ball",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03000684/n03000684_17431.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n03000684_17431.jpg",
+    "class_id": "n03000684",
+    "label": "chain saw",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03028079/n03028079_26571.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n03028079_26571.jpg",
+    "class_id": "n03028079",
+    "label": "church",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03445777/n03445777_9292.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n03445777_9292.jpg",
+    "class_id": "n03445777",
+    "label": "golf ball",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03394916/n03394916_38360.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n03394916_38360.jpg",
+    "class_id": "n03394916",
+    "label": "French horn",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03394916/n03394916_68551.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n03394916_68551.jpg",
+    "class_id": "n03394916",
+    "label": "French horn",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03888257/n03888257_29191.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n03888257_29191.jpg",
+    "class_id": "n03888257",
+    "label": "parachute",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03445777/n03445777_4211.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n03445777_4211.jpg",
+    "class_id": "n03445777",
+    "label": "golf ball",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03417042/n03417042_5631.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n03417042_5631.jpg",
+    "class_id": "n03417042",
+    "label": "garbage truck",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03445777/n03445777_16192.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n03445777_16192.jpg",
+    "class_id": "n03445777",
+    "label": "golf ball",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n02979186/n02979186_12962.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02979186_12962.jpg",
+    "class_id": "n02979186",
+    "label": "cassette player",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03888257/n03888257_7921.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n03888257_7921.jpg",
+    "class_id": "n03888257",
+    "label": "parachute",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03028079/n03028079_17831.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n03028079_17831.jpg",
+    "class_id": "n03028079",
+    "label": "church",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03417042/n03417042_3280.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n03417042_3280.jpg",
+    "class_id": "n03417042",
+    "label": "garbage truck",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n02102040/n02102040_620.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02102040_620.jpg",
+    "class_id": "n02102040",
+    "label": "English springer",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03028079/n03028079_3600.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n03028079_3600.jpg",
+    "class_id": "n03028079",
+    "label": "church",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03417042/n03417042_4752.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n03417042_4752.jpg",
+    "class_id": "n03417042",
+    "label": "garbage truck",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03028079/n03028079_15081.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n03028079_15081.jpg",
+    "class_id": "n03028079",
+    "label": "church",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03394916/n03394916_23071.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n03394916_23071.jpg",
+    "class_id": "n03394916",
+    "label": "French horn",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n02102040/n02102040_6400.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02102040_6400.jpg",
+    "class_id": "n02102040",
+    "label": "English springer",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n02102040/n02102040_1022.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02102040_1022.jpg",
+    "class_id": "n02102040",
+    "label": "English springer",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n02102040/n02102040_8150.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02102040_8150.jpg",
+    "class_id": "n02102040",
+    "label": "English springer",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03445777/n03445777_7011.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n03445777_7011.jpg",
+    "class_id": "n03445777",
+    "label": "golf ball",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n02102040/n02102040_4742.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02102040_4742.jpg",
+    "class_id": "n02102040",
+    "label": "English springer",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n01440764/n01440764_8992.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n01440764_8992.jpg",
+    "class_id": "n01440764",
+    "label": "tench",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03888257/n03888257_22972.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n03888257_22972.jpg",
+    "class_id": "n03888257",
+    "label": "parachute",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03417042/n03417042_14861.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n03417042_14861.jpg",
+    "class_id": "n03417042",
+    "label": "garbage truck",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03445777/n03445777_551.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n03445777_551.jpg",
+    "class_id": "n03445777",
+    "label": "golf ball",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03888257/n03888257_30712.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n03888257_30712.jpg",
+    "class_id": "n03888257",
+    "label": "parachute",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03394916/n03394916_47110.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n03394916_47110.jpg",
+    "class_id": "n03394916",
+    "label": "French horn",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n01440764/n01440764_10320.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n01440764_10320.jpg",
+    "class_id": "n01440764",
+    "label": "tench",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03888257/n03888257_32350.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n03888257_32350.jpg",
+    "class_id": "n03888257",
+    "label": "parachute",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03000684/n03000684_26901.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n03000684_26901.jpg",
+    "class_id": "n03000684",
+    "label": "chain saw",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03445777/ILSVRC2012_val_00042350.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_ILSVRC2012_val_00042350.jpg",
+    "class_id": "n03445777",
+    "label": "golf ball",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n01440764/n01440764_13860.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n01440764_13860.jpg",
+    "class_id": "n01440764",
+    "label": "tench",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03425413/n03425413_21350.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n03425413_21350.jpg",
+    "class_id": "n03425413",
+    "label": "gas pump",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03425413/ILSVRC2012_val_00009821.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_ILSVRC2012_val_00009821.jpg",
+    "class_id": "n03425413",
+    "label": "gas pump",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03000684/n03000684_5692.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n03000684_5692.jpg",
+    "class_id": "n03000684",
+    "label": "chain saw",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n02979186/n02979186_13841.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02979186_13841.jpg",
+    "class_id": "n02979186",
+    "label": "cassette player",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03417042/ILSVRC2012_val_00028190.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_ILSVRC2012_val_00028190.jpg",
+    "class_id": "n03417042",
+    "label": "garbage truck",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03000684/n03000684_19591.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n03000684_19591.jpg",
+    "class_id": "n03000684",
+    "label": "chain saw",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03888257/n03888257_19702.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n03888257_19702.jpg",
+    "class_id": "n03888257",
+    "label": "parachute",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03394916/n03394916_51752.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n03394916_51752.jpg",
+    "class_id": "n03394916",
+    "label": "French horn",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03000684/n03000684_8890.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n03000684_8890.jpg",
+    "class_id": "n03000684",
+    "label": "chain saw",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03000684/n03000684_10992.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n03000684_10992.jpg",
+    "class_id": "n03000684",
+    "label": "chain saw",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n01440764/n01440764_2221.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n01440764_2221.jpg",
+    "class_id": "n01440764",
+    "label": "tench",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03445777/n03445777_13161.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n03445777_13161.jpg",
+    "class_id": "n03445777",
+    "label": "golf ball",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03417042/n03417042_19862.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n03417042_19862.jpg",
+    "class_id": "n03417042",
+    "label": "garbage truck",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03394916/n03394916_35542.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n03394916_35542.jpg",
+    "class_id": "n03394916",
+    "label": "French horn",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03888257/n03888257_1251.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n03888257_1251.jpg",
+    "class_id": "n03888257",
+    "label": "parachute",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03445777/n03445777_9442.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n03445777_9442.jpg",
+    "class_id": "n03445777",
+    "label": "golf ball",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n02979186/n02979186_10341.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02979186_10341.jpg",
+    "class_id": "n02979186",
+    "label": "cassette player",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n02979186/n02979186_1810.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02979186_1810.jpg",
+    "class_id": "n02979186",
+    "label": "cassette player",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n02102040/n02102040_7460.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02102040_7460.jpg",
+    "class_id": "n02102040",
+    "label": "English springer",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03394916/n03394916_35801.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n03394916_35801.jpg",
+    "class_id": "n03394916",
+    "label": "French horn",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n02102040/n02102040_7931.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02102040_7931.jpg",
+    "class_id": "n02102040",
+    "label": "English springer",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03888257/n03888257_32391.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n03888257_32391.jpg",
+    "class_id": "n03888257",
+    "label": "parachute",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03028079/n03028079_25612.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n03028079_25612.jpg",
+    "class_id": "n03028079",
+    "label": "church",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03000684/n03000684_34171.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n03000684_34171.jpg",
+    "class_id": "n03000684",
+    "label": "chain saw",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n02979186/n02979186_4852.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02979186_4852.jpg",
+    "class_id": "n02979186",
+    "label": "cassette player",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03394916/n03394916_14002.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n03394916_14002.jpg",
+    "class_id": "n03394916",
+    "label": "French horn",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03417042/n03417042_11511.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n03417042_11511.jpg",
+    "class_id": "n03417042",
+    "label": "garbage truck",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03028079/n03028079_13251.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n03028079_13251.jpg",
+    "class_id": "n03028079",
+    "label": "church",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03888257/n03888257_22330.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n03888257_22330.jpg",
+    "class_id": "n03888257",
+    "label": "parachute",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03000684/n03000684_32301.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n03000684_32301.jpg",
+    "class_id": "n03000684",
+    "label": "chain saw",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n02979186/n02979186_9811.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02979186_9811.jpg",
+    "class_id": "n02979186",
+    "label": "cassette player",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n02979186/n02979186_24140.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02979186_24140.jpg",
+    "class_id": "n02979186",
+    "label": "cassette player",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n02979186/n02979186_11372.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02979186_11372.jpg",
+    "class_id": "n02979186",
+    "label": "cassette player",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03888257/n03888257_25460.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n03888257_25460.jpg",
+    "class_id": "n03888257",
+    "label": "parachute",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03394916/n03394916_30460.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n03394916_30460.jpg",
+    "class_id": "n03394916",
+    "label": "French horn",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03000684/n03000684_14740.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n03000684_14740.jpg",
+    "class_id": "n03000684",
+    "label": "chain saw",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n01440764/n01440764_6760.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n01440764_6760.jpg",
+    "class_id": "n01440764",
+    "label": "tench",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03888257/n03888257_80.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n03888257_80.jpg",
+    "class_id": "n03888257",
+    "label": "parachute",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n02102040/n02102040_1222.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02102040_1222.jpg",
+    "class_id": "n02102040",
+    "label": "English springer",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03888257/n03888257_33931.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_blur_n03888257_33931.jpg",
+    "class_id": "n03888257",
+    "label": "parachute",
+    "corruption_type": "gaussian_blur",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03394916/n03394916_42690.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n03394916_42690.jpg",
+    "class_id": "n03394916",
+    "label": "French horn",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03394916/n03394916_55411.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n03394916_55411.jpg",
+    "class_id": "n03394916",
+    "label": "French horn",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n02102040/n02102040_6880.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02102040_6880.jpg",
+    "class_id": "n02102040",
+    "label": "English springer",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n01440764/n01440764_9212.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n01440764_9212.jpg",
+    "class_id": "n01440764",
+    "label": "tench",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n02979186/n02979186_13950.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02979186_13950.jpg",
+    "class_id": "n02979186",
+    "label": "cassette player",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03425413/n03425413_21301.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n03425413_21301.jpg",
+    "class_id": "n03425413",
+    "label": "gas pump",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n01440764/n01440764_9931.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n01440764_9931.jpg",
+    "class_id": "n01440764",
+    "label": "tench",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n01440764/n01440764_190.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n01440764_190.jpg",
+    "class_id": "n01440764",
+    "label": "tench",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03417042/n03417042_6662.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n03417042_6662.jpg",
+    "class_id": "n03417042",
+    "label": "garbage truck",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03394916/n03394916_36772.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n03394916_36772.jpg",
+    "class_id": "n03394916",
+    "label": "French horn",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03028079/n03028079_37021.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n03028079_37021.jpg",
+    "class_id": "n03028079",
+    "label": "church",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n02979186/n02979186_10870.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02979186_10870.jpg",
+    "class_id": "n02979186",
+    "label": "cassette player",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03445777/n03445777_7902.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n03445777_7902.jpg",
+    "class_id": "n03445777",
+    "label": "golf ball",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03445777/n03445777_13911.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n03445777_13911.jpg",
+    "class_id": "n03445777",
+    "label": "golf ball",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03394916/n03394916_33181.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n03394916_33181.jpg",
+    "class_id": "n03394916",
+    "label": "French horn",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n02979186/n02979186_19412.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02979186_19412.jpg",
+    "class_id": "n02979186",
+    "label": "cassette player",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03000684/n03000684_7671.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n03000684_7671.jpg",
+    "class_id": "n03000684",
+    "label": "chain saw",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03417042/n03417042_21102.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n03417042_21102.jpg",
+    "class_id": "n03417042",
+    "label": "garbage truck",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03000684/n03000684_31112.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n03000684_31112.jpg",
+    "class_id": "n03000684",
+    "label": "chain saw",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03394916/n03394916_34332.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n03394916_34332.jpg",
+    "class_id": "n03394916",
+    "label": "French horn",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03394916/n03394916_48491.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n03394916_48491.jpg",
+    "class_id": "n03394916",
+    "label": "French horn",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03000684/n03000684_35991.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n03000684_35991.jpg",
+    "class_id": "n03000684",
+    "label": "chain saw",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03028079/n03028079_901.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n03028079_901.jpg",
+    "class_id": "n03028079",
+    "label": "church",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03425413/n03425413_15131.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n03425413_15131.jpg",
+    "class_id": "n03425413",
+    "label": "gas pump",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n01440764/n01440764_5680.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n01440764_5680.jpg",
+    "class_id": "n01440764",
+    "label": "tench",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03000684/n03000684_19771.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n03000684_19771.jpg",
+    "class_id": "n03000684",
+    "label": "chain saw",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03028079/n03028079_4612.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n03028079_4612.jpg",
+    "class_id": "n03028079",
+    "label": "church",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03888257/n03888257_59442.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n03888257_59442.jpg",
+    "class_id": "n03888257",
+    "label": "parachute",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03000684/n03000684_14632.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n03000684_14632.jpg",
+    "class_id": "n03000684",
+    "label": "chain saw",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n02102040/n02102040_6392.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02102040_6392.jpg",
+    "class_id": "n02102040",
+    "label": "English springer",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03028079/n03028079_6601.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n03028079_6601.jpg",
+    "class_id": "n03028079",
+    "label": "church",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03888257/n03888257_18560.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n03888257_18560.jpg",
+    "class_id": "n03888257",
+    "label": "parachute",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03417042/n03417042_20892.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n03417042_20892.jpg",
+    "class_id": "n03417042",
+    "label": "garbage truck",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03000684/n03000684_11441.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n03000684_11441.jpg",
+    "class_id": "n03000684",
+    "label": "chain saw",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n02102040/n02102040_8330.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02102040_8330.jpg",
+    "class_id": "n02102040",
+    "label": "English springer",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03888257/n03888257_4842.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n03888257_4842.jpg",
+    "class_id": "n03888257",
+    "label": "parachute",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n02102040/n02102040_2842.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02102040_2842.jpg",
+    "class_id": "n02102040",
+    "label": "English springer",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n02979186/n02979186_70.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02979186_70.jpg",
+    "class_id": "n02979186",
+    "label": "cassette player",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n02102040/n02102040_4582.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02102040_4582.jpg",
+    "class_id": "n02102040",
+    "label": "English springer",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03425413/n03425413_20562.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n03425413_20562.jpg",
+    "class_id": "n03425413",
+    "label": "gas pump",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03425413/n03425413_13811.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n03425413_13811.jpg",
+    "class_id": "n03425413",
+    "label": "gas pump",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n02102040/n02102040_5900.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02102040_5900.jpg",
+    "class_id": "n02102040",
+    "label": "English springer",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03394916/n03394916_26391.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n03394916_26391.jpg",
+    "class_id": "n03394916",
+    "label": "French horn",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n02979186/n02979186_23440.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02979186_23440.jpg",
+    "class_id": "n02979186",
+    "label": "cassette player",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03000684/n03000684_17902.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n03000684_17902.jpg",
+    "class_id": "n03000684",
+    "label": "chain saw",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03445777/n03445777_1311.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n03445777_1311.jpg",
+    "class_id": "n03445777",
+    "label": "golf ball",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03445777/n03445777_10862.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n03445777_10862.jpg",
+    "class_id": "n03445777",
+    "label": "golf ball",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03028079/n03028079_15102.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n03028079_15102.jpg",
+    "class_id": "n03028079",
+    "label": "church",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n02979186/n02979186_5392.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02979186_5392.jpg",
+    "class_id": "n02979186",
+    "label": "cassette player",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03417042/n03417042_3422.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n03417042_3422.jpg",
+    "class_id": "n03417042",
+    "label": "garbage truck",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n02979186/n02979186_6181.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02979186_6181.jpg",
+    "class_id": "n02979186",
+    "label": "cassette player",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n02102040/n02102040_7222.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02102040_7222.jpg",
+    "class_id": "n02102040",
+    "label": "English springer",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n01440764/n01440764_8012.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n01440764_8012.jpg",
+    "class_id": "n01440764",
+    "label": "tench",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03445777/n03445777_10581.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n03445777_10581.jpg",
+    "class_id": "n03445777",
+    "label": "golf ball",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03417042/ILSVRC2012_val_00033842.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_ILSVRC2012_val_00033842.jpg",
+    "class_id": "n03417042",
+    "label": "garbage truck",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03445777/n03445777_7090.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n03445777_7090.jpg",
+    "class_id": "n03445777",
+    "label": "golf ball",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03888257/n03888257_11210.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n03888257_11210.jpg",
+    "class_id": "n03888257",
+    "label": "parachute",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03425413/n03425413_14650.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n03425413_14650.jpg",
+    "class_id": "n03425413",
+    "label": "gas pump",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n02979186/n02979186_15901.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02979186_15901.jpg",
+    "class_id": "n02979186",
+    "label": "cassette player",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n02979186/n02979186_22991.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02979186_22991.jpg",
+    "class_id": "n02979186",
+    "label": "cassette player",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03417042/n03417042_28261.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n03417042_28261.jpg",
+    "class_id": "n03417042",
+    "label": "garbage truck",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03445777/n03445777_71.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n03445777_71.jpg",
+    "class_id": "n03445777",
+    "label": "golf ball",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n02979186/n02979186_10912.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02979186_10912.jpg",
+    "class_id": "n02979186",
+    "label": "cassette player",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n02979186/n02979186_15931.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02979186_15931.jpg",
+    "class_id": "n02979186",
+    "label": "cassette player",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03888257/n03888257_57010.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n03888257_57010.jpg",
+    "class_id": "n03888257",
+    "label": "parachute",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03000684/n03000684_11122.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n03000684_11122.jpg",
+    "class_id": "n03000684",
+    "label": "chain saw",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n01440764/n01440764_7571.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n01440764_7571.jpg",
+    "class_id": "n01440764",
+    "label": "tench",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03028079/n03028079_29920.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n03028079_29920.jpg",
+    "class_id": "n03028079",
+    "label": "church",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03394916/n03394916_53581.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n03394916_53581.jpg",
+    "class_id": "n03394916",
+    "label": "French horn",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03888257/n03888257_38560.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n03888257_38560.jpg",
+    "class_id": "n03888257",
+    "label": "parachute",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03888257/ILSVRC2012_val_00006561.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_ILSVRC2012_val_00006561.jpg",
+    "class_id": "n03888257",
+    "label": "parachute",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03888257/n03888257_61350.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n03888257_61350.jpg",
+    "class_id": "n03888257",
+    "label": "parachute",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n02102040/n02102040_4492.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02102040_4492.jpg",
+    "class_id": "n02102040",
+    "label": "English springer",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n01440764/n01440764_4962.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n01440764_4962.jpg",
+    "class_id": "n01440764",
+    "label": "tench",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  },
+  {
+    "original_path": "data/raw/imagenette2-160/val/n03888257/n03888257_5501.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n03888257_5501.jpg",
+    "class_id": "n03888257",
+    "label": "parachute",
+    "corruption_type": "gaussian_noise",
+    "severity": 3
+  }
+]

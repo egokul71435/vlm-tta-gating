@@ -7,7 +7,7 @@ random.seed(42)
 
 IMAGENETTE_VAL_DIR = Path("data/raw/imagenette2-160/val")
 NUM_IMAGES = 150
-OUTPUT_MANIFEST = Path("data/base_images.json")
+OUTPUT_MANIFEST = Path("data/manifests/base_images.json")
 
 # Imagenette class folder names map to WordNet IDs, not human labels
 # below mapping is Imagenette's official label set
