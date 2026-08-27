@@ -1,3 +1,5 @@
+# This uses a single signal (entropy) to predict which of TDA or TPT will win on a given image
+
 import json
 import numpy as np
 import matplotlib.pyplot as plt
