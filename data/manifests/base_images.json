@@ -1498,5 +1498,1005 @@
     "path": "data/raw/imagewoof2-160/val/n02086240/n02086240_5071.JPEG",
     "class_id": "n02086240",
     "label": "Shih-Tzu"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02088364/n02088364_1041.JPEG",
+    "class_id": "n02088364",
+    "label": "beagle"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02086240/n02086240_7622.JPEG",
+    "class_id": "n02086240",
+    "label": "Shih-Tzu"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02087394/n02087394_11541.JPEG",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02099601/n02099601_3562.JPEG",
+    "class_id": "n02099601",
+    "label": "golden retriever"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02093754/n02093754_2282.JPEG",
+    "class_id": "n02093754",
+    "label": "Australian terrier"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02093754/n02093754_7441.JPEG",
+    "class_id": "n02093754",
+    "label": "Australian terrier"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02105641/n02105641_12010.JPEG",
+    "class_id": "n02105641",
+    "label": "Old English sheepdog"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02111889/n02111889_15472.JPEG",
+    "class_id": "n02111889",
+    "label": "Samoyed"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02089973/n02089973_11392.JPEG",
+    "class_id": "n02089973",
+    "label": "English foxhound"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02111889/n02111889_8082.JPEG",
+    "class_id": "n02111889",
+    "label": "Samoyed"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02087394/n02087394_14651.JPEG",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02096294/n02096294_390.JPEG",
+    "class_id": "n02096294",
+    "label": "border terrier"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02087394/n02087394_4741.JPEG",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02089973/n02089973_660.JPEG",
+    "class_id": "n02089973",
+    "label": "English foxhound"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02099601/n02099601_7740.JPEG",
+    "class_id": "n02099601",
+    "label": "golden retriever"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02086240/n02086240_3552.JPEG",
+    "class_id": "n02086240",
+    "label": "Shih-Tzu"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02093754/n02093754_811.JPEG",
+    "class_id": "n02093754",
+    "label": "Australian terrier"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02096294/n02096294_7960.JPEG",
+    "class_id": "n02096294",
+    "label": "border terrier"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02088364/n02088364_3872.JPEG",
+    "class_id": "n02088364",
+    "label": "beagle"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02093754/n02093754_322.JPEG",
+    "class_id": "n02093754",
+    "label": "Australian terrier"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02099601/n02099601_6262.JPEG",
+    "class_id": "n02099601",
+    "label": "golden retriever"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02111889/n02111889_11810.JPEG",
+    "class_id": "n02111889",
+    "label": "Samoyed"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02086240/ILSVRC2012_val_00029700.JPEG",
+    "class_id": "n02086240",
+    "label": "Shih-Tzu"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02096294/n02096294_1132.JPEG",
+    "class_id": "n02096294",
+    "label": "border terrier"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02105641/ILSVRC2012_val_00018762.JPEG",
+    "class_id": "n02105641",
+    "label": "Old English sheepdog"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02115641/n02115641_23710.JPEG",
+    "class_id": "n02115641",
+    "label": "dingo"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02099601/ILSVRC2012_val_00031731.JPEG",
+    "class_id": "n02099601",
+    "label": "golden retriever"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02099601/n02099601_5132.JPEG",
+    "class_id": "n02099601",
+    "label": "golden retriever"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02086240/n02086240_110.JPEG",
+    "class_id": "n02086240",
+    "label": "Shih-Tzu"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02111889/n02111889_17580.JPEG",
+    "class_id": "n02111889",
+    "label": "Samoyed"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02093754/n02093754_70.JPEG",
+    "class_id": "n02093754",
+    "label": "Australian terrier"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02096294/n02096294_7341.JPEG",
+    "class_id": "n02096294",
+    "label": "border terrier"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02099601/n02099601_5512.JPEG",
+    "class_id": "n02099601",
+    "label": "golden retriever"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02111889/n02111889_5272.JPEG",
+    "class_id": "n02111889",
+    "label": "Samoyed"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02086240/n02086240_7601.JPEG",
+    "class_id": "n02086240",
+    "label": "Shih-Tzu"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02115641/n02115641_15372.JPEG",
+    "class_id": "n02115641",
+    "label": "dingo"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02105641/n02105641_13680.JPEG",
+    "class_id": "n02105641",
+    "label": "Old English sheepdog"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02111889/n02111889_3730.JPEG",
+    "class_id": "n02111889",
+    "label": "Samoyed"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02096294/n02096294_4910.JPEG",
+    "class_id": "n02096294",
+    "label": "border terrier"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02093754/n02093754_6531.JPEG",
+    "class_id": "n02093754",
+    "label": "Australian terrier"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02088364/n02088364_1411.JPEG",
+    "class_id": "n02088364",
+    "label": "beagle"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02115641/n02115641_44060.JPEG",
+    "class_id": "n02115641",
+    "label": "dingo"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02099601/n02099601_27330.JPEG",
+    "class_id": "n02099601",
+    "label": "golden retriever"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02096294/n02096294_3560.JPEG",
+    "class_id": "n02096294",
+    "label": "border terrier"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02099601/n02099601_3901.JPEG",
+    "class_id": "n02099601",
+    "label": "golden retriever"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02093754/n02093754_5292.JPEG",
+    "class_id": "n02093754",
+    "label": "Australian terrier"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02096294/n02096294_670.JPEG",
+    "class_id": "n02096294",
+    "label": "border terrier"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02096294/n02096294_11282.JPEG",
+    "class_id": "n02096294",
+    "label": "border terrier"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02099601/n02099601_4111.JPEG",
+    "class_id": "n02099601",
+    "label": "golden retriever"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02086240/n02086240_11492.JPEG",
+    "class_id": "n02086240",
+    "label": "Shih-Tzu"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02099601/n02099601_7841.JPEG",
+    "class_id": "n02099601",
+    "label": "golden retriever"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02105641/n02105641_4062.JPEG",
+    "class_id": "n02105641",
+    "label": "Old English sheepdog"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02096294/n02096294_1992.JPEG",
+    "class_id": "n02096294",
+    "label": "border terrier"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02086240/n02086240_7100.JPEG",
+    "class_id": "n02086240",
+    "label": "Shih-Tzu"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02111889/n02111889_1491.JPEG",
+    "class_id": "n02111889",
+    "label": "Samoyed"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02105641/n02105641_3540.JPEG",
+    "class_id": "n02105641",
+    "label": "Old English sheepdog"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02115641/n02115641_46540.JPEG",
+    "class_id": "n02115641",
+    "label": "dingo"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02087394/n02087394_24880.JPEG",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02111889/n02111889_16490.JPEG",
+    "class_id": "n02111889",
+    "label": "Samoyed"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02088364/n02088364_5582.JPEG",
+    "class_id": "n02088364",
+    "label": "beagle"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02086240/n02086240_8812.JPEG",
+    "class_id": "n02086240",
+    "label": "Shih-Tzu"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02099601/n02099601_10242.JPEG",
+    "class_id": "n02099601",
+    "label": "golden retriever"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02099601/n02099601_4651.JPEG",
+    "class_id": "n02099601",
+    "label": "golden retriever"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02115641/n02115641_4482.JPEG",
+    "class_id": "n02115641",
+    "label": "dingo"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02087394/n02087394_17872.JPEG",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02089973/n02089973_980.JPEG",
+    "class_id": "n02089973",
+    "label": "English foxhound"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02115641/n02115641_871.JPEG",
+    "class_id": "n02115641",
+    "label": "dingo"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02115641/n02115641_24410.JPEG",
+    "class_id": "n02115641",
+    "label": "dingo"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02086240/n02086240_3210.JPEG",
+    "class_id": "n02086240",
+    "label": "Shih-Tzu"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02099601/n02099601_7942.JPEG",
+    "class_id": "n02099601",
+    "label": "golden retriever"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02093754/n02093754_782.JPEG",
+    "class_id": "n02093754",
+    "label": "Australian terrier"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02093754/n02093754_220.JPEG",
+    "class_id": "n02093754",
+    "label": "Australian terrier"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02096294/n02096294_5221.JPEG",
+    "class_id": "n02096294",
+    "label": "border terrier"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02087394/n02087394_35282.JPEG",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02089973/n02089973_6202.JPEG",
+    "class_id": "n02089973",
+    "label": "English foxhound"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02087394/ILSVRC2012_val_00006900.JPEG",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02087394/n02087394_36031.JPEG",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02096294/n02096294_12161.JPEG",
+    "class_id": "n02096294",
+    "label": "border terrier"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02088364/n02088364_2630.JPEG",
+    "class_id": "n02088364",
+    "label": "beagle"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02086240/n02086240_9750.JPEG",
+    "class_id": "n02086240",
+    "label": "Shih-Tzu"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02099601/n02099601_10802.JPEG",
+    "class_id": "n02099601",
+    "label": "golden retriever"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02111889/n02111889_17640.JPEG",
+    "class_id": "n02111889",
+    "label": "Samoyed"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02089973/n02089973_6360.JPEG",
+    "class_id": "n02089973",
+    "label": "English foxhound"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02115641/n02115641_2701.JPEG",
+    "class_id": "n02115641",
+    "label": "dingo"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02105641/n02105641_8581.JPEG",
+    "class_id": "n02105641",
+    "label": "Old English sheepdog"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02093754/n02093754_5172.JPEG",
+    "class_id": "n02093754",
+    "label": "Australian terrier"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02105641/n02105641_10931.JPEG",
+    "class_id": "n02105641",
+    "label": "Old English sheepdog"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02089973/n02089973_3721.JPEG",
+    "class_id": "n02089973",
+    "label": "English foxhound"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02088364/n02088364_2952.JPEG",
+    "class_id": "n02088364",
+    "label": "beagle"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02111889/n02111889_16622.JPEG",
+    "class_id": "n02111889",
+    "label": "Samoyed"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02089973/n02089973_3351.JPEG",
+    "class_id": "n02089973",
+    "label": "English foxhound"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02096294/n02096294_6980.JPEG",
+    "class_id": "n02096294",
+    "label": "border terrier"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02096294/ILSVRC2012_val_00025912.JPEG",
+    "class_id": "n02096294",
+    "label": "border terrier"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02087394/n02087394_15292.JPEG",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02088364/n02088364_10012.JPEG",
+    "class_id": "n02088364",
+    "label": "beagle"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02088364/n02088364_1531.JPEG",
+    "class_id": "n02088364",
+    "label": "beagle"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02105641/n02105641_7562.JPEG",
+    "class_id": "n02105641",
+    "label": "Old English sheepdog"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02111889/n02111889_1340.JPEG",
+    "class_id": "n02111889",
+    "label": "Samoyed"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02099601/n02099601_4602.JPEG",
+    "class_id": "n02099601",
+    "label": "golden retriever"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02096294/n02096294_1682.JPEG",
+    "class_id": "n02096294",
+    "label": "border terrier"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02111889/ILSVRC2012_val_00029610.JPEG",
+    "class_id": "n02111889",
+    "label": "Samoyed"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02115641/n02115641_12981.JPEG",
+    "class_id": "n02115641",
+    "label": "dingo"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02105641/n02105641_10020.JPEG",
+    "class_id": "n02105641",
+    "label": "Old English sheepdog"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02105641/ILSVRC2012_val_00039591.JPEG",
+    "class_id": "n02105641",
+    "label": "Old English sheepdog"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02105641/n02105641_13242.JPEG",
+    "class_id": "n02105641",
+    "label": "Old English sheepdog"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02096294/n02096294_4880.JPEG",
+    "class_id": "n02096294",
+    "label": "border terrier"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02099601/n02099601_6040.JPEG",
+    "class_id": "n02099601",
+    "label": "golden retriever"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02087394/n02087394_9922.JPEG",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02093754/n02093754_7060.JPEG",
+    "class_id": "n02093754",
+    "label": "Australian terrier"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02096294/n02096294_7231.JPEG",
+    "class_id": "n02096294",
+    "label": "border terrier"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02086240/n02086240_5151.JPEG",
+    "class_id": "n02086240",
+    "label": "Shih-Tzu"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02115641/n02115641_4951.JPEG",
+    "class_id": "n02115641",
+    "label": "dingo"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02086240/n02086240_10771.JPEG",
+    "class_id": "n02086240",
+    "label": "Shih-Tzu"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02087394/n02087394_1352.JPEG",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02088364/n02088364_3722.JPEG",
+    "class_id": "n02088364",
+    "label": "beagle"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02115641/n02115641_1662.JPEG",
+    "class_id": "n02115641",
+    "label": "dingo"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02088364/n02088364_5090.JPEG",
+    "class_id": "n02088364",
+    "label": "beagle"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02087394/n02087394_16381.JPEG",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02099601/n02099601_8772.JPEG",
+    "class_id": "n02099601",
+    "label": "golden retriever"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02087394/n02087394_9261.JPEG",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02115641/n02115641_8492.JPEG",
+    "class_id": "n02115641",
+    "label": "dingo"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02096294/n02096294_6370.JPEG",
+    "class_id": "n02096294",
+    "label": "border terrier"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02088364/n02088364_4272.JPEG",
+    "class_id": "n02088364",
+    "label": "beagle"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02087394/n02087394_8532.JPEG",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02115641/n02115641_1940.JPEG",
+    "class_id": "n02115641",
+    "label": "dingo"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02111889/n02111889_7011.JPEG",
+    "class_id": "n02111889",
+    "label": "Samoyed"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02087394/n02087394_22042.JPEG",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02111889/n02111889_402.JPEG",
+    "class_id": "n02111889",
+    "label": "Samoyed"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02111889/n02111889_5201.JPEG",
+    "class_id": "n02111889",
+    "label": "Samoyed"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02087394/ILSVRC2012_val_00044140.JPEG",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02089973/n02089973_6321.JPEG",
+    "class_id": "n02089973",
+    "label": "English foxhound"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02099601/n02099601_13392.JPEG",
+    "class_id": "n02099601",
+    "label": "golden retriever"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02099601/n02099601_6272.JPEG",
+    "class_id": "n02099601",
+    "label": "golden retriever"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02105641/n02105641_7871.JPEG",
+    "class_id": "n02105641",
+    "label": "Old English sheepdog"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02115641/n02115641_9230.JPEG",
+    "class_id": "n02115641",
+    "label": "dingo"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02086240/n02086240_912.JPEG",
+    "class_id": "n02086240",
+    "label": "Shih-Tzu"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02087394/n02087394_10351.JPEG",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02089973/n02089973_1241.JPEG",
+    "class_id": "n02089973",
+    "label": "English foxhound"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02115641/ILSVRC2012_val_00032652.JPEG",
+    "class_id": "n02115641",
+    "label": "dingo"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02086240/n02086240_11762.JPEG",
+    "class_id": "n02086240",
+    "label": "Shih-Tzu"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02105641/n02105641_6742.JPEG",
+    "class_id": "n02105641",
+    "label": "Old English sheepdog"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02086240/n02086240_4450.JPEG",
+    "class_id": "n02086240",
+    "label": "Shih-Tzu"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02105641/n02105641_4970.JPEG",
+    "class_id": "n02105641",
+    "label": "Old English sheepdog"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02096294/n02096294_2160.JPEG",
+    "class_id": "n02096294",
+    "label": "border terrier"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02088364/n02088364_10001.JPEG",
+    "class_id": "n02088364",
+    "label": "beagle"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02115641/n02115641_4692.JPEG",
+    "class_id": "n02115641",
+    "label": "dingo"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02099601/n02099601_1492.JPEG",
+    "class_id": "n02099601",
+    "label": "golden retriever"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02111889/n02111889_17791.JPEG",
+    "class_id": "n02111889",
+    "label": "Samoyed"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02105641/n02105641_11591.JPEG",
+    "class_id": "n02105641",
+    "label": "Old English sheepdog"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02086240/n02086240_7982.JPEG",
+    "class_id": "n02086240",
+    "label": "Shih-Tzu"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02111889/n02111889_13401.JPEG",
+    "class_id": "n02111889",
+    "label": "Samoyed"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02099601/n02099601_3410.JPEG",
+    "class_id": "n02099601",
+    "label": "golden retriever"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02115641/n02115641_30802.JPEG",
+    "class_id": "n02115641",
+    "label": "dingo"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02087394/n02087394_6031.JPEG",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02086240/n02086240_8780.JPEG",
+    "class_id": "n02086240",
+    "label": "Shih-Tzu"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02111889/n02111889_13672.JPEG",
+    "class_id": "n02111889",
+    "label": "Samoyed"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02088364/n02088364_321.JPEG",
+    "class_id": "n02088364",
+    "label": "beagle"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02086240/n02086240_7730.JPEG",
+    "class_id": "n02086240",
+    "label": "Shih-Tzu"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02086240/n02086240_5810.JPEG",
+    "class_id": "n02086240",
+    "label": "Shih-Tzu"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02087394/n02087394_9511.JPEG",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02099601/n02099601_3860.JPEG",
+    "class_id": "n02099601",
+    "label": "golden retriever"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02087394/n02087394_10972.JPEG",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02105641/n02105641_6582.JPEG",
+    "class_id": "n02105641",
+    "label": "Old English sheepdog"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02093754/n02093754_5891.JPEG",
+    "class_id": "n02093754",
+    "label": "Australian terrier"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02087394/n02087394_12960.JPEG",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02089973/n02089973_6242.JPEG",
+    "class_id": "n02089973",
+    "label": "English foxhound"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02105641/n02105641_9921.JPEG",
+    "class_id": "n02105641",
+    "label": "Old English sheepdog"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02088364/n02088364_4572.JPEG",
+    "class_id": "n02088364",
+    "label": "beagle"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02089973/n02089973_3401.JPEG",
+    "class_id": "n02089973",
+    "label": "English foxhound"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02086240/n02086240_4751.JPEG",
+    "class_id": "n02086240",
+    "label": "Shih-Tzu"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02089973/n02089973_8061.JPEG",
+    "class_id": "n02089973",
+    "label": "English foxhound"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02111889/n02111889_1762.JPEG",
+    "class_id": "n02111889",
+    "label": "Samoyed"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02086240/n02086240_762.JPEG",
+    "class_id": "n02086240",
+    "label": "Shih-Tzu"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02105641/n02105641_7271.JPEG",
+    "class_id": "n02105641",
+    "label": "Old English sheepdog"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02086240/n02086240_2640.JPEG",
+    "class_id": "n02086240",
+    "label": "Shih-Tzu"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02093754/n02093754_7390.JPEG",
+    "class_id": "n02093754",
+    "label": "Australian terrier"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02099601/n02099601_6422.JPEG",
+    "class_id": "n02099601",
+    "label": "golden retriever"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02087394/n02087394_11442.JPEG",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02099601/n02099601_9831.JPEG",
+    "class_id": "n02099601",
+    "label": "golden retriever"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02089973/n02089973_7990.JPEG",
+    "class_id": "n02089973",
+    "label": "English foxhound"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02115641/n02115641_13332.JPEG",
+    "class_id": "n02115641",
+    "label": "dingo"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02105641/n02105641_4860.JPEG",
+    "class_id": "n02105641",
+    "label": "Old English sheepdog"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02096294/n02096294_1642.JPEG",
+    "class_id": "n02096294",
+    "label": "border terrier"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02115641/n02115641_2961.JPEG",
+    "class_id": "n02115641",
+    "label": "dingo"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02096294/n02096294_4162.JPEG",
+    "class_id": "n02096294",
+    "label": "border terrier"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02093754/n02093754_6432.JPEG",
+    "class_id": "n02093754",
+    "label": "Australian terrier"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02099601/n02099601_10381.JPEG",
+    "class_id": "n02099601",
+    "label": "golden retriever"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02105641/n02105641_1200.JPEG",
+    "class_id": "n02105641",
+    "label": "Old English sheepdog"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02105641/n02105641_10280.JPEG",
+    "class_id": "n02105641",
+    "label": "Old English sheepdog"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02096294/n02096294_3510.JPEG",
+    "class_id": "n02096294",
+    "label": "border terrier"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02093754/n02093754_2262.JPEG",
+    "class_id": "n02093754",
+    "label": "Australian terrier"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02088364/n02088364_10740.JPEG",
+    "class_id": "n02088364",
+    "label": "beagle"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02096294/n02096294_11181.JPEG",
+    "class_id": "n02096294",
+    "label": "border terrier"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02088364/n02088364_13630.JPEG",
+    "class_id": "n02088364",
+    "label": "beagle"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02093754/n02093754_4730.JPEG",
+    "class_id": "n02093754",
+    "label": "Australian terrier"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02096294/n02096294_1420.JPEG",
+    "class_id": "n02096294",
+    "label": "border terrier"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02087394/n02087394_8521.JPEG",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02099601/n02099601_16221.JPEG",
+    "class_id": "n02099601",
+    "label": "golden retriever"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02115641/n02115641_7560.JPEG",
+    "class_id": "n02115641",
+    "label": "dingo"
+  },
+  {
+    "path": "data/raw/imagewoof2-160/val/n02099601/n02099601_512.JPEG",
+    "class_id": "n02099601",
+    "label": "golden retriever"
   }
 ]

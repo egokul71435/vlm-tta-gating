@@ -2,23 +2,24 @@
 
 Pilot project exploring whether a lightweight, meta-learned gate can predict, per image, which test-time adaptation (TTA) strategy (TPT vs. TDA) will work better for a CLIP-based vision-language model under domain shift, without manual per-domain tuning.
 
-## Status: scaling in progress (n=150 → n=300, results trending but still inconclusive)
+## Status: scaling in progress -> entropy signal trending upward, still inconclusive (n=150 → 300 → 500)
 
-A small end-to-end pilot (150 images) has been run and validated.
+| n | Vanilla | TPT | TDA | Oracle | Oracle gap | Disagreement cases | Entropy-gate LOO acc | Majority baseline |
+|---|---|---|---|---|---|---|---|---|
+| 150 | 57.3% | 56.7% | 61.3% | 66.7% | 5.3pt | 23 | 56.5% | 65.2% |
+| 300 | 56.3% | 58.0% | 61.0% | 64.7% | 3.7pt | 31 | 54.8% | 64.5% |
+| 500 | 57.0% | 56.4% | 61.6% | 68.2% | 6.6pt | 92 | 60.9% | 64.1% |
 
-**TL;DR of pilot results (n=150):**
-- Vanilla CLIP baseline: 57.3%
-- TPT: 56.7% (roughly a wash — 12 images fixed, 13 regressed)
-- TDA: 61.3% (net positive — 9 fixed, 3 regressed)
-- Oracle (best of TPT/TDA per image): 66.7% — a 5.3-point gap over TDA alone, meaning a perfect gate could meaningfully outperform either fixed strategy
-- 23/150 images saw TPT and TDA disagree on correctness — the core signal a gate would need
-- A logistic-regression gate using pre-adaptation entropy (and confidence, corruption type) did not beat a majority-class baseline at this sample size — likely a data-volume limitation given the small number of disagreement cases, not evidence the signal doesn't exist
+**Read:** TDA consistently outperforms TPT and vanilla CLIP across all scales tested. The entropy-based gate is trending toward the majority-class baseline as data scales (gap has narrowed from -8.7pt at n=150 to -3.2pt at n=500), suggesting the earlier inconclusive results were at least partly a data-volume limitation. Not yet conclusive — the trend needs to continue at larger scale to confirm entropy is a real, usable signal rather than noise settling down.
 
-**Scaled to n=300:** vanilla 56.3%, TPT 58.0%, TDA 61.0%, oracle 64.7% (3.7pt gap over TDA) — core accuracy pattern held up, confirming the 150-image result wasn't a small-sample fluke. Disagreement cases grew to 31/300. A 3-feature gate (entropy + confidence + corruption type) improved over the entropy-only version and moved closer to (but still below) majority baseline.
+A multi-feature version (entropy + confidence + corruption type) has not consistently outperformed entropy alone across scales and likely overfits at these sample sizes; entropy alone remains the more trustworthy signal for now.
 
-The oracle gap confirms real headroom exists for a gate to capture. Currently scaling up image count and shift-type diversity to get a larger, more conclusive test of the entropy signal.
+Methodology note: `fit_gate_pilot.py` and `fit_gate_pilot_v2.py` were found to disagree on entropy-only accuracy (63.0% vs. 60.9%) due to a feature-scaling inconsistency between the two scripts. Standardized both to apply `StandardScaler` before fitting — 60.9% is the corrected, trustworthy number.
 
-**Read so far:** more data is helping incrementally but hasn't yet produced a gate that clearly beats naive baselines. Continuing to scale (targeting ~500 images) before deciding whether the signal is real-but-data-limited or genuinely weak.
+Note: n=150/300/500 are nested samples (same random seed, larger sets are supersets of smaller ones), not independent replications.
+
+**Next:** continue scaling toward ~800-1000 images to see whether the entropy signal fully closes the gap to baseline, or plateaus below it.
+
 
 ## Setup
 

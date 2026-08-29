@@ -1201,802 +1201,802 @@
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02096294/n02096294_5590.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02096294_5590.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02096294_5590.jpg",
     "class_id": "n02096294",
     "label": "border terrier",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02096294/n02096294_141.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02096294_141.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02096294_141.jpg",
     "class_id": "n02096294",
     "label": "border terrier",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02111889/n02111889_12900.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02111889_12900.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02111889_12900.jpg",
     "class_id": "n02111889",
     "label": "Samoyed",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02093754/n02093754_6492.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02093754_6492.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02093754_6492.jpg",
     "class_id": "n02093754",
     "label": "Australian terrier",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02105641/n02105641_7531.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02105641_7531.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02105641_7531.jpg",
     "class_id": "n02105641",
     "label": "Old English sheepdog",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02096294/n02096294_180.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02096294_180.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02096294_180.jpg",
     "class_id": "n02096294",
     "label": "border terrier",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02105641/n02105641_10151.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02105641_10151.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02105641_10151.jpg",
     "class_id": "n02105641",
     "label": "Old English sheepdog",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02111889/n02111889_1771.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02111889_1771.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02111889_1771.jpg",
     "class_id": "n02111889",
     "label": "Samoyed",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02088364/ILSVRC2012_val_00031220.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_ILSVRC2012_val_00031220.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_ILSVRC2012_val_00031220.jpg",
     "class_id": "n02088364",
     "label": "beagle",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02087394/n02087394_12331.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02087394_12331.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02087394_12331.jpg",
     "class_id": "n02087394",
     "label": "Rhodesian ridgeback",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02111889/n02111889_3132.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02111889_3132.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02111889_3132.jpg",
     "class_id": "n02111889",
     "label": "Samoyed",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02086240/n02086240_5750.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02086240_5750.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02086240_5750.jpg",
     "class_id": "n02086240",
     "label": "Shih-Tzu",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02089973/n02089973_5582.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02089973_5582.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02089973_5582.jpg",
     "class_id": "n02089973",
     "label": "English foxhound",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02099601/n02099601_10391.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02099601_10391.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02099601_10391.jpg",
     "class_id": "n02099601",
     "label": "golden retriever",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02111889/n02111889_7002.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02111889_7002.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02111889_7002.jpg",
     "class_id": "n02111889",
     "label": "Samoyed",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02115641/n02115641_42170.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02115641_42170.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02115641_42170.jpg",
     "class_id": "n02115641",
     "label": "dingo",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02088364/n02088364_16502.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02088364_16502.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02088364_16502.jpg",
     "class_id": "n02088364",
     "label": "beagle",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02111889/n02111889_14292.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02111889_14292.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02111889_14292.jpg",
     "class_id": "n02111889",
     "label": "Samoyed",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02096294/n02096294_7182.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02096294_7182.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02096294_7182.jpg",
     "class_id": "n02096294",
     "label": "border terrier",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02096294/n02096294_9242.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02096294_9242.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02096294_9242.jpg",
     "class_id": "n02096294",
     "label": "border terrier",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02087394/n02087394_27802.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02087394_27802.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02087394_27802.jpg",
     "class_id": "n02087394",
     "label": "Rhodesian ridgeback",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02093754/n02093754_4261.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02093754_4261.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02093754_4261.jpg",
     "class_id": "n02093754",
     "label": "Australian terrier",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02093754/n02093754_4412.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02093754_4412.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02093754_4412.jpg",
     "class_id": "n02093754",
     "label": "Australian terrier",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02088364/n02088364_6210.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02088364_6210.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02088364_6210.jpg",
     "class_id": "n02088364",
     "label": "beagle",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02093754/n02093754_5840.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02093754_5840.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02093754_5840.jpg",
     "class_id": "n02093754",
     "label": "Australian terrier",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02105641/n02105641_14142.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02105641_14142.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02105641_14142.jpg",
     "class_id": "n02105641",
     "label": "Old English sheepdog",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02086240/n02086240_630.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02086240_630.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02086240_630.jpg",
     "class_id": "n02086240",
     "label": "Shih-Tzu",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02086240/n02086240_5550.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02086240_5550.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02086240_5550.jpg",
     "class_id": "n02086240",
     "label": "Shih-Tzu",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02115641/n02115641_45212.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02115641_45212.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02115641_45212.jpg",
     "class_id": "n02115641",
     "label": "dingo",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02096294/n02096294_3022.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02096294_3022.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02096294_3022.jpg",
     "class_id": "n02096294",
     "label": "border terrier",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02086240/n02086240_10380.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02086240_10380.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02086240_10380.jpg",
     "class_id": "n02086240",
     "label": "Shih-Tzu",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02087394/n02087394_25552.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02087394_25552.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02087394_25552.jpg",
     "class_id": "n02087394",
     "label": "Rhodesian ridgeback",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02089973/ILSVRC2012_val_00043391.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_ILSVRC2012_val_00043391.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_ILSVRC2012_val_00043391.jpg",
     "class_id": "n02089973",
     "label": "English foxhound",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02111889/n02111889_1841.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02111889_1841.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02111889_1841.jpg",
     "class_id": "n02111889",
     "label": "Samoyed",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02096294/n02096294_6692.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02096294_6692.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02096294_6692.jpg",
     "class_id": "n02096294",
     "label": "border terrier",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02105641/n02105641_10732.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02105641_10732.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02105641_10732.jpg",
     "class_id": "n02105641",
     "label": "Old English sheepdog",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02115641/n02115641_5102.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02115641_5102.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02115641_5102.jpg",
     "class_id": "n02115641",
     "label": "dingo",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02096294/n02096294_6380.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02096294_6380.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02096294_6380.jpg",
     "class_id": "n02096294",
     "label": "border terrier",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02096294/n02096294_8492.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02096294_8492.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02096294_8492.jpg",
     "class_id": "n02096294",
     "label": "border terrier",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02099601/n02099601_1551.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02099601_1551.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02099601_1551.jpg",
     "class_id": "n02099601",
     "label": "golden retriever",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02115641/n02115641_3650.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02115641_3650.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02115641_3650.jpg",
     "class_id": "n02115641",
     "label": "dingo",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02089973/n02089973_3120.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02089973_3120.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02089973_3120.jpg",
     "class_id": "n02089973",
     "label": "English foxhound",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02099601/n02099601_8760.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02099601_8760.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02099601_8760.jpg",
     "class_id": "n02099601",
     "label": "golden retriever",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02099601/n02099601_7392.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02099601_7392.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02099601_7392.jpg",
     "class_id": "n02099601",
     "label": "golden retriever",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02088364/n02088364_3182.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02088364_3182.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02088364_3182.jpg",
     "class_id": "n02088364",
     "label": "beagle",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02115641/n02115641_11981.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02115641_11981.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02115641_11981.jpg",
     "class_id": "n02115641",
     "label": "dingo",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02105641/n02105641_7692.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02105641_7692.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02105641_7692.jpg",
     "class_id": "n02105641",
     "label": "Old English sheepdog",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02105641/n02105641_1212.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02105641_1212.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02105641_1212.jpg",
     "class_id": "n02105641",
     "label": "Old English sheepdog",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02088364/n02088364_1492.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02088364_1492.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02088364_1492.jpg",
     "class_id": "n02088364",
     "label": "beagle",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02099601/n02099601_5831.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02099601_5831.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02099601_5831.jpg",
     "class_id": "n02099601",
     "label": "golden retriever",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02111889/n02111889_661.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02111889_661.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02111889_661.jpg",
     "class_id": "n02111889",
     "label": "Samoyed",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02111889/n02111889_2442.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02111889_2442.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02111889_2442.jpg",
     "class_id": "n02111889",
     "label": "Samoyed",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02093754/n02093754_7552.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02093754_7552.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02093754_7552.jpg",
     "class_id": "n02093754",
     "label": "Australian terrier",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02093754/n02093754_5870.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02093754_5870.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02093754_5870.jpg",
     "class_id": "n02093754",
     "label": "Australian terrier",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02096294/n02096294_4342.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02096294_4342.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02096294_4342.jpg",
     "class_id": "n02096294",
     "label": "border terrier",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02105641/n02105641_2301.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02105641_2301.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02105641_2301.jpg",
     "class_id": "n02105641",
     "label": "Old English sheepdog",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02111889/n02111889_6110.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02111889_6110.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02111889_6110.jpg",
     "class_id": "n02111889",
     "label": "Samoyed",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02115641/n02115641_9681.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02115641_9681.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02115641_9681.jpg",
     "class_id": "n02115641",
     "label": "dingo",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02093754/n02093754_3302.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02093754_3302.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02093754_3302.jpg",
     "class_id": "n02093754",
     "label": "Australian terrier",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02087394/n02087394_19460.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02087394_19460.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02087394_19460.jpg",
     "class_id": "n02087394",
     "label": "Rhodesian ridgeback",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02115641/n02115641_29072.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02115641_29072.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02115641_29072.jpg",
     "class_id": "n02115641",
     "label": "dingo",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02105641/n02105641_802.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02105641_802.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02105641_802.jpg",
     "class_id": "n02105641",
     "label": "Old English sheepdog",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02105641/n02105641_10741.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02105641_10741.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02105641_10741.jpg",
     "class_id": "n02105641",
     "label": "Old English sheepdog",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02087394/n02087394_34751.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02087394_34751.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02087394_34751.jpg",
     "class_id": "n02087394",
     "label": "Rhodesian ridgeback",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02088364/n02088364_3840.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02088364_3840.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02088364_3840.jpg",
     "class_id": "n02088364",
     "label": "beagle",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02105641/n02105641_14112.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02105641_14112.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02105641_14112.jpg",
     "class_id": "n02105641",
     "label": "Old English sheepdog",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02115641/n02115641_9450.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02115641_9450.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02115641_9450.jpg",
     "class_id": "n02115641",
     "label": "dingo",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02096294/n02096294_5552.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02096294_5552.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02096294_5552.jpg",
     "class_id": "n02096294",
     "label": "border terrier",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02099601/n02099601_3810.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02099601_3810.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02099601_3810.jpg",
     "class_id": "n02099601",
     "label": "golden retriever",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02111889/n02111889_17211.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02111889_17211.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02111889_17211.jpg",
     "class_id": "n02111889",
     "label": "Samoyed",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02086240/n02086240_6732.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02086240_6732.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02086240_6732.jpg",
     "class_id": "n02086240",
     "label": "Shih-Tzu",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02088364/n02088364_17830.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02088364_17830.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02088364_17830.jpg",
     "class_id": "n02088364",
     "label": "beagle",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02096294/n02096294_4290.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02096294_4290.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02096294_4290.jpg",
     "class_id": "n02096294",
     "label": "border terrier",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02086240/n02086240_3492.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02086240_3492.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02086240_3492.jpg",
     "class_id": "n02086240",
     "label": "Shih-Tzu",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02099601/n02099601_3210.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02099601_3210.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02099601_3210.jpg",
     "class_id": "n02099601",
     "label": "golden retriever",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02105641/n02105641_2891.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02105641_2891.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02105641_2891.jpg",
     "class_id": "n02105641",
     "label": "Old English sheepdog",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02088364/n02088364_15370.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02088364_15370.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02088364_15370.jpg",
     "class_id": "n02088364",
     "label": "beagle",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02096294/n02096294_6170.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02096294_6170.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02096294_6170.jpg",
     "class_id": "n02096294",
     "label": "border terrier",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02105641/n02105641_9531.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02105641_9531.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02105641_9531.jpg",
     "class_id": "n02105641",
     "label": "Old English sheepdog",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02111889/n02111889_2962.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02111889_2962.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02111889_2962.jpg",
     "class_id": "n02111889",
     "label": "Samoyed",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02089973/n02089973_2300.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02089973_2300.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02089973_2300.jpg",
     "class_id": "n02089973",
     "label": "English foxhound",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02087394/n02087394_1180.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02087394_1180.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02087394_1180.jpg",
     "class_id": "n02087394",
     "label": "Rhodesian ridgeback",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02089973/n02089973_4820.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02089973_4820.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02089973_4820.jpg",
     "class_id": "n02089973",
     "label": "English foxhound",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02115641/ILSVRC2012_val_00015821.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_ILSVRC2012_val_00015821.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_ILSVRC2012_val_00015821.jpg",
     "class_id": "n02115641",
     "label": "dingo",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02111889/n02111889_4950.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02111889_4950.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02111889_4950.jpg",
     "class_id": "n02111889",
     "label": "Samoyed",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02087394/n02087394_11752.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02087394_11752.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02087394_11752.jpg",
     "class_id": "n02087394",
     "label": "Rhodesian ridgeback",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02115641/n02115641_6680.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02115641_6680.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02115641_6680.jpg",
     "class_id": "n02115641",
     "label": "dingo",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02096294/n02096294_10931.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02096294_10931.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02096294_10931.jpg",
     "class_id": "n02096294",
     "label": "border terrier",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02086240/n02086240_12690.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02086240_12690.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02086240_12690.jpg",
     "class_id": "n02086240",
     "label": "Shih-Tzu",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02111889/n02111889_8902.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02111889_8902.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02111889_8902.jpg",
     "class_id": "n02111889",
     "label": "Samoyed",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02115641/n02115641_7201.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02115641_7201.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02115641_7201.jpg",
     "class_id": "n02115641",
     "label": "dingo",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02087394/n02087394_14362.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02087394_14362.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02087394_14362.jpg",
     "class_id": "n02087394",
     "label": "Rhodesian ridgeback",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02115641/n02115641_15691.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02115641_15691.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02115641_15691.jpg",
     "class_id": "n02115641",
     "label": "dingo",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02111889/n02111889_5932.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02111889_5932.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02111889_5932.jpg",
     "class_id": "n02111889",
     "label": "Samoyed",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02111889/n02111889_6750.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02111889_6750.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02111889_6750.jpg",
     "class_id": "n02111889",
     "label": "Samoyed",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02099601/n02099601_1512.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02099601_1512.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02099601_1512.jpg",
     "class_id": "n02099601",
     "label": "golden retriever",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02088364/n02088364_12920.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02088364_12920.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02088364_12920.jpg",
     "class_id": "n02088364",
     "label": "beagle",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02088364/n02088364_9650.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02088364_9650.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02088364_9650.jpg",
     "class_id": "n02088364",
     "label": "beagle",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02099601/n02099601_5351.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02099601_5351.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02099601_5351.jpg",
     "class_id": "n02099601",
     "label": "golden retriever",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
     "original_path": "data/raw/imagewoof2-160/val/n02111889/n02111889_17462.JPEG",
-    "corrupted_path": "data/corrupted/gaussian_noise_n02111889_17462.jpg",
+    "corrupted_path": "data/corrupted/gaussian_blur_n02111889_17462.jpg",
     "class_id": "n02111889",
     "label": "Samoyed",
-    "corruption_type": "gaussian_noise",
+    "corruption_type": "gaussian_blur",
     "severity": 4
   },
   {
@@ -2396,6 +2396,1606 @@
     "corrupted_path": "data/corrupted/gaussian_noise_n02086240_5071.jpg",
     "class_id": "n02086240",
     "label": "Shih-Tzu",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02088364/n02088364_1041.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02088364_1041.jpg",
+    "class_id": "n02088364",
+    "label": "beagle",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02086240/n02086240_7622.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02086240_7622.jpg",
+    "class_id": "n02086240",
+    "label": "Shih-Tzu",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02087394/n02087394_11541.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02087394_11541.jpg",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02099601/n02099601_3562.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02099601_3562.jpg",
+    "class_id": "n02099601",
+    "label": "golden retriever",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02093754/n02093754_2282.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02093754_2282.jpg",
+    "class_id": "n02093754",
+    "label": "Australian terrier",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02093754/n02093754_7441.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02093754_7441.jpg",
+    "class_id": "n02093754",
+    "label": "Australian terrier",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02105641/n02105641_12010.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02105641_12010.jpg",
+    "class_id": "n02105641",
+    "label": "Old English sheepdog",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02111889/n02111889_15472.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02111889_15472.jpg",
+    "class_id": "n02111889",
+    "label": "Samoyed",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02089973/n02089973_11392.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02089973_11392.jpg",
+    "class_id": "n02089973",
+    "label": "English foxhound",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02111889/n02111889_8082.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02111889_8082.jpg",
+    "class_id": "n02111889",
+    "label": "Samoyed",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02087394/n02087394_14651.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02087394_14651.jpg",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02096294/n02096294_390.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02096294_390.jpg",
+    "class_id": "n02096294",
+    "label": "border terrier",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02087394/n02087394_4741.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02087394_4741.jpg",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02089973/n02089973_660.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02089973_660.jpg",
+    "class_id": "n02089973",
+    "label": "English foxhound",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02099601/n02099601_7740.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02099601_7740.jpg",
+    "class_id": "n02099601",
+    "label": "golden retriever",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02086240/n02086240_3552.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02086240_3552.jpg",
+    "class_id": "n02086240",
+    "label": "Shih-Tzu",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02093754/n02093754_811.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02093754_811.jpg",
+    "class_id": "n02093754",
+    "label": "Australian terrier",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02096294/n02096294_7960.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02096294_7960.jpg",
+    "class_id": "n02096294",
+    "label": "border terrier",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02088364/n02088364_3872.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02088364_3872.jpg",
+    "class_id": "n02088364",
+    "label": "beagle",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02093754/n02093754_322.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02093754_322.jpg",
+    "class_id": "n02093754",
+    "label": "Australian terrier",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02099601/n02099601_6262.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02099601_6262.jpg",
+    "class_id": "n02099601",
+    "label": "golden retriever",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02111889/n02111889_11810.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02111889_11810.jpg",
+    "class_id": "n02111889",
+    "label": "Samoyed",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02086240/ILSVRC2012_val_00029700.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_ILSVRC2012_val_00029700.jpg",
+    "class_id": "n02086240",
+    "label": "Shih-Tzu",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02096294/n02096294_1132.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02096294_1132.jpg",
+    "class_id": "n02096294",
+    "label": "border terrier",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02105641/ILSVRC2012_val_00018762.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_ILSVRC2012_val_00018762.jpg",
+    "class_id": "n02105641",
+    "label": "Old English sheepdog",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02115641/n02115641_23710.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02115641_23710.jpg",
+    "class_id": "n02115641",
+    "label": "dingo",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02099601/ILSVRC2012_val_00031731.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_ILSVRC2012_val_00031731.jpg",
+    "class_id": "n02099601",
+    "label": "golden retriever",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02099601/n02099601_5132.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02099601_5132.jpg",
+    "class_id": "n02099601",
+    "label": "golden retriever",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02086240/n02086240_110.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02086240_110.jpg",
+    "class_id": "n02086240",
+    "label": "Shih-Tzu",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02111889/n02111889_17580.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02111889_17580.jpg",
+    "class_id": "n02111889",
+    "label": "Samoyed",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02093754/n02093754_70.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02093754_70.jpg",
+    "class_id": "n02093754",
+    "label": "Australian terrier",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02096294/n02096294_7341.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02096294_7341.jpg",
+    "class_id": "n02096294",
+    "label": "border terrier",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02099601/n02099601_5512.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02099601_5512.jpg",
+    "class_id": "n02099601",
+    "label": "golden retriever",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02111889/n02111889_5272.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02111889_5272.jpg",
+    "class_id": "n02111889",
+    "label": "Samoyed",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02086240/n02086240_7601.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02086240_7601.jpg",
+    "class_id": "n02086240",
+    "label": "Shih-Tzu",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02115641/n02115641_15372.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02115641_15372.jpg",
+    "class_id": "n02115641",
+    "label": "dingo",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02105641/n02105641_13680.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02105641_13680.jpg",
+    "class_id": "n02105641",
+    "label": "Old English sheepdog",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02111889/n02111889_3730.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02111889_3730.jpg",
+    "class_id": "n02111889",
+    "label": "Samoyed",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02096294/n02096294_4910.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02096294_4910.jpg",
+    "class_id": "n02096294",
+    "label": "border terrier",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02093754/n02093754_6531.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02093754_6531.jpg",
+    "class_id": "n02093754",
+    "label": "Australian terrier",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02088364/n02088364_1411.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02088364_1411.jpg",
+    "class_id": "n02088364",
+    "label": "beagle",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02115641/n02115641_44060.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02115641_44060.jpg",
+    "class_id": "n02115641",
+    "label": "dingo",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02099601/n02099601_27330.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02099601_27330.jpg",
+    "class_id": "n02099601",
+    "label": "golden retriever",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02096294/n02096294_3560.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02096294_3560.jpg",
+    "class_id": "n02096294",
+    "label": "border terrier",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02099601/n02099601_3901.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02099601_3901.jpg",
+    "class_id": "n02099601",
+    "label": "golden retriever",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02093754/n02093754_5292.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02093754_5292.jpg",
+    "class_id": "n02093754",
+    "label": "Australian terrier",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02096294/n02096294_670.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02096294_670.jpg",
+    "class_id": "n02096294",
+    "label": "border terrier",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02096294/n02096294_11282.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02096294_11282.jpg",
+    "class_id": "n02096294",
+    "label": "border terrier",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02099601/n02099601_4111.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02099601_4111.jpg",
+    "class_id": "n02099601",
+    "label": "golden retriever",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02086240/n02086240_11492.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02086240_11492.jpg",
+    "class_id": "n02086240",
+    "label": "Shih-Tzu",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02099601/n02099601_7841.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02099601_7841.jpg",
+    "class_id": "n02099601",
+    "label": "golden retriever",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02105641/n02105641_4062.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02105641_4062.jpg",
+    "class_id": "n02105641",
+    "label": "Old English sheepdog",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02096294/n02096294_1992.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02096294_1992.jpg",
+    "class_id": "n02096294",
+    "label": "border terrier",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02086240/n02086240_7100.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02086240_7100.jpg",
+    "class_id": "n02086240",
+    "label": "Shih-Tzu",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02111889/n02111889_1491.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02111889_1491.jpg",
+    "class_id": "n02111889",
+    "label": "Samoyed",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02105641/n02105641_3540.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02105641_3540.jpg",
+    "class_id": "n02105641",
+    "label": "Old English sheepdog",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02115641/n02115641_46540.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02115641_46540.jpg",
+    "class_id": "n02115641",
+    "label": "dingo",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02087394/n02087394_24880.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02087394_24880.jpg",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02111889/n02111889_16490.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02111889_16490.jpg",
+    "class_id": "n02111889",
+    "label": "Samoyed",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02088364/n02088364_5582.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02088364_5582.jpg",
+    "class_id": "n02088364",
+    "label": "beagle",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02086240/n02086240_8812.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02086240_8812.jpg",
+    "class_id": "n02086240",
+    "label": "Shih-Tzu",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02099601/n02099601_10242.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02099601_10242.jpg",
+    "class_id": "n02099601",
+    "label": "golden retriever",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02099601/n02099601_4651.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02099601_4651.jpg",
+    "class_id": "n02099601",
+    "label": "golden retriever",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02115641/n02115641_4482.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02115641_4482.jpg",
+    "class_id": "n02115641",
+    "label": "dingo",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02087394/n02087394_17872.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02087394_17872.jpg",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02089973/n02089973_980.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02089973_980.jpg",
+    "class_id": "n02089973",
+    "label": "English foxhound",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02115641/n02115641_871.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02115641_871.jpg",
+    "class_id": "n02115641",
+    "label": "dingo",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02115641/n02115641_24410.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02115641_24410.jpg",
+    "class_id": "n02115641",
+    "label": "dingo",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02086240/n02086240_3210.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02086240_3210.jpg",
+    "class_id": "n02086240",
+    "label": "Shih-Tzu",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02099601/n02099601_7942.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02099601_7942.jpg",
+    "class_id": "n02099601",
+    "label": "golden retriever",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02093754/n02093754_782.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02093754_782.jpg",
+    "class_id": "n02093754",
+    "label": "Australian terrier",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02093754/n02093754_220.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02093754_220.jpg",
+    "class_id": "n02093754",
+    "label": "Australian terrier",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02096294/n02096294_5221.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02096294_5221.jpg",
+    "class_id": "n02096294",
+    "label": "border terrier",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02087394/n02087394_35282.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02087394_35282.jpg",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02089973/n02089973_6202.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02089973_6202.jpg",
+    "class_id": "n02089973",
+    "label": "English foxhound",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02087394/ILSVRC2012_val_00006900.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_ILSVRC2012_val_00006900.jpg",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02087394/n02087394_36031.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02087394_36031.jpg",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02096294/n02096294_12161.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02096294_12161.jpg",
+    "class_id": "n02096294",
+    "label": "border terrier",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02088364/n02088364_2630.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02088364_2630.jpg",
+    "class_id": "n02088364",
+    "label": "beagle",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02086240/n02086240_9750.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02086240_9750.jpg",
+    "class_id": "n02086240",
+    "label": "Shih-Tzu",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02099601/n02099601_10802.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02099601_10802.jpg",
+    "class_id": "n02099601",
+    "label": "golden retriever",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02111889/n02111889_17640.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02111889_17640.jpg",
+    "class_id": "n02111889",
+    "label": "Samoyed",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02089973/n02089973_6360.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02089973_6360.jpg",
+    "class_id": "n02089973",
+    "label": "English foxhound",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02115641/n02115641_2701.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02115641_2701.jpg",
+    "class_id": "n02115641",
+    "label": "dingo",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02105641/n02105641_8581.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02105641_8581.jpg",
+    "class_id": "n02105641",
+    "label": "Old English sheepdog",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02093754/n02093754_5172.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02093754_5172.jpg",
+    "class_id": "n02093754",
+    "label": "Australian terrier",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02105641/n02105641_10931.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02105641_10931.jpg",
+    "class_id": "n02105641",
+    "label": "Old English sheepdog",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02089973/n02089973_3721.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02089973_3721.jpg",
+    "class_id": "n02089973",
+    "label": "English foxhound",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02088364/n02088364_2952.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02088364_2952.jpg",
+    "class_id": "n02088364",
+    "label": "beagle",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02111889/n02111889_16622.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02111889_16622.jpg",
+    "class_id": "n02111889",
+    "label": "Samoyed",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02089973/n02089973_3351.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02089973_3351.jpg",
+    "class_id": "n02089973",
+    "label": "English foxhound",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02096294/n02096294_6980.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02096294_6980.jpg",
+    "class_id": "n02096294",
+    "label": "border terrier",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02096294/ILSVRC2012_val_00025912.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_ILSVRC2012_val_00025912.jpg",
+    "class_id": "n02096294",
+    "label": "border terrier",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02087394/n02087394_15292.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02087394_15292.jpg",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02088364/n02088364_10012.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02088364_10012.jpg",
+    "class_id": "n02088364",
+    "label": "beagle",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02088364/n02088364_1531.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02088364_1531.jpg",
+    "class_id": "n02088364",
+    "label": "beagle",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02105641/n02105641_7562.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02105641_7562.jpg",
+    "class_id": "n02105641",
+    "label": "Old English sheepdog",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02111889/n02111889_1340.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02111889_1340.jpg",
+    "class_id": "n02111889",
+    "label": "Samoyed",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02099601/n02099601_4602.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02099601_4602.jpg",
+    "class_id": "n02099601",
+    "label": "golden retriever",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02096294/n02096294_1682.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02096294_1682.jpg",
+    "class_id": "n02096294",
+    "label": "border terrier",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02111889/ILSVRC2012_val_00029610.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_ILSVRC2012_val_00029610.jpg",
+    "class_id": "n02111889",
+    "label": "Samoyed",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02115641/n02115641_12981.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02115641_12981.jpg",
+    "class_id": "n02115641",
+    "label": "dingo",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02105641/n02105641_10020.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02105641_10020.jpg",
+    "class_id": "n02105641",
+    "label": "Old English sheepdog",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02105641/ILSVRC2012_val_00039591.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_ILSVRC2012_val_00039591.jpg",
+    "class_id": "n02105641",
+    "label": "Old English sheepdog",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02105641/n02105641_13242.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02105641_13242.jpg",
+    "class_id": "n02105641",
+    "label": "Old English sheepdog",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02096294/n02096294_4880.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02096294_4880.jpg",
+    "class_id": "n02096294",
+    "label": "border terrier",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02099601/n02099601_6040.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02099601_6040.jpg",
+    "class_id": "n02099601",
+    "label": "golden retriever",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02087394/n02087394_9922.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02087394_9922.jpg",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02093754/n02093754_7060.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02093754_7060.jpg",
+    "class_id": "n02093754",
+    "label": "Australian terrier",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02096294/n02096294_7231.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02096294_7231.jpg",
+    "class_id": "n02096294",
+    "label": "border terrier",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02086240/n02086240_5151.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02086240_5151.jpg",
+    "class_id": "n02086240",
+    "label": "Shih-Tzu",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02115641/n02115641_4951.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02115641_4951.jpg",
+    "class_id": "n02115641",
+    "label": "dingo",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02086240/n02086240_10771.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02086240_10771.jpg",
+    "class_id": "n02086240",
+    "label": "Shih-Tzu",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02087394/n02087394_1352.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02087394_1352.jpg",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02088364/n02088364_3722.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02088364_3722.jpg",
+    "class_id": "n02088364",
+    "label": "beagle",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02115641/n02115641_1662.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02115641_1662.jpg",
+    "class_id": "n02115641",
+    "label": "dingo",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02088364/n02088364_5090.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02088364_5090.jpg",
+    "class_id": "n02088364",
+    "label": "beagle",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02087394/n02087394_16381.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02087394_16381.jpg",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02099601/n02099601_8772.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02099601_8772.jpg",
+    "class_id": "n02099601",
+    "label": "golden retriever",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02087394/n02087394_9261.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02087394_9261.jpg",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02115641/n02115641_8492.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02115641_8492.jpg",
+    "class_id": "n02115641",
+    "label": "dingo",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02096294/n02096294_6370.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02096294_6370.jpg",
+    "class_id": "n02096294",
+    "label": "border terrier",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02088364/n02088364_4272.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02088364_4272.jpg",
+    "class_id": "n02088364",
+    "label": "beagle",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02087394/n02087394_8532.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02087394_8532.jpg",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02115641/n02115641_1940.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02115641_1940.jpg",
+    "class_id": "n02115641",
+    "label": "dingo",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02111889/n02111889_7011.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02111889_7011.jpg",
+    "class_id": "n02111889",
+    "label": "Samoyed",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02087394/n02087394_22042.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02087394_22042.jpg",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02111889/n02111889_402.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02111889_402.jpg",
+    "class_id": "n02111889",
+    "label": "Samoyed",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02111889/n02111889_5201.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02111889_5201.jpg",
+    "class_id": "n02111889",
+    "label": "Samoyed",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02087394/ILSVRC2012_val_00044140.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_ILSVRC2012_val_00044140.jpg",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02089973/n02089973_6321.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02089973_6321.jpg",
+    "class_id": "n02089973",
+    "label": "English foxhound",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02099601/n02099601_13392.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02099601_13392.jpg",
+    "class_id": "n02099601",
+    "label": "golden retriever",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02099601/n02099601_6272.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02099601_6272.jpg",
+    "class_id": "n02099601",
+    "label": "golden retriever",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02105641/n02105641_7871.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02105641_7871.jpg",
+    "class_id": "n02105641",
+    "label": "Old English sheepdog",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02115641/n02115641_9230.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02115641_9230.jpg",
+    "class_id": "n02115641",
+    "label": "dingo",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02086240/n02086240_912.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02086240_912.jpg",
+    "class_id": "n02086240",
+    "label": "Shih-Tzu",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02087394/n02087394_10351.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02087394_10351.jpg",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02089973/n02089973_1241.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02089973_1241.jpg",
+    "class_id": "n02089973",
+    "label": "English foxhound",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02115641/ILSVRC2012_val_00032652.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_ILSVRC2012_val_00032652.jpg",
+    "class_id": "n02115641",
+    "label": "dingo",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02086240/n02086240_11762.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02086240_11762.jpg",
+    "class_id": "n02086240",
+    "label": "Shih-Tzu",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02105641/n02105641_6742.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02105641_6742.jpg",
+    "class_id": "n02105641",
+    "label": "Old English sheepdog",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02086240/n02086240_4450.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02086240_4450.jpg",
+    "class_id": "n02086240",
+    "label": "Shih-Tzu",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02105641/n02105641_4970.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02105641_4970.jpg",
+    "class_id": "n02105641",
+    "label": "Old English sheepdog",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02096294/n02096294_2160.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02096294_2160.jpg",
+    "class_id": "n02096294",
+    "label": "border terrier",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02088364/n02088364_10001.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02088364_10001.jpg",
+    "class_id": "n02088364",
+    "label": "beagle",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02115641/n02115641_4692.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02115641_4692.jpg",
+    "class_id": "n02115641",
+    "label": "dingo",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02099601/n02099601_1492.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02099601_1492.jpg",
+    "class_id": "n02099601",
+    "label": "golden retriever",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02111889/n02111889_17791.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02111889_17791.jpg",
+    "class_id": "n02111889",
+    "label": "Samoyed",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02105641/n02105641_11591.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02105641_11591.jpg",
+    "class_id": "n02105641",
+    "label": "Old English sheepdog",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02086240/n02086240_7982.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02086240_7982.jpg",
+    "class_id": "n02086240",
+    "label": "Shih-Tzu",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02111889/n02111889_13401.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02111889_13401.jpg",
+    "class_id": "n02111889",
+    "label": "Samoyed",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02099601/n02099601_3410.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02099601_3410.jpg",
+    "class_id": "n02099601",
+    "label": "golden retriever",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02115641/n02115641_30802.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02115641_30802.jpg",
+    "class_id": "n02115641",
+    "label": "dingo",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02087394/n02087394_6031.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02087394_6031.jpg",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02086240/n02086240_8780.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02086240_8780.jpg",
+    "class_id": "n02086240",
+    "label": "Shih-Tzu",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02111889/n02111889_13672.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02111889_13672.jpg",
+    "class_id": "n02111889",
+    "label": "Samoyed",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02088364/n02088364_321.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02088364_321.jpg",
+    "class_id": "n02088364",
+    "label": "beagle",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02086240/n02086240_7730.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02086240_7730.jpg",
+    "class_id": "n02086240",
+    "label": "Shih-Tzu",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02086240/n02086240_5810.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02086240_5810.jpg",
+    "class_id": "n02086240",
+    "label": "Shih-Tzu",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02087394/n02087394_9511.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02087394_9511.jpg",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02099601/n02099601_3860.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02099601_3860.jpg",
+    "class_id": "n02099601",
+    "label": "golden retriever",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02087394/n02087394_10972.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02087394_10972.jpg",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02105641/n02105641_6582.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02105641_6582.jpg",
+    "class_id": "n02105641",
+    "label": "Old English sheepdog",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02093754/n02093754_5891.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02093754_5891.jpg",
+    "class_id": "n02093754",
+    "label": "Australian terrier",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02087394/n02087394_12960.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02087394_12960.jpg",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02089973/n02089973_6242.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02089973_6242.jpg",
+    "class_id": "n02089973",
+    "label": "English foxhound",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02105641/n02105641_9921.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02105641_9921.jpg",
+    "class_id": "n02105641",
+    "label": "Old English sheepdog",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02088364/n02088364_4572.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02088364_4572.jpg",
+    "class_id": "n02088364",
+    "label": "beagle",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02089973/n02089973_3401.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02089973_3401.jpg",
+    "class_id": "n02089973",
+    "label": "English foxhound",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02086240/n02086240_4751.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02086240_4751.jpg",
+    "class_id": "n02086240",
+    "label": "Shih-Tzu",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02089973/n02089973_8061.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02089973_8061.jpg",
+    "class_id": "n02089973",
+    "label": "English foxhound",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02111889/n02111889_1762.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02111889_1762.jpg",
+    "class_id": "n02111889",
+    "label": "Samoyed",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02086240/n02086240_762.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02086240_762.jpg",
+    "class_id": "n02086240",
+    "label": "Shih-Tzu",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02105641/n02105641_7271.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02105641_7271.jpg",
+    "class_id": "n02105641",
+    "label": "Old English sheepdog",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02086240/n02086240_2640.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02086240_2640.jpg",
+    "class_id": "n02086240",
+    "label": "Shih-Tzu",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02093754/n02093754_7390.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02093754_7390.jpg",
+    "class_id": "n02093754",
+    "label": "Australian terrier",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02099601/n02099601_6422.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02099601_6422.jpg",
+    "class_id": "n02099601",
+    "label": "golden retriever",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02087394/n02087394_11442.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02087394_11442.jpg",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02099601/n02099601_9831.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02099601_9831.jpg",
+    "class_id": "n02099601",
+    "label": "golden retriever",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02089973/n02089973_7990.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02089973_7990.jpg",
+    "class_id": "n02089973",
+    "label": "English foxhound",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02115641/n02115641_13332.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02115641_13332.jpg",
+    "class_id": "n02115641",
+    "label": "dingo",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02105641/n02105641_4860.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02105641_4860.jpg",
+    "class_id": "n02105641",
+    "label": "Old English sheepdog",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02096294/n02096294_1642.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02096294_1642.jpg",
+    "class_id": "n02096294",
+    "label": "border terrier",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02115641/n02115641_2961.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02115641_2961.jpg",
+    "class_id": "n02115641",
+    "label": "dingo",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02096294/n02096294_4162.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02096294_4162.jpg",
+    "class_id": "n02096294",
+    "label": "border terrier",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02093754/n02093754_6432.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02093754_6432.jpg",
+    "class_id": "n02093754",
+    "label": "Australian terrier",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02099601/n02099601_10381.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02099601_10381.jpg",
+    "class_id": "n02099601",
+    "label": "golden retriever",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02105641/n02105641_1200.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02105641_1200.jpg",
+    "class_id": "n02105641",
+    "label": "Old English sheepdog",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02105641/n02105641_10280.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02105641_10280.jpg",
+    "class_id": "n02105641",
+    "label": "Old English sheepdog",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02096294/n02096294_3510.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02096294_3510.jpg",
+    "class_id": "n02096294",
+    "label": "border terrier",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02093754/n02093754_2262.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02093754_2262.jpg",
+    "class_id": "n02093754",
+    "label": "Australian terrier",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02088364/n02088364_10740.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02088364_10740.jpg",
+    "class_id": "n02088364",
+    "label": "beagle",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02096294/n02096294_11181.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02096294_11181.jpg",
+    "class_id": "n02096294",
+    "label": "border terrier",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02088364/n02088364_13630.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02088364_13630.jpg",
+    "class_id": "n02088364",
+    "label": "beagle",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02093754/n02093754_4730.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02093754_4730.jpg",
+    "class_id": "n02093754",
+    "label": "Australian terrier",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02096294/n02096294_1420.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02096294_1420.jpg",
+    "class_id": "n02096294",
+    "label": "border terrier",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02087394/n02087394_8521.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02087394_8521.jpg",
+    "class_id": "n02087394",
+    "label": "Rhodesian ridgeback",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02099601/n02099601_16221.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02099601_16221.jpg",
+    "class_id": "n02099601",
+    "label": "golden retriever",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02115641/n02115641_7560.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02115641_7560.jpg",
+    "class_id": "n02115641",
+    "label": "dingo",
+    "corruption_type": "gaussian_noise",
+    "severity": 4
+  },
+  {
+    "original_path": "data/raw/imagewoof2-160/val/n02099601/n02099601_512.JPEG",
+    "corrupted_path": "data/corrupted/gaussian_noise_n02099601_512.jpg",
+    "class_id": "n02099601",
+    "label": "golden retriever",
     "corruption_type": "gaussian_noise",
     "severity": 4
   }

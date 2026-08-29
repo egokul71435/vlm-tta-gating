@@ -5,6 +5,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from pathlib import Path
 from sklearn.linear_model import LogisticRegression
+from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import LeaveOneOut, cross_val_score
 
 WIN_LABELS = Path("results/win_labels.json")
@@ -33,8 +34,11 @@ def main():
 
     # Leave-one-out cross-validation — the only sane choice at n=23.
     # A single train/test split would be nearly meaningless at this size.
+    scaler = StandardScaler()
+    X_scaled = scaler.fit_transform(X)
+
     clf = LogisticRegression()
-    loo_scores = cross_val_score(clf, X, y, cv=LeaveOneOut())
+    loo_scores = cross_val_score(clf, X_scaled, y, cv=LeaveOneOut())
     accuracy = loo_scores.mean()
 
     majority_baseline = max(sum(y == 0), sum(y == 1)) / len(y)
@@ -50,7 +54,7 @@ def main():
 
     # Fit on full data (for the plot / reported coefficient) — not for
     # accuracy claims, since this reuses training data.
-    clf.fit(X, y)
+    clf.fit(X_scaled, y)
     print(f"\nCoefficient on entropy: {clf.coef_[0][0]:.3f} "
           f"({'higher entropy -> more likely TDA wins' if clf.coef_[0][0] > 0 else 'higher entropy -> more likely TPT wins'})")
 
