@@ -2,11 +2,19 @@
 
 Pilot project exploring whether a lightweight, meta-learned gate can predict, per image, which test-time adaptation (TTA) strategy (TPT vs. TDA) will work better for a CLIP-based vision-language model under domain shift, without manual per-domain tuning.
 
-## Status: pilot phase in progress
+## Status: pilot phase complete at n=150, scaling in progress
 
-A small end-to-end pilot has been run and validated.
+A small end-to-end pilot (150 images) has been run and validated.
 
-**TL;DR of pilot results:** TPT and TDA meaningfully disagree on which images they get right (23/150 disagreement cases), which supports the core hypothesis that a gate has something to learn. A simple logistic-regression gate using pre-adaptation entropy (and confidence, corruption type) did not beat a majority-class baseline at this sample size, likely a data-volume limitation rather than evidence the signal doesn't exist. Next step is deciding upon scaling.
+**TL;DR of pilot results (n=150):**
+- Vanilla CLIP baseline: 57.3%
+- TPT: 56.7% (roughly a wash — 12 images fixed, 13 regressed)
+- TDA: 61.3% (net positive — 9 fixed, 3 regressed)
+- Oracle (best of TPT/TDA per image): 66.7% — a 5.3-point gap over TDA alone, meaning a perfect gate could meaningfully outperform either fixed strategy
+- 23/150 images saw TPT and TDA disagree on correctness — the core signal a gate would need
+- A logistic-regression gate using pre-adaptation entropy (and confidence, corruption type) did not beat a majority-class baseline at this sample size — likely a data-volume limitation given the small number of disagreement cases, not evidence the signal doesn't exist
+
+The oracle gap confirms real headroom exists for a gate to capture. Currently scaling up image count and shift-type diversity to get a larger, more conclusive test of the entropy signal.
 
 ## Setup
 
@@ -29,7 +37,12 @@ git clone https://github.com/kdiaaa/tda refs/tda
 
 ## Pipeline
 
-Run in order:
+Run the full pipeline in order with:
+```bash
+./run_pipeline.sh
+```
+
+Or run steps in order:
 
 | Step | Script | Output |
 |---|---|---|
@@ -40,6 +53,7 @@ Run in order:
 | 5. Run TDA | `src/run_tda.py` | `results/tda_results.json` |
 | 6. Merge results | `src/build_win_labels.py` | `results/win_labels.json` |
 | 7. Test gate signal | `src/fit_gate_pilot.py` | `results/entropy_vs_winner.png` |
+| 8. Compute oracle baseline | `src/compute_oracle.py` | printed to console |
 
 Dataset used: [Imagewoof](https://github.com/fastai/imagenette) (10 dog breeds), 150 images, corrupted with gaussian blur/noise. Switched from Imagenette after finding its classes too easy to distinguish for corruption to matter (92-97% baseline accuracy even at high severity).
 
