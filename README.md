@@ -2,7 +2,7 @@
 
 Pilot project exploring whether a lightweight, meta-learned gate can predict, per image, which test-time adaptation (TTA) strategy (TPT vs. TDA) will work better for a CLIP-based vision-language model under domain shift, without manual per-domain tuning.
 
-## Status: pilot phase complete at n=150, scaling in progress
+## Status: scaling in progress (n=150 → n=300, results trending but still inconclusive)
 
 A small end-to-end pilot (150 images) has been run and validated.
 
@@ -14,7 +14,11 @@ A small end-to-end pilot (150 images) has been run and validated.
 - 23/150 images saw TPT and TDA disagree on correctness — the core signal a gate would need
 - A logistic-regression gate using pre-adaptation entropy (and confidence, corruption type) did not beat a majority-class baseline at this sample size — likely a data-volume limitation given the small number of disagreement cases, not evidence the signal doesn't exist
 
+**Scaled to n=300:** vanilla 56.3%, TPT 58.0%, TDA 61.0%, oracle 64.7% (3.7pt gap over TDA) — core accuracy pattern held up, confirming the 150-image result wasn't a small-sample fluke. Disagreement cases grew to 31/300. A 3-feature gate (entropy + confidence + corruption type) improved over the entropy-only version and moved closer to (but still below) majority baseline.
+
 The oracle gap confirms real headroom exists for a gate to capture. Currently scaling up image count and shift-type diversity to get a larger, more conclusive test of the entropy signal.
+
+**Read so far:** more data is helping incrementally but hasn't yet produced a gate that clearly beats naive baselines. Continuing to scale (targeting ~500 images) before deciding whether the signal is real-but-data-limited or genuinely weak.
 
 ## Setup
 

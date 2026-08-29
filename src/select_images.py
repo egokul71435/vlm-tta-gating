@@ -6,7 +6,7 @@ from pathlib import Path
 random.seed(42)
 
 IMAGENETTE_VAL_DIR = Path("data/raw/imagewoof2-160/val")
-NUM_IMAGES = 150
+NUM_IMAGES = 300
 OUTPUT_MANIFEST = Path("data/manifests/base_images.json")
 
 # mapping
