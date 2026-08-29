@@ -9,17 +9,15 @@ Pilot project exploring whether a lightweight, meta-learned gate can predict, pe
 | 150 | 57.3% | 56.7% | 61.3% | 66.7% | 5.3pt | 23 | 56.5% | 65.2% |
 | 300 | 56.3% | 58.0% | 61.0% | 64.7% | 3.7pt | 31 | 54.8% | 64.5% |
 | 500 | 57.0% | 56.4% | 61.6% | 68.2% | 6.6pt | 92 | 60.9% | 64.1% |
+| 1000 | 58.5% | 61.6% | 62.5% | 69.1% | 6.6pt | 141 | 53.2% | 53.2% |
 
-**Read:** TDA consistently outperforms TPT and vanilla CLIP across all scales tested. The entropy-based gate is trending toward the majority-class baseline as data scales (gap has narrowed from -8.7pt at n=150 to -3.2pt at n=500), suggesting the earlier inconclusive results were at least partly a data-volume limitation. Not yet conclusive — the trend needs to continue at larger scale to confirm entropy is a real, usable signal rather than noise settling down.
+**Read:** the oracle gap over the best fixed strategy is real and consistent — 4-7 points across a 6.7x increase in data (150→1000 images). TPT and TDA disagree often enough, and by enough margin, that a gate correctly routing between them would meaningfully beat either strategy alone. This is a stable, trustworthy finding.
 
-A multi-feature version (entropy + confidence + corruption type) has not consistently outperformed entropy alone across scales and likely overfits at these sample sizes; entropy alone remains the more trustworthy signal for now.
+The entropy-based gate signal is not stable and, at full scale, is not real: at n=1000 the fitted coefficient on entropy collapsed to ~0.001 (effectively no relationship), and the classifier's LOO accuracy exactly matches the majority baseline only because both converged near 53% as the TPT/TDA win-split became closer to even — not because entropy predicts anything. The earlier apparent upward trend (n=150→500) did not hold at n=1000 and is best read as noise in smaller samples, not real signal emerging. Multi-feature versions (adding confidence, corruption type) did not meaningfully improve on this at any scale.
 
-Methodology note: `fit_gate_pilot.py` and `fit_gate_pilot_v2.py` were found to disagree on entropy-only accuracy (63.0% vs. 60.9%) due to a feature-scaling inconsistency between the two scripts. Standardized both to apply `StandardScaler` before fitting — 60.9% is the corrected, trustworthy number.
+**Conclusion so far:** the strategy-selection opportunity is real (oracle gap), but pre-adaptation entropy alone does not appear to be the signal that captures it, at least not via a linear classifier. Next steps involve either richer/different features, a non-linear model, or proceeding directly to the full MAML-based gate and letting a more expressive model discover the relevant signal rather than hand-selecting one upfront.
 
-Note: n=150/300/500 are nested samples (same random seed, larger sets are supersets of smaller ones), not independent replications.
-
-**Next:** continue scaling toward ~800-1000 images to see whether the entropy signal fully closes the gap to baseline, or plateaus below it.
-
+Note: n=150/300/500/1000 are nested samples (same random seed, larger sets are supersets of smaller ones), not independent replications.
 
 ## Setup
 
