@@ -59,10 +59,14 @@ Or run steps in order:
 | 4. Run TPT | `src/run_tpt.py` | `results/tpt_results.json` |
 | 5. Run TDA | `src/run_tda.py` | `results/tda_results.json` |
 | 6. Merge results | `src/build_win_labels.py` | `results/win_labels.json` |
-| 7. Test gate signal | `src/fit_gate_pilot.py` | `results/entropy_vs_winner.png` |
+| 7. Test gate signal (search + stability check) | `src/fit_gate_final.py` | printed to console |
 | 8. Compute oracle baseline | `src/compute_oracle.py` | printed to console |
 
+Earlier iterations of the gate-signal search (`fit_gate_pilot_v2/v3/v4.py`, `check_gb_stability.py`) are preserved in `src/archive/` for reference — `fit_gate_final.py` consolidates the full search and the winning result.
+
 Dataset used: [Imagewoof](https://github.com/fastai/imagenette) (10 dog breeds), 150 images, corrupted with gaussian blur/noise. Switched from Imagenette after finding its classes too easy to distinguish for corruption to matter (92-97% baseline accuracy even at high severity).
+
+## Repo structure
 
 ## Repo structure
 
@@ -73,9 +77,11 @@ data/
 └── corrupted/       # generated corrupted images (gitignored, regenerable)
 results/             # per-stage outputs (JSON) + plots
 src/                 # pipeline scripts
+├── archive/         # superseded iterations of the gate-signal search, kept for reference
 refs/                # cloned reference implementations (gitignored)
-spec/                # project spec (to be added later) 
+spec/                # project spec (to be added later)
 ```
+
 
 ## Notes
 
