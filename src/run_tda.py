@@ -117,6 +117,9 @@ class NegativeCache:
 
 
 def main():
+
+    torch.manual_seed(42)
+
     model, _, preprocess = open_clip.create_model_and_transforms(
         "ViT-B-16-quickgelu", pretrained="openai"
     )

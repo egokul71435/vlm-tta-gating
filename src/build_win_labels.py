@@ -54,6 +54,8 @@ def main():
             "vanilla_entropy": v["entropy"],
             "tpt_correct": tpt_correct,
             "tpt_improved": t["improved_over_vanilla"],
+            "tpt_view_entropy_std": t["view_entropy_std"],
+            "tpt_view_entropy_mean": t["view_entropy_mean"],
             "tda_correct": tda_correct,
             "tda_improved": d["improved_over_vanilla"],
             "winner": winner,

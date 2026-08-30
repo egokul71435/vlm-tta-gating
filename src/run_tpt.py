@@ -95,6 +95,9 @@ def get_base_transform():
 
 
 def main():
+
+    torch.manual_seed(42)
+
     model, _, preprocess = open_clip.create_model_and_transforms(
         "ViT-B-16-quickgelu", pretrained="openai"
     )
@@ -148,6 +151,9 @@ def main():
                 entropies = -(probs * torch.log(probs.clamp_min(1e-12))).sum(dim=-1)
                 selected_idx = torch.topk(-entropies, k=top_k).indices
 
+                view_entropy_std = float(entropies.std().item())
+                view_entropy_mean = float(entropies.mean().item())
+
             avg_prob = probs[selected_idx].mean(dim=0)
             loss = -(avg_prob * torch.log(avg_prob.clamp_min(1e-12))).sum()
             # print(f"  loss: {loss.item():.4f}")  # check if loss actually decreases
@@ -181,6 +187,8 @@ def main():
             "entropy": entropy(final_probs),
             "vanilla_correct": vanilla_correct,
             "improved_over_vanilla": (correct and not vanilla_correct) if vanilla_correct is not None else None,
+            "view_entropy_std": view_entropy_std,     # NEW: spread of entropy across the 64 augmented views
+            "view_entropy_mean": view_entropy_mean,   # NEW: mean entropy across the 64 augmented views
         })
 
         if (i + 1) % 10 == 0:

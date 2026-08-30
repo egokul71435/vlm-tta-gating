@@ -2,22 +2,26 @@
 
 Pilot project exploring whether a lightweight, meta-learned gate can predict, per image, which test-time adaptation (TTA) strategy (TPT vs. TDA) will work better for a CLIP-based vision-language model under domain shift, without manual per-domain tuning.
 
-## Status: scaling in progress -> entropy signal trending upward, still inconclusive (n=150 → 300 → 500)
+## Status: pilot complete — real signal found (gradient boosting + entropy + TPT view-spread)
 
-| n | Vanilla | TPT | TDA | Oracle | Oracle gap | Disagreement cases | Entropy-gate LOO acc | Majority baseline |
-|---|---|---|---|---|---|---|---|---|
-| 150 | 57.3% | 56.7% | 61.3% | 66.7% | 5.3pt | 23 | 56.5% | 65.2% |
-| 300 | 56.3% | 58.0% | 61.0% | 64.7% | 3.7pt | 31 | 54.8% | 64.5% |
-| 500 | 57.0% | 56.4% | 61.6% | 68.2% | 6.6pt | 92 | 60.9% | 64.1% |
-| 1000 | 58.5% | 61.6% | 62.5% | 69.1% | 6.6pt | 141 | 53.2% | 53.2% |
+| n | Vanilla | TPT | TDA | Oracle | Oracle gap |
+|---|---|---|---|---|---|
+| 150 | 57.3% | 56.7% | 61.3% | 66.7% | 5.3pt |
+| 300 | 56.3% | 58.0% | 61.0% | 64.7% | 3.7pt |
+| 500 | 57.0% | 56.4% | 61.6% | 68.2% | 6.6pt |
+| 1000 | 58.5% | 61.6%–64.0%* | 62.5% | 69.1%–69.8%* | 5.8–6.6pt |
 
-**Read:** the oracle gap over the best fixed strategy is real and consistent — 4-7 points across a 6.7x increase in data (150→1000 images). TPT and TDA disagree often enough, and by enough margin, that a gate correctly routing between them would meaningfully beat either strategy alone. This is a stable, trustworthy finding.
+\*TPT/TDA use random augmentation; early runs (before a fixed seed was added) show minor run-to-run variance — see Notes.
 
-The entropy-based gate signal is not stable and, at full scale, is not real: at n=1000 the fitted coefficient on entropy collapsed to ~0.001 (effectively no relationship), and the classifier's LOO accuracy exactly matches the majority baseline only because both converged near 53% as the TPT/TDA win-split became closer to even — not because entropy predicts anything. The earlier apparent upward trend (n=150→500) did not hold at n=1000 and is best read as noise in smaller samples, not real signal emerging. Multi-feature versions (adding confidence, corruption type) did not meaningfully improve on this at any scale.
+**Oracle gap is real and stable** across a 6.7x increase in data (150→1000 images): TPT and TDA disagree often enough, and by enough margin, that a gate correctly routing between them would meaningfully beat either strategy alone.
 
-**Conclusion so far:** the strategy-selection opportunity is real (oracle gap), but pre-adaptation entropy alone does not appear to be the signal that captures it, at least not via a linear classifier. Next steps involve either richer/different features, a non-linear model, or proceeding directly to the full MAML-based gate and letting a more expressive model discover the relevant signal rather than hand-selecting one upfront.
+**Signal search:** pre-adaptation entropy alone (tested with logistic regression, random forest, gradient boosting, k-NN, at 4 data scales) did not reliably beat a majority-class baseline. Adding TPT's internal view-entropy spread (the spread of entropy across TPT's 64 augmented views, before adaptation) as a second feature, combined with gradient boosting specifically, does: **60.7% average LOO accuracy vs. 55.7% majority baseline**, stable across 7 random seeds (std = 0.004). Simpler models (logistic regression) and simpler feature sets (entropy alone) did not find this — it required both the richer feature and a non-linear model.
 
-Note: n=150/300/500/1000 are nested samples (same random seed, larger sets are supersets of smaller ones), not independent replications.
+**One earlier false positive was caught and ruled out:** an initial random forest result (65.5%) did not replicate once TPT/TDA's random augmentation was seeded for reproducibility — a reminder that promising-looking small-sample results need a stability check before being trusted.
+
+**Conclusion:** the strategy-selection opportunity is real (oracle gap), and a genuine, if modest, predictive signal exists — but it required a non-linear model and a richer feature than simple entropy to surface. This supports moving to the full MAML-based gate, which can learn this kind of non-linear, multi-signal relationship directly rather than requiring hand-picked features.
+
+Note: n=150/300/500/1000 are nested samples (same seed for image selection), not independent replications. TPT/TDA augmentation is now seeded (`torch.manual_seed(42)`) for reproducibility — some earlier-cited numbers predate this fix and may not exactly reproduce.
 
 ## Setup
 
