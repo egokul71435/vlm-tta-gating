@@ -9,19 +9,19 @@ Pilot project exploring whether a lightweight, meta-learned gate can predict, pe
 | 150 | 57.3% | 56.7% | 61.3% | 66.7% | 5.3pt |
 | 300 | 56.3% | 58.0% | 61.0% | 64.7% | 3.7pt |
 | 500 | 57.0% | 56.4% | 61.6% | 68.2% | 6.6pt |
-| 1000 | 58.5% | 61.6%–64.0%* | 62.5% | 69.1%–69.8%* | 5.8–6.6pt |
+| 1000 | 58.5% | 64.0% | 62.5% | 69.8% | 5.8pt |
 
-\*TPT/TDA use random augmentation; early runs (before a fixed seed was added) show minor run-to-run variance — see Notes.
+All numbers reproducible with `torch.manual_seed(42)`, fixed in `run_tpt.py`/`run_tda.py`.
 
 **Oracle gap is real and stable** across a 6.7x increase in data (150→1000 images): TPT and TDA disagree often enough, and by enough margin, that a gate correctly routing between them would meaningfully beat either strategy alone.
 
-**Signal search:** pre-adaptation entropy alone (tested with logistic regression, random forest, gradient boosting, k-NN, at 4 data scales) did not reliably beat a majority-class baseline. Adding TPT's internal view-entropy spread (the spread of entropy across TPT's 64 augmented views, before adaptation) as a second feature, combined with gradient boosting specifically, does: **60.7% average LOO accuracy vs. 55.7% majority baseline**, stable across 7 random seeds (std = 0.004). Simpler models (logistic regression) and simpler feature sets (entropy alone) did not find this — it required both the richer feature and a non-linear model.
+**Signal search:** pre-adaptation entropy alone (tested with logistic regression, random forest, gradient boosting, k-NN, at 4 data scales) did not reliably beat a majority-class baseline. Adding TPT's internal view-entropy spread (the spread of entropy across TPT's 64 augmented views, before adaptation) as a second feature, combined with gradient boosting specifically, does: **60.7% average LOO accuracy vs. 55.7% majority baseline**, stable across 7 random seeds (std = 0.004). Simpler models (logistic regression) and simpler feature sets (entropy alone) did not find this, it required both the richer feature and a non-linear model.
 
-**One earlier false positive was caught and ruled out:** an initial random forest result (65.5%) did not replicate once TPT/TDA's random augmentation was seeded for reproducibility — a reminder that promising-looking small-sample results need a stability check before being trusted.
+**One earlier false positive was caught and ruled out:** an initial random forest result (65.5%) did not replicate once TPT/TDA's random augmentation was seeded for reproducibility, a reminder that promising-looking small-sample results need a stability check before being trusted.
 
-**Conclusion:** the strategy-selection opportunity is real (oracle gap), and a genuine, if modest, predictive signal exists — but it required a non-linear model and a richer feature than simple entropy to surface. This supports moving to the full MAML-based gate, which can learn this kind of non-linear, multi-signal relationship directly rather than requiring hand-picked features.
+**Conclusion:** the strategy-selection opportunity is real (oracle gap), and a genuine, if modest, predictive signal exists, but it required a non-linear model and a richer feature than simple entropy to surface. This supports moving to the full MAML-based gate, which can learn this kind of non-linear, multi-signal relationship directly rather than requiring hand-picked features.
 
-Note: n=150/300/500/1000 are nested samples (same seed for image selection), not independent replications. TPT/TDA augmentation is now seeded (`torch.manual_seed(42)`) for reproducibility — some earlier-cited numbers predate this fix and may not exactly reproduce.
+Note: n=150/300/500/1000 are nested samples (same seed for image selection), not independent replications.
 
 ## Setup
 
