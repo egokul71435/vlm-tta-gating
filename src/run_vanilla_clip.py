@@ -7,6 +7,7 @@ from PIL import Image
 
 MANIFEST = Path("data/manifests/corrupted_manifest.json")
 OUTPUT_CSV = Path("results/vanilla_clip_results.json")
+EMBEDDINGS_OUTPUT = Path("results/vanilla_clip_embeddings.npz")
 DEVICE = "mps"
 
 # Imagenette classes, in a fixed order matching CLASS_NAMES from select_images.py
@@ -39,6 +40,7 @@ def main():
         images = json.load(f)
 
     results = []
+    embedding_store = {}
 
     with torch.no_grad():
         for i, entry in enumerate(images):
@@ -47,6 +49,7 @@ def main():
 
             image_features = model.encode_image(img_tensor)
             image_features = image_features / image_features.norm(dim=-1, keepdim=True)
+            embedding_store[entry["corrupted_path"]] = image_features.squeeze(0).cpu().numpy()
 
             logit_scale = model.logit_scale.exp()
             logits = (logit_scale * image_features @ text_features.T).squeeze(0)
@@ -82,6 +85,13 @@ def main():
         subset = [r for r in results if r["corruption_type"] == ctype]
         acc = sum(r["correct"] for r in subset) / len(subset)
         print(f"  {ctype}: {acc:.3f} ({len(subset)} images)")
+
+    EMBEDDINGS_OUTPUT.parent.mkdir(parents=True, exist_ok=True)
+    np.savez_compressed(
+        EMBEDDINGS_OUTPUT,
+        **{path.replace("/", "__"): emb for path, emb in embedding_store.items()}
+    )
+    print(f"Saved {len(embedding_store)} image embeddings to {EMBEDDINGS_OUTPUT}")
 
 if __name__ == "__main__":
     main()

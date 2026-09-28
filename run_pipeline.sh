@@ -28,4 +28,7 @@ time python src/fit_gate_final.py
 echo -e "\n=== 8/9: Computing oracle baseline ==="
 time python src/compute_oracle.py
 
+echo -e "\n=== 9/9: RL gate + PCA-embedding gate ==="
+time python src/train_rl_gate.py
+
 echo -e "\n=== Pipeline complete ==="
