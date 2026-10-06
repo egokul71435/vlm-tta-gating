@@ -133,6 +133,7 @@ Or run steps in order:
 | 7. Test gate signal (search + stability check) | `src/fit_gate_final.py` | printed to console |
 | 8. Compute oracle baseline | `src/compute_oracle.py` | printed to console |
 | 9. RL / embedding-based gates + permutation tests | `src/train_rl_gate.py` | printed to console |
+| 10. Cost-aware routing curve | `src/cost_aware_routing.py` | `results/cost_curve.png` |
 
 Earlier iterations of the gate-signal search (`fit_gate_pilot_v2/v3/v4.py`, `check_gb_stability.py`) are preserved in `src/archive/` for reference — `fit_gate_final.py` consolidates the full search and the winning result.
 
