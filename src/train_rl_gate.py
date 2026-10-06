@@ -9,6 +9,13 @@ from sklearn.decomposition import PCA
 from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.model_selection import LeaveOneOut, permutation_test_score
 
+from sklearn.metrics import roc_auc_score
+import matplotlib
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt
+
+from cost_aware_routing import CHEAP_SCALARS, BUDGETS, oof_needs_tpt_scores, route_curve
+
 WIN_LABELS = Path("results/win_labels.json")
 EMBEDDINGS_PATH = Path("results/vanilla_clip_embeddings.npz")
 
@@ -392,9 +399,115 @@ def report_permutation_result(score, perm_scores, p_value, y):
     else:
         print("Not distinguishable from shuffled labels at p < 0.05: treat as suggestive only.")
 
+# --- Cost-shaped RL gate ---
+# Reward: choose TDA -> tda_correct (TDA always runs, no extra cost)
+#         choose TPT -> tpt_correct - lam (extra cost of running TPT)
+# The gate should pick TPT only when it expects TPT to beat TDA's chance of
+# being right by more than lam. Sweeping lam traces RL's accuracy-vs-cost
+# points, compared directly against the supervised cost-aware scorer.
+
+RL_COST_PLOT = Path("results/rl_cost_curve.png")
+LAMBDAS = [0.0, 0.02, 0.05, 0.1, 0.15, 0.2, 0.3, 0.5]
+
+
+def train_reinforce_cost(X_train, r_tpt, r_tda, lam, epochs=300, lr=0.01, seed=0):
+    torch.manual_seed(seed)
+    model = PolicyNet(n_features=X_train.shape[1])
+    optimizer = torch.optim.Adam(model.parameters(), lr=lr)
+
+    X_t = torch.tensor(X_train, dtype=torch.float32)
+    rew_tpt = torch.tensor(r_tpt - lam, dtype=torch.float32)  # action 0
+    rew_tda = torch.tensor(r_tda, dtype=torch.float32)        # action 1
+    baseline = (rew_tpt + rew_tda) / 2.0                      # variance reduction
+
+    for _ in range(epochs):
+        probs = torch.softmax(model(X_t), dim=-1)
+        dist = torch.distributions.Categorical(probs)
+        actions = dist.sample()
+        rewards = torch.where(actions == 0, rew_tpt, rew_tda)
+        loss = -(dist.log_prob(actions) * (rewards - baseline)).mean()
+        optimizer.zero_grad()
+        loss.backward()
+        optimizer.step()
+    return model
+
+
+def cost_shaped_rl_sweep(n_repeats=3):
+    with open(WIN_LABELS) as f:
+        rows = json.load(f)
+
+    y = np.array([r["needs_tpt"] for r in rows], dtype=int)
+    tpt_c = np.array([r["tpt_correct"] for r in rows], dtype=float)
+    tda_c = np.array([r["tda_correct"] for r in rows], dtype=float)
+    tpt_s = np.array([r["tpt_seconds"] for r in rows])
+    tda_s = np.array([r["tda_seconds"] for r in rows])
+    X = np.array([[r[f] for f in CHEAP_SCALARS] for r in rows])
+
+    tpt_acc, tda_acc = tpt_c.mean(), tda_c.mean()
+    print("\n=== Cost-shaped RL gate (cheap scalars, 5-fold, "
+          f"averaged over {n_repeats} fold splits) ===")
+    print(f"Always TDA: acc {tda_acc:.3f} | Always TPT: acc {tpt_acc:.3f}\n")
+    print(f"{'lambda':>7} | {'% to TPT':>8} | {'accuracy':>8} | {'cost (ms)':>9} | {'AUC':>5}")
+
+    rl_points = []
+    for lam in LAMBDAS:
+        fracs, accs, costs, aucs = [], [], [], []
+        for rep in range(n_repeats):
+            skf = StratifiedKFold(n_splits=5, shuffle=True, random_state=rep)
+            route = np.zeros(len(y), dtype=bool)
+            p_tpt = np.zeros(len(y))
+            for tr, te in skf.split(X, y):
+                sc = StandardScaler().fit(X[tr])
+                model = train_reinforce_cost(sc.transform(X[tr]), tpt_c[tr], tda_c[tr],
+                                             lam, seed=rep)
+                with torch.no_grad():
+                    probs = torch.softmax(
+                        model(torch.tensor(sc.transform(X[te]), dtype=torch.float32)), dim=-1
+                    ).numpy()
+                p_tpt[te] = probs[:, 0]
+                route[te] = probs[:, 0] > 0.5      # greedy: pick the likelier action
+            fracs.append(route.mean())
+            accs.append(np.where(route, tpt_c, tda_c).mean())
+            costs.append((tda_s + route * tpt_s).mean() * 1000)
+            aucs.append(roc_auc_score(y, p_tpt))
+        point = (lam, np.mean(fracs), np.mean(accs), np.mean(costs), np.mean(aucs))
+        rl_points.append(point)
+        print(f"{lam:7.2f} | {point[1]:8.1%} | {point[2]:8.3f} | {point[3]:9.1f} | {point[4]:.3f}")
+
+    # Supervised cost-aware scorer curve for comparison (same features + accounting)
+    scorer_accs = np.mean([
+        route_curve(oof_needs_tpt_scores(X, None, y, "logreg", seed=r),
+                    tpt_c, tda_c, tpt_s, tda_s)[0]
+        for r in range(5)
+    ], axis=0)
+
+    fig, ax = plt.subplots(figsize=(8, 5.5))
+    ax.plot(BUDGETS * 100, scorer_accs * 100, marker="o", ms=3,
+            label="supervised scorer (logreg | cheap scalars)")
+    ax.plot(BUDGETS * 100, ((1 - BUDGETS) * tda_acc + BUDGETS * tpt_acc) * 100,
+            "k--", label="random routing")
+    ax.axhline(tpt_acc * 100, color="gray", ls=":", label=f"always TPT ({tpt_acc:.1%})")
+    ax.scatter([y.mean() * 100], [np.maximum(tpt_c, tda_c).mean() * 100], marker="*",
+               s=200, color="red", zorder=5, label="cost-aware oracle")
+    for lam, frac, acc, _, _ in rl_points:
+        if frac <= 0.5:
+            ax.scatter(frac * 100, acc * 100, color="tab:orange", zorder=4)
+            ax.annotate(f"λ={lam}", (frac * 100, acc * 100), fontsize=7,
+                        xytext=(4, 4), textcoords="offset points")
+    ax.scatter([], [], color="tab:orange", label="cost-shaped RL (one point per λ)")
+    ax.set_xlabel("% of images routed to TPT")
+    ax.set_ylabel("Accuracy (%)")
+    ax.set_title("Cost-shaped RL vs. supervised cost-aware scorer (n=1,000)")
+    ax.legend(fontsize=8, loc="lower right")
+    ax.grid(alpha=0.3)
+    fig.tight_layout()
+    fig.savefig(RL_COST_PLOT, dpi=150)
+    print(f"\nSaved plot to {RL_COST_PLOT}")
+
 if __name__ == "__main__":
-    main()
-    run_embedding_experiment()
-    check_embedding_gate_stability()
-    permutation_test_embedding_mlp()
-    permutation_test_gradient_boosting()
+    # main()
+    # run_embedding_experiment()
+    # check_embedding_gate_stability()
+    # permutation_test_embedding_mlp()
+    # permutation_test_gradient_boosting()
+    cost_shaped_rl_sweep()
