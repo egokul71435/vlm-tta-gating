@@ -1,3 +1,4 @@
+import time
 import json
 import copy
 import torch
@@ -130,6 +131,7 @@ def main():
         optimizer = torch.optim.AdamW(prompt_learner.parameters(), lr=LR)
 
         img = Image.open(entry["corrupted_path"]).convert("RGB")
+        t0 = time.perf_counter()
 
         views = [preprocess(base_transform(img)) for _ in range(N_AUGMENTATIONS + 1)]
         views_tensor = torch.stack(views).to(DEVICE)
@@ -137,6 +139,9 @@ def main():
         with torch.no_grad():
             image_features_all = model.encode_image(views_tensor)
             image_features_all = image_features_all / image_features_all.norm(dim=-1, keepdim=True)
+
+        torch.mps.synchronize()
+        view_feature_seconds = time.perf_counter() - t0  # cost of 64 augmented views + forward pass
 
         for _ in range(N_STEPS):
             prompts = prompt_learner()
@@ -171,6 +176,8 @@ def main():
             final_probs = probs[selected_idx].mean(dim=0).cpu().numpy()
 
         pred_idx = int(np.argmax(final_probs))
+        torch.mps.synchronize()
+        elapsed = time.perf_counter() - t0
         pred_label = CLASS_LABELS[pred_idx]
         correct = pred_label == entry["label"]
 
@@ -189,6 +196,8 @@ def main():
             "improved_over_vanilla": (correct and not vanilla_correct) if vanilla_correct is not None else None,
             "view_entropy_std": view_entropy_std,     # NEW: spread of entropy across the 64 augmented views
             "view_entropy_mean": view_entropy_mean,   # NEW: mean entropy across the 64 augmented views
+            "seconds": elapsed,
+            "view_feature_seconds": view_feature_seconds,
         })
 
         if (i + 1) % 10 == 0:
@@ -206,6 +215,18 @@ def main():
 
     regressed_count = sum(1 for r in results if r["vanilla_correct"] and not r["correct"])
     print(f"Images regressed vs vanilla: {regressed_count}")
+
+    secs = np.array([r["seconds"] for r in results])
+    view_secs = np.array([r["view_feature_seconds"] for r in results])
+    print(f"TPT time per image: median {np.median(secs)*1000:.1f} ms, mean {secs.mean()*1000:.1f} ms")
+    print(f"  of which views + forward pass: median {np.median(view_secs)*1000:.1f} ms")
+
+    tda_path = Path("results/tda_results.json")
+    if tda_path.exists():
+        with open(tda_path) as f:
+            tda_secs = np.array([r["seconds"] for r in json.load(f) if "seconds" in r])
+        if len(tda_secs):
+            print(f"TPT / TDA cost ratio (median): {np.median(secs) / np.median(tda_secs):.1f}x")
     
 
 if __name__ == "__main__":
