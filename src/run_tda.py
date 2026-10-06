@@ -1,4 +1,6 @@
+import time
 import json
+from pyparsing import results
 import torch
 import numpy as np
 import open_clip
@@ -73,6 +75,21 @@ class PositiveCache:
             logits[class_idx] = affinities.sum()
         return logits
 
+    def stats(self, image_feature, num_classes, beta):
+        """Summarize the cache as it stands BEFORE this image is added.
+        Used as gate features, so it must not include the image itself."""
+        all_feats = [e[0] for entries in self.cache.values() for e in entries]
+        if not all_feats:
+            return {"pos_cache_max_sim": 0.0, "pos_cache_mean_sim": 0.0,
+                    "cache_fill": 0, "cache_pred": -1}
+        sims = torch.stack(all_feats) @ image_feature
+        logits = self.compute_logits(image_feature, num_classes, beta)
+        return {
+            "pos_cache_max_sim": float(sims.max().item()),
+            "pos_cache_mean_sim": float(sims.mean().item()),
+            "cache_fill": len(all_feats),
+            "cache_pred": int(torch.argmax(logits).item()),
+        }
 
 class NegativeCache:
     """Per-predicted-class queue of (feature, entropy, negative_mask) triples.
@@ -146,6 +163,7 @@ def main():
     with torch.no_grad():
         for i, entry in enumerate(images):
             img = Image.open(entry["corrupted_path"]).convert("RGB")
+            t0 = time.perf_counter()
             img_tensor = preprocess(img).unsqueeze(0).to(DEVICE)
 
             image_features = model.encode_image(img_tensor)
@@ -162,6 +180,12 @@ def main():
             # influence its own cache-boosted prediction.
             pseudo_label_idx = int(torch.argmax(clip_probs).item())
             pseudo_entropy = entropy(clip_probs.cpu().numpy())
+
+            # Gate features: snapshot the cache BEFORE this image updates it.
+            cache_stats = pos_cache.stats(image_feature, len(CLASS_LABELS), POS_BETA)
+            cache_agrees = int(cache_stats["cache_pred"] == pseudo_label_idx)
+            neg_cache_fill = sum(len(v) for v in neg_cache.cache.values())
+
             pos_cache.update(pseudo_label_idx, image_feature.clone(), pseudo_entropy)
             neg_cache.maybe_update(pseudo_label_idx, image_feature.clone(), pseudo_entropy, clip_probs)
 
@@ -171,6 +195,8 @@ def main():
             combined_probs = torch.softmax(combined_logits, dim=-1).cpu().numpy()
 
             pred_idx = int(np.argmax(combined_probs))
+            torch.mps.synchronize()
+            elapsed = time.perf_counter() - t0
             pred_label = CLASS_LABELS[pred_idx]
             correct = pred_label == entry["label"]
 
@@ -187,6 +213,13 @@ def main():
                 "entropy": entropy(combined_probs),
                 "vanilla_correct": vanilla_correct,
                 "improved_over_vanilla": (correct and not vanilla_correct) if vanilla_correct is not None else None,
+                "pos_cache_max_sim": cache_stats["pos_cache_max_sim"],
+                "pos_cache_mean_sim": cache_stats["pos_cache_mean_sim"],
+                "cache_fill": cache_stats["cache_fill"],
+                "cache_agrees_with_clip": cache_agrees,
+                "cache_pred_label": CLASS_LABELS[cache_stats["cache_pred"]] if cache_stats["cache_pred"] >= 0 else None,
+                "neg_cache_fill": neg_cache_fill,
+                "seconds": elapsed,
             })
 
             if (i + 1) % 25 == 0:
@@ -203,6 +236,9 @@ def main():
     print(f"Images improved over vanilla: {improved_count}")
     print(f"Images regressed vs vanilla: {regressed_count}")
     print(f"Saved results to {OUTPUT_PATH}")
+
+    secs = np.array([r["seconds"] for r in results])
+    print(f"TDA time per image: median {np.median(secs)*1000:.1f} ms, mean {secs.mean()*1000:.1f} ms")
 
 
 if __name__ == "__main__":
