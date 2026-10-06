@@ -51,9 +51,14 @@ def main():
             image_features = image_features / image_features.norm(dim=-1, keepdim=True)
             embedding_store[entry["corrupted_path"]] = image_features.squeeze(0).cpu().numpy()
 
+            cos_sims = (image_features @ text_features.T).squeeze(0)  # raw cosine similarity to each class prompt
             logit_scale = model.logit_scale.exp()
-            logits = (logit_scale * image_features @ text_features.T).squeeze(0)
+            logits = logit_scale * cos_sims
             probs = torch.softmax(logits, dim=-1).cpu().numpy()
+
+            sorted_probs = np.sort(probs)[::-1]
+            margin = float(sorted_probs[0] - sorted_probs[1])       # top-1 minus top-2 probability
+            text_alignment = float(cos_sims.max().item())           # closeness to the nearest class prompt
 
             pred_idx = int(np.argmax(probs))
             pred_label = CLASS_LABELS[pred_idx]
@@ -67,6 +72,8 @@ def main():
                 "correct": correct,
                 "confidence": float(np.max(probs)),
                 "entropy": entropy(probs),
+                "margin": margin,
+                "text_alignment": text_alignment,
             })
 
             if (i + 1) % 25 == 0:
