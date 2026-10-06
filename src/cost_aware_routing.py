@@ -29,6 +29,12 @@ CHEAP_SCALARS = [
     "tda_pos_cache_max_sim", "tda_pos_cache_mean_sim", "tda_cache_agrees_with_clip",
     "tda_cache_fill", "tda_neg_cache_fill",
 ]
+FEATURE_GROUPS = {
+    "vanilla uncertainty": ["vanilla_entropy", "vanilla_confidence",
+                            "vanilla_margin", "vanilla_text_alignment"],
+    "TDA cache": ["tda_pos_cache_max_sim", "tda_pos_cache_mean_sim",
+                  "tda_cache_agrees_with_clip", "tda_cache_fill", "tda_neg_cache_fill"],
+}
 BUDGETS = np.round(np.arange(0, 0.51, 0.05), 2)   # fraction of images routed to TPT
 
 
@@ -154,6 +160,63 @@ def cost_aware_curve(n_repeats=5):
     fig.savefig(COST_CURVE_PLOT, dpi=150)
     print(f"\nSaved plot to {COST_CURVE_PLOT}")
 
+# --- Feature analysis + significance for the best config (logreg | cheap scalars) ---
+
+def mean_oof_auc(X, y, n_repeats=5):
+    return np.mean([
+        roc_auc_score(y, oof_needs_tpt_scores(X, None, y, "logreg", seed=r))
+        for r in range(n_repeats)
+    ])
+
+
+def feature_analysis(n_repeats=5, n_permutations=200):
+    with open(WIN_LABELS) as f:
+        rows = json.load(f)
+    y = np.array([r["needs_tpt"] for r in rows], dtype=int)
+    X = np.array([[r[f] for f in CHEAP_SCALARS] for r in rows])
+
+    print("\n=== Feature analysis: logreg | cheap scalars ===")
+
+    # 1. Coefficients (fit on all data, standardized features).
+    # Correlated features (entropy/confidence/margin, r~0.98) split weight
+    # between them, so read these alongside the group ablation below.
+    sc = StandardScaler().fit(X)
+    model = LogisticRegression(class_weight="balanced", max_iter=1000).fit(sc.transform(X), y)
+    print("\nCoefficients (standardized; + means higher value -> more likely to need TPT):")
+    for f, c in sorted(zip(CHEAP_SCALARS, model.coef_[0]), key=lambda t: -abs(t[1])):
+        print(f"  {f:28s} {c:+.3f}")
+
+    # 2. Drop-one ablation: how much out-of-fold AUC falls without each feature.
+    base_auc = mean_oof_auc(X, y, n_repeats)
+    print(f"\nBaseline out-of-fold AUC (all features): {base_auc:.3f}")
+    print("Drop-one ablation (negative delta = feature helps):")
+    for i, f in enumerate(CHEAP_SCALARS):
+        auc = mean_oof_auc(np.delete(X, i, axis=1), y, n_repeats)
+        print(f"  without {f:28s} AUC {auc:.3f}  (delta {auc - base_auc:+.3f})")
+
+    # 3. Group ablation: each group alone, and everything except each group.
+    print("\nGroup ablation:")
+    for g, feats in FEATURE_GROUPS.items():
+        idx = [CHEAP_SCALARS.index(f) for f in feats]
+        only = mean_oof_auc(X[:, idx], y, n_repeats)
+        without = mean_oof_auc(np.delete(X, idx, axis=1), y, n_repeats)
+        print(f"  {g:20s} alone: AUC {only:.3f} | all except it: AUC {without:.3f}")
+
+    # 4. Permutation test on AUC: shuffle needs_tpt, rerun the same CV.
+    observed = roc_auc_score(y, oof_needs_tpt_scores(X, None, y, "logreg", seed=0))
+    rng = np.random.default_rng(0)
+    perm_aucs = np.array([
+        roc_auc_score(y_p, oof_needs_tpt_scores(X, None, y_p, "logreg", seed=0))
+        for y_p in (rng.permutation(y) for _ in range(n_permutations))
+    ])
+    p = (np.sum(perm_aucs >= observed) + 1) / (n_permutations + 1)
+    print(f"\nPermutation test ({n_permutations} shuffles of needs_tpt):")
+    print(f"  Observed AUC {observed:.3f} | shuffled mean {perm_aucs.mean():.3f}, "
+          f"95th pct {np.percentile(perm_aucs, 95):.3f}, max {perm_aucs.max():.3f}")
+    print(f"  p-value: {p:.4f}  (smallest possible with {n_permutations} shuffles: "
+          f"{1/(n_permutations+1):.4f})")
+
 
 if __name__ == "__main__":
     cost_aware_curve()
+    feature_analysis()

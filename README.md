@@ -2,7 +2,7 @@
 
 Pilot project exploring whether a lightweight, meta-learned gate can predict, per image, which test-time adaptation (TTA) strategy (TPT vs. TDA) will work better for a CLIP-based vision-language model under domain shift, without manual per-domain tuning.
 
-## Status: pilot complete — real signal found (gradient boosting on scalar features; MLP on PCA-compressed embeddings)
+## Status: cost-aware routing matches TPT's accuracy with ~25–30% of images routed to TPT (~3x cheaper), p < 0.005
 
 | n | Vanilla | TPT | TDA | Oracle | Oracle gap |
 |---|---|---|---|---|---|
@@ -77,6 +77,36 @@ Median wall-clock time per image on an M2 Max (MPS), excluding image loading:
 
 86% of TPT's cost (449 ms) is generating its 64 augmented views and their forward pass. Gates that use view-spread features (gradient boosting, RL) pay that cost on every image just to decide, so they can't deliver meaningful savings. Gates built on cheap signals (vanilla CLIP outputs, TDA cache statistics, CLIP embeddings) add almost no overhead. Wall-clock ratios are hardware-specific.
 
+### Gate 4: Cost-aware routing (`src/cost_aware_routing.py`)
+
+Instead of asking "which strategy is better?", this gate asks **"does this image need TPT?"** (`needs_tpt` = TPT right and TDA wrong, 73 of 1,000 images). A scorer ranks images by that probability using only cheap features. For a given TPT budget, the top-scoring images go to TPT and the rest to TDA.
+
+- **Features (cheap, from vanilla CLIP and TDA's cache):** entropy, confidence, top-2 margin, text alignment, positive-cache max/mean similarity, cache-agrees-with-CLIP, cache fill, negative-cache fill. No view-spread features.
+- **Models:** logistic regression and gradient boosting on three feature sets (scalars, PCA-5 embeddings, both). All six are reported; settings were fixed in advance.
+- **Evaluation:** 5-fold cross-validation, averaged over 5 different fold splits, using all 1,000 images.
+- **Cost accounting (conservative):** TDA runs on every image, since its cache must keep updating and the cheap features come from its pass. Routed images pay for TPT on top. Mean per-image times are used, so the numbers differ slightly from the median-based table above.
+
+**Best configuration: logistic regression on cheap scalars** (AUC 0.757 ± 0.007, average precision 0.161 vs. 0.073 at random):
+
+| Strategy | Images sent to TPT | Accuracy | Cost per image |
+|---|---|---|---|
+| Always TDA | 0% | 62.5% | 30 ms |
+| Gate | 20% | 63.8% | ~138 ms |
+| **Gate** | **25%** | **≥64.0% (matches always-TPT)** | **~165 ms (~3.3x cheaper)** |
+| Gate | 30% | 64.7% | ~192 ms (~2.8x cheaper) |
+| Always TPT | 100% | 64.0% | 537 ms |
+| Cost-aware oracle | 7.3% | 69.8% | 70 ms |
+
+All six configurations beat random routing at every budget. Plot: `results/cost_curve.png`.
+
+**What drives it** (feature analysis, logistic regression):
+- **Vanilla CLIP uncertainty carries most of the signal:** alone it reaches AUC 0.750, vs. 0.757 with all features.
+- **TDA cache agreement is the one cache feature that adds unique signal:** removing it drops AUC by 0.017. When the cache disagrees with CLIP, the image is more likely to need TPT.
+- The other cache features are largely redundant with uncertainty.
+- In short, **TPT is needed when CLIP is torn between classes and TDA's cache disagrees with CLIP.**
+
+**Caveats:** "matches at 25%" sits right at the line (64.3% vs. 64.0% is about 3 images), so "25–30%" is the safer claim. There's a large gap to the oracle: most top-ranked images don't actually need TPT. Confirmation on new images or another dataset is still pending.
+
 ## Statistical checks
 
 | Check | Applied to | What it shows | Result |
@@ -84,13 +114,14 @@ Median wall-clock time per image on an M2 Max (MPS), excluding image loading:
 | Cross-validation | All gates | Scores on images not used for training | Numbers above |
 | Seed stability | Gradient boosting, RL, MLP | Result doesn't depend on one random initialization | Stable for all three |
 | Permutation test (200 label shuffles) | Gradient boosting, MLP | Whether the gap over baseline beats chance | p = 0.045 (GB), p = 0.030 (MLP, single seed) |
+| Permutation test on AUC (200 shuffles of `needs_tpt`) | Cost-aware gate (logreg, cheap scalars) | Whether the scorer ranks images better than chance | Observed AUC 0.770 vs. shuffled max 0.634; **p < 0.005** (survives correction for the 6 configurations) |
 
 **Caveats:**
-- With 131 cases, accuracy has a standard error of about ±4 points, so a ~5-point gap is about one standard error.
+- The caveats below apply to the disagreement-case gates (1–3). With 131 cases, accuracy has a standard error of about ±4 points, so a ~5-point gap is about one standard error.
 - The permutation p-values treat each gate as the only one tried. Gradient boosting was the best of 16 configurations, and the MLP's PCA size and regularization were tuned on the same folds. Correcting for 16 tries would require p < 0.003, so both results are **nominally significant**.
 - Seed checks vary model initialization, not the data split, so they show stability, not significance.
 
-**Next step:** freeze one gate configuration, train on disagreement cases from the first 1,000 images, and test on disagreement cases from newly added images. That gives a clean estimate with no tuning on the test data.
+**Next steps:** a cost-shaped RL gate (reward = correct − λ × cost) as a comparison against the cost-aware scorer; then scaling and cross-dataset tests (e.g., train on ImageNet-R, test on ImageNet-A or Sketch) once GPU access is available.
 
 Note: n=150/300/500/1000 are nested samples (same seed for image selection), not independent replications.
 
