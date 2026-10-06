@@ -65,6 +65,18 @@ Only the **131 disagreement cases** carry information about which strategy to pi
 - **What didn't work:** raw 512 dims memorized the training data (100% train vs. ~64% test); training on all 1,000 images collapsed to always predicting TPT; 30 PCA dims overfit to 47%.
 - **Cost note:** the embedding comes from vanilla CLIP's single forward pass, so this gate is nearly free to run.
 
+### Cost (measured)
+
+Median wall-clock time per image on an M2 Max (MPS), excluding image loading:
+
+| Strategy | Accuracy | Time per image |
+|---|---|---|
+| Always TDA | 62.5% | 29.3 ms |
+| Always TPT | 64.0% | 524.7 ms (~18x TDA) |
+| Cost-aware oracle (TPT only where it alone is right: 7.3% of images) | 69.8% | 65.4 ms (8x cheaper than always-TPT) |
+
+86% of TPT's cost (449 ms) is generating its 64 augmented views and their forward pass. Gates that use view-spread features (gradient boosting, RL) pay that cost on every image just to decide, so they can't deliver meaningful savings. Gates built on cheap signals (vanilla CLIP outputs, TDA cache statistics, CLIP embeddings) add almost no overhead. Wall-clock ratios are hardware-specific.
+
 ## Statistical checks
 
 | Check | Applied to | What it shows | Result |
@@ -117,7 +129,7 @@ Or run steps in order:
 | 3. Vanilla CLIP baseline | `src/run_vanilla_clip.py` | `results/vanilla_clip_results.json`, `results/vanilla_clip_embeddings.npz` |
 | 4. Run TPT | `src/run_tpt.py` | `results/tpt_results.json` |
 | 5. Run TDA | `src/run_tda.py` | `results/tda_results.json` |
-| 6. Merge results | `src/build_win_labels.py` | `results/win_labels.json` |
+| 6. Merge results | `src/build_win_labels.py` | `results/win_labels.json` (incl. `needs_tpt` label, cheap features, timings) |
 | 7. Test gate signal (search + stability check) | `src/fit_gate_final.py` | printed to console |
 | 8. Compute oracle baseline | `src/compute_oracle.py` | printed to console |
 | 9. RL / embedding-based gates + permutation tests | `src/train_rl_gate.py` | printed to console |
