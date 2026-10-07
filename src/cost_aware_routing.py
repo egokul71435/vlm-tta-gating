@@ -216,7 +216,81 @@ def feature_analysis(n_repeats=5, n_permutations=200):
     print(f"  p-value: {p:.4f}  (smallest possible with {n_permutations} shuffles: "
           f"{1/(n_permutations+1):.4f})")
 
+# --- Simple-threshold baselines: route by ONE feature, no training ---
+# Each rule's direction is fixed a priori (more uncertain -> send to TPT),
+# not chosen from results, so these are fair baselines for the learned gate.
+
+THRESHOLD_PLOT = Path("results/threshold_baseline.png")
+
+
+def threshold_baselines(n_repeats=5):
+    with open(WIN_LABELS) as f:
+        rows = json.load(f)
+
+    y = np.array([r["needs_tpt"] for r in rows], dtype=int)
+    tpt_c = np.array([r["tpt_correct"] for r in rows], dtype=float)
+    tda_c = np.array([r["tda_correct"] for r in rows], dtype=float)
+    tpt_s = np.array([r["tpt_seconds"] for r in rows])
+    tda_s = np.array([r["tda_seconds"] for r in rows])
+    X = np.array([[r[f] for f in CHEAP_SCALARS] for r in rows])
+    tpt_acc, tda_acc = tpt_c.mean(), tda_c.mean()
+
+    entropy_ = np.array([r["vanilla_entropy"] for r in rows])
+    disagree = 1 - np.array([r["tda_cache_agrees_with_clip"] for r in rows])
+    # Hand-made two-signal rule: cache disagreement first, ties broken by entropy
+    ent_norm = (entropy_ - entropy_.min()) / (entropy_.max() - entropy_.min())
+
+    rules = {
+        "threshold: high entropy": entropy_,
+        "threshold: low confidence": -np.array([r["vanilla_confidence"] for r in rows]),
+        "threshold: low margin": -np.array([r["vanilla_margin"] for r in rows]),
+        "rule: cache disagrees, then entropy": disagree + 0.5 * ent_norm,
+    }
+
+    # Learned gate (logreg | cheap scalars), averaged over fold splits
+    learned = [oof_needs_tpt_scores(X, None, y, "logreg", seed=r) for r in range(n_repeats)]
+    learned_curve = np.mean([route_curve(s, tpt_c, tda_c, tpt_s, tda_s)[0] for s in learned], 0)
+
+    print("\n=== Simple-threshold baselines vs. learned gate (no training for thresholds) ===")
+    print(f"Always TDA {tda_acc:.3f} | Always TPT {tpt_acc:.3f} | needs_tpt base rate {y.mean():.3f}\n")
+
+    def summarize(name, accs, auc, ap):
+        match = next((b for b, a in zip(BUDGETS, accs) if a >= tpt_acc), None)
+        match_str = f"{match:.0%}" if match is not None else ">50%"
+        print(f"{name:38s} AUC {auc:.3f} | AP {ap:.3f} | "
+              f"@10% {acc_at(accs, 0.10):.3f} @20% {acc_at(accs, 0.20):.3f} "
+              f"@25% {acc_at(accs, 0.25):.3f} @30% {acc_at(accs, 0.30):.3f} | "
+              f"matches TPT at {match_str}")
+
+    curves = {}
+    for name, score in rules.items():
+        accs, _ = route_curve(score, tpt_c, tda_c, tpt_s, tda_s)
+        curves[name] = accs
+        summarize(name, accs, roc_auc_score(y, score), average_precision_score(y, score))
+
+    curves["learned gate (logreg | cheap scalars)"] = learned_curve
+    summarize("learned gate (logreg | cheap scalars)", learned_curve,
+              np.mean([roc_auc_score(y, s) for s in learned]),
+              np.mean([average_precision_score(y, s) for s in learned]))
+
+    fig, ax = plt.subplots(figsize=(8, 5.5))
+    x = BUDGETS * 100
+    for name, accs in curves.items():
+        style = "-" if name.startswith("learned") else "--"
+        ax.plot(x, accs * 100, style, marker="o", ms=3, label=name)
+    ax.plot(x, ((1 - BUDGETS) * tda_acc + BUDGETS * tpt_acc) * 100, "k:", label="random routing")
+    ax.axhline(tpt_acc * 100, color="gray", ls=":", label=f"always TPT ({tpt_acc:.1%})")
+    ax.set_xlabel("% of images routed to TPT")
+    ax.set_ylabel("Accuracy (%)")
+    ax.set_title("Simple-threshold baselines vs. learned gate (n=1,000)")
+    ax.legend(fontsize=7, loc="lower right")
+    ax.grid(alpha=0.3)
+    fig.tight_layout()
+    fig.savefig(THRESHOLD_PLOT, dpi=150)
+    print(f"\nSaved plot to {THRESHOLD_PLOT}")
+
 
 if __name__ == "__main__":
-    cost_aware_curve()
-    feature_analysis()
+    # cost_aware_curve()
+    # feature_analysis()
+    threshold_baselines()

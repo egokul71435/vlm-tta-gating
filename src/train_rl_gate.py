@@ -407,7 +407,7 @@ def report_permutation_result(score, perm_scores, p_value, y):
 # points, compared directly against the supervised cost-aware scorer.
 
 RL_COST_PLOT = Path("results/rl_cost_curve.png")
-LAMBDAS = [0.0, 0.02, 0.05, 0.1, 0.15, 0.2, 0.3, 0.5]
+LAMBDAS = [0.0, 0.02, 0.03, 0.04, 0.05, 0.06, 0.08, 0.1, 0.15, 0.2]
 
 
 def train_reinforce_cost(X_train, r_tpt, r_tda, lam, epochs=300, lr=0.01, seed=0):
@@ -432,7 +432,7 @@ def train_reinforce_cost(X_train, r_tpt, r_tda, lam, epochs=300, lr=0.01, seed=0
     return model
 
 
-def cost_shaped_rl_sweep(n_repeats=3):
+def cost_shaped_rl_sweep(n_repeats=5):
     with open(WIN_LABELS) as f:
         rows = json.load(f)
 
@@ -442,16 +442,27 @@ def cost_shaped_rl_sweep(n_repeats=3):
     tpt_s = np.array([r["tpt_seconds"] for r in rows])
     tda_s = np.array([r["tda_seconds"] for r in rows])
     X = np.array([[r[f] for f in CHEAP_SCALARS] for r in rows])
-
     tpt_acc, tda_acc = tpt_c.mean(), tda_c.mean()
-    print("\n=== Cost-shaped RL gate (cheap scalars, 5-fold, "
-          f"averaged over {n_repeats} fold splits) ===")
+
+    # Scorer scores per repeat. StratifiedKFold with the same random_state on the
+    # same labels gives identical folds, so RL and scorer see the same splits.
+    scorer_scores = [oof_needs_tpt_scores(X, None, y, "logreg", seed=rep)
+                     for rep in range(n_repeats)]
+
+    def acc_top_k(scores, k):
+        route = np.zeros(len(scores), dtype=bool)
+        route[np.argsort(-scores)[:k]] = True
+        return np.where(route, tpt_c, tda_c).mean()
+
+    print("\n=== Cost-shaped RL vs. supervised scorer at the SAME budget "
+          f"(5-fold, {n_repeats} fold splits, paired) ===")
     print(f"Always TDA: acc {tda_acc:.3f} | Always TPT: acc {tpt_acc:.3f}\n")
-    print(f"{'lambda':>7} | {'% to TPT':>8} | {'accuracy':>8} | {'cost (ms)':>9} | {'AUC':>5}")
+    print(f"{'lambda':>6} | {'% to TPT':>13} | {'RL acc':>13} | {'scorer acc':>13} | "
+          f"{'RL - scorer':>14} | {'RL wins':>7} | {'cost ms':>7} | {'AUC':>5}")
 
     rl_points = []
     for lam in LAMBDAS:
-        fracs, accs, costs, aucs = [], [], [], []
+        fracs, rl_accs, sc_accs, costs, aucs = [], [], [], [], []
         for rep in range(n_repeats):
             skf = StratifiedKFold(n_splits=5, shuffle=True, random_state=rep)
             route = np.zeros(len(y), dtype=bool)
@@ -465,39 +476,49 @@ def cost_shaped_rl_sweep(n_repeats=3):
                         model(torch.tensor(sc.transform(X[te]), dtype=torch.float32)), dim=-1
                     ).numpy()
                 p_tpt[te] = probs[:, 0]
-                route[te] = probs[:, 0] > 0.5      # greedy: pick the likelier action
+                route[te] = probs[:, 0] > 0.5
+
+            k = int(route.sum())
             fracs.append(route.mean())
-            accs.append(np.where(route, tpt_c, tda_c).mean())
+            rl_accs.append(np.where(route, tpt_c, tda_c).mean())
+            sc_accs.append(acc_top_k(scorer_scores[rep], k))   # same budget, same split
             costs.append((tda_s + route * tpt_s).mean() * 1000)
             aucs.append(roc_auc_score(y, p_tpt))
-        point = (lam, np.mean(fracs), np.mean(accs), np.mean(costs), np.mean(aucs))
-        rl_points.append(point)
-        print(f"{lam:7.2f} | {point[1]:8.1%} | {point[2]:8.3f} | {point[3]:9.1f} | {point[4]:.3f}")
 
-    # Supervised cost-aware scorer curve for comparison (same features + accounting)
-    scorer_accs = np.mean([
-        route_curve(oof_needs_tpt_scores(X, None, y, "logreg", seed=r),
-                    tpt_c, tda_c, tpt_s, tda_s)[0]
-        for r in range(5)
-    ], axis=0)
+        fracs, rl_accs, sc_accs = map(np.array, (fracs, rl_accs, sc_accs))
+        diffs = rl_accs - sc_accs
+        wins = int(np.sum(diffs > 0))
+        rl_points.append((lam, fracs.mean(), fracs.std(), rl_accs.mean(), rl_accs.std()))
+        print(f"{lam:6.2f} | {fracs.mean():6.1%} ±{fracs.std():5.1%} | "
+              f"{rl_accs.mean():.3f} ±{rl_accs.std():.3f} | "
+              f"{sc_accs.mean():.3f} ±{sc_accs.std():.3f} | "
+              f"{diffs.mean():+.3f} ±{diffs.std():.3f} | {wins:>3}/{n_repeats} | "
+              f"{np.mean(costs):7.1f} | {np.mean(aucs):.3f}")
+
+    # Scorer curve with spread across fold splits
+    curves = np.array([route_curve(s, tpt_c, tda_c, tpt_s, tda_s)[0] for s in scorer_scores])
+    sc_mean, sc_std = curves.mean(0), curves.std(0)
 
     fig, ax = plt.subplots(figsize=(8, 5.5))
-    ax.plot(BUDGETS * 100, scorer_accs * 100, marker="o", ms=3,
+    x = BUDGETS * 100
+    ax.plot(x, sc_mean * 100, marker="o", ms=3,
             label="supervised scorer (logreg | cheap scalars)")
-    ax.plot(BUDGETS * 100, ((1 - BUDGETS) * tda_acc + BUDGETS * tpt_acc) * 100,
-            "k--", label="random routing")
+    ax.fill_between(x, (sc_mean - sc_std) * 100, (sc_mean + sc_std) * 100, alpha=0.2)
+    ax.plot(x, ((1 - BUDGETS) * tda_acc + BUDGETS * tpt_acc) * 100, "k--",
+            label="random routing")
     ax.axhline(tpt_acc * 100, color="gray", ls=":", label=f"always TPT ({tpt_acc:.1%})")
     ax.scatter([y.mean() * 100], [np.maximum(tpt_c, tda_c).mean() * 100], marker="*",
                s=200, color="red", zorder=5, label="cost-aware oracle")
-    for lam, frac, acc, _, _ in rl_points:
-        if frac <= 0.5:
-            ax.scatter(frac * 100, acc * 100, color="tab:orange", zorder=4)
-            ax.annotate(f"λ={lam}", (frac * 100, acc * 100), fontsize=7,
+    for lam, f_m, f_s, a_m, a_s in rl_points:
+        if f_m <= 0.5:
+            ax.errorbar(f_m * 100, a_m * 100, xerr=f_s * 100, yerr=a_s * 100,
+                        fmt="o", color="tab:orange", capsize=3, zorder=4)
+            ax.annotate(f"λ={lam}", (f_m * 100, a_m * 100), fontsize=7,
                         xytext=(4, 4), textcoords="offset points")
-    ax.scatter([], [], color="tab:orange", label="cost-shaped RL (one point per λ)")
+    ax.errorbar([], [], fmt="o", color="tab:orange", label="cost-shaped RL (±1 std per λ)")
     ax.set_xlabel("% of images routed to TPT")
     ax.set_ylabel("Accuracy (%)")
-    ax.set_title("Cost-shaped RL vs. supervised cost-aware scorer (n=1,000)")
+    ax.set_title("Cost-shaped RL vs. supervised scorer (n=1,000, 5 fold splits)")
     ax.legend(fontsize=8, loc="lower right")
     ax.grid(alpha=0.3)
     fig.tight_layout()

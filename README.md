@@ -2,7 +2,7 @@
 
 Pilot project exploring whether a lightweight, meta-learned gate can predict, per image, which test-time adaptation (TTA) strategy (TPT vs. TDA) will work better for a CLIP-based vision-language model under domain shift, without manual per-domain tuning.
 
-## Status: cost-aware routing matches TPT's accuracy with ~25–30% of images routed to TPT (~3x cheaper), p < 0.005
+## Status: routing the most uncertain images to TPT matches TPT's accuracy with 15–25% of images sent to TPT (~3.3–5x cheaper); a simple threshold does as well as a learned gate
 
 | n | Vanilla | TPT | TDA | Oracle | Oracle gap |
 |---|---|---|---|---|---|
@@ -106,6 +106,26 @@ All six configurations beat random routing at every budget. Plot: `results/cost_
 - In short, **TPT is needed when CLIP is torn between classes and TDA's cache disagrees with CLIP.**
 
 **Caveats:** "matches at 25%" sits right at the line (64.3% vs. 64.0% is about 3 images), so "25–30%" is the safer claim. There's a large gap to the oracle: most top-ranked images don't actually need TPT. Confirmation on new images or another dataset is still pending.
+
+#### Simple-threshold baselines (`threshold_baselines` in `src/cost_aware_routing.py`)
+
+No training: each rule ranks images by one feature and sends the top X% to TPT. Directions were fixed in advance (more uncertain → TPT).
+
+| Rule | AUC | AP | Acc @20% | Acc @30% | Matches always-TPT at |
+|---|---|---|---|---|---|
+| High entropy | 0.754 | 0.163 | 63.8% | 63.8% | 25% |
+| Low confidence | 0.757 | 0.158 | 64.0% | 64.2% | 20% |
+| Low margin | 0.755 | 0.166 | 64.2% | 64.5% | 20% |
+| Cache disagrees, then entropy | 0.746 | 0.165 | 64.1% | 64.5% | **15%** |
+| Learned gate (logreg, cheap scalars) | 0.757 | 0.161 | 63.8% | 64.7% | 25% |
+
+- **At this scale, a single uncertainty threshold does as well as the learned gate.** Differences are 0.2–0.5 points (2–5 images), within noise.
+- **The two-signal rule** (send images where TDA's cache disagrees with CLIP, then the most uncertain) matches TPT with only 15% of images going to TPT, the cheapest point so far, and is fully interpretable. It was designed after the feature analysis, so it needs confirming on new data.
+- **What this means for the contribution:** the value is in the cost-aware analysis and the finding that uncertainty plus cache agreement predict when TPT is needed, not in a complex gate. Learned gates may help again with more data and richer features.
+
+Plot: `results/threshold_baseline.png`.
+
+- **Positioning:** the learned scorer is simpler than RL (one model covers every budget via a cutoff), but simple thresholds match both at this scale (see below). The main method is therefore the routing approach itself, with a simple rule as the default; learned gates are revisited at larger scale.
 
 ## Statistical checks
 
