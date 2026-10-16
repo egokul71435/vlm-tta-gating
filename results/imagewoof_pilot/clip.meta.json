@@ -1,0 +1,23 @@
+{
+  "git_commit": "e7607c9",
+  "saved_at": "2026-10-16 00:19:45",
+  "n": 1000,
+  "accuracy": 0.59,
+  "args": {
+    "dataset": "imagewoof_pilot",
+    "classnames": null,
+    "templates": null,
+    "output": null,
+    "tag": null,
+    "device": "auto",
+    "seed": 42,
+    "n": null,
+    "no_embeddings": false,
+    "model": "ViT-B-16-quickgelu",
+    "pretrained": "openai"
+  },
+  "summary": {
+    "accuracy": 0.59,
+    "templates": 1
+  }
+}

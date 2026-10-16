@@ -4,7 +4,16 @@ needs_tpt = TPT right AND TDA wrong: the only case worth paying TPT's ~18x
 cost for. A scorer ranks images by P(needs_tpt) using CHEAP features only
 (vanilla CLIP outputs, TDA cache statistics, CLIP embeddings). For each TPT
 budget, the top-scoring images go to TPT and the rest to TDA.
+
+Reads results/<dataset>/win_labels[_<tag>].json (from build_win_labels.py) and
+the CLIP embeddings; writes plots to results/<dataset>/.
+
+Examples:
+  python src_main/scripts/cost_aware_routing.py --dataset imagewoof_pilot
+  python src_main/scripts/cost_aware_routing.py --dataset imagenet_a --tag 1view --skip-permutation
 """
+
+import argparse
 
 import json
 from pathlib import Path
@@ -20,9 +29,22 @@ from sklearn.metrics import average_precision_score, roc_auc_score
 from sklearn.model_selection import StratifiedKFold
 from sklearn.preprocessing import StandardScaler
 
-WIN_LABELS = Path("results/win_labels.json")
-EMBEDDINGS_PATH = Path("results/vanilla_clip_embeddings.npz")
-COST_CURVE_PLOT = Path("results/cost_curve.png")
+from tta.common import results_path
+from tta.registry import add_dataset_arg, get_dataset
+
+# Set by configure() from --dataset / --tag.
+WIN_LABELS = EMBEDDINGS_PATH = COST_CURVE_PLOT = THRESHOLD_PLOT = None
+
+
+def configure(dataset, tag=None, clip_tag=None):
+    global WIN_LABELS, EMBEDDINGS_PATH, COST_CURVE_PLOT, THRESHOLD_PLOT
+    spec = get_dataset(dataset)
+    suffix = f"_{tag}" if tag else ""
+    WIN_LABELS = results_path(spec.name, "win_labels", tag)
+    clip = results_path(spec.name, "clip", clip_tag)
+    EMBEDDINGS_PATH = clip.with_name(clip.stem + "_embeddings.npz")
+    COST_CURVE_PLOT = WIN_LABELS.with_name(f"cost_curve{suffix}.png")
+    THRESHOLD_PLOT = WIN_LABELS.with_name(f"threshold_baseline{suffix}.png")
 
 CHEAP_SCALARS = [
     "vanilla_entropy", "vanilla_confidence", "vanilla_margin", "vanilla_text_alignment",
@@ -40,7 +62,7 @@ BUDGETS = np.round(np.arange(0, 0.51, 0.05), 2)   # fraction of images routed to
 
 def load_embeddings():
     npz = np.load(EMBEDDINGS_PATH)
-    return {k.replace("__", "/"): npz[k] for k in npz.files}
+    return dict(zip(npz["ids"].tolist(), npz["embeddings"]))
 
 
 def oof_needs_tpt_scores(X_scalar, X_emb, y, model_name, n_components=5, seed=0):
@@ -101,7 +123,7 @@ def cost_aware_curve(n_repeats=5):
     tpt_secs = np.array([r["tpt_seconds"] for r in rows])
     tda_secs = np.array([r["tda_seconds"] for r in rows])
     X_scalar = np.array([[r[f] for f in CHEAP_SCALARS] for r in rows])
-    X_emb = np.array([embeddings[r["corrupted_path"]] for r in rows])
+    X_emb = np.array([embeddings[r["id"]] for r in rows])
 
     tpt_acc, tda_acc = tpt_correct.mean(), tda_correct.mean()
     oracle_route = y.astype(bool)
@@ -153,7 +175,7 @@ def cost_aware_curve(n_repeats=5):
                zorder=5, label=f"cost-aware oracle ({oracle_acc:.1%})")
     ax.set_xlabel("% of images routed to TPT")
     ax.set_ylabel("Accuracy (%)")
-    ax.set_title("Cost-aware routing: accuracy vs. TPT budget (n=1,000)")
+    ax.set_title(f"Cost-aware routing: accuracy vs. TPT budget (n={len(rows):,})")
     ax.legend(fontsize=8, loc="lower right")
     ax.grid(alpha=0.3)
     fig.tight_layout()
@@ -203,6 +225,9 @@ def feature_analysis(n_repeats=5, n_permutations=200):
         print(f"  {g:20s} alone: AUC {only:.3f} | all except it: AUC {without:.3f}")
 
     # 4. Permutation test on AUC: shuffle needs_tpt, rerun the same CV.
+    if n_permutations <= 0:
+        print("\nPermutation test skipped.")
+        return
     observed = roc_auc_score(y, oof_needs_tpt_scores(X, None, y, "logreg", seed=0))
     rng = np.random.default_rng(0)
     perm_aucs = np.array([
@@ -219,8 +244,6 @@ def feature_analysis(n_repeats=5, n_permutations=200):
 # --- Simple-threshold baselines: route by ONE feature, no training ---
 # Each rule's direction is fixed a priori (more uncertain -> send to TPT),
 # not chosen from results, so these are fair baselines for the learned gate.
-
-THRESHOLD_PLOT = Path("results/threshold_baseline.png")
 
 
 def threshold_baselines(n_repeats=5):
@@ -282,7 +305,7 @@ def threshold_baselines(n_repeats=5):
     ax.axhline(tpt_acc * 100, color="gray", ls=":", label=f"always TPT ({tpt_acc:.1%})")
     ax.set_xlabel("% of images routed to TPT")
     ax.set_ylabel("Accuracy (%)")
-    ax.set_title("Simple-threshold baselines vs. learned gate (n=1,000)")
+    ax.set_title(f"Simple-threshold baselines vs. learned gate (n={len(rows):,})")
     ax.legend(fontsize=7, loc="lower right")
     ax.grid(alpha=0.3)
     fig.tight_layout()
@@ -291,6 +314,15 @@ def threshold_baselines(n_repeats=5):
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Cost-aware routing analysis for one dataset.")
+    add_dataset_arg(parser)
+    parser.add_argument("--tag", default=None, help="Which win_labels to use (win_labels[_<tag>].json).")
+    parser.add_argument("--clip-tag", default=None, help="Which clip embeddings to use.")
+    parser.add_argument("--skip-permutation", action="store_true",
+                        help="Skip the 200-shuffle permutation test (slow on large datasets).")
+    args = parser.parse_args()
+    configure(args.dataset, args.tag, args.clip_tag)
+
     cost_aware_curve()
-    feature_analysis()
+    feature_analysis(n_permutations=0 if args.skip_permutation else 200)
     threshold_baselines()
