@@ -9,3 +9,12 @@ checkpoints/
 .DS_Store
 results/*.csv
 refs/
+
+data/*
+!data/classnames/
+!data/templates/
+!data/masks/
+!data/manifests/
+refs/
+*.egg-info/*.egg-info/
+*.egg-info/

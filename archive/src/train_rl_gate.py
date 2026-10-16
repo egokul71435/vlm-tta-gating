@@ -14,7 +14,7 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
-from cost_aware_routing import CHEAP_SCALARS, BUDGETS, oof_needs_tpt_scores, route_curve
+from archive.src.cost_aware_routing import CHEAP_SCALARS, BUDGETS, oof_needs_tpt_scores, route_curve
 
 WIN_LABELS = Path("results/win_labels.json")
 EMBEDDINGS_PATH = Path("results/vanilla_clip_embeddings.npz")

@@ -5,7 +5,7 @@ from pathlib import Path
 from sklearn.model_selection import StratifiedKFold
 from sklearn.preprocessing import StandardScaler
 
-from train_rl_gate import PolicyNet, build_dataset, evaluate, WIN_LABELS, FEATURES
+from archive.src.train_rl_gate import PolicyNet, build_dataset, evaluate, WIN_LABELS, FEATURES
 
 
 def train_reinforce_seeded(X_train, r_tpt_train, r_tda_train, seed, epochs=300, lr=0.01):
