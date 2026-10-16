@@ -1,149 +1,115 @@
-# Meta-Learned Test-Time Adaptation: Strategy Selection for VLMs
+# Cost-Aware Routing Between Test-Time Adaptation Methods for VLMs
 
-Pilot project exploring whether a lightweight, meta-learned gate can predict, per image, which test-time adaptation (TTA) strategy (TPT vs. TDA) will work better for a CLIP-based vision-language model under domain shift, without manual per-domain tuning.
+Test-time adaptation (TTA) recovers CLIP accuracy under distribution shift, but methods differ widely in cost. TPT (test-time prompt tuning) runs 64 augmented views plus a gradient step per image; TDA (training-free dynamic adapter) can run on a single view with a small cache. This project routes each image: cheap TDA by default, expensive TPT only when a nearly free gate predicts the image needs it.
 
-## Status: routing the most uncertain images to TPT matches TPT's accuracy with 15–25% of images sent to TPT (~3.3–5x cheaper); a simple threshold does as well as a learned gate
+## Status
 
-| n | Vanilla | TPT | TDA | Oracle | Oracle gap |
-|---|---|---|---|---|---|
-| 150 | 57.3% | 56.7% | 61.3% | 66.7% | 5.3pt |
-| 300 | 56.3% | 58.0% | 61.0% | 64.7% | 3.7pt |
-| 500 | 57.0% | 56.4% | 61.6% | 68.2% | 6.6pt |
-| 1000 | 58.5% | 64.0% | 62.5% | 69.8% | 5.8pt |
+- **Both methods verified against the official code** (logic matches; differences are documented run settings). Published-number reproduction is pending GPU access.
+- **Pilot (Imagewoof, 1,000 images) re-run with the verified implementations and shared prompts.** A single free signal, CLIP's top-2 margin, predicts which images need TPT (AUC ~0.86, permutation p < 0.005). On this pilot TPT and TDA differ by under a point, so the accuracy at stake is small.
+- **Repo restructured:** any registered dataset runs end to end with `./run.sh <dataset>`. The pilot reproduces exactly through the new pipeline (identical per-image predictions, outcome counts and routing numbers).
+- **Next:** ImageNet-A data preparation and zero-shot check (target 49.89%), then TDA (64 and 1 view) and TPT on ImageNet-A, then the rest of the ImageNet OOD suite and the 10 cross-domain datasets. Target: CVPR 2027.
 
-The n=1000 row comes from a seeded run (`torch.manual_seed(42)` in `run_tpt.py`/`run_tda.py`) and is reproducible. The n=150/300/500 rows predate the seeding fix, so TPT/TDA numbers there may shift slightly on a rerun. The qualitative pattern (TDA > vanilla, stable oracle gap) is what to take from them.
+## Pilot setup
 
-## Gate results
+- **Data:** [Imagewoof](https://github.com/fastai/imagenette) validation images (10 dog breeds), 1,000 images, half gaussian blur and half gaussian noise (scikit-image implementation of ImageNet-C severity conventions). Switched from Imagenette after CLIP was too accurate there for corruption to matter.
+- **Model:** CLIP ViT-B/16 (open_clip `ViT-B-16-quickgelu`, OpenAI weights), on Apple M2 Max (MPS).
+- **Class names:** official ImageNet names for the 10 classes (from the TPT repo), e.g. "Shih Tzu", "Beagle".
+- **Prompt:** `a photo of a {}.` for all three methods (the same prompt official TPT starts from).
+- **TDA:** 1 view; pilot α=1.0, β=5.0 (Imagewoof has no official config; untuned); manifest order plus 3 shuffle seeds.
+- **TPT:** official defaults (see below), crop + flip views (official setting for ImageNet-derived data).
 
-All numbers are from the seeded n=1,000 run. Of the 1,000 images:
+## Pilot results
 
-| Case | Images | Does the gate's choice matter? |
+| Method | Accuracy | Notes |
 |---|---|---|
-| Both TPT and TDA correct | 567 | No |
-| Both wrong | 302 | No |
-| Only TPT correct | 73 | Yes |
-| Only TDA correct | 58 | Yes |
+| Vanilla CLIP | 59.0% | blur 63.6%, noise 54.4% |
+| TDA (1 view) | 60.1% | 59.9 / 60.6 / 60.5% across 3 shuffle seeds |
+| TPT (official) | 61.0% | +2.0 over vanilla (51 improved, 31 regressed) |
+| Oracle (best of TPT/TDA per image) | 64.8% | 3.8 pts above TPT |
 
-Only the **131 disagreement cases** carry information about which strategy to pick, so gates are trained and compared there. Overall accuracy follows directly: (567 + disagreement cases the gate gets right) / 1,000.
+**Per-image outcomes:** both right 563, both wrong 352, only TPT right 47, only TDA right 38. Only the 47 "TPT-only" images (4.7%) are worth paying TPT's cost for; 38 of them (81%) are noise-corrupted.
 
-### Summary
-
-| Gate | Disagreement cases (n=131) | Overall (n=1,000) | Share of oracle headroom captured* |
-|---|---|---|---|
-| Vanilla CLIP (no adaptation) | — | 58.5% | — |
-| Always TDA | 44.3% | 62.5% | — |
-| **Always TPT (baseline)** | **55.7%** | **64.0%** | 0% |
-| Entropy-only classifier (best: logistic regression) | 55.0% | 63.9% | ~0% |
-| RL gate (REINFORCE) | ~50–57%† | 63.3–64.1% | ~0% |
-| Embedding MLP (PCA-5) | 59.8% | ~64.5% | ~9% |
-| Gradient boosting (entropy + view-spread) | 60.7% | ~64.7% | ~11% |
-| **Oracle (perfect per-image choice)** | **100%** | **69.8%** | 100% |
-
-\*Headroom = oracle minus always-TPT: 5.8 points overall, or 58 images. A gate's share = (its overall accuracy − 64.0%) / 5.8 points.
-†The RL gate was evaluated on all 1,000 images; its disagreement-case accuracy is derived from its overall accuracy using the formula above.
-
-**Takeaway:** the oracle shows up to 5.8 points of overall gain is available. The best gates so far capture roughly a tenth of it: about +4–5 points on the disagreement cases, or about +0.5–0.7 points overall.
-
-### Gate 1: Classic classifiers (`src/fit_gate_final.py`)
-
-- **Setup:** 4 feature sets × 4 models (logistic regression, random forest, gradient boosting, k-NN) = 16 configurations, trained on the 131 disagreement cases and evaluated with leave-one-out cross-validation.
-- **Features tried:** pre-adaptation entropy; + confidence; + corruption type; entropy + TPT view-entropy spread (the mean and std of CLIP's entropy across TPT's 64 augmented views, before adaptation).
-- **Outcome:** only gradient boosting on entropy + view-spread beat the baseline: **60.7% vs. 55.7%**, averaged over 7 seeds (std 0.004). All entropy-only variants were at or below baseline.
-- **Cost note:** the view-spread features need TPT's 64 forward passes, so this gate pays a large part of TPT's cost before deciding.
-- **Earlier false positive:** a random forest result (65.5%) didn't replicate once TPT/TDA augmentation was seeded.
-
-### Gate 2: RL gate (`src/train_rl_gate.py`, `main`)
-
-- **Setup:** a contextual bandit. A small network (4 scalar features → 16 hidden → 2 actions) picks TPT or TDA per image and receives reward 1 if that strategy was correct. Trained with REINFORCE on all 1,000 images, using the average reward of both options as a variance-reducing baseline. Evaluated with 5-fold cross-validation.
-- **Outcome:** **63.3–64.1% overall vs. 64.0% always-TPT** across runs, and 1/5 seeds above baseline in the stability check. No gain.
-- **Likely reasons:** 87% of images give identical reward for either action (no learning signal), and sampling actions adds noise that supervised training avoids.
-
-### Gate 3: Embedding MLP (`src/train_rl_gate.py`, `run_embedding_experiment`)
-
-- **Setup:** supervised classifier on vanilla CLIP image embeddings (512-dim), PCA-reduced to 5 dims inside each fold (≈30% of variance retained), MLP with 64 hidden units, weight decay 0.1, 30 epochs. Trained on the 131 disagreement cases, evaluated with 5-fold cross-validation.
-- **Outcome:** **59.8% vs. 55.7%**, averaged over 7 seeds (std 0.013), with all 7 above baseline.
-- **What didn't work:** raw 512 dims memorized the training data (100% train vs. ~64% test); training on all 1,000 images collapsed to always predicting TPT; 30 PCA dims overfit to 47%.
-- **Cost note:** the embedding comes from vanilla CLIP's single forward pass, so this gate is nearly free to run.
-
-### Cost (measured)
-
-Median wall-clock time per image on an M2 Max (MPS), excluding image loading:
+### Cost (median per image, M2 Max)
 
 | Strategy | Accuracy | Time per image |
 |---|---|---|
-| Always TDA | 62.5% | 29.3 ms |
-| Always TPT | 64.0% | 524.7 ms (~18x TDA) |
-| Cost-aware oracle (TPT only where it alone is right: 7.3% of images) | 69.8% | 65.4 ms (8x cheaper than always-TPT) |
+| Always TDA (1 view) | 60.1% | ~25–35 ms |
+| Always TPT | 61.0% | ~600–770 ms (~22–24x TDA); in the faster run: views 47, encoding 469, tuning + prediction 83 |
+| Cost-aware oracle (TPT only on the 4.7% that need it) | 64.8% | ~11x cheaper than always-TPT |
 
-86% of TPT's cost (449 ms) is generating its 64 augmented views and their forward pass. Gates that use view-spread features (gradient boosting, RL) pay that cost on every image just to decide, so they can't deliver meaningful savings. Gates built on cheap signals (vanilla CLIP outputs, TDA cache statistics, CLIP embeddings) add almost no overhead. Wall-clock ratios are hardware-specific.
+Ranges span two runs of the same code; laptop timings vary with load and temperature, while the ratio stays stable. On this 10-class dataset, encoding TPT's 64 views dominates its cost. TPT's tuning step runs the text encoder over one prompt per class, so on 1,000-class datasets it will be far heavier. Paper costs will be measured on GPU, on an otherwise idle machine, after warm-up.
 
-### Gate 4: Cost-aware routing (`src/cost_aware_routing.py`)
+### Routing
 
-Instead of asking "which strategy is better?", this gate asks **"does this image need TPT?"** (`needs_tpt` = TPT right and TDA wrong, 73 of 1,000 images). A scorer ranks images by that probability using only cheap features. For a given TPT budget, the top-scoring images go to TPT and the rest to TDA.
+The gate scores each image by how likely it is to need TPT (TPT right, TDA wrong) using cheap signals from vanilla CLIP and TDA's cache; the top-scoring X% go to TPT, the rest to TDA. Cost accounting is conservative: TDA runs on every image, routed images pay for TPT on top.
 
-- **Features (cheap, from vanilla CLIP and TDA's cache):** entropy, confidence, top-2 margin, text alignment, positive-cache max/mean similarity, cache-agrees-with-CLIP, cache fill, negative-cache fill. No view-spread features.
-- **Models:** logistic regression and gradient boosting on three feature sets (scalars, PCA-5 embeddings, both). All six are reported; settings were fixed in advance.
-- **Evaluation:** 5-fold cross-validation, averaged over 5 different fold splits, using all 1,000 images.
-- **Cost accounting (conservative):** TDA runs on every image, since its cache must keep updating and the cheap features come from its pass. Routed images pay for TPT on top. Mean per-image times are used, so the numbers differ slightly from the median-based table above.
-
-**Best configuration: logistic regression on cheap scalars** (AUC 0.757 ± 0.007, average precision 0.161 vs. 0.073 at random):
-
-| Strategy | Images sent to TPT | Accuracy | Cost per image |
-|---|---|---|---|
-| Always TDA | 0% | 62.5% | 30 ms |
-| Gate | 20% | 63.8% | ~138 ms |
-| **Gate** | **25%** | **≥64.0% (matches always-TPT)** | **~165 ms (~3.3x cheaper)** |
-| Gate | 30% | 64.7% | ~192 ms (~2.8x cheaper) |
-| Always TPT | 100% | 64.0% | 537 ms |
-| Cost-aware oracle | 7.3% | 69.8% | 70 ms |
-
-All six configurations beat random routing at every budget. Plot: `results/cost_curve.png`.
-
-**What drives it** (feature analysis, logistic regression):
-- **Vanilla CLIP uncertainty carries most of the signal:** alone it reaches AUC 0.750, vs. 0.757 with all features.
-- **TDA cache agreement is the one cache feature that adds unique signal:** removing it drops AUC by 0.017. When the cache disagrees with CLIP, the image is more likely to need TPT.
-- The other cache features are largely redundant with uncertainty.
-- In short, **TPT is needed when CLIP is torn between classes and TDA's cache disagrees with CLIP.**
-
-**Caveats:** "matches at 25%" sits right at the line (64.3% vs. 64.0% is about 3 images), so "25–30%" is the safer claim. There's a large gap to the oracle: most top-ranked images don't actually need TPT. Confirmation on new images or another dataset is still pending.
-
-#### Simple-threshold baselines (`threshold_baselines` in `src/cost_aware_routing.py`)
-
-No training: each rule ranks images by one feature and sends the top X% to TPT. Directions were fixed in advance (more uncertain → TPT).
-
-| Rule | AUC | AP | Acc @20% | Acc @30% | Matches always-TPT at |
+| Gate | AUC | Avg. precision (base rate 0.047) | Acc @20% to TPT | Acc @30% | Matches always-TPT at |
 |---|---|---|---|---|---|
-| High entropy | 0.754 | 0.163 | 63.8% | 63.8% | 25% |
-| Low confidence | 0.757 | 0.158 | 64.0% | 64.2% | 20% |
-| Low margin | 0.755 | 0.166 | 64.2% | 64.5% | 20% |
-| Cache disagrees, then entropy | 0.746 | 0.165 | 64.1% | 64.5% | **15%** |
-| Learned gate (logreg, cheap scalars) | 0.757 | 0.161 | 63.8% | 64.7% | 25% |
+| Low top-2 margin (single threshold) | 0.861 | 0.156 | 60.5% | 60.8% | 25% |
+| Low confidence (single threshold) | 0.853 | 0.164 | 60.6% | 60.9% | 40% |
+| High entropy (single threshold) | 0.816 | 0.142 | 60.3% | 60.9% | 45% |
+| Logistic regression, cheap scalars | 0.844 ± 0.008 | 0.142 | 60.8% | 60.9% | 25% |
+| Gradient boosting, cheap scalars | 0.835 ± 0.009 | 0.149 | 61.2% | 60.8% | 15% |
+| Logistic regression, PCA-5 CLIP embeddings | 0.688 | 0.100 | 60.9% | 61.3% | 25% |
+| Random routing | 0.5 | 0.047 | 60.3% | 60.4% | — |
 
-- **At this scale, a single uncertainty threshold does as well as the learned gate.** Differences are 0.2–0.5 points (2–5 images), within noise.
-- **The two-signal rule** (send images where TDA's cache disagrees with CLIP, then the most uncertain) matches TPT with only 15% of images going to TPT, the cheapest point so far, and is fully interpretable. It was designed after the feature analysis, so it needs confirming on new data.
-- **What this means for the contribution:** the value is in the cost-aware analysis and the finding that uncertainty plus cache agreement predict when TPT is needed, not in a complex gate. Learned gates may help again with more data and richer features.
+Learned gates use 5-fold cross-validation averaged over 5 fold splits; thresholds need no training.
 
-Plot: `results/threshold_baseline.png`.
+- **The ranking signal is real:** permutation test on the logistic-regression AUC (200 label shuffles): observed 0.847 vs. shuffled mean 0.501, max 0.635; **p < 0.005**.
+- **Top-2 margin carries it.** Vanilla-uncertainty features alone reach AUC 0.853 (slightly above all features, 0.844); TDA cache features alone reach 0.702 but add nothing on top of uncertainty. Margin has by far the largest coefficient (−2.39), and a margin threshold alone is the best single rule.
+- **Accuracy gains are small here.** TPT beats TDA by only 0.9 pts, so routing gains ~0.5–0.9 pts over random routing and roughly matches TPT at 15–40% TPT. Those budget numbers are noisy (a few images move them); the benchmarks, with larger method gaps, will decide whether routing matters in practice.
 
-- **Positioning:** the learned scorer is simpler than RL (one model covers every budget via a cutoff), but simple thresholds match both at this scale (see below). The main method is therefore the routing approach itself, with a simple rule as the default; learned gates are revisited at larger scale.
+## Why these results differ from the first pilot
 
-## Statistical checks
+The first pilot (kept in `results/pilot_v1/`) reported TDA 62.5%, TPT 64.0% and a 5.8-pt oracle gap. Three things changed:
 
-| Check | Applied to | What it shows | Result |
-|---|---|---|---|
-| Cross-validation | All gates | Scores on images not used for training | Numbers above |
-| Seed stability | Gradient boosting, RL, MLP | Result doesn't depend on one random initialization | Stable for all three |
-| Permutation test (200 label shuffles) | Gradient boosting, MLP | Whether the gap over baseline beats chance | p = 0.045 (GB), p = 0.030 (MLP, single seed) |
-| Permutation test on AUC (200 shuffles of `needs_tpt`) | Cost-aware gate (logreg, cheap scalars) | Whether the scorer ranks images better than chance | Observed AUC 0.770 vs. shuffled max 0.634; **p < 0.005** (survives correction for the 6 configurations) |
+1. **Shared prompts (the main reason).** The first pilot gave the methods different text prompts: vanilla CLIP used "a photo of a {class}", while TDA and TPT used "... {class}, a type of dog." Telling CLIP the classes are dog breeds raises accuracy by itself, so part of TDA's and TPT's apparent gain over vanilla came from the better prompt rather than from adaptation. With one prompt for all three, TDA's gain over vanilla drops from 4.0 to 1.1 pts.
+2. **TPT now follows the official implementation.** The first pilot's TPT used a random prompt initialization, a random first view, and averaged six augmented views for its prediction. Official TPT initializes from "a photo of a", uses a center-cropped first view, and predicts from that view alone. (Legacy flags reproduce the first pilot exactly: 64.0%.)
+3. **Official class names** ("Shih Tzu" rather than "Shih-Tzu", etc.), matching what the benchmarks will use.
 
-**Caveats:**
-- The caveats below apply to the disagreement-case gates (1–3). With 131 cases, accuracy has a standard error of about ±4 points, so a ~5-point gap is about one standard error.
-- The permutation p-values treat each gate as the only one tried. Gradient boosting was the best of 16 configurations, and the MLP's PCA size and regularization were tuned on the same folds. Correcting for 16 tries would require p < 0.003, so both results are **nominally significant**.
-- Seed checks vary model initialization, not the data split, so they show stability, not significance.
+TDA's cache logic was already equivalent to the official code; its rewrite reproduces the first pilot exactly (62.5%) under the old settings.
 
-**Next steps:** a cost-shaped RL gate (reward = correct − λ × cost) as a comparison against the cost-aware scorer; then scaling and cross-dataset tests (e.g., train on ImageNet-R, test on ImageNet-A or Sketch) once GPU access is available.
+**Superseded results:** the gate experiments from the first pilot (disagreement-case classifiers, the embedding MLP, cost-shaped RL, and the claim that TDA cache agreement adds unique signal) were run on the old implementations and prompts. They are not reported here; RL and the cascade will be re-run on the benchmarks.
 
-Note: n=150/300/500/1000 are nested samples (same seed for image selection), not independent replications.
+## Implementations and verification
+
+Both were compared line by line against the official repositories ([TPT](https://github.com/azshue/TPT), [TDA](https://github.com/kdiaaa/tda)) and reviewed independently.
+
+**TDA** (`src_main/scripts/run_tda.py`)
+- Matches official: CLIP pseudo-label updates both caches before the image's own prediction; entropy-ordered queues (3 positive / 2 negative per class); negative cache gated on entropy in nats divided by log2(classes) (official convention, so the normalized value tops out near 0.69); fixed logit scale 100; text weights averaged over a template list.
+- Views follow the dataset's official setting by default: 1 view (as described in the TDA paper; official code on ImageNet and the cross-domain sets) or 64 views (center crop + 63 AugMix views, lowest-entropy 10% averaged; official code on ImageNet-A, -V2, -R and Sketch, though the paper does not mention it). `--n-views` overrides.
+- Deviations: fp32 by default (official fp16; `--half` on CUDA); image order is a seeded shuffle rather than official's exact sequence (order moves pilot accuracy by a few tenths); pilot α/β untuned.
+
+**TPT** (`src_main/scripts/run_tpt.py`)
+- Matches official: 4 context vectors from "a photo of a"; prompts "[context] {class}."; view 0 = resize + center crop; 63 random-resized-crop + flip views (AugMix on the cross-domain sets, as official; `--augmix` / `--no-augmix` override); lowest-entropy 6 of 64 views; loss = entropy of their averaged prediction; AdamW lr 5e-3, 1 step; reset per image; final prediction from view 0. The open_clip text path matches open_clip's own encoding exactly (max difference 0.0).
+- Encodes views once instead of every step (same predictions, slightly cheaper).
+- Deviations: fp32 by default (official fp16 with a gradient scaler; `--amp` on CUDA); seed 42 vs. official 0 (only the random views differ).
+- Gate features come from the pre-tuning logits, which in default mode are zero-shot predictions, so they cost nothing extra.
+
+**Still to verify:** zero-shot CLIP and published TDA/TPT accuracy on ImageNet-A and -R (ViT-B/16 targets: CLIP 49.89% / 77.65%; TDA with 64 views 60.11% / 80.24%; TPT 54.77% / 77.06%), and GPU cost per dataset.
+
+## Repository layout
+
+```
+run.sh                  pipeline runner (one dataset, chosen stages)
+pyproject.toml          installs the tta package (pip install -e .)
+src_main/
+  tta/
+    registry.py         one entry per dataset: images, class names, templates, mask, TDA config, view settings, published targets
+    data.py             dataset -> ordered samples (id, path, label); ImageFolder, manifest and CoOp-split layouts
+    common.py           device, seeding, CLIP loading, text weights, uncertainty stats, results I/O
+  scripts/
+    run_vanilla_clip.py zero-shot CLIP (reproduction check + vanilla gate features + embeddings)
+    run_tda.py          TDA
+    run_tpt.py          TPT
+    build_win_labels.py merge the three runs per image; outcome labels, gate features, headroom
+    cost_aware_routing.py  gates, budget curves, feature analysis, threshold baselines
+configs/tda/            official TDA configs (copied from refs/tda/configs)
+data/                   classnames/, templates/, masks/, manifests/ are tracked; images are not
+results/<dataset>/      per-dataset outputs (see below)
+archive/                first-pilot scripts and gate searches (frozen; some no longer run)
+refs/                   official TPT and TDA repos (gitignored)
+```
 
 ## Setup
 
@@ -151,60 +117,72 @@ Note: n=150/300/500/1000 are nested samples (same seed for image selection), not
 conda create -n vlm-tta python=3.11 -y
 conda activate vlm-tta
 pip install -r requirements.txt
-```
+pip install -e .
+python -c "import torch; print(torch.cuda.is_available() or torch.backends.mps.is_available())"
+python -c "import tta.registry as r; print(sorted(r.REGISTRY))"
 
-Confirm MPS is available (Apple Silicon):
-```bash
-python -c "import torch; print(torch.backends.mps.is_available())"
-```
-
-Reference implementations (not project dependencies, used for verification):
-```bash
+# official implementations, used for verification and AugMix operations (gitignored)
 git clone https://github.com/azshue/TPT refs/tpt
 git clone https://github.com/kdiaaa/tda refs/tda
 ```
 
-## Pipeline
+`DATA_ROOT` (default `data`) and `RESULTS_ROOT` (default `results`) can be set as environment variables, e.g. to point at a cluster's data directory.
 
-Run the full pipeline in order with:
+## Running
+
+Run from the repo root. `run.sh` runs any subset of the five stages for one registered dataset and saves each stage's output to `results/<dataset>/logs/<stage>.log`:
+
 ```bash
-./run_pipeline.sh
+chmod +x run.sh                                  # once
+./run.sh imagewoof_pilot                         # all stages: clip tda tpt labels route
+./run.sh imagenet_a clip                         # zero-shot check only
+N=100 ./run.sh imagenet_a clip tda               # smoke test on the first 100 images
+./run.sh imagewoof_pilot labels route            # re-analyze saved results (no model)
+RESULTS_ROOT=/tmp/test N=20 ./run.sh imagewoof_pilot clip tda tpt labels   # test without touching results/
 ```
 
-Or run steps in order:
+For variants, call the scripts directly; `--tag` keeps their outputs separate:
 
-| Step | Script | Output |
+```bash
+python src_main/scripts/run_tda.py --dataset imagewoof_pilot --shuffle-seed 1 --tag seed1
+python src_main/scripts/run_tda.py --dataset imagenet_a --n-views 1 --tag 1view
+python src_main/scripts/build_win_labels.py --dataset imagenet_a --tda-tag 1view --out-tag 1view
+python src_main/scripts/cost_aware_routing.py --dataset imagenet_a --tag 1view --skip-permutation
+python src_main/scripts/run_tpt.py --dataset imagewoof_pilot --ctx-init random --suffix ", a type of dog." \
+    --view0 random --final selected_avg --tag legacy        # first-pilot TPT
+```
+
+| Stage | Script | Output in `results/<dataset>/` |
 |---|---|---|
-| 1. Select base images | `src/select_images.py` | `data/manifests/base_images.json` |
-| 2. Apply corruptions | `src/apply_corruptions.py` | `data/corrupted/`, `data/manifests/corrupted_manifest.json` |
-| 3. Vanilla CLIP baseline | `src/run_vanilla_clip.py` | `results/vanilla_clip_results.json`, `results/vanilla_clip_embeddings.npz` |
-| 4. Run TPT | `src/run_tpt.py` | `results/tpt_results.json` |
-| 5. Run TDA | `src/run_tda.py` | `results/tda_results.json` |
-| 6. Merge results | `src/build_win_labels.py` | `results/win_labels.json` (incl. `needs_tpt` label, cheap features, timings) |
-| 7. Test gate signal (search + stability check) | `src/fit_gate_final.py` | printed to console |
-| 8. Compute oracle baseline | `src/compute_oracle.py` | printed to console |
-| 9. RL / embedding-based gates + permutation tests | `src/train_rl_gate.py` | printed to console |
-| 10. Cost-aware routing curve | `src/cost_aware_routing.py` | `results/cost_curve.png` |
+| `clip` | `run_vanilla_clip.py` | `clip.json`, `clip_embeddings.npz` |
+| `tda` | `run_tda.py` | `tda.json` |
+| `tpt` | `run_tpt.py` | `tpt.json` |
+| `labels` | `build_win_labels.py` | `win_labels.json` (prints headroom: TPT-only %, TDA-only %, oracle) |
+| `route` | `cost_aware_routing.py` | `cost_curve.png`, `threshold_baseline.png` (prints gate tables) |
 
-Earlier iterations of the gate-signal search (`fit_gate_pilot_v2/v3/v4.py`, `check_gb_stability.py`) are preserved in `src/archive/` for reference — `fit_gate_final.py` consolidates the full search and the winning result.
+Only the model stages need a GPU or long runtimes. Routing can be simulated exactly from saved outputs, because TDA runs on every image regardless of routing (its cache evolves the same way) and TPT resets after every image; the analysis stages therefore take seconds to minutes and never rerun a model.
 
-Dataset used: [Imagewoof](https://github.com/fastai/imagenette) (10 dog breeds), scaled from 150 to 1,000 images, corrupted with gaussian blur/noise. Switched from Imagenette after finding its classes too easy to distinguish for corruption to matter (92-97% baseline accuracy even at high severity).
+### Results format
 
+Each run writes a list of per-image rows plus a `.meta.json` (git commit, arguments, accuracy). Every row has `id` (image path relative to `DATA_ROOT`, the join key across methods), `label`, `pred`, `correct`, `label_name`, `pred_name`, and method signals:
 
-## Repo structure
-```
-data/
-├── raw/            # downloaded datasets (gitignored)
-├── manifests/       # image selection + corruption metadata
-└── corrupted/       # generated corrupted images (gitignored, regenerable)
-results/             # per-stage outputs (JSON) + plots
-src/                 # pipeline scripts
-├── archive/         # superseded iterations of the gate-signal search, kept for reference
-refs/                # cloned reference implementations (gitignored)
-spec/                # project spec (to be added later)
-```
+- **CLIP:** `clip_conf`, `clip_margin`, `clip_entropy`, `clip_norm_entropy` (entropy / ln C, comparable across datasets), `text_alignment`.
+- **TDA:** the same stats for CLIP as TDA sees it (`clip_*`, `clip_view0_*`) and for TDA's output (`tda_*`); whether TDA changed CLIP's prediction; cache state before the image (similarities, fill, agreement with CLIP); how much each cache moved the logits; stream position; timings.
+- **TPT:** zero-shot stats before tuning (`zs_*`); TPT's output stats (`tpt_*`); whether tuning changed the prediction; the loss before the update; view and 8-view probe entropy/agreement; timings.
+
+### Adding a dataset
+
+1. Put the images under `data/` and the class names (JSON list, index = label), templates and, if needed, a class mask under `data/classnames/`, `data/templates/`, `data/masks/`.
+2. Add a `DatasetSpec` to `src_main/tta/registry.py` (layout, paths, TDA config, `tda_n_views`, `tpt_augmix`, published targets).
+3. `./run.sh <dataset> clip` and compare to the published CLIP number before running anything else.
+
+Label conventions are handled in `data.py`: WNID folders are labeled in sorted order (matching ascending class masks); ImageNet-V2's numeric folders are labeled by their number.
+
+### Pilot data
+
+The pilot's data preparation (`archive/src/select_images.py`, `apply_corruptions.py`, `align_classnames.py`) has already been run; its outputs live in `data/manifests/`, `data/classnames/` and `data/templates/`. The run before the restructure is preserved in `results/pilot_v2/` as the regression reference; `results/imagewoof_pilot/` holds the same results in the current format.
 
 ## Notes
 
-- TPT and TDA implementations were built independently and verified line-by-line against their official repos.
-- `imagecorruptions` was replaced with a direct `scikit-image` implementation due to unresolved packaging issues (see relevant commit for details).
+- Results from the first pilot are preserved in `results/pilot_v1/`; earlier gate-search scripts are in `archive/src/archive/`.
+- `imagecorruptions` was replaced with a direct scikit-image implementation due to packaging issues.
