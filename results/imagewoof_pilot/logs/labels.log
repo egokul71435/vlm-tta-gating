@@ -1,0 +1,26 @@
+Built win-label dataset with 1000 images, saved to results/imagewoof_pilot/win_labels.json
+
+Winner distribution (overall):
+  both: 563
+  neither: 352
+  tpt: 47
+  tda: 38
+
+Winner distribution by corruption type:
+  gaussian_blur: {'both': 318, 'neither': 163, 'tpt': 9, 'tda': 10}
+  gaussian_noise: {'both': 245, 'neither': 189, 'tpt': 38, 'tda': 28}
+
+Among 410 images vanilla CLIP got wrong:
+  both: 13
+  neither: 346
+  tpt: 38
+  tda: 13
+
+Headroom:
+  TPT-only right: 47 (4.7%) | TDA-only right: 38 (3.8%) | oracle 0.648 (+0.038 over the better method)
+
+Cost-aware view (median ms per image):
+  needs_tpt: 47/1000 images (4.7%)
+  Always TDA:          acc 0.601, cost 34.1 ms
+  Always TPT:          acc 0.610, cost 768.5 ms
+  Cost-aware oracle:   acc 0.648, cost 68.6 ms (11.2x cheaper than always-TPT); 70.2 ms if TDA also runs on routed images

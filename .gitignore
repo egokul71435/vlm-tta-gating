@@ -18,3 +18,6 @@ data/*
 refs/
 *.egg-info/*.egg-info/
 *.egg-info/
+
+  __pycache__/
+  *.pyc

@@ -1,0 +1,60 @@
+
+=== Cost-aware routing (5-fold, out-of-fold scores, averaged over 5 fold splits) ===
+needs_tpt base rate: 0.047 (47/1000)
+Always TDA:         acc 0.601, cost 35.3 ms
+Always TPT:         acc 0.610, cost 818.8 ms
+Cost-aware oracle:  acc 0.648, cost 72.2 ms (TPT on 4.7%)
+Random routing at 20% / 30%: 0.603 / 0.604
+
+logreg | cheap scalars           AUC 0.844±0.008 | AP 0.142 (base 0.047) | acc@10% 0.601 @20% 0.608 @30% 0.609 | matches always-TPT at: 25% TPT
+gb | cheap scalars               AUC 0.835±0.009 | AP 0.149 (base 0.047) | acc@10% 0.608 @20% 0.612 @30% 0.608 | matches always-TPT at: 15% TPT
+logreg | embeddings (PCA-5)      AUC 0.688±0.014 | AP 0.100 (base 0.047) | acc@10% 0.603 @20% 0.609 @30% 0.613 | matches always-TPT at: 25% TPT
+gb | embeddings (PCA-5)          AUC 0.629±0.018 | AP 0.072 (base 0.047) | acc@10% 0.601 @20% 0.603 @30% 0.604 | matches always-TPT at: not reached by 50%
+logreg | scalars + embeddings    AUC 0.840±0.011 | AP 0.137 (base 0.047) | acc@10% 0.602 @20% 0.607 @30% 0.610 | matches always-TPT at: 40% TPT
+gb | scalars + embeddings        AUC 0.827±0.008 | AP 0.149 (base 0.047) | acc@10% 0.609 @20% 0.611 @30% 0.609 | matches always-TPT at: 15% TPT
+
+Saved plot to results/imagewoof_pilot/cost_curve.png
+
+=== Feature analysis: logreg | cheap scalars ===
+
+Coefficients (standardized; + means higher value -> more likely to need TPT):
+  vanilla_margin               -2.393
+  tda_neg_cache_fill           +0.721
+  vanilla_entropy              -0.581
+  tda_pos_cache_mean_sim       -0.549
+  tda_cache_fill               -0.436
+  tda_cache_agrees_with_clip   -0.337
+  tda_pos_cache_max_sim        +0.216
+  vanilla_confidence           -0.107
+  vanilla_text_alignment       +0.106
+
+Baseline out-of-fold AUC (all features): 0.844
+Drop-one ablation (negative delta = feature helps):
+  without vanilla_entropy              AUC 0.843  (delta -0.001)
+  without vanilla_confidence           AUC 0.844  (delta -0.000)
+  without vanilla_margin               AUC 0.845  (delta +0.001)
+  without vanilla_text_alignment       AUC 0.849  (delta +0.004)
+  without tda_pos_cache_max_sim        AUC 0.848  (delta +0.003)
+  without tda_pos_cache_mean_sim       AUC 0.848  (delta +0.003)
+  without tda_cache_agrees_with_clip   AUC 0.845  (delta +0.001)
+  without tda_cache_fill               AUC 0.848  (delta +0.003)
+  without tda_neg_cache_fill           AUC 0.847  (delta +0.003)
+
+Group ablation:
+  vanilla uncertainty  alone: AUC 0.853 | all except it: AUC 0.702
+  TDA cache            alone: AUC 0.702 | all except it: AUC 0.853
+
+Permutation test (200 shuffles of needs_tpt):
+  Observed AUC 0.847 | shuffled mean 0.501, 95th pct 0.589, max 0.635
+  p-value: 0.0050  (smallest possible with 200 shuffles: 0.0050)
+
+=== Simple-threshold baselines vs. learned gate (no training for thresholds) ===
+Always TDA 0.601 | Always TPT 0.610 | needs_tpt base rate 0.047
+
+threshold: high entropy                AUC 0.816 | AP 0.142 | @10% 0.601 @20% 0.603 @25% 0.608 @30% 0.609 | matches TPT at 45%
+threshold: low confidence              AUC 0.853 | AP 0.164 | @10% 0.605 @20% 0.606 @25% 0.605 @30% 0.609 | matches TPT at 40%
+threshold: low margin                  AUC 0.861 | AP 0.156 | @10% 0.593 @20% 0.605 @25% 0.610 @30% 0.608 | matches TPT at 25%
+rule: cache disagrees, then entropy    AUC 0.783 | AP 0.141 | @10% 0.601 @20% 0.611 @25% 0.612 @30% 0.612 | matches TPT at 20%
+learned gate (logreg | cheap scalars)  AUC 0.844 | AP 0.142 | @10% 0.601 @20% 0.608 @25% 0.611 @30% 0.609 | matches TPT at 25%
+
+Saved plot to results/imagewoof_pilot/threshold_baseline.png

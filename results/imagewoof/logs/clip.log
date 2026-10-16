@@ -1,0 +1,7 @@
+usage: run_vanilla_clip.py [-h] --dataset
+                           {imagenet,imagenet_a,imagenet_r,imagenet_sketch,imagenet_v2,imagewoof_pilot}
+                           [--classnames CLASSNAMES] [--templates TEMPLATES]
+                           [--output OUTPUT] [--tag TAG] [--device DEVICE]
+                           [--seed SEED] [--n N] [--no-embeddings]
+                           [--model MODEL] [--pretrained PRETRAINED]
+run_vanilla_clip.py: error: argument --dataset: invalid choice: 'imagewoof' (choose from 'imagenet', 'imagenet_a', 'imagenet_r', 'imagenet_sketch', 'imagenet_v2', 'imagewoof_pilot')
