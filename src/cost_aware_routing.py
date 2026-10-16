@@ -291,6 +291,6 @@ def threshold_baselines(n_repeats=5):
 
 
 if __name__ == "__main__":
-    # cost_aware_curve()
-    # feature_analysis()
+    cost_aware_curve()
+    feature_analysis()
     threshold_baselines()

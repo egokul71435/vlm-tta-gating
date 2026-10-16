@@ -11,11 +11,13 @@ EMBEDDINGS_OUTPUT = Path("results/vanilla_clip_embeddings.npz")
 DEVICE = "mps"
 
 # Imagenette classes, in a fixed order matching CLASS_NAMES from select_images.py
-CLASS_LABELS = [
-    "Shih-Tzu", "Rhodesian ridgeback", "beagle", "English foxhound",
-    "Australian terrier", "border terrier", "golden retriever",
-    "Old English sheepdog", "Samoyed", "dingo",
-]
+# CLASS_LABELS = [
+#     "Shih-Tzu", "Rhodesian ridgeback", "beagle", "English foxhound",
+#     "Australian terrier", "border terrier", "golden retriever",
+#     "Old English sheepdog", "Samoyed", "dingo",
+# ]
+CLASSNAMES_PATH = Path("data/classnames/imagewoof.json")
+TEMPLATE = "a photo of a {}."
 
 def entropy(probs):
     # Shannon entropy of a probability distribution, in nats
@@ -30,7 +32,10 @@ def main():
     model = model.to(DEVICE).eval()
 
     # build and encode text prompts once
-    prompts = [f"a photo of a {label}" for label in CLASS_LABELS]
+    # prompts = [f"a photo of a {label}" for label in CLASS_LABELS]
+    with open(CLASSNAMES_PATH) as f:
+        CLASS_LABELS = json.load(f)
+        prompts = [TEMPLATE.format(label) for label in CLASS_LABELS]
     text_tokens = tokenizer(prompts).to(DEVICE)
     with torch.no_grad():
         text_features = model.encode_text(text_tokens)
