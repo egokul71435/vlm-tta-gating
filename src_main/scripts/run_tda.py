@@ -1,4 +1,4 @@
-"""Run TDA (Training-free Dynamic Adapter) over a manifest of images.
+"""Run TDA (Training-free Dynamic Adapter) on a registered dataset.
 
 Mirrors the official implementation (refs/tda: tda_runner.py, utils.py):
   - caches are updated with the CLIP pseudo-label BEFORE the image's own prediction
@@ -7,52 +7,49 @@ Mirrors the official implementation (refs/tda: tda_runner.py, utils.py):
   - fixed logit scale of 100
   - text weights = per-class mean of normalized template embeddings, renormalized
 
+Everything dataset-specific (images, class names, templates, TDA config, number
+of views) comes from the registry entry for --dataset; the flags below override
+it for experiments.
+
 Views:
-  --n-views 1   one center-cropped view (as described in the TDA paper; official
-                code on ImageNet and the 10 cross-domain datasets)
-  --n-views 64  center crop + 63 AugMix views, lowest-entropy 10% averaged
-                (official code on ImageNet-A / -V2 / -R / Sketch)
+  1   one center-cropped view (as described in the TDA paper; official code on
+      ImageNet and the 10 cross-domain datasets)
+  64  center crop + 63 AugMix views, lowest-entropy 10% averaged (official code
+      on ImageNet-A / -V2 / -R / Sketch)
 
-Defaults reproduce the Imagewoof pilot: 1 view, one dog template, alpha=1.0,
-beta=5.0, manifest order, full precision.
-
-Example (official-style run):
-  python src_main/scripts/run_tda.py --manifest data/manifests/imagenet_a.json \
-      --classnames data/classnames/imagenet_a.json --templates data/templates/imagenet.json \
-      --config refs/tda/configs/imagenet_a.yaml --n-views 64 --shuffle-seed 1 \
-      --output results/imagenet_a/tda_64v.json --save-probs
+Examples:
+  python src_main/scripts/run_tda.py --dataset imagewoof_pilot
+  python src_main/scripts/run_tda.py --dataset imagewoof_pilot --shuffle-seed 1 --tag seed1
+  python src_main/scripts/run_tda.py --dataset imagenet_r --shuffle-seed 1 --save-probs
+  python src_main/scripts/run_tda.py --dataset imagenet_r --n-views 1 --tag 1view
 """
 
 import argparse
 import json
 import math
-import random
 import sys
 import time
 from pathlib import Path
 
 import numpy as np
-import open_clip
 import torch
 import torch.nn.functional as F
 from PIL import Image
 from torchvision import transforms
 from torchvision.transforms import InterpolationMode
 
+from tta.common import (build_text_weights, load_clip, load_results, pick_device, results_path,
+                        save_results, seed_everything, softmax_entropy, sync, uncertainty_stats)
+from tta.data import load_samples
+from tta.registry import REPO_ROOT, add_dataset_arg, get_dataset
+
 LOGIT_SCALE = 100.0
 CLIP_MEAN = (0.48145466, 0.4578275, 0.40821073)
 CLIP_STD = (0.26862954, 0.26130258, 0.27577711)
 
-# --- Pilot defaults (Imagewoof) ---
-PILOT_CLASSNAMES = [
-    "Shih-Tzu", "Rhodesian ridgeback", "beagle", "English foxhound",
-    "Australian terrier", "border terrier", "golden retriever",
-    "Old English sheepdog", "Samoyed", "dingo",
-]
-PILOT_TEMPLATES = ["a photo of a {}, a type of dog."]
-# shot_capacity and negative-cache settings match every official config.
-# alpha/beta are dataset-specific officially; Imagewoof has no official config,
-# so 1.0/5.0 is a documented choice, not a verified default.
+# Used when the dataset has no official TDA config (the Imagewoof pilot).
+# shot_capacity and negative-cache settings match every official config;
+# alpha/beta are dataset-specific officially, so 1.0/5.0 is a documented choice.
 PILOT_CONFIG = {
     "positive": {"enabled": True, "shot_capacity": 3, "alpha": 1.0, "beta": 5.0},
     "negative": {
@@ -66,36 +63,6 @@ PILOT_CONFIG = {
 # ----------------------------------------------------------------------------
 # Setup helpers
 # ----------------------------------------------------------------------------
-
-def pick_device(name):
-    if name != "auto":
-        return name
-    if torch.cuda.is_available():
-        return "cuda"
-    if torch.backends.mps.is_available():
-        return "mps"
-    return "cpu"
-
-
-def synchronize(device):
-    if device == "cuda":
-        torch.cuda.synchronize()
-    elif device == "mps":
-        torch.mps.synchronize()
-
-
-def set_seeds(seed):
-    random.seed(seed)
-    np.random.seed(seed)
-    torch.manual_seed(seed)
-
-
-def load_json_list(path, default):
-    if path is None:
-        return default
-    with open(path) as f:
-        return json.load(f)
-
 
 def load_config(path):
     if path is None:
@@ -166,13 +133,8 @@ class AugMixViews:
 
 
 # ----------------------------------------------------------------------------
-# Official TDA logic
+# Official TDA logic (unchanged)
 # ----------------------------------------------------------------------------
-
-def softmax_entropy(logits):
-    """Per-row entropy in nats."""
-    return -(logits.softmax(-1) * logits.log_softmax(-1)).sum(-1)
-
 
 def avg_entropy(logits):
     """Entropy of the averaged prediction across rows (official avg_entropy)."""
@@ -182,24 +144,13 @@ def avg_entropy(logits):
     return -(avg * avg.exp()).sum(-1)
 
 
-def build_text_weights(model, tokenizer, classnames, templates, device):
-    """Official clip_classifier: (dim, C) matrix of class embeddings."""
-    weights = []
-    with torch.no_grad():
-        for name in classnames:
-            texts = tokenizer([t.format(name.replace("_", " ")) for t in templates]).to(device)
-            emb = model.encode_text(texts)
-            emb = emb / emb.norm(dim=-1, keepdim=True)
-            emb = emb.mean(0)
-            weights.append(emb / emb.norm())
-    return torch.stack(weights, dim=1)
-
-
 def clip_outputs(views, model, text_weights, select_frac=0.1):
-    """Official get_clip_logits. views: (V, 3, 224, 224) with V = 1 or 64."""
+    """Official get_clip_logits. views: (V, 3, 224, 224) with V = 1 or 64.
+    Also returns view 0's own logits (for gate features; not used by TDA)."""
     feats = model.encode_image(views)
     feats = feats / feats.norm(dim=-1, keepdim=True)
     logits = LOGIT_SCALE * feats @ text_weights
+    view0_logits = logits[:1]
     if feats.shape[0] > 1:
         ent = softmax_entropy(logits)
         idx = ent.argsort()[: int(feats.shape[0] * select_frac)]
@@ -213,7 +164,7 @@ def clip_outputs(views, model, text_weights, select_frac=0.1):
         loss = softmax_entropy(logits)[0]
         probs = logits.softmax(-1)
     pred = int(logits.argmax(-1))
-    return feat, logits, float(loss), probs, pred
+    return feat, logits, float(loss), probs, pred, view0_logits
 
 
 def update_cache(cache, pred, item, capacity):
@@ -251,14 +202,17 @@ def gate_stats(feat, pos_cache, neg_cache, pos_cfg, num_classes, clip_pred):
     neg_fill = sum(len(v) for v in neg_cache.values())
     keys = [item[0] for c in pos_cache for item in pos_cache[c]]
     if not keys:
-        return {"pos_cache_max_sim": 0.0, "pos_cache_mean_sim": 0.0, "cache_fill": 0,
-                "cache_pred": -1, "cache_agrees_with_clip": 0, "neg_cache_fill": neg_fill}
+        return {"pos_cache_max_sim": 0.0, "pos_cache_mean_sim": 0.0, "pos_cache_sim_clip_pred": 0.0,
+                "cache_fill": 0, "cache_pred": -1, "cache_agrees_with_clip": 0, "neg_cache_fill": neg_fill}
     sims = (feat @ torch.cat(keys, dim=0).T).squeeze(0)
+    same_class = [item[0] for item in pos_cache.get(clip_pred, [])]
+    sim_clip_pred = float((feat @ torch.cat(same_class, dim=0).T).max()) if same_class else 0.0
     pos_logits = cache_logits(feat, pos_cache, pos_cfg["alpha"], pos_cfg["beta"], num_classes)
     cache_pred = int(pos_logits.argmax(-1))
     return {
         "pos_cache_max_sim": float(sims.max()),
         "pos_cache_mean_sim": float(sims.mean()),
+        "pos_cache_sim_clip_pred": sim_clip_pred,       # closest cached image of CLIP's predicted class
         "cache_fill": len(keys),
         "cache_pred": cache_pred,
         "cache_agrees_with_clip": int(cache_pred == clip_pred),
@@ -271,21 +225,24 @@ def gate_stats(feat, pos_cache, neg_cache, pos_cfg, num_classes, clip_pred):
 # ----------------------------------------------------------------------------
 
 def parse_args():
-    p = argparse.ArgumentParser(description="Run TDA over an image manifest.")
-    p.add_argument("--manifest", default="data/manifests/corrupted_manifest.json")
-    p.add_argument("--output", default="results/tda_results.json")
-    p.add_argument("--vanilla-results", default="results/vanilla_clip_results.json",
-                   help="Optional; used for improved/regressed vs. vanilla CLIP.")
-    p.add_argument("--classnames", default=None, help="JSON list of class names (default: pilot dogs).")
-    p.add_argument("--templates", default=None, help="JSON list of templates with {} (default: pilot dog template).")
-    p.add_argument("--config", default=None, help="Official TDA YAML config (default: pilot settings).")
-    p.add_argument("--n-views", type=int, default=1, choices=[1, 64])
-    p.add_argument("--refs-tda", default="refs/tda", help="Official TDA repo (for AugMix ops).")
+    p = argparse.ArgumentParser(description="Run TDA on a registered dataset.")
+    add_dataset_arg(p)
+    p.add_argument("--n-views", type=int, default=None, choices=[1, 64],
+                   help="Default: the dataset's official setting.")
+    p.add_argument("--config", default=None, help="TDA YAML (default: the dataset's official config).")
+    p.add_argument("--classnames", default=None, help="Override: JSON list of class names.")
+    p.add_argument("--templates", default=None, help="Override: JSON list of templates with {}.")
+    p.add_argument("--output", default=None, help="Default: results/<dataset>/tda[_<tag>].json")
+    p.add_argument("--tag", default=None, help="Suffix for the default output name, e.g. seed1, 1view.")
+    p.add_argument("--vanilla-results", default=None,
+                   help="Optional; default results/<dataset>/clip.json if it exists.")
+    p.add_argument("--refs-tda", default=str(REPO_ROOT / "refs" / "tda"),
+                   help="Official TDA repo (for AugMix ops).")
     p.add_argument("--device", default="auto", help="auto | cuda | mps | cpu")
     p.add_argument("--half", action="store_true", help="Half precision (CUDA only), as official.")
     p.add_argument("--seed", type=int, default=42)
     p.add_argument("--shuffle-seed", type=int, default=None,
-                   help="Shuffle the stream with this seed (official uses a seeded shuffle). Default: manifest order.")
+                   help="Shuffle the stream with this seed (official uses a seeded shuffle). Default: dataset order.")
     p.add_argument("--n", type=int, default=None, help="Use only the first N images (smoke tests).")
     p.add_argument("--save-probs", action="store_true", help="Also save probability vectors (.npz).")
     p.add_argument("--model", default="ViT-B-16-quickgelu")
@@ -295,56 +252,48 @@ def parse_args():
 
 def main():
     args = parse_args()
+    spec = get_dataset(args.dataset)
     device = pick_device(args.device)
-    set_seeds(args.seed)
+    seed_everything(args.seed)
 
-    classnames = load_json_list(args.classnames, PILOT_CLASSNAMES)
-    templates = load_json_list(args.templates, PILOT_TEMPLATES)
-    cfg = load_config(args.config)
+    classnames = json.loads(Path(args.classnames).read_text()) if args.classnames else spec.load_classnames()
+    templates = json.loads(Path(args.templates).read_text()) if args.templates else spec.load_templates()
+    n_views = args.n_views or spec.tda_n_views
+    cfg = load_config(args.config or spec.tda_config_path())
     num_classes = len(classnames)
     pos_cfg, neg_cfg = cfg["positive"], cfg["negative"]
     mask_thr = (neg_cfg["mask_threshold"]["lower"], neg_cfg["mask_threshold"]["upper"])
 
-    model, _, _ = open_clip.create_model_and_transforms(args.model, pretrained=args.pretrained)
-    tokenizer = open_clip.get_tokenizer(args.model)
-    model = model.to(device).eval()
-    if args.half and device == "cuda":
+    model, _, tokenizer = load_clip(device, args.model, args.pretrained)
+    if args.half and device.type == "cuda":
         model = model.half()
     dtype = next(model.parameters()).dtype
 
     text_weights = build_text_weights(model, tokenizer, classnames, templates, device)
-    make_views = single_view if args.n_views == 1 else AugMixViews(
-        args.n_views - 1, load_augmix_ops(args.refs_tda))
+    make_views = single_view if n_views == 1 else AugMixViews(n_views - 1, load_augmix_ops(args.refs_tda))
 
-    with open(args.manifest) as f:
-        images = json.load(f)
-    if args.shuffle_seed is not None:
-        random.Random(args.shuffle_seed).shuffle(images)
-    if args.n is not None:
-        images = images[: args.n]
+    samples = load_samples(spec, shuffle_seed=args.shuffle_seed, n=args.n)
+    out = Path(args.output) if args.output else results_path(spec.name, "tda", args.tag)
 
-    vanilla = {}
-    if args.vanilla_results and Path(args.vanilla_results).exists():
-        with open(args.vanilla_results) as f:
-            vanilla = {r["corrupted_path"]: r for r in json.load(f)}
+    vanilla_path = Path(args.vanilla_results) if args.vanilla_results else results_path(spec.name, "clip")
+    vanilla = load_results(vanilla_path) if vanilla_path.exists() else {}
 
     pos_cache, neg_cache = {}, {}
-    results, final_probs_all, clip_probs_all, paths = [], [], [], []
+    rows, final_probs_all, clip_probs_all, ids = [], [], [], []
 
-    print(f"TDA | device={device} | views={args.n_views} | classes={num_classes} | "
-          f"templates={len(templates)} | alpha={pos_cfg['alpha']} beta={pos_cfg['beta']} | images={len(images)}")
+    print(f"TDA | dataset={spec.name} | device={device} | views={n_views} | classes={num_classes} | "
+          f"templates={len(templates)} | alpha={pos_cfg['alpha']} beta={pos_cfg['beta']} | images={len(samples)}")
 
     with torch.no_grad():
-        for i, entry in enumerate(images):
-            path = entry.get("corrupted_path", entry.get("path"))
-            img = Image.open(path).convert("RGB")
+        for i, s in enumerate(samples):
+            img = Image.open(s.path).convert("RGB")
 
             t0 = time.perf_counter()
             views = make_views(img)
             t_views = time.perf_counter() - t0
 
             views = views.to(device, dtype)
-            feat, logits, loss, probs, clip_pred = clip_outputs(views, model, text_weights)
+            feat, logits, loss, probs, clip_pred, view0_logits = clip_outputs(views, model, text_weights)
             norm_ent = loss / math.log2(num_classes)            # official convention
 
             stats = gate_stats(feat, pos_cache, neg_cache, pos_cfg, num_classes, clip_pred)
@@ -356,66 +305,80 @@ def main():
                 update_cache(neg_cache, clip_pred, [feat, loss, probs], neg_cfg["shot_capacity"])
 
             final = logits.clone()
+            pos_max = neg_max = 0.0
             if pos_cfg["enabled"] and pos_cache:
-                final += cache_logits(feat, pos_cache, pos_cfg["alpha"], pos_cfg["beta"], num_classes)
+                pos = cache_logits(feat, pos_cache, pos_cfg["alpha"], pos_cfg["beta"], num_classes)
+                final += pos
+                pos_max = float(pos.max())
             if neg_cfg["enabled"] and neg_cache:
-                final -= cache_logits(feat, neg_cache, neg_cfg["alpha"], neg_cfg["beta"],
-                                      num_classes, mask_thr)
+                neg = cache_logits(feat, neg_cache, neg_cfg["alpha"], neg_cfg["beta"], num_classes, mask_thr)
+                final -= neg
+                neg_max = float(neg.max())
 
-            pred_idx = int(final.argmax(-1))
-            synchronize(device)
+            pred = int(final.argmax(-1))
+            sync(device)
             elapsed = time.perf_counter() - t0
 
-            final_probs = final.float().softmax(-1).squeeze(0).cpu().numpy()
-            pred_label = classnames[pred_idx]
-            correct = pred_label == entry["label"]
-            v = vanilla.get(path, {})
+            v = vanilla.get(s.id, {})
             vanilla_correct = v.get("correct")
+            correct = pred == s.label
 
-            results.append({
-                "corrupted_path": path,
-                "true_label": entry["label"],
-                "corruption_type": entry.get("corruption_type"),
-                "predicted_label": pred_label,
+            row = {
+                "id": s.id,
+                "label": s.label,
+                "pred": pred,
                 "correct": correct,
-                "confidence": float(final_probs.max()),
-                "entropy": float(-(final_probs * np.log(np.clip(final_probs, 1e-12, 1))).sum()),
-                "vanilla_correct": vanilla_correct,
-                "improved_over_vanilla": (correct and not vanilla_correct) if vanilla_correct is not None else None,
+                "label_name": classnames[s.label],
+                "pred_name": classnames[pred],
+                **s.meta,
+                "stream_index": i,
+                "n_views": n_views,
+                # CLIP before the caches (what TDA's caches are updated with), and TDA's output
+                **uncertainty_stats(logits, "clip"),
+                **uncertainty_stats(view0_logits, "clip_view0"),
+                **uncertainty_stats(final, "tda"),
+                "tda_changed_clip": pred != clip_pred,
+                # cache state before this image, and how much each cache moved the logits
                 "pos_cache_max_sim": stats["pos_cache_max_sim"],
                 "pos_cache_mean_sim": stats["pos_cache_mean_sim"],
+                "pos_cache_sim_clip_pred": stats["pos_cache_sim_clip_pred"],
                 "cache_fill": stats["cache_fill"],
                 "cache_agrees_with_clip": stats["cache_agrees_with_clip"],
-                "cache_pred_label": classnames[stats["cache_pred"]] if stats["cache_pred"] >= 0 else None,
+                "cache_pred": stats["cache_pred"],
                 "neg_cache_fill": stats["neg_cache_fill"],
-                "n_views": args.n_views,
+                "pos_cache_logit_max": pos_max,
+                "neg_cache_logit_max": neg_max,
+                "vanilla_correct": vanilla_correct,
+                "improved_over_vanilla": (correct and not vanilla_correct) if vanilla_correct is not None else None,
                 "view_seconds": t_views,
                 "model_seconds": elapsed - t_views,
                 "seconds": elapsed,
-            })
+            }
+            rows.append(row)
             if args.save_probs:
-                final_probs_all.append(final_probs)
+                final_probs_all.append(final.float().softmax(-1).squeeze(0).cpu().numpy())
                 clip_probs_all.append(probs.float().squeeze(0).cpu().numpy())
-                paths.append(path)
+                ids.append(s.id)
 
             if (i + 1) % 25 == 0:
-                print(f"Processed {i + 1}/{len(images)}")
+                print(f"Processed {i + 1}/{len(samples)}")
 
-    out = Path(args.output)
-    out.parent.mkdir(parents=True, exist_ok=True)
-    with open(out, "w") as f:
-        json.dump(results, f, indent=2)
+    acc = float(np.mean([r["correct"] for r in rows]))
+    secs = np.array([r["seconds"] for r in rows])
+    view_secs = np.array([r["view_seconds"] for r in rows])
+    summary = {"accuracy": acc, "n_views": n_views, "median_ms": float(np.median(secs) * 1000),
+               "config": str(args.config or spec.tda_config_path() or "pilot_default")}
+    save_results(rows, out, args, summary)
     if args.save_probs:
-        np.savez_compressed(out.with_suffix(".probs.npz"), paths=np.array(paths),
+        np.savez_compressed(out.with_suffix(".probs.npz"), ids=np.array(ids),
                             final_probs=np.stack(final_probs_all), clip_probs=np.stack(clip_probs_all))
 
-    acc = np.mean([r["correct"] for r in results])
-    secs = np.array([r["seconds"] for r in results])
-    view_secs = np.array([r["view_seconds"] for r in results])
-    print(f"\nTDA accuracy: {acc:.3f}  ({len(results)} images, {args.n_views} view(s))")
+    print(f"\nTDA accuracy: {acc:.3f}  ({len(rows)} images, {n_views} view(s))")
+    if spec.targets.get("tda") is not None:
+        print(f"Target (registry): {spec.targets['tda']:.2f}%")
     if vanilla:
-        improved = sum(1 for r in results if r["improved_over_vanilla"])
-        regressed = sum(1 for r in results if r["vanilla_correct"] and not r["correct"])
+        improved = sum(1 for r in rows if r["improved_over_vanilla"])
+        regressed = sum(1 for r in rows if r["vanilla_correct"] and not r["correct"])
         print(f"Improved over vanilla: {improved} | regressed: {regressed}")
     print(f"Time per image: median {np.median(secs)*1000:.1f} ms "
           f"(views {np.median(view_secs)*1000:.1f} ms, model {np.median(secs - view_secs)*1000:.1f} ms)")

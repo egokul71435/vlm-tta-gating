@@ -53,9 +53,11 @@ def seed_everything(seed: int) -> None:
 
 
 # ---------------------------------------------------------------- CLIP
-def load_clip(device: torch.device):
-    model, _, preprocess = open_clip.create_model_and_transforms(MODEL_NAME, pretrained=PRETRAINED)
-    tokenizer = open_clip.get_tokenizer(MODEL_NAME)
+def load_clip(device: torch.device, model_name: str = MODEL_NAME, pretrained: str = PRETRAINED):
+    """Model init draws random numbers, so seed BEFORE calling this when exact
+    reproducibility matters (TPT's legacy random prompt init depends on it)."""
+    model, _, preprocess = open_clip.create_model_and_transforms(model_name, pretrained=pretrained)
+    tokenizer = open_clip.get_tokenizer(model_name)
     return model.to(device).eval(), preprocess, tokenizer
 
 

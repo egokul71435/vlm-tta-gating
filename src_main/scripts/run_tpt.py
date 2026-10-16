@@ -1,15 +1,17 @@
-"""Run TPT (Test-time Prompt Tuning) over a manifest of images.
+"""Run TPT (Test-time Prompt Tuning) on a registered dataset.
 
 Mirrors the official implementation (refs/tpt: tpt_classification.py, clip/custom_clip.py):
   - 4 learnable context vectors initialized from the token embeddings of "a photo of a"
   - prompts are "[ctx x4] {class name}."
   - 64 views: view 0 = Resize(224, bicubic) + CenterCrop(224); 63 augmented views
-    (random resized crop + flip; AugMix with --augmix, as official uses on the
-    cross-domain datasets)
+    (random resized crop + flip; AugMix on the cross-domain datasets, as official)
   - lowest-entropy 10% of views (6 of 64) selected from the pre-tuning logits
   - loss = entropy of the averaged prediction over the selected views
   - AdamW, lr 5e-3, 1 step; prompt and optimizer reset for every image
   - final prediction from view 0 only, with the tuned prompt
+
+Class names and whether to use AugMix come from the registry entry for
+--dataset; the flags override them for experiments.
 
 Legacy flags reproduce the original Imagewoof pilot (random init, dog suffix,
 random view 0, averaged selected views):
@@ -17,61 +19,38 @@ random view 0, averaged selected views):
 
 Gate features come from the PRE-tuning logits. In official mode those are plain
 zero-shot predictions ("a photo of a {class}."), so they cost nothing extra.
+
+Examples:
+  python src_main/scripts/run_tpt.py --dataset imagewoof_pilot
+  python src_main/scripts/run_tpt.py --dataset imagenet_a --n 100 --tag smoke
 """
 
 import argparse
 import json
-import random
 import sys
 import time
 from contextlib import nullcontext
 from pathlib import Path
 
 import numpy as np
-import open_clip
 import torch
 import torch.nn as nn
 from PIL import Image
 from torchvision import transforms
 from torchvision.transforms import InterpolationMode
 
+from tta.common import (load_clip, load_results, pick_device, results_path, save_results,
+                        seed_everything, softmax_entropy, sync, uncertainty_stats)
+from tta.data import load_samples
+from tta.registry import REPO_ROOT, add_dataset_arg, get_dataset
+
 CLIP_MEAN = (0.48145466, 0.4578275, 0.40821073)
 CLIP_STD = (0.26862954, 0.26130258, 0.27577711)
-
-PILOT_CLASSNAMES = [
-    "Shih-Tzu", "Rhodesian ridgeback", "beagle", "English foxhound",
-    "Australian terrier", "border terrier", "golden retriever",
-    "Old English sheepdog", "Samoyed", "dingo",
-]
 
 
 # ----------------------------------------------------------------------------
 # Setup helpers
 # ----------------------------------------------------------------------------
-
-def pick_device(name):
-    if name != "auto":
-        return name
-    if torch.cuda.is_available():
-        return "cuda"
-    if torch.backends.mps.is_available():
-        return "mps"
-    return "cpu"
-
-
-def synchronize(device):
-    if device == "cuda":
-        torch.cuda.synchronize()
-    elif device == "mps":
-        torch.mps.synchronize()
-
-
-def load_json_list(path, default):
-    if path is None:
-        return default
-    with open(path) as f:
-        return json.load(f)
-
 
 def load_augmix_ops(refs_tpt):
     ops_dir = Path(refs_tpt) / "data"
@@ -196,12 +175,8 @@ class TextEncoder(nn.Module):
 
 
 # ----------------------------------------------------------------------------
-# Official TPT math
+# Official TPT math (unchanged)
 # ----------------------------------------------------------------------------
-
-def softmax_entropy(logits):
-    return -(logits.softmax(-1) * logits.log_softmax(-1)).sum(-1)
-
 
 def avg_entropy(logits):
     log_p = logits - logits.logsumexp(-1, keepdim=True)
@@ -220,19 +195,23 @@ def text_features(prompt_learner, text_encoder):
 # ----------------------------------------------------------------------------
 
 def parse_args():
-    p = argparse.ArgumentParser(description="Run TPT over an image manifest.")
-    p.add_argument("--manifest", default="data/manifests/corrupted_manifest.json")
-    p.add_argument("--output", default="results/tpt_results.json")
-    p.add_argument("--vanilla-results", default="results/vanilla_clip_results.json")
-    p.add_argument("--tda-results", default="results/tda_results.json",
-                   help="Optional; used to print the TPT/TDA cost ratio.")
-    p.add_argument("--classnames", default=None, help="JSON list of class names (default: pilot dogs).")
+    p = argparse.ArgumentParser(description="Run TPT on a registered dataset.")
+    add_dataset_arg(p)
+    p.add_argument("--classnames", default=None, help="Override: JSON list of class names.")
+    p.add_argument("--augmix", action=argparse.BooleanOptionalAction, default=None,
+                   help="AugMix views (default: the dataset's official setting).")
+    p.add_argument("--output", default=None, help="Default: results/<dataset>/tpt[_<tag>].json")
+    p.add_argument("--tag", default=None, help="Suffix for the default output name, e.g. legacy, smoke.")
+    p.add_argument("--vanilla-results", default=None,
+                   help="Optional; default results/<dataset>/clip.json if it exists.")
+    p.add_argument("--tda-results", default=None,
+                   help="Optional; default results/<dataset>/tda.json, used for the cost ratio.")
     p.add_argument("--ctx-init", default="a_photo_of_a", help='Official default; "random" for the legacy pilot.')
     p.add_argument("--suffix", default=".", help='Text after the class name; legacy pilot: ", a type of dog."')
     p.add_argument("--view0", default="center", choices=["center", "random"])
     p.add_argument("--final", default="view0", choices=["view0", "selected_avg"])
-    p.add_argument("--augmix", action="store_true", help="AugMix views (official on cross-domain datasets).")
-    p.add_argument("--refs-tpt", default="refs/tpt", help="Official TPT repo (for AugMix ops).")
+    p.add_argument("--refs-tpt", default=str(REPO_ROOT / "refs" / "tpt"),
+                   help="Official TPT repo (for AugMix ops).")
     p.add_argument("--n-views", type=int, default=64)
     p.add_argument("--selection-p", type=float, default=0.1)
     p.add_argument("--lr", type=float, default=5e-3)
@@ -250,20 +229,19 @@ def parse_args():
 
 def main():
     args = parse_args()
+    spec = get_dataset(args.dataset)
     device = pick_device(args.device)
-    use_amp = args.amp and device == "cuda"
+    use_amp = args.amp and device.type == "cuda"
+    augmix = spec.tpt_augmix if args.augmix is None else args.augmix
 
     # Seed BEFORE creating the model: model init draws random numbers, so this
     # order is what makes the legacy flags reproduce the old pilot exactly.
-    random.seed(args.seed)
-    np.random.seed(args.seed)
-    torch.manual_seed(args.seed)
+    seed_everything(args.seed)
 
-    classnames = load_json_list(args.classnames, PILOT_CLASSNAMES)
+    classnames = json.loads(Path(args.classnames).read_text()) if args.classnames else spec.load_classnames()
 
-    model, _, _ = open_clip.create_model_and_transforms(args.model, pretrained=args.pretrained)
-    tokenizer = open_clip.get_tokenizer(args.model)
-    model = model.to(device).float().eval()
+    model, _, tokenizer = load_clip(device, args.model, args.pretrained)
+    model = model.float().eval()
     for p in model.parameters():
         p.requires_grad_(False)
 
@@ -271,32 +249,29 @@ def main():
     text_encoder = TextEncoder(model).to(device)
     logit_scale = model.logit_scale.exp().detach()
 
-    aug_list = load_augmix_ops(args.refs_tpt) if args.augmix else []
+    aug_list = load_augmix_ops(args.refs_tpt) if augmix else []
     make_views = TPTViews(args.n_views - 1, aug_list, args.view0)
     autocast = (lambda: torch.autocast("cuda", dtype=torch.float16)) if use_amp else nullcontext
     scaler = torch.amp.GradScaler("cuda", init_scale=1000) if use_amp else None
 
-    with open(args.manifest) as f:
-        images = json.load(f)
-    if args.n is not None:
-        images = images[: args.n]
+    # TPT resets per image, so stream order does not matter; dataset order is kept.
+    samples = load_samples(spec, n=args.n)
+    out = Path(args.output) if args.output else results_path(spec.name, "tpt", args.tag)
 
-    vanilla = {}
-    if args.vanilla_results and Path(args.vanilla_results).exists():
-        with open(args.vanilla_results) as f:
-            vanilla = {r["corrupted_path"]: r for r in json.load(f)}
+    vanilla_path = Path(args.vanilla_results) if args.vanilla_results else results_path(spec.name, "clip")
+    vanilla = load_results(vanilla_path) if vanilla_path.exists() else {}
 
-    print(f"TPT | device={device} | amp={use_amp} | views={args.n_views} | augmix={args.augmix} | "
-          f"ctx_init={args.ctx_init} | view0={args.view0} | final={args.final} | images={len(images)}")
+    print(f"TPT | dataset={spec.name} | device={device} | amp={use_amp} | views={args.n_views} | "
+          f"augmix={augmix} | ctx_init={args.ctx_init} | view0={args.view0} | final={args.final} | "
+          f"classes={len(classnames)} | images={len(samples)}")
 
-    results, final_probs_all, zs_probs_all, paths = [], [], [], []
+    rows, final_probs_all, zs_probs_all, ids = [], [], [], []
 
-    for i, entry in enumerate(images):
-        path = entry.get("corrupted_path", entry.get("path"))
+    for i, s in enumerate(samples):
         prompt_learner.reset()
         optimizer = torch.optim.AdamW(prompt_learner.parameters(), lr=args.lr)
 
-        img = Image.open(path).convert("RGB")
+        img = Image.open(s.path).convert("RGB")
         t0 = time.perf_counter()
 
         views = make_views(img)
@@ -306,11 +281,11 @@ def main():
         with torch.no_grad(), autocast():
             img_feats = model.encode_image(views)
             img_feats = img_feats / img_feats.norm(dim=-1, keepdim=True)
-        synchronize(device)
+        sync(device)
         t_encoded = time.perf_counter() - t0
 
         # --- test-time tuning ---
-        selected_idx, init_logits = None, None
+        selected_idx, init_logits, loss_before = None, None, None
         for _ in range(args.steps):
             with autocast():
                 logits = logit_scale * img_feats @ text_features(prompt_learner, text_encoder).T
@@ -320,6 +295,8 @@ def main():
                 ent = softmax_entropy(init_logits)
                 selected_idx = ent.argsort()[: int(logits.shape[0] * args.selection_p)]
             loss = avg_entropy(logits[selected_idx])
+            if loss_before is None:
+                loss_before = float(loss.detach())
             optimizer.zero_grad()
             if scaler is not None:
                 scaler.scale(loss).backward()
@@ -337,32 +314,34 @@ def main():
             else:
                 probs = (logit_scale * img_feats @ tuned_text.T).float().softmax(-1)
                 final_probs = probs[selected_idx].mean(0)
-        final_probs = final_probs.cpu().numpy()
-        pred_idx = int(final_probs.argmax())
-        synchronize(device)
+        pred = int(final_probs.argmax())
+        sync(device)
         elapsed = time.perf_counter() - t0
 
-        # --- gate features from the pre-tuning logits (zero-shot in official mode) ---
+        # --- signals: pre-tuning logits are zero-shot "a photo of a {class}." in official mode ---
         init_ent = softmax_entropy(init_logits)
         init_pred = init_logits.argmax(-1)
+        zs_pred = int(init_pred[0])
         k = min(args.probe_k, init_logits.shape[0])
-        zs_probs = init_logits[0].softmax(-1).cpu().numpy()
 
-        pred_label = classnames[pred_idx]
-        correct = pred_label == entry["label"]
-        v = vanilla.get(path, {})
+        v = vanilla.get(s.id, {})
         vanilla_correct = v.get("correct")
+        correct = pred == s.label
 
-        results.append({
-            "corrupted_path": path,
-            "true_label": entry["label"],
-            "corruption_type": entry.get("corruption_type"),
-            "predicted_label": pred_label,
+        rows.append({
+            "id": s.id,
+            "label": s.label,
+            "pred": pred,
             "correct": correct,
-            "confidence": float(final_probs.max()),
-            "entropy": float(-(final_probs * np.log(np.clip(final_probs, 1e-12, 1))).sum()),
-            "vanilla_correct": vanilla_correct,
-            "improved_over_vanilla": (correct and not vanilla_correct) if vanilla_correct is not None else None,
+            "label_name": classnames[s.label],
+            "pred_name": classnames[pred],
+            **s.meta,
+            "n_views": args.n_views,
+            # zero-shot view 0 (before tuning) and TPT's output
+            **uncertainty_stats(init_logits[0], "zs"),
+            **uncertainty_stats(torch.log(final_probs.clamp_min(1e-12)), "tpt"),
+            "tpt_changed_zs": pred != zs_pred,
+            "selected_entropy_before": loss_before,   # TPT's loss before its update step
             # pre-tuning view statistics (all views): costly, need the 64 views
             "view_entropy_std": float(init_ent.std()),
             "view_entropy_mean": float(init_ent.mean()),
@@ -371,7 +350,8 @@ def main():
             "probe_entropy_mean": float(init_ent[:k].mean()),
             "probe_entropy_std": float(init_ent[:k].std()),
             "probe_agreement": float((init_pred[:k] == init_pred[0]).float().mean()),
-            "n_views": args.n_views,
+            "vanilla_correct": vanilla_correct,
+            "improved_over_vanilla": (correct and not vanilla_correct) if vanilla_correct is not None else None,
             "view_seconds": t_views,
             "encode_seconds": t_encoded - t_views,
             "tune_predict_seconds": elapsed - t_encoded,
@@ -379,36 +359,35 @@ def main():
             "seconds": elapsed,
         })
         if args.save_probs:
-            final_probs_all.append(final_probs)
-            zs_probs_all.append(zs_probs)
-            paths.append(path)
+            final_probs_all.append(final_probs.cpu().numpy())
+            zs_probs_all.append(init_logits[0].softmax(-1).cpu().numpy())
+            ids.append(s.id)
 
         if (i + 1) % 10 == 0:
-            print(f"Processed {i + 1}/{len(images)}")
+            print(f"Processed {i + 1}/{len(samples)}")
 
-    out = Path(args.output)
-    out.parent.mkdir(parents=True, exist_ok=True)
-    with open(out, "w") as f:
-        json.dump(results, f, indent=2)
+    acc = float(np.mean([r["correct"] for r in rows]))
+    secs = np.array([r["seconds"] for r in rows])
+    summary = {"accuracy": acc, "augmix": augmix, "median_ms": float(np.median(secs) * 1000)}
+    save_results(rows, out, args, summary)
     if args.save_probs:
-        np.savez_compressed(out.with_suffix(".probs.npz"), paths=np.array(paths),
+        np.savez_compressed(out.with_suffix(".probs.npz"), ids=np.array(ids),
                             final_probs=np.stack(final_probs_all), zeroshot_view0_probs=np.stack(zs_probs_all))
 
-    acc = np.mean([r["correct"] for r in results])
-    secs = np.array([r["seconds"] for r in results])
-    print(f"\nTPT accuracy: {acc:.3f}  ({len(results)} images)")
+    print(f"\nTPT accuracy: {acc:.3f}  ({len(rows)} images)")
+    if spec.targets.get("tpt") is not None:
+        print(f"Target (registry): {spec.targets['tpt']:.2f}%")
     if vanilla:
-        improved = sum(1 for r in results if r["improved_over_vanilla"])
-        regressed = sum(1 for r in results if r["vanilla_correct"] and not r["correct"])
+        improved = sum(1 for r in rows if r["improved_over_vanilla"])
+        regressed = sum(1 for r in rows if r["vanilla_correct"] and not r["correct"])
         print(f"Improved over vanilla: {improved} | regressed: {regressed}")
     print(f"Time per image: median {np.median(secs)*1000:.1f} ms "
-          f"(views {np.median([r['view_seconds'] for r in results])*1000:.1f}, "
-          f"encode {np.median([r['encode_seconds'] for r in results])*1000:.1f}, "
-          f"tune+predict {np.median([r['tune_predict_seconds'] for r in results])*1000:.1f})")
-    tda_path = Path(args.tda_results) if args.tda_results else None
-    if tda_path and tda_path.exists():
-        with open(tda_path) as f:
-            tda_secs = [r["seconds"] for r in json.load(f) if "seconds" in r]
+          f"(views {np.median([r['view_seconds'] for r in rows])*1000:.1f}, "
+          f"encode {np.median([r['encode_seconds'] for r in rows])*1000:.1f}, "
+          f"tune+predict {np.median([r['tune_predict_seconds'] for r in rows])*1000:.1f})")
+    tda_path = Path(args.tda_results) if args.tda_results else results_path(spec.name, "tda")
+    if tda_path.exists():
+        tda_secs = [r["seconds"] for r in json.loads(tda_path.read_text()) if "seconds" in r]
         if tda_secs:
             print(f"TPT / TDA cost ratio (median): {np.median(secs) / np.median(tda_secs):.1f}x")
     print(f"Saved results to {out}")
