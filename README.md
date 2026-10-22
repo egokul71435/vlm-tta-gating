@@ -65,6 +65,21 @@ Learned gates use 5-fold cross-validation averaged over 5 fold splits; threshold
 - **Nonlinear gates don't help here.** The MLP ranks below the linear model on every input set (0.815 vs. 0.844 on cheap scalars), and adding embeddings lowers its AUC further (0.783). With 47 positive images, extra capacity mostly fits noise; the signal is close to one number. The MLP's real test is the benchmarks, with far more images per dataset and several shift types.
 - **Accuracy gains are small here.** TPT beats TDA by only 0.9 pts, so routing gains ~0.5–0.9 pts over random routing and roughly matches TPT at 15–40% TPT. Those budget numbers are noisy (a few images move them); the benchmarks, with larger method gaps, will decide whether routing matters in practice.
 
+### How the gates are trained and tested
+
+All learned gates use stratified 5-fold cross-validation over the 1,000 pilot images: each fold trains on 800 images and tests on the other 200, so every image is scored exactly once by a model that never saw it. AUC and the budget curves are computed over those 1,000 held-out scores. The procedure is repeated over 5 fold splits (3 for the RL gates) and averaged; the ± values are the spread across splits. Feature scaling and PCA are fit on each training fold only.
+
+| Gate | Trained on (per fold) | Tested on (per fold) | Notes |
+|---|---|---|---|
+| Thresholds (margin, confidence, entropy, cache rule) | — (no training) | all 1,000 | Direction fixed in advance: more uncertain → TPT |
+| Logistic regression, gradient boosting, MLP | 800 (~38 need TPT) | 200 (~9–10 need TPT) | Target: needs TPT (TPT right, TDA wrong) |
+| Winner MLP | ~68 disagreement images among the 800 (~38 TPT-only, ~30 TDA-only) | 200 | Never sees an image where the methods agree |
+| REINFORCE, accuracy-only (λ = 0) | 800, but only the ~68 disagreement images move the policy | 200 | Where both methods agree, both actions score the same |
+| REINFORCE, cost-shaped (λ > 0) | 800; every image contributes | 200 | The penalty pushes every image toward TDA |
+| Feature analysis coefficients | all 1,000 (one fit) | — | Descriptive only; the ablations and the permutation test use the cross-validation above |
+
+> **Limitation: the pilot is small.** Each gate learns from about 38 positive images per fold (47 in total), so differences of a few tenths of a point are a few images, and the ± values reflect only fold-to-fold variation, understating the real uncertainty. Everything here is also trained and tested within one dataset; whether a gate transfers across datasets (train on some benchmarks, test on another) is untested. The benchmarks, with thousands of images per dataset, are where these comparisons count.
+
 ### RL and RL-adjacent gates
 
 Same cheap features, folds and cost accounting as above (`cost_aware_routing.py --rl`; 5-fold, 3 fold splits). Every image's outcome is known for both methods, so the gate is a contextual bandit with full feedback; REINFORCE uses the mean reward of the two actions as its baseline.
