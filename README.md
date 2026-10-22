@@ -6,8 +6,10 @@ Test-time adaptation (TTA) recovers CLIP accuracy under distribution shift, but 
 
 - **Both methods verified against the official code** (logic matches; differences are documented run settings). Published-number reproduction is pending GPU access.
 - **Pilot (Imagewoof, 1,000 images) re-run with the verified implementations and shared prompts.** A single free signal, CLIP's top-2 margin, predicts which images need TPT (AUC ~0.86, permutation p < 0.005). On this pilot TPT and TDA differ by under a point, so the accuracy at stake is small.
+- **Learned and RL gates compared on the corrected pilot:** a small MLP scorer (AUC 0.815) and cost-shaped REINFORCE (useful only in a narrow penalty range) never beat the simple scorers; accuracy-only RL and disagreement-trained MLPs do not rank the images that need TPT. A margin threshold remains the method; the others are comparisons. Attention-based gates are a possible follow-up if the benchmarks show the simple gates leaving signal behind.
 - **Repo restructured:** any registered dataset runs end to end with `./run.sh <dataset>`. The pilot reproduces exactly through the new pipeline (identical per-image predictions, outcome counts and routing numbers).
-- **Next:** ImageNet-A data preparation and zero-shot check (target 49.89%), then TDA (64 and 1 view) and TPT on ImageNet-A, then the rest of the ImageNet OOD suite and the 10 cross-domain datasets. Target: CVPR 2027.
+- **Compute:** access to NCSA DeltaAI through the lab's ACCESS allocation (Delta GPU hours are used up).
+- **Next:** ImageNet-A data preparation and zero-shot check (target 49.89%), then TDA (1 and 64 views) and TPT on ImageNet-A, ZERO as a second expensive method, then the rest of the ImageNet OOD suite and the 10 cross-domain datasets. Target: CVPR 2027.
 
 ## Pilot setup
 
@@ -50,14 +52,54 @@ The gate scores each image by how likely it is to need TPT (TPT right, TDA wrong
 | High entropy (single threshold) | 0.816 | 0.142 | 60.3% | 60.9% | 45% |
 | Logistic regression, cheap scalars | 0.844 ± 0.008 | 0.142 | 60.8% | 60.9% | 25% |
 | Gradient boosting, cheap scalars | 0.835 ± 0.009 | 0.149 | 61.2% | 60.8% | 15% |
-| Logistic regression, PCA-5 CLIP embeddings | 0.688 | 0.100 | 60.9% | 61.3% | 25% |
+| MLP, cheap scalars | 0.815 ± 0.007 | 0.130 | 61.0% | 60.6% | 15% |
+| Logistic regression, PCA-5 CLIP embeddings | 0.688 ± 0.014 | 0.100 | 60.9% | 61.3% | 25% |
+| MLP, PCA-5 CLIP embeddings | 0.646 ± 0.019 | 0.080 | 60.6% | 60.6% | not by 50% |
+| MLP, cheap scalars + PCA-5 embeddings | 0.783 ± 0.012 | 0.132 | 60.5% | 60.5% | not by 50% |
 | Random routing | 0.5 | 0.047 | 60.3% | 60.4% | — |
 
-Learned gates use 5-fold cross-validation averaged over 5 fold splits; thresholds need no training.
+Learned gates use 5-fold cross-validation averaged over 5 fold splits; thresholds need no training. The MLP has one hidden layer of 32 units, L2 weight decay, and positives up-weighted by the negative-to-positive ratio (the same balance as the logistic regression).
 
 - **The ranking signal is real:** permutation test on the logistic-regression AUC (200 label shuffles): observed 0.847 vs. shuffled mean 0.501, max 0.635; **p < 0.005**.
 - **Top-2 margin carries it.** Vanilla-uncertainty features alone reach AUC 0.853 (slightly above all features, 0.844); TDA cache features alone reach 0.702 but add nothing on top of uncertainty. Margin has by far the largest coefficient (−2.39), and a margin threshold alone is the best single rule.
+- **Nonlinear gates don't help here.** The MLP ranks below the linear model on every input set (0.815 vs. 0.844 on cheap scalars), and adding embeddings lowers its AUC further (0.783). With 47 positive images, extra capacity mostly fits noise; the signal is close to one number. The MLP's real test is the benchmarks, with far more images per dataset and several shift types.
 - **Accuracy gains are small here.** TPT beats TDA by only 0.9 pts, so routing gains ~0.5–0.9 pts over random routing and roughly matches TPT at 15–40% TPT. Those budget numbers are noisy (a few images move them); the benchmarks, with larger method gaps, will decide whether routing matters in practice.
+
+### RL and RL-adjacent gates
+
+Same cheap features, folds and cost accounting as above (`cost_aware_routing.py --rl`; 5-fold, 3 fold splits). Every image's outcome is known for both methods, so the gate is a contextual bandit with full feedback; REINFORCE uses the mean reward of the two actions as its baseline.
+
+**Cost-shaped REINFORCE** (reward = TDA right, or TPT right − λ when choosing TPT), greedy decisions:
+
+| λ | Images to TPT | Accuracy | Cost (ms/image) | AUC of P(TPT) |
+|---|---|---|---|---|
+| 0 (accuracy-only) | 69.8% | 61.1% | 606 | 0.43 |
+| 0.02 | 18.3% | 61.0% | 182 | 0.78 |
+| 0.05 | 11.1% | 60.5% | 125 | 0.74 |
+| ≥ 0.10 | 0–0.2% | 60.1% (always TDA) | 35–37 | — |
+
+**As ranking scores over the same budgets:**
+
+| Gate | AUC | AP | Acc @10% | Acc @20% | Acc @30% | Matches always-TPT at |
+|---|---|---|---|---|---|---|
+| Logistic regression, cheap scalars (reference) | 0.843 | 0.140 | 60.2% | 60.7% | 60.8% | 25% |
+| Accuracy-only REINFORCE | 0.432 | 0.041 | 60.3% | 60.5% | 60.6% | not by 50% |
+| Winner MLP (disagreements only), cheap scalars | 0.465 | 0.043 | 60.1% | 60.2% | 60.3% | not by 50% |
+| Winner MLP (disagreements only), PCA-5 embeddings | 0.588 | 0.056 | 60.4% | 60.7% | 60.7% | 35% |
+
+- **Cost-shaped RL only works in a narrow band of λ.** At λ = 0.02 it matches always-TPT with 18% of images sent to TPT (182 vs. 819 ms per image in this run, about 4.5x cheaper), level with the scorers at that budget (60.7–61.2%). Above about 0.1, it never routes: the expected advantage of TPT over TDA on any image rarely exceeds λ, because only 4.7% of images need TPT and 3.8% need TDA.
+- **Accuracy-only RL learns "mostly TPT"**, not which images need it. It sends 70% of images to TPT, roughly matching always-TPT accuracy at ~17x TDA's cost, and its probabilities rank needs-TPT images worse than chance.
+- **The winner MLP answers the wrong question.** Trained on the 85 images where the methods disagree, it predicts which method wins given a disagreement, not whether one will occur, so it cannot pick out those images among all 1,000.
+- **Conclusion:** no RL or RL-adjacent gate beats a single margin threshold, and each RL budget needs its own training run and λ, while a scorer covers every budget with one threshold. Differences of 0.3 pts are 3 images on this pilot. RL stays as a comparison; the benchmarks decide whether it is worth revisiting.
+- **Why:** with both outcomes known and one decision per image, the cost-shaped objective (accuracy − λ × cost) is maximized by routing whenever the predicted advantage of TPT over TDA exceeds λ. A supervised scorer estimates that directly; REINFORCE estimates it through sampled actions and noisier gradients, so at best it matches. The cost-shaped objective stays as the paper's framing of the problem.
+
+### Future consideration: attention-based gates
+
+Not built yet. Worth trying only if, on the benchmarks, the MLP or gradient boosting clearly beat the margin threshold, i.e. there is nonlinear signal the simple gates miss.
+
+- **What it would attend over** (in order of promise): CLIP's top-k class text embeddings (which classes the image is confused between, and how similar they are, beyond the single margin number); TDA's cache entries (a learned look-up in place of TDA's fixed similarity kernel); recent images in the stream (context about the current shift); CLIP's patch tokens.
+- **Cost:** the first is free (computable from saved image embeddings and text weights, no reruns); the cache version needs TDA rerun with its cache contents logged (cheap with 1 view); patch tokens need re-encoding.
+- **Risks:** too little data on the pilot (about 85 informative images), and every extra component in the gate is something reviewers will ask us to justify; a threshold doing the work is a strength for a cost-focused paper.
 
 ## Why these results differ from the first pilot
 
@@ -69,7 +111,7 @@ The first pilot (kept in `results/pilot_v1/`) reported TDA 62.5%, TPT 64.0% and 
 
 TDA's cache logic was already equivalent to the official code; its rewrite reproduces the first pilot exactly (62.5%) under the old settings.
 
-**Superseded results:** the gate experiments from the first pilot (disagreement-case classifiers, the embedding MLP, cost-shaped RL, and the claim that TDA cache agreement adds unique signal) were run on the old implementations and prompts. They are not reported here; RL and the cascade will be re-run on the benchmarks.
+**Superseded results:** the gate experiments from the first pilot (disagreement-case classifiers, the embedding MLP, cost-shaped RL, and the claim that TDA cache agreement adds unique signal) were run on the old implementations and prompts. The RL, cost-shaped RL and winner-MLP gates have been re-run on the corrected pilot (above), without the first pilot's TPT 64-view features, which cost nearly all of TPT's view encoding and so cannot be part of a cheap gate. The cascade will be built on the benchmarks.
 
 ## Implementations and verification
 
@@ -103,7 +145,7 @@ src_main/
     run_tda.py          TDA
     run_tpt.py          TPT
     build_win_labels.py merge the three runs per image; outcome labels, gate features, headroom
-    cost_aware_routing.py  gates, budget curves, feature analysis, threshold baselines
+    cost_aware_routing.py  gates (logreg, GB, MLP), budget curves, feature analysis, threshold baselines, RL gates (--rl)
 configs/tda/            official TDA configs (copied from refs/tda/configs)
 data/                   classnames/, templates/, masks/, manifests/ are tracked; images are not
 results/<dataset>/      per-dataset outputs (see below)
@@ -148,6 +190,7 @@ python src_main/scripts/run_tda.py --dataset imagewoof_pilot --shuffle-seed 1 --
 python src_main/scripts/run_tda.py --dataset imagenet_a --n-views 1 --tag 1view
 python src_main/scripts/build_win_labels.py --dataset imagenet_a --tda-tag 1view --out-tag 1view
 python src_main/scripts/cost_aware_routing.py --dataset imagenet_a --tag 1view --skip-permutation
+python src_main/scripts/cost_aware_routing.py --dataset imagewoof_pilot --rl        # add RL gates (--rl-only: just those)
 python src_main/scripts/run_tpt.py --dataset imagewoof_pilot --ctx-init random --suffix ", a type of dog." \
     --view0 random --final selected_avg --tag legacy        # first-pilot TPT
 ```
@@ -158,7 +201,7 @@ python src_main/scripts/run_tpt.py --dataset imagewoof_pilot --ctx-init random -
 | `tda` | `run_tda.py` | `tda.json` |
 | `tpt` | `run_tpt.py` | `tpt.json` |
 | `labels` | `build_win_labels.py` | `win_labels.json` (prints headroom: TPT-only %, TDA-only %, oracle) |
-| `route` | `cost_aware_routing.py` | `cost_curve.png`, `threshold_baseline.png` (prints gate tables) |
+| `route` | `cost_aware_routing.py` | `cost_curve.png`, `threshold_baseline.png`, `rl_gates.png` with `--rl` (prints gate tables) |
 
 Only the model stages need a GPU or long runtimes. Routing can be simulated exactly from saved outputs, because TDA runs on every image regardless of routing (its cache evolves the same way) and TPT resets after every image; the analysis stages therefore take seconds to minutes and never rerun a model.
 
