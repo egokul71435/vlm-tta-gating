@@ -1,0 +1,1687 @@
+{
+ "n": 7500,
+ "points": [
+  {
+   "name": "CLIP (cost shown as 1-view TDA's)",
+   "family": "fixed",
+   "acc": 0.5066666666666667,
+   "cost_ms": 31.130864902050234
+  },
+  {
+   "name": "TDA alone",
+   "family": "fixed",
+   "acc": 0.5105333333333333,
+   "cost_ms": 31.130864902050234
+  },
+  {
+   "name": "ZERO alone",
+   "family": "fixed",
+   "acc": 0.5924,
+   "cost_ms": 465.0802049751238
+  },
+  {
+   "name": "TPT alone",
+   "family": "fixed",
+   "acc": 0.5458666666666666,
+   "cost_ms": 1330.0725294119445
+  },
+  {
+   "name": "TDA, 64 views",
+   "family": "fixed",
+   "acc": 0.6010666666666666,
+   "cost_ms": 651.3123553518672
+  },
+  {
+   "name": "avg TDA + ZERO",
+   "family": "fixed",
+   "acc": 0.5765333333333333,
+   "cost_ms": 496.21106987717405
+  },
+  {
+   "name": "avg TDA + TPT",
+   "family": "fixed",
+   "acc": 0.5361333333333334,
+   "cost_ms": 1361.2033943139947
+  },
+  {
+   "name": "avg ZERO + TPT",
+   "family": "fixed",
+   "acc": 0.5906666666666667,
+   "cost_ms": 1795.1527343870684
+  },
+  {
+   "name": "avg TDA + ZERO + TPT",
+   "family": "fixed",
+   "acc": 0.5704,
+   "cost_ms": 1826.2835992891185
+  },
+  {
+   "name": "TDA -> ZERO replace @0%",
+   "family": "route ZERO",
+   "acc": 0.5105333333333333,
+   "cost_ms": 31.130864902050234
+  },
+  {
+   "name": "TDA -> ZERO replace @5%",
+   "family": "route ZERO",
+   "acc": 0.5209333333333334,
+   "cost_ms": 54.32133803533701
+  },
+  {
+   "name": "TDA -> ZERO replace @10%",
+   "family": "route ZERO",
+   "acc": 0.5305333333333333,
+   "cost_ms": 77.56879993081093
+  },
+  {
+   "name": "TDA -> ZERO replace @15%",
+   "family": "route ZERO",
+   "acc": 0.5394666666666666,
+   "cost_ms": 100.69835152174346
+  },
+  {
+   "name": "TDA -> ZERO replace @20%",
+   "family": "route ZERO",
+   "acc": 0.5496,
+   "cost_ms": 124.02108258751687
+  },
+  {
+   "name": "TDA -> ZERO replace @25%",
+   "family": "route ZERO",
+   "acc": 0.5589333333333333,
+   "cost_ms": 147.22636480316675
+  },
+  {
+   "name": "TDA -> ZERO replace @30%",
+   "family": "route ZERO",
+   "acc": 0.5657333333333333,
+   "cost_ms": 170.4562055032545
+  },
+  {
+   "name": "TDA -> ZERO replace @35%",
+   "family": "route ZERO",
+   "acc": 0.5709333333333333,
+   "cost_ms": 193.7108189526247
+  },
+  {
+   "name": "TDA -> ZERO replace @40%",
+   "family": "route ZERO",
+   "acc": 0.5770666666666666,
+   "cost_ms": 216.91620976254345
+  },
+  {
+   "name": "TDA -> ZERO replace @45%",
+   "family": "route ZERO",
+   "acc": 0.5812,
+   "cost_ms": 240.2005895120247
+  },
+  {
+   "name": "TDA -> ZERO replace @50%",
+   "family": "route ZERO",
+   "acc": 0.5834666666666667,
+   "cost_ms": 263.4981330663897
+  },
+  {
+   "name": "TDA -> ZERO replace @55%",
+   "family": "route ZERO",
+   "acc": 0.5861333333333333,
+   "cost_ms": 286.84773061141993
+  },
+  {
+   "name": "TDA -> ZERO replace @60%",
+   "family": "route ZERO",
+   "acc": 0.5896,
+   "cost_ms": 310.10023694001916
+  },
+  {
+   "name": "TDA -> ZERO replace @65%",
+   "family": "route ZERO",
+   "acc": 0.5897333333333333,
+   "cost_ms": 333.48976003940527
+  },
+  {
+   "name": "TDA -> ZERO replace @70%",
+   "family": "route ZERO",
+   "acc": 0.5909333333333333,
+   "cost_ms": 356.83011915676764
+  },
+  {
+   "name": "TDA -> ZERO replace @75%",
+   "family": "route ZERO",
+   "acc": 0.5917333333333333,
+   "cost_ms": 380.03642192227613
+  },
+  {
+   "name": "TDA -> ZERO replace @80%",
+   "family": "route ZERO",
+   "acc": 0.5918666666666667,
+   "cost_ms": 403.1955478375079
+  },
+  {
+   "name": "TDA -> ZERO replace @85%",
+   "family": "route ZERO",
+   "acc": 0.5924,
+   "cost_ms": 426.2767029944264
+  },
+  {
+   "name": "TDA -> ZERO replace @90%",
+   "family": "route ZERO",
+   "acc": 0.5924,
+   "cost_ms": 449.4952488881536
+  },
+  {
+   "name": "TDA -> ZERO replace @95%",
+   "family": "route ZERO",
+   "acc": 0.5925333333333334,
+   "cost_ms": 472.9679691096457
+  },
+  {
+   "name": "TDA -> ZERO replace @100%",
+   "family": "route ZERO",
+   "acc": 0.5924,
+   "cost_ms": 496.21106987717405
+  },
+  {
+   "name": "TDA -> ZERO average @0%",
+   "family": "route ZERO",
+   "acc": 0.5105333333333333,
+   "cost_ms": 31.130864902050234
+  },
+  {
+   "name": "TDA -> ZERO average @5%",
+   "family": "route ZERO",
+   "acc": 0.5205333333333333,
+   "cost_ms": 54.32133803533701
+  },
+  {
+   "name": "TDA -> ZERO average @10%",
+   "family": "route ZERO",
+   "acc": 0.5289333333333334,
+   "cost_ms": 77.56879993081093
+  },
+  {
+   "name": "TDA -> ZERO average @15%",
+   "family": "route ZERO",
+   "acc": 0.5370666666666667,
+   "cost_ms": 100.69835152174346
+  },
+  {
+   "name": "TDA -> ZERO average @20%",
+   "family": "route ZERO",
+   "acc": 0.5464,
+   "cost_ms": 124.02108258751687
+  },
+  {
+   "name": "TDA -> ZERO average @25%",
+   "family": "route ZERO",
+   "acc": 0.554,
+   "cost_ms": 147.22636480316675
+  },
+  {
+   "name": "TDA -> ZERO average @30%",
+   "family": "route ZERO",
+   "acc": 0.5588,
+   "cost_ms": 170.4562055032545
+  },
+  {
+   "name": "TDA -> ZERO average @35%",
+   "family": "route ZERO",
+   "acc": 0.5625333333333333,
+   "cost_ms": 193.7108189526247
+  },
+  {
+   "name": "TDA -> ZERO average @40%",
+   "family": "route ZERO",
+   "acc": 0.5674666666666667,
+   "cost_ms": 216.91620976254345
+  },
+  {
+   "name": "TDA -> ZERO average @45%",
+   "family": "route ZERO",
+   "acc": 0.5702666666666667,
+   "cost_ms": 240.2005895120247
+  },
+  {
+   "name": "TDA -> ZERO average @50%",
+   "family": "route ZERO",
+   "acc": 0.5724,
+   "cost_ms": 263.4981330663897
+  },
+  {
+   "name": "TDA -> ZERO average @55%",
+   "family": "route ZERO",
+   "acc": 0.574,
+   "cost_ms": 286.84773061141993
+  },
+  {
+   "name": "TDA -> ZERO average @60%",
+   "family": "route ZERO",
+   "acc": 0.5753333333333334,
+   "cost_ms": 310.10023694001916
+  },
+  {
+   "name": "TDA -> ZERO average @65%",
+   "family": "route ZERO",
+   "acc": 0.5756,
+   "cost_ms": 333.48976003940527
+  },
+  {
+   "name": "TDA -> ZERO average @70%",
+   "family": "route ZERO",
+   "acc": 0.5762666666666667,
+   "cost_ms": 356.83011915676764
+  },
+  {
+   "name": "TDA -> ZERO average @75%",
+   "family": "route ZERO",
+   "acc": 0.5765333333333333,
+   "cost_ms": 380.03642192227613
+  },
+  {
+   "name": "TDA -> ZERO average @80%",
+   "family": "route ZERO",
+   "acc": 0.5765333333333333,
+   "cost_ms": 403.1955478375079
+  },
+  {
+   "name": "TDA -> ZERO average @85%",
+   "family": "route ZERO",
+   "acc": 0.5765333333333333,
+   "cost_ms": 426.2767029944264
+  },
+  {
+   "name": "TDA -> ZERO average @90%",
+   "family": "route ZERO",
+   "acc": 0.5765333333333333,
+   "cost_ms": 449.4952488881536
+  },
+  {
+   "name": "TDA -> ZERO average @95%",
+   "family": "route ZERO",
+   "acc": 0.5765333333333333,
+   "cost_ms": 472.9679691096457
+  },
+  {
+   "name": "TDA -> ZERO average @100%",
+   "family": "route ZERO",
+   "acc": 0.5765333333333333,
+   "cost_ms": 496.21106987717405
+  },
+  {
+   "name": "TDA -> ZERO more confident @0%",
+   "family": "route ZERO",
+   "acc": 0.5105333333333333,
+   "cost_ms": 31.130864902050234
+  },
+  {
+   "name": "TDA -> ZERO more confident @5%",
+   "family": "route ZERO",
+   "acc": 0.5201333333333333,
+   "cost_ms": 54.32133803533701
+  },
+  {
+   "name": "TDA -> ZERO more confident @10%",
+   "family": "route ZERO",
+   "acc": 0.5284,
+   "cost_ms": 77.56879993081093
+  },
+  {
+   "name": "TDA -> ZERO more confident @15%",
+   "family": "route ZERO",
+   "acc": 0.5358666666666667,
+   "cost_ms": 100.69835152174346
+  },
+  {
+   "name": "TDA -> ZERO more confident @20%",
+   "family": "route ZERO",
+   "acc": 0.5448,
+   "cost_ms": 124.02108258751687
+  },
+  {
+   "name": "TDA -> ZERO more confident @25%",
+   "family": "route ZERO",
+   "acc": 0.5526666666666666,
+   "cost_ms": 147.22636480316675
+  },
+  {
+   "name": "TDA -> ZERO more confident @30%",
+   "family": "route ZERO",
+   "acc": 0.5584,
+   "cost_ms": 170.4562055032545
+  },
+  {
+   "name": "TDA -> ZERO more confident @35%",
+   "family": "route ZERO",
+   "acc": 0.5628,
+   "cost_ms": 193.7108189526247
+  },
+  {
+   "name": "TDA -> ZERO more confident @40%",
+   "family": "route ZERO",
+   "acc": 0.5678666666666666,
+   "cost_ms": 216.91620976254345
+  },
+  {
+   "name": "TDA -> ZERO more confident @45%",
+   "family": "route ZERO",
+   "acc": 0.5709333333333333,
+   "cost_ms": 240.2005895120247
+  },
+  {
+   "name": "TDA -> ZERO more confident @50%",
+   "family": "route ZERO",
+   "acc": 0.5733333333333334,
+   "cost_ms": 263.4981330663897
+  },
+  {
+   "name": "TDA -> ZERO more confident @55%",
+   "family": "route ZERO",
+   "acc": 0.5750666666666666,
+   "cost_ms": 286.84773061141993
+  },
+  {
+   "name": "TDA -> ZERO more confident @60%",
+   "family": "route ZERO",
+   "acc": 0.5765333333333333,
+   "cost_ms": 310.10023694001916
+  },
+  {
+   "name": "TDA -> ZERO more confident @65%",
+   "family": "route ZERO",
+   "acc": 0.5769333333333333,
+   "cost_ms": 333.48976003940527
+  },
+  {
+   "name": "TDA -> ZERO more confident @70%",
+   "family": "route ZERO",
+   "acc": 0.5774666666666667,
+   "cost_ms": 356.83011915676764
+  },
+  {
+   "name": "TDA -> ZERO more confident @75%",
+   "family": "route ZERO",
+   "acc": 0.5777333333333333,
+   "cost_ms": 380.03642192227613
+  },
+  {
+   "name": "TDA -> ZERO more confident @80%",
+   "family": "route ZERO",
+   "acc": 0.5777333333333333,
+   "cost_ms": 403.1955478375079
+  },
+  {
+   "name": "TDA -> ZERO more confident @85%",
+   "family": "route ZERO",
+   "acc": 0.5777333333333333,
+   "cost_ms": 426.2767029944264
+  },
+  {
+   "name": "TDA -> ZERO more confident @90%",
+   "family": "route ZERO",
+   "acc": 0.5777333333333333,
+   "cost_ms": 449.4952488881536
+  },
+  {
+   "name": "TDA -> ZERO more confident @95%",
+   "family": "route ZERO",
+   "acc": 0.5777333333333333,
+   "cost_ms": 472.9679691096457
+  },
+  {
+   "name": "TDA -> ZERO more confident @100%",
+   "family": "route ZERO",
+   "acc": 0.5777333333333333,
+   "cost_ms": 496.21106987717405
+  },
+  {
+   "name": "TDA -> ZERO average (TDA + ZERO votes) @0%",
+   "family": "route ZERO",
+   "acc": 0.5105333333333333,
+   "cost_ms": 31.130864902050234
+  },
+  {
+   "name": "TDA -> ZERO average (TDA + ZERO votes) @5%",
+   "family": "route ZERO",
+   "acc": 0.5202666666666667,
+   "cost_ms": 54.32133803533701
+  },
+  {
+   "name": "TDA -> ZERO average (TDA + ZERO votes) @10%",
+   "family": "route ZERO",
+   "acc": 0.5292,
+   "cost_ms": 77.56879993081093
+  },
+  {
+   "name": "TDA -> ZERO average (TDA + ZERO votes) @15%",
+   "family": "route ZERO",
+   "acc": 0.538,
+   "cost_ms": 100.69835152174346
+  },
+  {
+   "name": "TDA -> ZERO average (TDA + ZERO votes) @20%",
+   "family": "route ZERO",
+   "acc": 0.5484,
+   "cost_ms": 124.02108258751687
+  },
+  {
+   "name": "TDA -> ZERO average (TDA + ZERO votes) @25%",
+   "family": "route ZERO",
+   "acc": 0.5572,
+   "cost_ms": 147.22636480316675
+  },
+  {
+   "name": "TDA -> ZERO average (TDA + ZERO votes) @30%",
+   "family": "route ZERO",
+   "acc": 0.5636,
+   "cost_ms": 170.4562055032545
+  },
+  {
+   "name": "TDA -> ZERO average (TDA + ZERO votes) @35%",
+   "family": "route ZERO",
+   "acc": 0.568,
+   "cost_ms": 193.7108189526247
+  },
+  {
+   "name": "TDA -> ZERO average (TDA + ZERO votes) @40%",
+   "family": "route ZERO",
+   "acc": 0.5733333333333334,
+   "cost_ms": 216.91620976254345
+  },
+  {
+   "name": "TDA -> ZERO average (TDA + ZERO votes) @45%",
+   "family": "route ZERO",
+   "acc": 0.5770666666666666,
+   "cost_ms": 240.2005895120247
+  },
+  {
+   "name": "TDA -> ZERO average (TDA + ZERO votes) @50%",
+   "family": "route ZERO",
+   "acc": 0.5802666666666667,
+   "cost_ms": 263.4981330663897
+  },
+  {
+   "name": "TDA -> ZERO average (TDA + ZERO votes) @55%",
+   "family": "route ZERO",
+   "acc": 0.5829333333333333,
+   "cost_ms": 286.84773061141993
+  },
+  {
+   "name": "TDA -> ZERO average (TDA + ZERO votes) @60%",
+   "family": "route ZERO",
+   "acc": 0.5854666666666667,
+   "cost_ms": 310.10023694001916
+  },
+  {
+   "name": "TDA -> ZERO average (TDA + ZERO votes) @65%",
+   "family": "route ZERO",
+   "acc": 0.5857333333333333,
+   "cost_ms": 333.48976003940527
+  },
+  {
+   "name": "TDA -> ZERO average (TDA + ZERO votes) @70%",
+   "family": "route ZERO",
+   "acc": 0.5861333333333333,
+   "cost_ms": 356.83011915676764
+  },
+  {
+   "name": "TDA -> ZERO average (TDA + ZERO votes) @75%",
+   "family": "route ZERO",
+   "acc": 0.5864,
+   "cost_ms": 380.03642192227613
+  },
+  {
+   "name": "TDA -> ZERO average (TDA + ZERO votes) @80%",
+   "family": "route ZERO",
+   "acc": 0.5864,
+   "cost_ms": 403.1955478375079
+  },
+  {
+   "name": "TDA -> ZERO average (TDA + ZERO votes) @85%",
+   "family": "route ZERO",
+   "acc": 0.5866666666666667,
+   "cost_ms": 426.2767029944264
+  },
+  {
+   "name": "TDA -> ZERO average (TDA + ZERO votes) @90%",
+   "family": "route ZERO",
+   "acc": 0.5866666666666667,
+   "cost_ms": 449.4952488881536
+  },
+  {
+   "name": "TDA -> ZERO average (TDA + ZERO votes) @95%",
+   "family": "route ZERO",
+   "acc": 0.5868,
+   "cost_ms": 472.9679691096457
+  },
+  {
+   "name": "TDA -> ZERO average (TDA + ZERO votes) @100%",
+   "family": "route ZERO",
+   "acc": 0.5868,
+   "cost_ms": 496.21106987717405
+  },
+  {
+   "name": "TDA -> TPT replace @0%",
+   "family": "route TPT",
+   "acc": 0.5105333333333333,
+   "cost_ms": 31.130864902050234
+  },
+  {
+   "name": "TDA -> TPT replace @5%",
+   "family": "route TPT",
+   "acc": 0.5146666666666667,
+   "cost_ms": 97.5886308360224
+  },
+  {
+   "name": "TDA -> TPT replace @10%",
+   "family": "route TPT",
+   "acc": 0.5204,
+   "cost_ms": 163.9972646562693
+  },
+  {
+   "name": "TDA -> TPT replace @15%",
+   "family": "route TPT",
+   "acc": 0.5248,
+   "cost_ms": 230.50230777310207
+  },
+  {
+   "name": "TDA -> TPT replace @20%",
+   "family": "route TPT",
+   "acc": 0.5285333333333333,
+   "cost_ms": 296.9744027614594
+  },
+  {
+   "name": "TDA -> TPT replace @25%",
+   "family": "route TPT",
+   "acc": 0.5336,
+   "cost_ms": 363.5057331992236
+  },
+  {
+   "name": "TDA -> TPT replace @30%",
+   "family": "route TPT",
+   "acc": 0.5361333333333334,
+   "cost_ms": 430.18875754977734
+  },
+  {
+   "name": "TDA -> TPT replace @35%",
+   "family": "route TPT",
+   "acc": 0.5385333333333333,
+   "cost_ms": 496.7714074233702
+  },
+  {
+   "name": "TDA -> TPT replace @40%",
+   "family": "route TPT",
+   "acc": 0.5406666666666666,
+   "cost_ms": 563.2340105287808
+  },
+  {
+   "name": "TDA -> TPT replace @45%",
+   "family": "route TPT",
+   "acc": 0.5424,
+   "cost_ms": 629.6835737677678
+  },
+  {
+   "name": "TDA -> TPT replace @50%",
+   "family": "route TPT",
+   "acc": 0.5421333333333334,
+   "cost_ms": 696.111853374696
+  },
+  {
+   "name": "TDA -> TPT replace @55%",
+   "family": "route TPT",
+   "acc": 0.5436,
+   "cost_ms": 762.5575932863245
+  },
+  {
+   "name": "TDA -> TPT replace @60%",
+   "family": "route TPT",
+   "acc": 0.5469333333333334,
+   "cost_ms": 829.0056496306089
+  },
+  {
+   "name": "TDA -> TPT replace @65%",
+   "family": "route TPT",
+   "acc": 0.5468,
+   "cost_ms": 895.5389496862578
+  },
+  {
+   "name": "TDA -> TPT replace @70%",
+   "family": "route TPT",
+   "acc": 0.5462666666666667,
+   "cost_ms": 962.0902370749662
+  },
+  {
+   "name": "TDA -> TPT replace @75%",
+   "family": "route TPT",
+   "acc": 0.546,
+   "cost_ms": 1028.63608905434
+  },
+  {
+   "name": "TDA -> TPT replace @80%",
+   "family": "route TPT",
+   "acc": 0.5461333333333334,
+   "cost_ms": 1095.1319183564513
+  },
+  {
+   "name": "TDA -> TPT replace @85%",
+   "family": "route TPT",
+   "acc": 0.546,
+   "cost_ms": 1161.6616061946766
+  },
+  {
+   "name": "TDA -> TPT replace @90%",
+   "family": "route TPT",
+   "acc": 0.5458666666666666,
+   "cost_ms": 1228.1317762068395
+  },
+  {
+   "name": "TDA -> TPT replace @95%",
+   "family": "route TPT",
+   "acc": 0.5458666666666666,
+   "cost_ms": 1294.667696908132
+  },
+  {
+   "name": "TDA -> TPT replace @100%",
+   "family": "route TPT",
+   "acc": 0.5458666666666666,
+   "cost_ms": 1361.2033943139947
+  },
+  {
+   "name": "TDA -> TPT average @0%",
+   "family": "route TPT",
+   "acc": 0.5105333333333333,
+   "cost_ms": 31.130864902050234
+  },
+  {
+   "name": "TDA -> TPT average @5%",
+   "family": "route TPT",
+   "acc": 0.5136,
+   "cost_ms": 97.5886308360224
+  },
+  {
+   "name": "TDA -> TPT average @10%",
+   "family": "route TPT",
+   "acc": 0.5174666666666666,
+   "cost_ms": 163.9972646562693
+  },
+  {
+   "name": "TDA -> TPT average @15%",
+   "family": "route TPT",
+   "acc": 0.5210666666666667,
+   "cost_ms": 230.50230777310207
+  },
+  {
+   "name": "TDA -> TPT average @20%",
+   "family": "route TPT",
+   "acc": 0.5237333333333334,
+   "cost_ms": 296.9744027614594
+  },
+  {
+   "name": "TDA -> TPT average @25%",
+   "family": "route TPT",
+   "acc": 0.528,
+   "cost_ms": 363.5057331992236
+  },
+  {
+   "name": "TDA -> TPT average @30%",
+   "family": "route TPT",
+   "acc": 0.53,
+   "cost_ms": 430.18875754977734
+  },
+  {
+   "name": "TDA -> TPT average @35%",
+   "family": "route TPT",
+   "acc": 0.5312,
+   "cost_ms": 496.7714074233702
+  },
+  {
+   "name": "TDA -> TPT average @40%",
+   "family": "route TPT",
+   "acc": 0.5325333333333333,
+   "cost_ms": 563.2340105287808
+  },
+  {
+   "name": "TDA -> TPT average @45%",
+   "family": "route TPT",
+   "acc": 0.5338666666666667,
+   "cost_ms": 629.6835737677678
+  },
+  {
+   "name": "TDA -> TPT average @50%",
+   "family": "route TPT",
+   "acc": 0.534,
+   "cost_ms": 696.111853374696
+  },
+  {
+   "name": "TDA -> TPT average @55%",
+   "family": "route TPT",
+   "acc": 0.5348,
+   "cost_ms": 762.5575932863245
+  },
+  {
+   "name": "TDA -> TPT average @60%",
+   "family": "route TPT",
+   "acc": 0.5362666666666667,
+   "cost_ms": 829.0056496306089
+  },
+  {
+   "name": "TDA -> TPT average @65%",
+   "family": "route TPT",
+   "acc": 0.536,
+   "cost_ms": 895.5389496862578
+  },
+  {
+   "name": "TDA -> TPT average @70%",
+   "family": "route TPT",
+   "acc": 0.5361333333333334,
+   "cost_ms": 962.0902370749662
+  },
+  {
+   "name": "TDA -> TPT average @75%",
+   "family": "route TPT",
+   "acc": 0.5361333333333334,
+   "cost_ms": 1028.63608905434
+  },
+  {
+   "name": "TDA -> TPT average @80%",
+   "family": "route TPT",
+   "acc": 0.5361333333333334,
+   "cost_ms": 1095.1319183564513
+  },
+  {
+   "name": "TDA -> TPT average @85%",
+   "family": "route TPT",
+   "acc": 0.5361333333333334,
+   "cost_ms": 1161.6616061946766
+  },
+  {
+   "name": "TDA -> TPT average @90%",
+   "family": "route TPT",
+   "acc": 0.5361333333333334,
+   "cost_ms": 1228.1317762068395
+  },
+  {
+   "name": "TDA -> TPT average @95%",
+   "family": "route TPT",
+   "acc": 0.5361333333333334,
+   "cost_ms": 1294.667696908132
+  },
+  {
+   "name": "TDA -> TPT average @100%",
+   "family": "route TPT",
+   "acc": 0.5361333333333334,
+   "cost_ms": 1361.2033943139947
+  },
+  {
+   "name": "TDA -> TPT more confident @0%",
+   "family": "route TPT",
+   "acc": 0.5105333333333333,
+   "cost_ms": 31.130864902050234
+  },
+  {
+   "name": "TDA -> TPT more confident @5%",
+   "family": "route TPT",
+   "acc": 0.5136,
+   "cost_ms": 97.5886308360224
+  },
+  {
+   "name": "TDA -> TPT more confident @10%",
+   "family": "route TPT",
+   "acc": 0.5174666666666666,
+   "cost_ms": 163.9972646562693
+  },
+  {
+   "name": "TDA -> TPT more confident @15%",
+   "family": "route TPT",
+   "acc": 0.5208,
+   "cost_ms": 230.50230777310207
+  },
+  {
+   "name": "TDA -> TPT more confident @20%",
+   "family": "route TPT",
+   "acc": 0.5237333333333334,
+   "cost_ms": 296.9744027614594
+  },
+  {
+   "name": "TDA -> TPT more confident @25%",
+   "family": "route TPT",
+   "acc": 0.528,
+   "cost_ms": 363.5057331992236
+  },
+  {
+   "name": "TDA -> TPT more confident @30%",
+   "family": "route TPT",
+   "acc": 0.5296,
+   "cost_ms": 430.18875754977734
+  },
+  {
+   "name": "TDA -> TPT more confident @35%",
+   "family": "route TPT",
+   "acc": 0.5306666666666666,
+   "cost_ms": 496.7714074233702
+  },
+  {
+   "name": "TDA -> TPT more confident @40%",
+   "family": "route TPT",
+   "acc": 0.5318666666666667,
+   "cost_ms": 563.2340105287808
+  },
+  {
+   "name": "TDA -> TPT more confident @45%",
+   "family": "route TPT",
+   "acc": 0.5330666666666667,
+   "cost_ms": 629.6835737677678
+  },
+  {
+   "name": "TDA -> TPT more confident @50%",
+   "family": "route TPT",
+   "acc": 0.5330666666666667,
+   "cost_ms": 696.111853374696
+  },
+  {
+   "name": "TDA -> TPT more confident @55%",
+   "family": "route TPT",
+   "acc": 0.534,
+   "cost_ms": 762.5575932863245
+  },
+  {
+   "name": "TDA -> TPT more confident @60%",
+   "family": "route TPT",
+   "acc": 0.5350666666666667,
+   "cost_ms": 829.0056496306089
+  },
+  {
+   "name": "TDA -> TPT more confident @65%",
+   "family": "route TPT",
+   "acc": 0.5350666666666667,
+   "cost_ms": 895.5389496862578
+  },
+  {
+   "name": "TDA -> TPT more confident @70%",
+   "family": "route TPT",
+   "acc": 0.5350666666666667,
+   "cost_ms": 962.0902370749662
+  },
+  {
+   "name": "TDA -> TPT more confident @75%",
+   "family": "route TPT",
+   "acc": 0.5350666666666667,
+   "cost_ms": 1028.63608905434
+  },
+  {
+   "name": "TDA -> TPT more confident @80%",
+   "family": "route TPT",
+   "acc": 0.5350666666666667,
+   "cost_ms": 1095.1319183564513
+  },
+  {
+   "name": "TDA -> TPT more confident @85%",
+   "family": "route TPT",
+   "acc": 0.5350666666666667,
+   "cost_ms": 1161.6616061946766
+  },
+  {
+   "name": "TDA -> TPT more confident @90%",
+   "family": "route TPT",
+   "acc": 0.5350666666666667,
+   "cost_ms": 1228.1317762068395
+  },
+  {
+   "name": "TDA -> TPT more confident @95%",
+   "family": "route TPT",
+   "acc": 0.5350666666666667,
+   "cost_ms": 1294.667696908132
+  },
+  {
+   "name": "TDA -> TPT more confident @100%",
+   "family": "route TPT",
+   "acc": 0.5350666666666667,
+   "cost_ms": 1361.2033943139947
+  },
+  {
+   "name": "cascade b1=20% b2=0%",
+   "family": "cascade (TPT reuses views)",
+   "acc": 0.5464,
+   "cost_ms": 124.02108258751687
+  },
+  {
+   "name": "cascade b1=20% b2=25%",
+   "family": "cascade (TPT reuses views)",
+   "acc": 0.5444,
+   "cost_ms": 167.48835390955986
+  },
+  {
+   "name": "cascade b1=20% b2=50%",
+   "family": "cascade (TPT reuses views)",
+   "acc": 0.5432,
+   "cost_ms": 210.97249040882258
+  },
+  {
+   "name": "cascade b1=20% b2=100%",
+   "family": "cascade (TPT reuses views)",
+   "acc": 0.5426666666666666,
+   "cost_ms": 297.7994737308783
+  },
+  {
+   "name": "cascade b1=30% b2=0%",
+   "family": "cascade (TPT reuses views)",
+   "acc": 0.5588,
+   "cost_ms": 170.4562055032545
+  },
+  {
+   "name": "cascade b1=30% b2=25%",
+   "family": "cascade (TPT reuses views)",
+   "acc": 0.5569333333333333,
+   "cost_ms": 235.64883942550514
+  },
+  {
+   "name": "cascade b1=30% b2=50%",
+   "family": "cascade (TPT reuses views)",
+   "acc": 0.5546666666666666,
+   "cost_ms": 301.15229697025694
+  },
+  {
+   "name": "cascade b1=30% b2=100%",
+   "family": "cascade (TPT reuses views)",
+   "acc": 0.5548,
+   "cost_ms": 431.3949159692352
+  },
+  {
+   "name": "cascade b1=50% b2=0%",
+   "family": "cascade (TPT reuses views)",
+   "acc": 0.5724,
+   "cost_ms": 263.4981330663897
+  },
+  {
+   "name": "cascade b1=50% b2=25%",
+   "family": "cascade (TPT reuses views)",
+   "acc": 0.5701333333333334,
+   "cost_ms": 372.2942657290104
+  },
+  {
+   "name": "cascade b1=50% b2=50%",
+   "family": "cascade (TPT reuses views)",
+   "acc": 0.5684,
+   "cost_ms": 481.1333485623666
+  },
+  {
+   "name": "cascade b1=50% b2=100%",
+   "family": "cascade (TPT reuses views)",
+   "acc": 0.5669333333333333,
+   "cost_ms": 698.3165313693229
+  },
+  {
+   "name": "cascade b1=70% b2=0%",
+   "family": "cascade (TPT reuses views)",
+   "acc": 0.5762666666666667,
+   "cost_ms": 356.83011915676764
+  },
+  {
+   "name": "cascade b1=70% b2=25%",
+   "family": "cascade (TPT reuses views)",
+   "acc": 0.5725333333333333,
+   "cost_ms": 509.0955357688712
+  },
+  {
+   "name": "cascade b1=70% b2=50%",
+   "family": "cascade (TPT reuses views)",
+   "acc": 0.5726666666666667,
+   "cost_ms": 661.444710395718
+  },
+  {
+   "name": "cascade b1=70% b2=100%",
+   "family": "cascade (TPT reuses views)",
+   "acc": 0.5705333333333333,
+   "cost_ms": 965.4506142543008
+  },
+  {
+   "name": "cascade b1=100% b2=0%",
+   "family": "cascade (TPT reuses views)",
+   "acc": 0.5765333333333333,
+   "cost_ms": 496.21106987717405
+  },
+  {
+   "name": "cascade b1=100% b2=25%",
+   "family": "cascade (TPT reuses views)",
+   "acc": 0.5730666666666666,
+   "cost_ms": 713.9994243782324
+  },
+  {
+   "name": "cascade b1=100% b2=50%",
+   "family": "cascade (TPT reuses views)",
+   "acc": 0.5722666666666667,
+   "cost_ms": 931.3276584378133
+  },
+  {
+   "name": "cascade b1=100% b2=100%",
+   "family": "cascade (TPT reuses views)",
+   "acc": 0.5704,
+   "cost_ms": 1365.651633267741
+  },
+  {
+   "name": "CAS-style (label agreement), CLIP fallback @0%",
+   "family": "CAS-style",
+   "acc": 0.5066666666666667,
+   "cost_ms": 461.8359965732632
+  },
+  {
+   "name": "CAS-style (label agreement), CLIP fallback @5%",
+   "family": "CAS-style",
+   "acc": 0.5310666666666667,
+   "cost_ms": 462.02896568475603
+  },
+  {
+   "name": "CAS-style (label agreement), CLIP fallback @10%",
+   "family": "CAS-style",
+   "acc": 0.5454666666666667,
+   "cost_ms": 462.21438706679425
+  },
+  {
+   "name": "CAS-style (label agreement), CLIP fallback @15%",
+   "family": "CAS-style",
+   "acc": 0.5589333333333333,
+   "cost_ms": 462.3722611280391
+  },
+  {
+   "name": "CAS-style (label agreement), CLIP fallback @20%",
+   "family": "CAS-style",
+   "acc": 0.574,
+   "cost_ms": 462.5265991082182
+  },
+  {
+   "name": "CAS-style (label agreement), CLIP fallback @25%",
+   "family": "CAS-style",
+   "acc": 0.5793333333333334,
+   "cost_ms": 462.6888812475294
+  },
+  {
+   "name": "CAS-style (label agreement), CLIP fallback @30%",
+   "family": "CAS-style",
+   "acc": 0.5862666666666667,
+   "cost_ms": 462.84492436350166
+  },
+  {
+   "name": "CAS-style (label agreement), CLIP fallback @35%",
+   "family": "CAS-style",
+   "acc": 0.5862666666666667,
+   "cost_ms": 463.0140261686795
+  },
+  {
+   "name": "CAS-style (label agreement), CLIP fallback @40%",
+   "family": "CAS-style",
+   "acc": 0.5853333333333334,
+   "cost_ms": 463.1680260189033
+  },
+  {
+   "name": "CAS-style (label agreement), CLIP fallback @45%",
+   "family": "CAS-style",
+   "acc": 0.5844,
+   "cost_ms": 463.3260715024002
+  },
+  {
+   "name": "CAS-style (label agreement), CLIP fallback @50%",
+   "family": "CAS-style",
+   "acc": 0.5856,
+   "cost_ms": 463.49877392937583
+  },
+  {
+   "name": "CAS-style (label agreement), CLIP fallback @55%",
+   "family": "CAS-style",
+   "acc": 0.5853333333333334,
+   "cost_ms": 463.6684193175286
+  },
+  {
+   "name": "CAS-style (label agreement), CLIP fallback @60%",
+   "family": "CAS-style",
+   "acc": 0.586,
+   "cost_ms": 463.8265782226886
+  },
+  {
+   "name": "CAS-style (label agreement), CLIP fallback @65%",
+   "family": "CAS-style",
+   "acc": 0.5889333333333333,
+   "cost_ms": 463.9815776728559
+  },
+  {
+   "name": "CAS-style (label agreement), CLIP fallback @70%",
+   "family": "CAS-style",
+   "acc": 0.5890666666666666,
+   "cost_ms": 464.13735861233437
+  },
+  {
+   "name": "CAS-style (label agreement), CLIP fallback @75%",
+   "family": "CAS-style",
+   "acc": 0.5896,
+   "cost_ms": 464.3133086295255
+  },
+  {
+   "name": "CAS-style (label agreement), CLIP fallback @80%",
+   "family": "CAS-style",
+   "acc": 0.5906666666666667,
+   "cost_ms": 464.4684133523687
+  },
+  {
+   "name": "CAS-style (label agreement), CLIP fallback @85%",
+   "family": "CAS-style",
+   "acc": 0.5914666666666667,
+   "cost_ms": 464.61982233561577
+  },
+  {
+   "name": "CAS-style (label agreement), CLIP fallback @90%",
+   "family": "CAS-style",
+   "acc": 0.5914666666666667,
+   "cost_ms": 464.77502448073744
+  },
+  {
+   "name": "CAS-style (label agreement), CLIP fallback @95%",
+   "family": "CAS-style",
+   "acc": 0.5925333333333334,
+   "cost_ms": 464.9258448875664
+  },
+  {
+   "name": "CAS-style (label agreement), CLIP fallback @100%",
+   "family": "CAS-style",
+   "acc": 0.5924,
+   "cost_ms": 465.0802049751238
+  },
+  {
+   "name": "CAS-style (label agreement), TDA fallback @0%",
+   "family": "CAS-style",
+   "acc": 0.5105333333333333,
+   "cost_ms": 492.9668614753134
+  },
+  {
+   "name": "CAS-style (label agreement), TDA fallback @5%",
+   "family": "CAS-style",
+   "acc": 0.534,
+   "cost_ms": 493.15983058680627
+  },
+  {
+   "name": "CAS-style (label agreement), TDA fallback @10%",
+   "family": "CAS-style",
+   "acc": 0.5481333333333334,
+   "cost_ms": 493.3452519688445
+  },
+  {
+   "name": "CAS-style (label agreement), TDA fallback @15%",
+   "family": "CAS-style",
+   "acc": 0.5609333333333333,
+   "cost_ms": 493.50312603008933
+  },
+  {
+   "name": "CAS-style (label agreement), TDA fallback @20%",
+   "family": "CAS-style",
+   "acc": 0.5754666666666667,
+   "cost_ms": 493.6574640102684
+  },
+  {
+   "name": "CAS-style (label agreement), TDA fallback @25%",
+   "family": "CAS-style",
+   "acc": 0.5801333333333333,
+   "cost_ms": 493.81974614957966
+  },
+  {
+   "name": "CAS-style (label agreement), TDA fallback @30%",
+   "family": "CAS-style",
+   "acc": 0.5858666666666666,
+   "cost_ms": 493.9757892655519
+  },
+  {
+   "name": "CAS-style (label agreement), TDA fallback @35%",
+   "family": "CAS-style",
+   "acc": 0.5842666666666667,
+   "cost_ms": 494.1448910707297
+  },
+  {
+   "name": "CAS-style (label agreement), TDA fallback @40%",
+   "family": "CAS-style",
+   "acc": 0.5821333333333333,
+   "cost_ms": 494.2988909209535
+  },
+  {
+   "name": "CAS-style (label agreement), TDA fallback @45%",
+   "family": "CAS-style",
+   "acc": 0.5813333333333334,
+   "cost_ms": 494.45693640445046
+  },
+  {
+   "name": "CAS-style (label agreement), TDA fallback @50%",
+   "family": "CAS-style",
+   "acc": 0.5830666666666666,
+   "cost_ms": 494.62963883142606
+  },
+  {
+   "name": "CAS-style (label agreement), TDA fallback @55%",
+   "family": "CAS-style",
+   "acc": 0.5829333333333333,
+   "cost_ms": 494.79928421957885
+  },
+  {
+   "name": "CAS-style (label agreement), TDA fallback @60%",
+   "family": "CAS-style",
+   "acc": 0.5837333333333333,
+   "cost_ms": 494.95744312473886
+  },
+  {
+   "name": "CAS-style (label agreement), TDA fallback @65%",
+   "family": "CAS-style",
+   "acc": 0.5870666666666666,
+   "cost_ms": 495.11244257490614
+  },
+  {
+   "name": "CAS-style (label agreement), TDA fallback @70%",
+   "family": "CAS-style",
+   "acc": 0.588,
+   "cost_ms": 495.2682235143846
+  },
+  {
+   "name": "CAS-style (label agreement), TDA fallback @75%",
+   "family": "CAS-style",
+   "acc": 0.5877333333333333,
+   "cost_ms": 495.44417353157576
+  },
+  {
+   "name": "CAS-style (label agreement), TDA fallback @80%",
+   "family": "CAS-style",
+   "acc": 0.5897333333333333,
+   "cost_ms": 495.59927825441895
+  },
+  {
+   "name": "CAS-style (label agreement), TDA fallback @85%",
+   "family": "CAS-style",
+   "acc": 0.5909333333333333,
+   "cost_ms": 495.750687237666
+  },
+  {
+   "name": "CAS-style (label agreement), TDA fallback @90%",
+   "family": "CAS-style",
+   "acc": 0.5910666666666666,
+   "cost_ms": 495.9058893827877
+  },
+  {
+   "name": "CAS-style (label agreement), TDA fallback @95%",
+   "family": "CAS-style",
+   "acc": 0.5922666666666667,
+   "cost_ms": 496.05670978961666
+  },
+  {
+   "name": "CAS-style (label agreement), TDA fallback @100%",
+   "family": "CAS-style",
+   "acc": 0.5924,
+   "cost_ms": 496.21106987717405
+  },
+  {
+   "name": "CAS-style (probability cosine), CLIP fallback @0%",
+   "family": "CAS-style",
+   "acc": 0.5066666666666667,
+   "cost_ms": 461.8359965732632
+  },
+  {
+   "name": "CAS-style (probability cosine), CLIP fallback @5%",
+   "family": "CAS-style",
+   "acc": 0.5364,
+   "cost_ms": 461.9937234506477
+  },
+  {
+   "name": "CAS-style (probability cosine), CLIP fallback @10%",
+   "family": "CAS-style",
+   "acc": 0.5541333333333334,
+   "cost_ms": 462.1873771403606
+  },
+  {
+   "name": "CAS-style (probability cosine), CLIP fallback @15%",
+   "family": "CAS-style",
+   "acc": 0.5637333333333333,
+   "cost_ms": 462.3458009509835
+  },
+  {
+   "name": "CAS-style (probability cosine), CLIP fallback @20%",
+   "family": "CAS-style",
+   "acc": 0.5725333333333333,
+   "cost_ms": 462.52234747409045
+  },
+  {
+   "name": "CAS-style (probability cosine), CLIP fallback @25%",
+   "family": "CAS-style",
+   "acc": 0.5786666666666667,
+   "cost_ms": 462.6835285173884
+  },
+  {
+   "name": "CAS-style (probability cosine), CLIP fallback @30%",
+   "family": "CAS-style",
+   "acc": 0.5837333333333333,
+   "cost_ms": 462.84259590588823
+  },
+  {
+   "name": "CAS-style (probability cosine), CLIP fallback @35%",
+   "family": "CAS-style",
+   "acc": 0.5862666666666667,
+   "cost_ms": 463.0114378456259
+  },
+  {
+   "name": "CAS-style (probability cosine), CLIP fallback @40%",
+   "family": "CAS-style",
+   "acc": 0.5884,
+   "cost_ms": 463.1688526854928
+  },
+  {
+   "name": "CAS-style (probability cosine), CLIP fallback @45%",
+   "family": "CAS-style",
+   "acc": 0.5901333333333333,
+   "cost_ms": 463.32680542482217
+  },
+  {
+   "name": "CAS-style (probability cosine), CLIP fallback @50%",
+   "family": "CAS-style",
+   "acc": 0.5902666666666667,
+   "cost_ms": 463.49648755181113
+  },
+  {
+   "name": "CAS-style (probability cosine), CLIP fallback @55%",
+   "family": "CAS-style",
+   "acc": 0.5922666666666667,
+   "cost_ms": 463.65184984650307
+  },
+  {
+   "name": "CAS-style (probability cosine), CLIP fallback @60%",
+   "family": "CAS-style",
+   "acc": 0.5934666666666667,
+   "cost_ms": 463.8101862964764
+  },
+  {
+   "name": "CAS-style (probability cosine), CLIP fallback @65%",
+   "family": "CAS-style",
+   "acc": 0.5926666666666667,
+   "cost_ms": 463.9660189510323
+  },
+  {
+   "name": "CAS-style (probability cosine), CLIP fallback @70%",
+   "family": "CAS-style",
+   "acc": 0.5928,
+   "cost_ms": 464.1287396288477
+  },
+  {
+   "name": "CAS-style (probability cosine), CLIP fallback @75%",
+   "family": "CAS-style",
+   "acc": 0.5926666666666667,
+   "cost_ms": 464.2888114758224
+  },
+  {
+   "name": "CAS-style (probability cosine), CLIP fallback @80%",
+   "family": "CAS-style",
+   "acc": 0.5924,
+   "cost_ms": 464.44866611026225
+  },
+  {
+   "name": "CAS-style (probability cosine), CLIP fallback @85%",
+   "family": "CAS-style",
+   "acc": 0.5924,
+   "cost_ms": 464.6070256486923
+  },
+  {
+   "name": "CAS-style (probability cosine), CLIP fallback @90%",
+   "family": "CAS-style",
+   "acc": 0.5924,
+   "cost_ms": 464.7635044588164
+  },
+  {
+   "name": "CAS-style (probability cosine), CLIP fallback @95%",
+   "family": "CAS-style",
+   "acc": 0.5924,
+   "cost_ms": 464.9214724804042
+  },
+  {
+   "name": "CAS-style (probability cosine), CLIP fallback @100%",
+   "family": "CAS-style",
+   "acc": 0.5924,
+   "cost_ms": 465.0802049751238
+  },
+  {
+   "name": "CAS-style (probability cosine), TDA fallback @0%",
+   "family": "CAS-style",
+   "acc": 0.5105333333333333,
+   "cost_ms": 492.9668614753134
+  },
+  {
+   "name": "CAS-style (probability cosine), TDA fallback @5%",
+   "family": "CAS-style",
+   "acc": 0.5397333333333333,
+   "cost_ms": 493.1245883526979
+  },
+  {
+   "name": "CAS-style (probability cosine), TDA fallback @10%",
+   "family": "CAS-style",
+   "acc": 0.5568,
+   "cost_ms": 493.3182420424108
+  },
+  {
+   "name": "CAS-style (probability cosine), TDA fallback @15%",
+   "family": "CAS-style",
+   "acc": 0.566,
+   "cost_ms": 493.47666585303375
+  },
+  {
+   "name": "CAS-style (probability cosine), TDA fallback @20%",
+   "family": "CAS-style",
+   "acc": 0.5732,
+   "cost_ms": 493.6532123761407
+  },
+  {
+   "name": "CAS-style (probability cosine), TDA fallback @25%",
+   "family": "CAS-style",
+   "acc": 0.5785333333333333,
+   "cost_ms": 493.81439341943866
+  },
+  {
+   "name": "CAS-style (probability cosine), TDA fallback @30%",
+   "family": "CAS-style",
+   "acc": 0.5826666666666667,
+   "cost_ms": 493.97346080793847
+  },
+  {
+   "name": "CAS-style (probability cosine), TDA fallback @35%",
+   "family": "CAS-style",
+   "acc": 0.5853333333333334,
+   "cost_ms": 494.1423027476761
+  },
+  {
+   "name": "CAS-style (probability cosine), TDA fallback @40%",
+   "family": "CAS-style",
+   "acc": 0.5870666666666666,
+   "cost_ms": 494.29971758754306
+  },
+  {
+   "name": "CAS-style (probability cosine), TDA fallback @45%",
+   "family": "CAS-style",
+   "acc": 0.5881333333333333,
+   "cost_ms": 494.4576703268724
+  },
+  {
+   "name": "CAS-style (probability cosine), TDA fallback @50%",
+   "family": "CAS-style",
+   "acc": 0.5881333333333333,
+   "cost_ms": 494.62735245386136
+  },
+  {
+   "name": "CAS-style (probability cosine), TDA fallback @55%",
+   "family": "CAS-style",
+   "acc": 0.5901333333333333,
+   "cost_ms": 494.7827147485533
+  },
+  {
+   "name": "CAS-style (probability cosine), TDA fallback @60%",
+   "family": "CAS-style",
+   "acc": 0.5916,
+   "cost_ms": 494.9410511985266
+  },
+  {
+   "name": "CAS-style (probability cosine), TDA fallback @65%",
+   "family": "CAS-style",
+   "acc": 0.5924,
+   "cost_ms": 495.09688385308255
+  },
+  {
+   "name": "CAS-style (probability cosine), TDA fallback @70%",
+   "family": "CAS-style",
+   "acc": 0.5924,
+   "cost_ms": 495.25960453089795
+  },
+  {
+   "name": "CAS-style (probability cosine), TDA fallback @75%",
+   "family": "CAS-style",
+   "acc": 0.5925333333333334,
+   "cost_ms": 495.41967637787263
+  },
+  {
+   "name": "CAS-style (probability cosine), TDA fallback @80%",
+   "family": "CAS-style",
+   "acc": 0.5924,
+   "cost_ms": 495.5795310123125
+  },
+  {
+   "name": "CAS-style (probability cosine), TDA fallback @85%",
+   "family": "CAS-style",
+   "acc": 0.5924,
+   "cost_ms": 495.7378905507425
+  },
+  {
+   "name": "CAS-style (probability cosine), TDA fallback @90%",
+   "family": "CAS-style",
+   "acc": 0.5924,
+   "cost_ms": 495.8943693608666
+  },
+  {
+   "name": "CAS-style (probability cosine), TDA fallback @95%",
+   "family": "CAS-style",
+   "acc": 0.5924,
+   "cost_ms": 496.0523373824544
+  },
+  {
+   "name": "CAS-style (probability cosine), TDA fallback @100%",
+   "family": "CAS-style",
+   "acc": 0.5924,
+   "cost_ms": 496.21106987717405
+  }
+ ],
+ "pareto": [
+  {
+   "name": "TDA alone",
+   "family": "fixed",
+   "acc": 0.5105333333333333,
+   "cost_ms": 31.130864902050234
+  },
+  {
+   "name": "TDA -> ZERO replace @5%",
+   "family": "route ZERO",
+   "acc": 0.5209333333333334,
+   "cost_ms": 54.32133803533701
+  },
+  {
+   "name": "TDA -> ZERO replace @10%",
+   "family": "route ZERO",
+   "acc": 0.5305333333333333,
+   "cost_ms": 77.56879993081093
+  },
+  {
+   "name": "TDA -> ZERO replace @15%",
+   "family": "route ZERO",
+   "acc": 0.5394666666666666,
+   "cost_ms": 100.69835152174346
+  },
+  {
+   "name": "TDA -> ZERO replace @20%",
+   "family": "route ZERO",
+   "acc": 0.5496,
+   "cost_ms": 124.02108258751687
+  },
+  {
+   "name": "TDA -> ZERO replace @25%",
+   "family": "route ZERO",
+   "acc": 0.5589333333333333,
+   "cost_ms": 147.22636480316675
+  },
+  {
+   "name": "TDA -> ZERO replace @30%",
+   "family": "route ZERO",
+   "acc": 0.5657333333333333,
+   "cost_ms": 170.4562055032545
+  },
+  {
+   "name": "TDA -> ZERO replace @35%",
+   "family": "route ZERO",
+   "acc": 0.5709333333333333,
+   "cost_ms": 193.7108189526247
+  },
+  {
+   "name": "TDA -> ZERO replace @40%",
+   "family": "route ZERO",
+   "acc": 0.5770666666666666,
+   "cost_ms": 216.91620976254345
+  },
+  {
+   "name": "TDA -> ZERO replace @45%",
+   "family": "route ZERO",
+   "acc": 0.5812,
+   "cost_ms": 240.2005895120247
+  },
+  {
+   "name": "TDA -> ZERO replace @50%",
+   "family": "route ZERO",
+   "acc": 0.5834666666666667,
+   "cost_ms": 263.4981330663897
+  },
+  {
+   "name": "TDA -> ZERO replace @55%",
+   "family": "route ZERO",
+   "acc": 0.5861333333333333,
+   "cost_ms": 286.84773061141993
+  },
+  {
+   "name": "TDA -> ZERO replace @60%",
+   "family": "route ZERO",
+   "acc": 0.5896,
+   "cost_ms": 310.10023694001916
+  },
+  {
+   "name": "TDA -> ZERO replace @65%",
+   "family": "route ZERO",
+   "acc": 0.5897333333333333,
+   "cost_ms": 333.48976003940527
+  },
+  {
+   "name": "TDA -> ZERO replace @70%",
+   "family": "route ZERO",
+   "acc": 0.5909333333333333,
+   "cost_ms": 356.83011915676764
+  },
+  {
+   "name": "TDA -> ZERO replace @75%",
+   "family": "route ZERO",
+   "acc": 0.5917333333333333,
+   "cost_ms": 380.03642192227613
+  },
+  {
+   "name": "TDA -> ZERO replace @80%",
+   "family": "route ZERO",
+   "acc": 0.5918666666666667,
+   "cost_ms": 403.1955478375079
+  },
+  {
+   "name": "TDA -> ZERO replace @85%",
+   "family": "route ZERO",
+   "acc": 0.5924,
+   "cost_ms": 426.2767029944264
+  },
+  {
+   "name": "CAS-style (probability cosine), CLIP fallback @60%",
+   "family": "CAS-style",
+   "acc": 0.5934666666666667,
+   "cost_ms": 463.8101862964764
+  },
+  {
+   "name": "TDA, 64 views",
+   "family": "fixed",
+   "acc": 0.6010666666666666,
+   "cost_ms": 651.3123553518672
+  }
+ ]
+}
