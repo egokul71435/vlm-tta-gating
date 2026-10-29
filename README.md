@@ -68,21 +68,89 @@ ZERO with the official code's fp16 soft votes gives 59.3%; the main number uses 
 | Cascade: 70% to ZERO, a quarter of those to TPT | 57.3% | 509 ms |
 | 64-view TDA | 60.1% | 651 ms |
 
-### Gates
+### Every gate against always-ZERO and always-TPT
 
-5-fold cross-validation (6,000 train / 1,500 test per fold), averaged over 5 fold splits (3 for RL).
+1-view TDA runs on every image; each gate sends its top-ranked share of images to the expensive method. Learned gates use 5-fold cross-validation (6,000 train / 1,500 test per fold), averaged over 5 fold splits (3 for RL); thresholds need no training. "Within 1 pt" = accuracy no more than 1 point below always-ZERO (59.2%) or always-TPT (54.6%); "matches" = at least equal to it. Cost at a routed share b is 31 + b × 465 ms for ZERO and 31 + b × 1,330 ms for TPT; always-ZERO costs 465 ms and always-TPT 1,330 ms, so routing 100% costs slightly more than running the expensive method alone.
 
-| Gate | AUC, needs ZERO | AUC, needs TPT |
-|---|---|---|
-| Low CLIP margin (threshold) | 0.748 | 0.764 |
-| Low TDA margin (threshold) | 0.743 | 0.753 |
-| Logistic regression, cheap scalars (CLIP uncertainty + TDA cache) | 0.751 | 0.782 |
-| Logistic regression, cheap scalars + TDA's own output | 0.757 | 0.790 |
-| Logistic regression, + PCA-5 CLIP embeddings | 0.760 | 0.792 |
-| Gradient boosting / MLP, cheap + TDA output | 0.753 / 0.738 | 0.783 / 0.766 |
-| CLIP embeddings alone (PCA-5) | 0.54–0.56 | 0.55–0.56 |
-| Cost-shaped REINFORCE, λ = 0.02 | 0.714 (58.9% at 304 ms) | — |
-| Accuracy-only REINFORCE / winner MLP | 0.61 / 0.58 | — |
+Features: **CLIP** = CLIP's confidence, margin, entropy and text alignment; **cache** = TDA's cache statistics; **TDA out** = TDA's own margin, entropy, confidence and cache logits; **emb** = PCA-5 CLIP image embeddings.
+
+**TDA → ZERO** (always-TDA 51.1%, always-ZERO 59.2%, oracle 65.3% at 14.2% routed)
+
+| Gate | AUC | Acc @30% | Acc @50% | Peak (at) | Within 1 pt at | Matches at |
+|---|---|---|---|---|---|---|
+| *Thresholds (no training)* | | | | | | |
+| Low CLIP margin | 0.748 | 56.6% | 58.3% | 59.3% (95%) | 50% (264 ms) | 85% (426 ms) |
+| Low CLIP confidence | 0.744 | 56.7% | 58.3% | 59.3% (85%) | 50% (264 ms) | 85% (426 ms) |
+| High CLIP entropy | 0.715 | 56.4% | 58.3% | 59.3% (90%) | 50% (264 ms) | 85% (426 ms) |
+| Low TDA margin | 0.743 | 57.1% | 58.3% | 59.3% (90%) | 45% (240 ms) | 90% (450 ms) |
+| Low TDA confidence | 0.740 | 56.7% | 58.6% | 59.3% (95%) | 45% (240 ms) | 90% (450 ms) |
+| Cache disagrees, then entropy | 0.693 | 56.5% | 58.1% | 59.3% (90%) | 55% (287 ms) | 90% (450 ms) |
+| *Supervised scorers* | | | | | | |
+| Logistic regression, CLIP + cache | 0.751 | 57.0% | 58.5% | 59.2% (100%) | 50% (264 ms) | 100% (496 ms) |
+| Logistic regression, CLIP + cache + TDA out | 0.757 | 57.1% | 58.6% | 59.2% (95%) | 45% (240 ms) | 95% (473 ms) |
+| Logistic regression, CLIP + cache + emb | 0.756 | 57.0% | 58.7% | 59.2% (100%) | 45% (240 ms) | 100% (496 ms) |
+| Logistic regression, all features | **0.760** | **57.2%** | **58.8%** | 59.2% (100%) | **40% (217 ms)** | 100% (496 ms) |
+| Gradient boosting, CLIP + cache | 0.750 | 56.9% | 58.2% | 59.2% (100%) | 50% (264 ms) | 100% (496 ms) |
+| Gradient boosting, CLIP + cache + TDA out | 0.753 | 56.8% | 58.6% | 59.2% (100%) | 50% (264 ms) | 100% (496 ms) |
+| Gradient boosting, all features | 0.755 | 56.8% | 58.7% | 59.2% (100%) | 45% (240 ms) | 100% (496 ms) |
+| MLP, CLIP + cache | 0.744 | 56.5% | 58.4% | 59.2% (90%) | 50% (264 ms) | 90% (450 ms) |
+| MLP, CLIP + cache + TDA out | 0.738 | 56.4% | 58.3% | 59.2% (100%) | 50% (264 ms) | 100% (496 ms) |
+| MLP, all features | 0.727 | 56.4% | 58.3% | 59.2% (95%) | 50% (264 ms) | 95% (473 ms) |
+| Embeddings only (logreg / GB / MLP) | 0.54–0.56 | 54.4–54.7% | 56.0–56.4% | 59.2% (100%) | 80–85% (403–426 ms) | 100% (496 ms) |
+| *RL and RL-adjacent (CLIP + cache + TDA out)* | | | | | | |
+| Accuracy-only REINFORCE, ranked | 0.607 | 54.5% | 57.7% | 59.2% (100%) | 65% (333 ms) | 100% (496 ms) |
+| Winner MLP, ranked | 0.582 | 54.9% | 57.0% | 59.3% (95%) | 70% (357 ms) | 90% (450 ms) |
+| Winner MLP on embeddings, ranked | 0.538 | 54.4% | 56.0% | 59.2% (100%) | 85% (426 ms) | 100% (496 ms) |
+| Random routing | 0.50 | 53.5% | 55.2% | 59.2% (100%) | 90% (450 ms) | 100% (496 ms) |
+
+Cost-shaped REINFORCE makes one routing decision per image, so it gives single points rather than a curve: λ = 0.02 routes 58.6% for 58.9% at 304 ms (within 1 pt); λ = 0.05 routes 51.2% for 58.6% at 269 ms (within 1 pt); λ = 0.10 routes 37.2% for 57.8% at 204 ms; λ = 0.15 routes 24.1% for 56.5% at 143 ms; λ = 0.20 routes 15.2% for 54.7% at 102 ms; λ ≥ 0.30 never routes. Accuracy-only REINFORCE (λ = 0) routes 86.7% for 59.1% at 434 ms.
+
+**TDA → TPT** (always-TDA 51.1%, always-TPT 54.6%, oracle 58.8% at 7.7% routed; RL gates not run)
+
+| Gate | AUC | Acc @30% | Acc @50% | Peak (at) | Within 1 pt at | Matches at |
+|---|---|---|---|---|---|---|
+| *Thresholds (no training)* | | | | | | |
+| Low CLIP margin | 0.764 | 53.6% | 54.2% | 54.7% (60%) | 30% (430 ms) | 60% (829 ms) |
+| Low CLIP confidence | 0.732 | 53.4% | 54.1% | 54.7% (70%) | 35% (497 ms) | 65% (896 ms) |
+| High CLIP entropy | 0.670 | 53.0% | 54.0% | 54.6% (80%) | 45% (630 ms) | 75% (1,029 ms) |
+| Low TDA margin | 0.753 | 53.8% | 54.4% | 54.6% (70%) | 30% (430 ms) | 70% (962 ms) |
+| Low TDA confidence | 0.730 | 53.5% | 54.4% | 54.6% (70%) | 35% (497 ms) | 70% (962 ms) |
+| Cache disagrees, then entropy | 0.657 | 53.1% | 54.0% | 54.6% (85%) | 40% (563 ms) | 85% (1,162 ms) |
+| *Supervised scorers* | | | | | | |
+| Logistic regression, CLIP + cache | 0.782 | 53.5% | 54.4% | 54.7% (65%) | 35% (497 ms) | 65% (896 ms) |
+| Logistic regression, CLIP + cache + TDA out | 0.790 | 53.8% | 54.6% | 54.7% (65%) | 30% (430 ms) | 55% (763 ms) |
+| Logistic regression, CLIP + cache + emb | 0.784 | 53.7% | 54.5% | 54.7% (65%) | 30% (430 ms) | 60% (829 ms) |
+| Logistic regression, all features | **0.792** | **53.8%** | **54.6%** | 54.7% (65%) | **25% (364 ms)** | **50% (696 ms)** |
+| Gradient boosting, CLIP + cache | 0.768 | 53.4% | 54.4% | 54.7% (60%) | 35% (497 ms) | 55% (763 ms) |
+| Gradient boosting, CLIP + cache + TDA out | 0.783 | 53.6% | 54.5% | 54.7% (60%) | 30% (430 ms) | 55% (763 ms) |
+| Gradient boosting, all features | 0.783 | 53.7% | 54.5% | 54.7% (60%) | 30% (430 ms) | 55% (763 ms) |
+| MLP, CLIP + cache | 0.768 | 53.5% | 54.6% | 54.7% (60%) | 35% (497 ms) | 55% (763 ms) |
+| MLP, CLIP + cache + TDA out | 0.766 | 53.5% | 54.5% | 54.6% (70%) | 35% (497 ms) | 60% (829 ms) |
+| MLP, all features | 0.749 | 53.5% | 54.4% | 54.6% (80%) | 35% (497 ms) | 75% (1,029 ms) |
+| Embeddings only (logreg / GB / MLP) | 0.55–0.56 | 52.6–52.8% | 53.4–53.6% | 54.6–54.7% (95–100%) | 55–60% (763–829 ms) | 90–100% (1,228–1,361 ms) |
+| Random routing | 0.50 | 52.1% | 52.9% | 54.6% (100%) | 75% (1,029 ms) | 100% (1,361 ms) |
+
+**Other ways to answer on routed images, and the CAS-style baseline** (low-CLIP-margin gate unless noted; from `fusion_cascade.py`, where the budget grid prints 10/20/30/50/70/100%, so some match points are ranges)
+
+| Option | Acc @30% | Acc @50% | Peak (at) | Within 1 pt of always-ZERO at | Matches always-ZERO at |
+|---|---|---|---|---|---|
+| ZERO's answer (the method) | 56.6% | 58.3% | 59.3% (95%) | 50% (264 ms) | 75–85% (380–426 ms) |
+| Average of TDA and ZERO probabilities | 55.9% | 57.2% | 57.7% (75%) | never | never |
+| More confident of TDA and ZERO | 55.8% | 57.3% | 57.8% (75%) | never | never |
+| Average of TDA probabilities and ZERO's votes | 56.4% | 58.0% | 58.7% (95%) | 55–70% | never |
+| Weighted 0.75 ZERO / 0.25 TDA (tuned on these images) | 56.4% | 58.5% | 59.5% (85%) | 35–50% | 55–70% |
+| Cascade TDA → ZERO → TPT, any TPT share | below the same ZERO share without TPT | — | 57.3% | never | never |
+| CAS-style, ZERO, CLIP fallback (consistency signals) | 58.4–58.6% | 58.6–59.0% | 59.3% | ≤30%, but every budget costs 462–465 ms | ~60%, at 464 ms |
+| CAS-style, ZERO, TDA fallback | 58.3–58.6% | 58.3–58.8% | 59.2–59.3% | ≤30%, but every budget costs 493–496 ms | at ~496 ms |
+
+For TPT, every fusion rule stays below always-TPT (peak 53.5–54.5%), so on routed images TPT's answer is kept as well.
+
+**Reading the tables**
+
+- **Within 1 point is cheap; an exact tie is not.** The best gate is within 1 point of ZERO at 40% routed (217 ms, 47% of ZERO's cost) and of TPT at 25% (364 ms, 27% of TPT's cost). An exact tie with ZERO needs 85% or more, because the last of ZERO's wins are mixed in with images where TDA is right.
+- **Ties with TPT come sooner:** TPT's lead over TDA is smaller (3.5 vs. 8.1 points), so a gate matches it at 50–60% routed.
+- **The gap between gates is small.** The best learned gate (all features) is 0.01–0.03 AUC and at most one budget step ahead of the plain CLIP-margin threshold; the threshold needs no labels, training or features beyond CLIP's own output.
+- **Embedding-only gates, RL rankings and the winner MLP** are close to random routing.
 
 ### Findings
 
