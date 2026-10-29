@@ -1,0 +1,38 @@
+{
+  "git_commit": "6a9fa24",
+  "saved_at": "2026-10-29 02:19:06",
+  "n": 7500,
+  "accuracy": 0.5924,
+  "args": {
+    "dataset": "imagenet_a",
+    "classnames": null,
+    "prompt": "a photo of a {}.",
+    "output": null,
+    "tag": null,
+    "vanilla_results": null,
+    "n_views": 64,
+    "gamma": 0.3,
+    "cas_rho": 0.1,
+    "device": "auto",
+    "half": false,
+    "fp16_votes": false,
+    "seed": 1,
+    "n": null,
+    "save_probs": true,
+    "save_view_probs": true,
+    "model": "ViT-B-16-quickgelu",
+    "pretrained": "openai"
+  },
+  "summary": {
+    "accuracy": 0.5924,
+    "accuracy_one_hot_votes": 0.5924,
+    "accuracy_fp16_votes": 0.5934666666666667,
+    "main_votes": "one-hot",
+    "gamma": 0.3,
+    "ties": 168,
+    "tie_fallbacks": 0,
+    "ties_one_hot_votes": 168,
+    "ties_fp16_votes": 1,
+    "median_ms": 450.92483301414177
+  }
+}

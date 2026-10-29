@@ -1,0 +1,31 @@
+{
+  "git_commit": "6a9fa24",
+  "saved_at": "2026-10-29 01:19:25",
+  "n": 7500,
+  "accuracy": 0.6010666666666666,
+  "args": {
+    "dataset": "imagenet_a",
+    "n_views": null,
+    "config": null,
+    "classnames": null,
+    "templates": null,
+    "output": null,
+    "tag": null,
+    "vanilla_results": null,
+    "refs_tda": "/Users/gokulelangovan/Downloads/projects/research-oriented/vlm-tta-gating/refs/tda",
+    "device": "auto",
+    "half": false,
+    "seed": 42,
+    "shuffle_seed": 1,
+    "n": null,
+    "save_probs": true,
+    "model": "ViT-B-16-quickgelu",
+    "pretrained": "openai"
+  },
+  "summary": {
+    "accuracy": 0.6010666666666666,
+    "n_views": 64,
+    "median_ms": 641.4846044790465,
+    "config": "/Users/gokulelangovan/Downloads/projects/research-oriented/vlm-tta-gating/configs/tda/imagenet_a.yaml"
+  }
+}

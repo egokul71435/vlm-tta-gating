@@ -1,0 +1,37 @@
+{
+  "git_commit": "6a9fa24",
+  "saved_at": "2026-10-29 05:06:32",
+  "n": 7500,
+  "accuracy": 0.5458666666666666,
+  "args": {
+    "dataset": "imagenet_a",
+    "classnames": null,
+    "augmix": null,
+    "output": null,
+    "tag": null,
+    "vanilla_results": null,
+    "tda_results": null,
+    "ctx_init": "a_photo_of_a",
+    "suffix": ".",
+    "view0": "center",
+    "final": "view0",
+    "refs_tpt": "/Users/gokulelangovan/Downloads/projects/research-oriented/vlm-tta-gating/refs/tpt",
+    "n_views": 64,
+    "selection_p": 0.1,
+    "lr": 0.005,
+    "steps": 1,
+    "probe_k": 8,
+    "device": "auto",
+    "amp": false,
+    "seed": 42,
+    "n": null,
+    "save_probs": true,
+    "model": "ViT-B-16-quickgelu",
+    "pretrained": "openai"
+  },
+  "summary": {
+    "accuracy": 0.5458666666666666,
+    "augmix": false,
+    "median_ms": 1322.752729000058
+  }
+}
