@@ -1,0 +1,23 @@
+{
+  "git_commit": "dffbdbc",
+  "saved_at": "2026-10-28 22:49:50",
+  "n": 7500,
+  "accuracy": 0.49946666666666667,
+  "args": {
+    "dataset": "imagenet_a",
+    "classnames": null,
+    "templates": "data/templates/clip80.json",
+    "output": null,
+    "tag": "ens80",
+    "device": "auto",
+    "seed": 42,
+    "n": null,
+    "no_embeddings": false,
+    "model": "ViT-B-16-quickgelu",
+    "pretrained": "openai"
+  },
+  "summary": {
+    "accuracy": 0.49946666666666667,
+    "templates": 80
+  }
+}

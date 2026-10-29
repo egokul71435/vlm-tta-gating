@@ -54,10 +54,14 @@ class DatasetSpec:
         return CONFIG_ROOT / "tda" / self.tda_config if self.tda_config else None
 
 
-_IMAGENET_FAMILY = dict(
-    templates="templates/imagenet_ensemble.json",  # copy from refs/tda/datasets/imagenet.py
-    tpt_augmix=False,
-)
+# TDA's official templates: its 7-template set on ImageNet, -A and -V2; the 80
+# CLIP templates on -R and -Sketch (refs/tda/datasets/*.py). Built by
+# src_main/scripts/prepare_data.py. The published CLIP targets below come from
+# the TPT paper's 80-template ensemble, so check zero-shot accuracy with
+# --templates data/templates/clip80.json.
+_TIP7 = "templates/tip7.json"
+_CLIP80 = "templates/clip80.json"
+_IMAGENET_FAMILY = dict(tpt_augmix=False)
 
 REGISTRY: dict[str, DatasetSpec] = {
     # ---- pilot (kept so the regression check keeps working) ----
@@ -76,31 +80,31 @@ REGISTRY: dict[str, DatasetSpec] = {
 
     # ---- ImageNet OOD suite ----
     "imagenet_a": DatasetSpec(
-        name="imagenet_a", image_root="imagenet-a", layout="imagefolder",
+        name="imagenet_a", templates=_TIP7, image_root="imagenet-a", layout="imagefolder",
         classnames="classnames/imagenet_a.json", class_mask="masks/imagenet_a_mask.json",
         tda_config="imagenet_a.yaml", tda_n_views=64,
         targets={"clip": 49.89, "tda": 60.11, "tpt": 54.77}, **_IMAGENET_FAMILY,
     ),
     "imagenet_r": DatasetSpec(
-        name="imagenet_r", image_root="imagenet-r", layout="imagefolder",
+        name="imagenet_r", templates=_CLIP80, image_root="imagenet-r", layout="imagefolder",
         classnames="classnames/imagenet_r.json", class_mask="masks/imagenet_r_mask.json",
         tda_config="imagenet_r.yaml", tda_n_views=64,
         targets={"clip": 77.65, "tda": 80.24, "tpt": 77.06}, **_IMAGENET_FAMILY,
     ),
     "imagenet_v2": DatasetSpec(
-        name="imagenet_v2", image_root="imagenetv2-matched-frequency", layout="imagefolder",
+        name="imagenet_v2", templates=_TIP7, image_root="imagenetv2-matched-frequency", layout="imagefolder",
         classnames="classnames/imagenet.json",
         tda_config="imagenet_v.yaml", tda_n_views=64,
         targets={"clip": 61.88, "tda": 64.67, "tpt": 63.45}, **_IMAGENET_FAMILY,
     ),
     "imagenet_sketch": DatasetSpec(
-        name="imagenet_sketch", image_root="imagenet-sketch", layout="imagefolder",
+        name="imagenet_sketch", templates=_CLIP80, image_root="imagenet-sketch", layout="imagefolder",
         classnames="classnames/imagenet.json",
         tda_config="imagenet_s.yaml", tda_n_views=64,
         targets={"clip": 48.24, "tda": 50.54, "tpt": 47.94}, **_IMAGENET_FAMILY,
     ),
     "imagenet": DatasetSpec(
-        name="imagenet", image_root="imagenet/val", layout="imagefolder",
+        name="imagenet", templates=_TIP7, image_root="imagenet/val", layout="imagefolder",
         classnames="classnames/imagenet.json",
         tda_config="imagenet.yaml", tda_n_views=1,
         targets={"clip": 68.34, "tda": 69.51, "tpt": 68.98}, **_IMAGENET_FAMILY,

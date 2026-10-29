@@ -1,0 +1,23 @@
+{
+  "git_commit": "dffbdbc",
+  "saved_at": "2026-10-28 22:54:31",
+  "n": 7500,
+  "accuracy": 0.478,
+  "args": {
+    "dataset": "imagenet_a",
+    "classnames": null,
+    "templates": "data/templates/photo.json",
+    "output": null,
+    "tag": "photo",
+    "device": "auto",
+    "seed": 42,
+    "n": null,
+    "no_embeddings": false,
+    "model": "ViT-B-16-quickgelu",
+    "pretrained": "openai"
+  },
+  "summary": {
+    "accuracy": 0.478,
+    "templates": 1
+  }
+}

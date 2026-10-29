@@ -11,6 +11,7 @@
 # scripts directly.
 
 set -euo pipefail
+export PYTHONUNBUFFERED=1
 cd "$(dirname "$0")"
 
 DATASET=${1:?"usage: ./run.sh <dataset> [clip|tda|tpt|labels|route ...]"}
