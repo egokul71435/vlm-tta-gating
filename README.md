@@ -101,9 +101,17 @@ Features: **CLIP** = CLIP's confidence, margin, entropy and text alignment; **ca
 | Accuracy-only REINFORCE, ranked | 0.607 | 54.5% | 57.7% | 59.2% (100%) | 65% (333 ms) | 100% (496 ms) |
 | Winner MLP, ranked | 0.582 | 54.9% | 57.0% | 59.3% (95%) | 70% (357 ms) | 90% (450 ms) |
 | Winner MLP on embeddings, ranked | 0.538 | 54.4% | 56.0% | 59.2% (100%) | 85% (426 ms) | 100% (496 ms) |
+| *Cost-shaped REINFORCE (CLIP + cache + TDA out), one point per λ* | | | | | | |
+| λ = 0 (accuracy-only), greedy | 0.607 | — | — | 59.1% (86.7%, 434 ms) | yes, at 86.7% (434 ms) | no |
+| λ = 0.02 | 0.714 | — | — | 58.9% (58.6%, 304 ms) | yes, at 58.6% (304 ms) | no |
+| λ = 0.05 | 0.724 | — | — | 58.6% (51.2%, 269 ms) | yes, at 51.2% (269 ms) | no |
+| λ = 0.10 | 0.734 | — | — | 57.8% (37.2%, 204 ms) | no | no |
+| λ = 0.15 | 0.739 | — | — | 56.5% (24.1%, 143 ms) | no | no |
+| λ = 0.20 | 0.736 | — | — | 54.7% (15.2%, 102 ms) | no | no |
+| λ = 0.30 / 0.50 | 0.546 / 0.520 | — | — | 51.1% (0%, 31 ms) | no | no |
 | Random routing | 0.50 | 53.5% | 55.2% | 59.2% (100%) | 90% (450 ms) | 100% (496 ms) |
 
-Cost-shaped REINFORCE makes one routing decision per image, so it gives single points rather than a curve: λ = 0.02 routes 58.6% for 58.9% at 304 ms (within 1 pt); λ = 0.05 routes 51.2% for 58.6% at 269 ms (within 1 pt); λ = 0.10 routes 37.2% for 57.8% at 204 ms; λ = 0.15 routes 24.1% for 56.5% at 143 ms; λ = 0.20 routes 15.2% for 54.7% at 102 ms; λ ≥ 0.30 never routes. Accuracy-only REINFORCE (λ = 0) routes 86.7% for 59.1% at 434 ms.
+Cost-shaped REINFORCE picks its own routed share for each penalty λ instead of giving a ranking, so each λ is a single point: "Peak" shows its accuracy with the share routed and the cost, and the last two columns say whether that one point is within 1 point of, or matches, always-ZERO. Its AUC comes from P(ZERO). λ = 0.02 and 0.05 land on the scorers' curve (the best logistic regression reaches 58.8% at 50% routed); none of the λ values matches always-ZERO. Cost-shaped RL was not run for TPT.
 
 **TDA → TPT** (always-TDA 51.1%, always-TPT 54.6%, oracle 58.8% at 7.7% routed; RL gates not run)
 
